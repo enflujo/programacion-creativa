@@ -56,3 +56,7 @@ Ir a [Glosario](Glosario.md)
 
 - ..:: Lina Orejuela ::..
 
+git.stage README.md
+git.add README.md
+git.push README.md
+
