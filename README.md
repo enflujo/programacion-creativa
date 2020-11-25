@@ -53,3 +53,4 @@ Ir a [Glosario](Glosario.md)
 - ..:: Antonia Bustamante ::..
 - ..:: Jeanniffer Pimentel ::..
 - ..:: Hugo Idárraga ::..
+- Lina Orejuela
