@@ -56,4 +56,4 @@ Ir a [Glosario](Glosario.md)
 
 - ..:: Lina Orejuela ::..
 
-$ git push origin < hola-soy-lina >
+$ git push origin < hola soy lina >
