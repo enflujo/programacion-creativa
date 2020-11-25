@@ -52,3 +52,4 @@ Ir a [Glosario](Glosario.md)
 - ..:: Juan Camilo González ::..
 - ..:: Antonia Bustamante ::..
 - ..:: Jeanniffer Pimentel ::..
+- ..:: Julián García ::..
