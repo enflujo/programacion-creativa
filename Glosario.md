@@ -6,7 +6,7 @@ Una serie de términos que nos sirven para tener un lenguaje común y aprender a
 |---|---|
 |Tipos de variables (diferencias entre `const`, `let`, `var`)|Variables|
 |Tipos de funciones (`function(){...}` vs. `() => {...}` vs. `() => ...` )|Arrow functions|
-|Modelo de Objetos del Documento (MOD)|Document Object Model (DOM)|
+|[Modelo de Objetos del Documento (MOD)](#Modelo-de-Objetos-del-Documento-(MOD)|Document Object Model (DOM)|
 |Elementos del MOD|DOM Elements|
 |MOD virtual|Virtual DOM|
 |Manipulación del MOD|DOM Manipulation|
@@ -59,3 +59,18 @@ Es un paradigma de programación (es decir, una forma de entender la construcci�
 ### Interfaz de Programación de Aplicaciones API
 
 Conjunto de reglas que hacen posible la comunicación entre distintas aplicaciones, por ejemplo entre sistemas operativos, bases de datos, redes sociales y otras plataformas online. Son especialmente útiles porque permiten aprovechar fragmentos de código de un programa en otro, sin necesidad de reinventarlos ni reescribirlos.
+
+### Modelo de Objetos del Documento (MOD)
+
+Es una interfaz multiplataforma que trata todo documento XML o HTML como una estructura de árbol, donde cada nodo es un objeto que representa una parte del documento. El DOM o MOD sería una forma de representar esquemáticamente las partes de un documento. Los métodos del MOD permiten modificar esa estructura. EL MOD está estructurado en forma de ramificación lógica. Cada una de estas ramas termina en un nodo, que a su vez contienen un objeto. Así, el típico MOD sería:
+
+/Document 
+  //Head
+  //Body
+    ///<p>txt</p>
+    
+Tanto Head, Body y la etiqueta P serían objetos contenidos en los nodos, ubicados al final de la rama que proviene de la raíz, que es document. Los métodos MOD permiten cambiar esta estructura, por ejemplo cambiando <p> por <span> o introduciendo contenido dentro de <p>txt.txt</p>. Los métodos MOD permiten además cambiar los estilos de los objetos, modificando el tipo de letra o el color de la fuente, por ejemplo. Resumiendo, el MOD representa la estructura y contenido del documento y es a través de sus métodos que podemos modificarla.
+  
+### Elementos del MOD
+
+Un Elemento MOD representa un elemento HTML. Así, los elementos del MOD son todos aquellos elementos válidos dentro del lenguaje html, tales como P, DIV, UL, LI, etc. 
