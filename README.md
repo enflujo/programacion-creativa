@@ -55,3 +55,7 @@ Ir a [Glosario](Glosario.md)
 - ..:: Hugo Idárraga ::..
 
 - ..:: Lina Orejuela ::..
+
+git.add 
+git.committ
+git.push
