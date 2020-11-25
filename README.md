@@ -56,7 +56,7 @@ Ir a [Glosario](Glosario.md)
 
 - ..:: Lina Orejuela ::..
 
-git.stage README.md
-git.add README.md
-git.push README.md
-
+git:
+git.stage https://github.com/latinx-cyborg95?tab=repositories
+git.add https://github.com/latinx-cyborg95?tab=repositories
+git.push https://github.com/latinx-cyborg95?tab=repositories
