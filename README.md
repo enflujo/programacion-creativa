@@ -56,6 +56,3 @@ Ir a [Glosario](Glosario.md)
 
 - ..:: Lina Orejuela ::..
 
-git.add 
-git.committ
-git.push
