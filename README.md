@@ -54,4 +54,4 @@ Ir a [Glosario](Glosario.md)
 - ..:: Jeanniffer Pimentel ::..
 - ..:: Hugo Idárraga ::..
 
-git.clone https://github.com/enflujo/programacion-creativa.git
+git clone https://github.com/enflujo/programacion-creativa.git
