@@ -6,8 +6,8 @@ Una serie de términos que nos sirven para tener un lenguaje común y aprender a
 |---|---|
 |Tipos de variables (diferencias entre `const`, `let`, `var`)|Variables|
 |Tipos de funciones (`function(){...}` vs. `() => {...}` vs. `() => ...` )|Arrow functions|
-|[Modelo de Objetos del Documento (MOD)](#Modelo-de-Objetos-del-Documento-(MOD))|Document Object Model (DOM)|
-|Elementos del MOD|DOM Elements|
+|[Modelo de Objetos del Documento (MOD)](#modelo-de-objetos-del-documento)|Document Object Model (DOM)|
+|[Elementos del MOD|DOM Elements](#elementos-del-mod)|
 |MOD virtual|Virtual DOM|
 |Manipulación del MOD|DOM Manipulation|
 |Eventos Sensibles|Eventlisteners|
@@ -60,7 +60,7 @@ Es un paradigma de programación (es decir, una forma de entender la construcci�
 
 Conjunto de reglas que hacen posible la comunicación entre distintas aplicaciones, por ejemplo entre sistemas operativos, bases de datos, redes sociales y otras plataformas online. Son especialmente útiles porque permiten aprovechar fragmentos de código de un programa en otro, sin necesidad de reinventarlos ni reescribirlos.
 
-### Modelo de Objetos del Documento (MOD)
+### Modelo de Objetos del Documento 
 
 El MOD es una interfaz multiplataforma que trata la estructura del documento HTML o XML en forma de árbol. Las ramas de este árbol terminan en nodos: objetos que representan las partes de las que se compone el documento. Así, la estructura más común de el MOD sería:
 
