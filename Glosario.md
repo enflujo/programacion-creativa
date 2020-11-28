@@ -7,7 +7,7 @@ Una serie de términos que nos sirven para tener un lenguaje común y aprender a
 |Tipos de variables (diferencias entre `const`, `let`, `var`)|Variables|
 |Tipos de funciones (`function(){...}` vs. `() => {...}` vs. `() => ...` )|Arrow functions|
 |[Modelo de Objetos del Documento (MOD)](#modelo-de-objetos-del-documento)|Document Object Model (DOM)|
-|[Elementos del MOD|DOM Elements](#elementos-del-mod)|
+|[Elementos del MOD](#elementos-del-mod)|DOM Elements|
 |MOD virtual|Virtual DOM|
 |Manipulación del MOD|DOM Manipulation|
 |Eventos Sensibles|Eventlisteners|
