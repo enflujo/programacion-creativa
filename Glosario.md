@@ -10,7 +10,7 @@ Una serie de términos que nos sirven para tener un lenguaje común y aprender a
 |[Elementos del MOD](#elementos-del-mod)|DOM Elements|
 |MOD virtual|Virtual DOM|
 |Manipulación del MOD|DOM Manipulation|
-|Eventos Sensibles|Eventlisteners|
+|[Eventos Sensibles](#eventos-sensibles-eventlisteners)|Eventlisteners|
 |[Sintaxis](#sintaxis)|Sintax|
 |JavaScript Nativo|Vanilla JavaScript|
 |JavaScript Compilado (ES6 o TypeScript -> JS)|Compiled JavaScript|
@@ -75,4 +75,7 @@ Del 'Document Object', es decir del'documento', nacen dos ramas: /head y /body. 
 ### Elementos del MOD
 
 Un elemento del MOD representa un elemento HTML. Esto significa que los elementos MOD son todos aquellos elementos HTML admitidos por el WWW Consortium. Ejemplos de estos elementos son las etiquetas DIV, P, A, TABLE, UL, etc.
+
+### Eventos Sensibles Eventlisteners
   
+El Eventlistener es un método del DOM que es llamado según la acción que haya sido configurada para ello. El Eventlistener permite por ejemplo que, al hacer click a un botón, se abra un cuadro de diálogo. Es literalmente un método que está a la escucha de que ocurra algún evento para el cual está programado escuchar. Con addEventListener podemos registrar un evento que ocurre no sólo en el HTML sino en todo el DOM, así como agregar más de un listener a un solo evento, es decir, que un mismo evento active varias funciones por ejemplo.
