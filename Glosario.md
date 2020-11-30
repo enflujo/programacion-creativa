@@ -6,7 +6,7 @@ Una serie de términos que nos sirven para tener un lenguaje común y aprender a
 |---|---|
 |Tipos de variables (diferencias entre `const`, `let`, `var`)|Variables|
 |Tipos de funciones (`function(){...}` vs. `() => {...}` vs. `() => ...` )|Arrow functions|
-|[Modelo de Objetos del Documento (MOD)](#modelo-de-objetos-del-documento)|Document Object Model (DOM)|
+|[Modelo de Objetos del Documento (MOD)](#modelo-de-objetos-del-documento-mod)|Document Object Model (DOM)|
 |[Elementos del MOD](#elementos-del-mod)|DOM Elements|
 |MOD virtual|Virtual DOM|
 |Manipulación del MOD|DOM Manipulation|
@@ -60,15 +60,15 @@ Es un paradigma de programación (es decir, una forma de entender la construcci�
 
 Conjunto de reglas que hacen posible la comunicación entre distintas aplicaciones, por ejemplo entre sistemas operativos, bases de datos, redes sociales y otras plataformas online. Son especialmente útiles porque permiten aprovechar fragmentos de código de un programa en otro, sin necesidad de reinventarlos ni reescribirlos.
 
-### Modelo de Objetos del Documento 
+### Modelo de Objetos del Documento (MOD)
 
 El MOD es una interfaz multiplataforma que trata la estructura del documento HTML o XML en forma de árbol. Las ramas de este árbol terminan en nodos: objetos que representan las partes de las que se compone el documento. Así, la estructura más común de el MOD sería:
 
-documento
-  /head
-  /body
-    //section
-      ///p
+documento\
+  /head\
+  /body\
+    //section\
+      ///p\
 
 Del 'Document Object', es decir del'documento', nacen dos ramas: /head y /body. De body nacen más ramas, que serían //Section y dentro de ella ///p. El final de cada una de estas ramas es un objeto que pude contener tanto un elemento como un método del MOD. Toda la estructura, el contenido y el estilo de los nodos pueden ser modificados por medio de los métodos MOD.
 
