@@ -112,7 +112,7 @@ documento
       ///p
 ```
 
-Del 'Document Object', es decir del'documento', nacen dos ramas: /head y /body. De body nacen más ramas, que serían //Section y dentro de ella ///p. El final de cada una de estas ramas es un objeto que pude contener tanto un elemento como un método del MOD. Toda la estructura, el contenido y el estilo de los nodos pueden ser modificados por medio de los métodos MOD.
+Del 'Document Object', es decir del 'documento', nacen dos ramas: /head y /body. De body nacen más ramas, que serían //Section y dentro de ella ///p. El final de cada una de estas ramas es un objeto que pude contener tanto un elemento como un método del MOD. Toda la estructura, el contenido y el estilo de los nodos pueden ser modificados por medio de los métodos MOD.
 
 ### Elementos del MOD
 
