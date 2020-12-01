@@ -12,6 +12,12 @@ A veces los guío y a veces los motivo a proponer derivas.
 
 A veces les ayudo y a veces los instigo.
 
+## Contenido
+
+* [Glosario](/programacion-creativa/Glosario.md)
+* [Plantillas](/programacion-creativa/plantillas/README.md)
+* [HTML](/programacion-creativa/HTML.md)
+
 ## Ejercicio 1: Instalar herramientas
 
 Una de las habilidades más importantes de un programador es saber buscar en internet. El primer ejercicio es buscar como instalar las siguientes herramientas en su computador.
