@@ -14,9 +14,9 @@ A veces les ayudo y a veces los instigo.
 
 ## Contenido
 
-* [Glosario](/programacion-creativa/Glosario.md)
-* [Plantillas](/programacion-creativa/plantillas/README.md)
-* [HTML](/programacion-creativa/HTML.md)
+* [Glosario](/Glosario.md)
+* [Plantillas](/plantillas/README.md)
+* [HTML](/HTML.md)
 
 ## Ejercicio 1: Instalar herramientas
 
