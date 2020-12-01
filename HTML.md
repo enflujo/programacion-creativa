@@ -201,6 +201,3 @@ Pintar un bodegón observándolo directamente en sus casas. Es pintura digital a
 ¿Inspiración? Tatsuo Horiuchi pinta en Excel :)
 
 [![Tatsuo Horiuchi](https://img.youtube.com/vi/OrwBc6PwAcY/0.jpg)](https://www.youtube.com/watch?v=OrwBc6PwAcY)
-
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OrwBc6PwAcY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
