@@ -15,7 +15,7 @@ A veces les ayudo y a veces los instigo.
 ## Contenido
 
 * [Glosario](/Glosario.md)
-* [Plantillas](/plantillas/README.md)
+* [Plantillas](/plantillas)
 * [HTML](/HTML.md)
 
 ## Ejercicio 1: Instalar herramientas
