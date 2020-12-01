@@ -79,11 +79,13 @@ Las variables son elementos empleados para almacenar un valor. Estos valores pue
 
 El MOD es una interfaz multiplataforma que trata la estructura del documento HTML o XML en forma de árbol. Las ramas de este árbol terminan en nodos: objetos que representan las partes de las que se compone el documento. Así, la estructura más común de el MOD sería:
 
-documento\
-  /head\
-  /body\
-    //section\
+```
+documento
+  /head
+  /body
+    //section
       ///p
+```
 
 Del 'Document Object', es decir del'documento', nacen dos ramas: /head y /body. De body nacen más ramas, que serían //Section y dentro de ella ///p. El final de cada una de estas ramas es un objeto que pude contener tanto un elemento como un método del MOD. Toda la estructura, el contenido y el estilo de los nodos pueden ser modificados por medio de los métodos MOD.
 
