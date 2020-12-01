@@ -5,7 +5,7 @@ Una serie de términos que nos sirven para tener un lenguaje común y aprender a
 |Español|Inglés|
 |---|---|
 |[Tipos de variables (diferencias entre `const`, `let`, `var`)](#tipos-de-variables)|Variables|
-|Tipos de funciones (`function(){...}` vs. `() => {...}` vs. `() => ...` )|Arrow functions|
+|[Tipos de funciones (`function(){...}` vs. `() => {...}` vs. `() => ...` )](#tipos-de-funciones)|Arrow functions|
 |[Modelo de Objetos del Documento (MOD)](#modelo-de-objetos-del-documento-mod)|Document Object Model (DOM)|
 |[Elementos del MOD](#elementos-del-mod)|DOM Elements|
 |[MOD virtual](#mod-virtual)|Virtual DOM|
@@ -15,8 +15,8 @@ Una serie de términos que nos sirven para tener un lenguaje común y aprender a
 |JavaScript Nativo|Vanilla JavaScript|
 |JavaScript Compilado (ES6 o TypeScript -> JS)|Compiled JavaScript|
 |CSS Nativo|CSS / Vanilla CSS|
-|CSS Compilado (SASS o LESS -> CSS)|Compiled CSS / superset of CSS|
-|Compilador / Transpilador (Babel) [ref.](https://www.stevefenton.co.uk/2012/11/compiling-vs-transpiling/)|Compiler / Transpiler|
+|[CSS Compilado (SASS o LESS -> CSS)](#css-compilado-SASS-o-LESS-->-CSS)|Compiled CSS / superset of CSS|
+|[Compilador / Transpilador (Babel)](#compilador-/-transpilador-babel) [ref.](https://www.stevefenton.co.uk/2012/11/compiling-vs-transpiling/)|Compiler / Transpiler|
 |Empaquetador (Webpack, Parcel, Rollup, Snowpack, ...)|Bundler|
 |Manipulación de pixeles|Pixel Manipulation|
 |Dibujo Generativo|Generative Drawing|
@@ -33,6 +33,8 @@ Una serie de términos que nos sirven para tener un lenguaje común y aprender a
 |Matrices, Matriz|Matrices, Matrix|
 |Render con CPU vs. GPU (contexto del `canvas` 2d vs WebGL)|CPU vs GPU rendering|
 |[Interfaz de Programación de Aplicaciones (API)](#interfaz-de-programación-de-aplicaciones-api)|Application Programming Interface API|
+|[Sistema de control de versiones](#sistema-de-control-de-versiones)|Version Control System (VCS)|
+
 
 ## Ejercicio
 
@@ -49,6 +51,15 @@ Definiciones no-técnicas de conceptos técnicos.
 
 La forma, las reglas y la estructura que debe tener un lenguaje de programación para que la máquina lo entienda correctamente. 
 
+### CSS Compilado (SASS o LESS -> CSS)
+
+Sass y Less son preprocesadores de CSS. Un preprocesador permite ampliar las posibilidades de un lenguaje (en este caso CSS) mediante una sintaxis específica. Del lado humano SASS y LESS nos ayudan a escribir de forma más organizada, sintetizada y legible los estilos de una página web usando características que no están presentes en CSS nativo, como variables, anidamientos de estilo, operaciones y mixins... Del otro lado, la máquina se encarga de traducir (compilar) el archivo .less o .scss a la sintaxis nativa de CSS.
+
+### Compilador / Transpilador (Babel)
+
+Los lenguajes de programación se ubican en diferentes rangos de abstracción, un lenguaje de alto nivel es el que se acerca a la forma de escribir / expresar humana, mientras que uno de bajo nivel se acerca al lenguaje máquina (formado por unos y ceros). Los compiladores traducen de un lenguaje a otro para que pueda ser leído y ejecutado sin problemas, esa traducción puede ser de un lenguaje de alto nivel a uno de bajo nivel. 
+Cuando la traducción se da entre el mismo lenguaje o se mantiene el mismo nivel de abstracción se usa también la palabra transpilación, por ejemplo: Babel traduce de JavaScript ES6 a ES5 para aumentar su compatibilidad sin cambiar de lenguaje. Un equivalente humano sería traducir de un idioma a otro (compilar) o hacer el mismo proceso de traducción de un dialecto a otro dentro del mismo idioma (transpilar).
+
 ### Programación Creativa
 
 Negociar con las máquinas un gesto artístico. Es un acto de agenciamiento entre potencias físicas y potencias del dispositivo. En el mejor de los casos produce un devenir en artista post-humano.
@@ -64,15 +75,42 @@ Conjunto de reglas que hacen posible la comunicación entre distintas aplicacion
 
 Las variables son elementos empleados para almacenar un valor. Estos valores pueden ser llamados de forma tal que un programa pueda funcionar independientemente de los valores introducidos (boolean, string, number). Aunque depende del tipo, las variables se pueden declarar asignando un nombre (identificador) y un valor (aunque las variables *var* y *let* se pueden declarar sin asignarle valor alguno). Cuando en una variable se declara no sólo su identificador sino también un valor, se dice que la variable ha sido inicializada. En las versiones modernas de JavaScript no sólo se emplea la palabra reservada *var* sino también *let* y *const*. La introducción de *let* permitió solucionar algunos errores o confusiones que se generaban con *var*. Por ejemplo, con *var* se puede declarar una variable después de inicializada, debido a la elevación (hoisting). Esto significa que, a pesar de que la declaración es levantada hasta el inicio del ámbito de aplicación, la asignación del valor permanece en el mismo sitio donde se realizó. Esta elevación ya no existe con *let*, evitando de esta manera algunas confusiones en el código. También, con *var* es posible declarar la misma variable tantas veces sea requerido. Con *let* la variable sólo puede ser declarada una vez, es decir, el identificador no puede ser reasignado, pero el valor sí puede ser actualizado. La variable *const* se diferencia de *var* y de *let* principalmente por la imposibilidad de reasignar sus valores. Una vez declarada e inicializada, *const* mantiene el mismo valor para todo el bloque de código. Sin embargo, que no se puede reasignar no significa que los valores de *const* sean inmutables. A partir de un método del DOM (MOD) se puede modificar el valor de un string o de un number por ejemplo, mutando así entonces el valor primeramente asignado a *const*.    
 
+### Tipos de funciones
+
+En JavaScript, una función es el conjunto de pasos que el navegador debe seguir para realizar una acción o calcular un valor. Para que estos procedimientos o pasos puedan ser denominados una función, deben haber unos datos de entrada y otros de salida. En general, casi todas las funciones están compuestas de un nombre o identificador (como en las variables), una lista de parámetros y las declaraciones de JavaScript que definen la función. Por más compleja que sea ésta, en el fondo toda función es un *valor*, que podemos emplear en otras funciones o en otras partes del bloque de código.
+
+Dependiendo de la sintaxis, puede haber una declaración de función (Function Declaration) o una expresión de función (Function Expression). En la primera se declaran todos los elementos de la función: identificador, parámetros y declaraciones (sentencias), mientras que la segunda puede ser una función no declarada o anónima, integrada al interior de una expresión u otra construcción sintáctica. En este caso, la expresión de función es un valor, mientras que la declaración de función es un bloque de código. Por esta razón, se recomienda poner un punto y coma al final de la expresión de función, lo cual resulta innecesario en el caso de la declaración de función. Una otra diferencia estriba en el ámbito (scope) de cada una de estas funciones. Mientras que la declaración de función es reconocida globalmente cuando aparece como una sentencia separada (ya que puede ser elevada (hoisted)), el ámbito de la expresión de función está determinado por el lugar dentro del cual la expresión ha sido creada. Lo mismo ocurre con las funciones anidadas: sólo se puede acceder a ellas al interior del bloque de código en el que se encuentran.
+
+Una característica de las funciones en JavaScript es que, a diferencia de otros lenguajes de programación, éstas deben ser llamadas para ejecutarse. El ámbito de las llamadas de activación de una función está determinado por el lugar que ocupa la función dentro de código. Si la llamada está por fuera del alcance de la función, ésta no se activará.
+
+Junto a las expresiones de funciones y  las declaraciones de funciones, hay otras sintaxis para construirlas. Una de estas es la función flecha (Arrow Function). Las funciones flecha siempre son más cortas que las otras funciones y son además siempre anónimas, es decir, no poseen un identificador. Se consideran una alternativa más concisas frente a una expresión de función tradicional. Así, podríamos pasar de una sintaxis tradicional a la sintaxis de la función flecha así:
+
+```
+1) function (a){
+  return a * 10;
+}
+
+2) (a) => {
+  return a * 10;
+ }
+ 
+3) (a) => a * 10;
+ 
+4) a => a * 10;
+
+```
+
 ### Modelo de Objetos del Documento (MOD)
 
 El MOD es una interfaz multiplataforma que trata la estructura del documento HTML o XML en forma de árbol. Las ramas de este árbol terminan en nodos: objetos que representan las partes de las que se compone el documento. Así, la estructura más común de el MOD sería:
 
-documento\
-  /head\
-  /body\
-    //section\
+```
+documento
+  /head
+  /body
+    //section
       ///p
+```
 
 Del 'Document Object', es decir del'documento', nacen dos ramas: /head y /body. De body nacen más ramas, que serían //Section y dentro de ella ///p. El final de cada una de estas ramas es un objeto que pude contener tanto un elemento como un método del MOD. Toda la estructura, el contenido y el estilo de los nodos pueden ser modificados por medio de los métodos MOD.
 
@@ -87,3 +125,7 @@ El MOD virtual (virtualDOM) es una abstracción de los nodos de la estructura ar
 ### Eventos Sensibles (Eventlisteners)
   
 El Eventlistener es un método del DOM que es llamado según la acción que haya sido configurada para ello. El Eventlistener permite por ejemplo que, al hacer click a un botón, se abra un cuadro de diálogo. Es literalmente un método que está a la escucha de que ocurra algún evento para el cual está programado escuchar. Con addEventListener podemos registrar un evento que ocurre no sólo en el HTML sino en todo el DOM, así como agregar más de un listener a un solo evento, es decir, que un mismo evento active varias funciones por ejemplo.
+
+### Sistema de control de versiones
+
+Es una forma de gestionar la evolución de un proyecto de forma colaborativa. Git es un software de control de versiones mientras que GitHub es un sitio web / comunidad que hace uso de las posibilidades de Git.
