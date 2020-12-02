@@ -1,0 +1,15 @@
+{
+  "name": "parcel",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Juan Camilo González Jiménez <info@juancgonzalez.com>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist/",
+    "start": "yarn run clean && parcel src/index.html -p 8080",
+    "build": "parcel build index.html"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
