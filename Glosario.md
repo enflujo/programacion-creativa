@@ -35,7 +35,6 @@ Una serie de términos que nos sirven para tener un lenguaje común y aprender a
 |[Interfaz de Programación de Aplicaciones (API)](#interfaz-de-programación-de-aplicaciones-api)|Application Programming Interface API|
 |[Sistema de control de versiones](#sistema-de-control-de-versiones)|Version Control System (VCS)|
 
-
 ## Ejercicio
 
 - Crear un branch `terminos-NOMBRE`.
@@ -49,7 +48,7 @@ Definiciones no-técnicas de conceptos técnicos.
 
 ### Sintaxis
 
-La forma, las reglas y la estructura que debe tener un lenguaje de programación para que la máquina lo entienda correctamente. 
+La forma, las reglas y la estructura que debe tener un lenguaje de programación para que la máquina lo entienda correctamente.
 
 ### CSS Compilado (SASS o LESS -> CSS)
 
@@ -65,7 +64,8 @@ Cuando la traducción se da entre el mismo lenguaje o se mantiene el mismo nivel
 Negociar con las máquinas un gesto artístico. Es un acto de agenciamiento entre potencias físicas y potencias del dispositivo. En el mejor de los casos produce un devenir en artista post-humano.
 
 ### Programación orientada a objetos POO
-Es un paradigma de programación (es decir, una forma de entender la construcción de un programa) en el cual se estructura el código en piezas simples y reutilizables llamadas clases, a partir de las cuales se crean objetos. Estos objetos y clases se relacionan entre sí, tienen ciertas características (atributos) y son capaces de llevar a cabo ciertas acciones (funciones) dentro del programa. Algunas clases (hijas) pueden heredar atributos y funciones de otras clases (madres). <br> Típico ejemplo: Una clase madre Animal puede tener clases hijas Perro, Gato, Vaca. Todos los objetos de la clase Animal (y por extensión Perro, Gato, Vaca) tendrán un color, un peso, un tamaño (atributos) y podrán desplazarse y alimentarse (funciones). Un objeto de la clase Gato, por ejemplo, heredará de su clase madre Animal los atributos y funciones anteriores y sumará los suyos propios: colorDeBigotes (atributo) y maullar (función). 
+
+Es un paradigma de programación (es decir, una forma de entender la construcción de un programa) en el cual se estructura el código en piezas simples y reutilizables llamadas clases, a partir de las cuales se crean objetos. Estos objetos y clases se relacionan entre sí, tienen ciertas características (atributos) y son capaces de llevar a cabo ciertas acciones (funciones) dentro del programa. Algunas clases (hijas) pueden heredar atributos y funciones de otras clases (madres). `<br>` Típico ejemplo: Una clase madre Animal puede tener clases hijas Perro, Gato, Vaca. Todos los objetos de la clase Animal (y por extensión Perro, Gato, Vaca) tendrán un color, un peso, un tamaño (atributos) y podrán desplazarse y alimentarse (funciones). Un objeto de la clase Gato, por ejemplo, heredará de su clase madre Animal los atributos y funciones anteriores y sumará los suyos propios: colorDeBigotes (atributo) y maullar (función). 
 
 ### Interfaz de Programación de Aplicaciones API
 
@@ -73,7 +73,7 @@ Conjunto de reglas que hacen posible la comunicación entre distintas aplicacion
 
 ### Tipos de variables
 
-Las variables son elementos empleados para almacenar un valor. Estos valores pueden ser llamados de forma tal que un programa pueda funcionar independientemente de los valores introducidos (boolean, string, number). Aunque depende del tipo, las variables se pueden declarar asignando un nombre (identificador) y un valor (aunque las variables *var* y *let* se pueden declarar sin asignarle valor alguno). Cuando en una variable se declara no sólo su identificador sino también un valor, se dice que la variable ha sido inicializada. En las versiones modernas de JavaScript no sólo se emplea la palabra reservada *var* sino también *let* y *const*. La introducción de *let* permitió solucionar algunos errores o confusiones que se generaban con *var*. Por ejemplo, con *var* se puede declarar una variable después de inicializada, debido a la elevación (hoisting). Esto significa que, a pesar de que la declaración es levantada hasta el inicio del ámbito de aplicación, la asignación del valor permanece en el mismo sitio donde se realizó. Esta elevación ya no existe con *let*, evitando de esta manera algunas confusiones en el código. También, con *var* es posible declarar la misma variable tantas veces sea requerido. Con *let* la variable sólo puede ser declarada una vez, es decir, el identificador no puede ser reasignado, pero el valor sí puede ser actualizado. La variable *const* se diferencia de *var* y de *let* principalmente por la imposibilidad de reasignar sus valores. Una vez declarada e inicializada, *const* mantiene el mismo valor para todo el bloque de código. Sin embargo, que no se puede reasignar no significa que los valores de *const* sean inmutables. A partir de un método del DOM (MOD) se puede modificar el valor de un string o de un number por ejemplo, mutando así entonces el valor primeramente asignado a *const*.    
+Las variables son elementos empleados para almacenar un valor. Estos valores pueden ser llamados de forma tal que un programa pueda funcionar independientemente de los valores introducidos (`boolean`, `string`, `number`). Aunque depende del tipo, las variables se pueden declarar asignando un nombre (identificador) y un valor (aunque las variables `var` y `let` se pueden declarar sin asignarle valor alguno). Cuando en una variable se declara no sólo su identificador sino también un valor, se dice que la variable ha sido inicializada. En las versiones modernas de JavaScript no sólo se emplea la palabra reservada `var` sino también `let` y `const`. La introducción de `let` permitió solucionar algunos errores o confusiones que se generaban con `var`. Por ejemplo, con `var` se puede declarar una variable después de inicializada, debido a la elevación (hoisting). Esto significa que, a pesar de que la declaración es levantada hasta el inicio del ámbito de aplicación, la asignación del valor permanece en el mismo sitio donde se realizó. Esta elevación ya no existe con `let`, evitando de esta manera algunas confusiones en el código. También, con `var` es posible declarar la misma variable tantas veces sea requerido. Con `let` la variable sólo puede ser declarada una vez, es decir, el identificador no puede ser reasignado, pero el valor sí puede ser actualizado. La variable `const` se diferencia de `var` y de `let` principalmente por la imposibilidad de reasignar sus valores. Una vez declarada e inicializada, `const` mantiene el mismo valor para todo el bloque de código. Sin embargo, que no se puede reasignar no significa que los valores de `const` sean inmutables. A partir de un método del DOM (MOD) se puede modificar el valor de un `string` o de un `number` por ejemplo, mutando así entonces el valor primeramente asignado a `const`.
 
 ### Tipos de funciones
 
@@ -81,30 +81,33 @@ En JavaScript, una función es el conjunto de pasos que el navegador debe seguir
 
 Dependiendo de la sintaxis, puede haber una declaración de función (Function Declaration) o una expresión de función (Function Expression). En la primera se declaran todos los elementos de la función: identificador, parámetros y declaraciones (sentencias), mientras que la segunda puede ser una función no declarada o anónima, integrada al interior de una expresión u otra construcción sintáctica. En este caso, la expresión de función es un valor, mientras que la declaración de función es un bloque de código. Por esta razón, se recomienda poner un punto y coma al final de la expresión de función, lo cual resulta innecesario en el caso de la declaración de función. Una otra diferencia estriba en el ámbito (scope) de cada una de estas funciones. Mientras que la declaración de función es reconocida globalmente cuando aparece como una sentencia separada (ya que puede ser elevada (hoisted)), el ámbito de la expresión de función está determinado por el lugar dentro del cual la expresión ha sido creada. Lo mismo ocurre con las funciones anidadas: sólo se puede acceder a ellas al interior del bloque de código en el que se encuentran.
 
-Una característica de las funciones en JavaScript es que, a diferencia de otros lenguajes de programación, éstas deben ser llamadas para ejecutarse. El ámbito de las llamadas de activación de una función está determinado por el lugar que ocupa la función dentro de código. Si la llamada está por fuera del alcance de la función, ésta no se activará.
+Una característica de las funciones en JavaScript es que, a diferencia de otros lenguajes de programación, éstas deben ser llamadas para ejecutarse. El ámbito de las llamadas de activación de una función está determinado por el lugar que ocupa la función dentro del código. Si la llamada está por fuera del alcance de la función, ésta no se activará.
 
 Junto a las expresiones de funciones y  las declaraciones de funciones, hay otras sintaxis para construirlas. Una de estas es la función flecha (Arrow Function). Las funciones flecha siempre son más cortas que las otras funciones y son además siempre anónimas, es decir, no poseen un identificador. Se consideran una alternativa más concisas frente a una expresión de función tradicional. Así, podríamos pasar de una sintaxis tradicional a la sintaxis de la función flecha así:
 
-```
-1) function (a){
+```js
+// 1)
+function(a) {
   return a * 10;
 }
 
-2) (a) => {
+// 2)
+(a) => {
   return a * 10;
- }
- 
-3) (a) => a * 10;
- 
-4) a => a * 10;
+}
 
+// 3)
+(a) => a * 10;
+
+// 4)
+a => a * 10;
 ```
 
 ### Modelo de Objetos del Documento (MOD)
 
 El MOD es una interfaz multiplataforma que trata la estructura del documento HTML o XML en forma de árbol. Las ramas de este árbol terminan en nodos: objetos que representan las partes de las que se compone el documento. Así, la estructura más común de el MOD sería:
 
-```
+```md
 documento
   /head
   /body
@@ -112,19 +115,19 @@ documento
       ///p
 ```
 
-Del 'Document Object', es decir del 'documento', nacen dos ramas: /head y /body. De body nacen más ramas, que serían //Section y dentro de ella ///p. El final de cada una de estas ramas es un objeto que pude contener tanto un elemento como un método del MOD. Toda la estructura, el contenido y el estilo de los nodos pueden ser modificados por medio de los métodos MOD.
+Del 'Document Object', es decir del 'documento', nacen dos ramas: `/head` y `/body`. De body nacen más ramas, que serían `//section` y dentro de ella `///p`. El final de cada una de estas ramas es un objeto que pude contener tanto un elemento como un método del MOD. Toda la estructura, el contenido y el estilo de los nodos pueden ser modificados por medio de los métodos MOD.
 
 ### Elementos del MOD
 
-Un elemento del MOD representa un elemento HTML. Esto significa que los elementos MOD son todos aquellos elementos HTML admitidos por el WWW Consortium. Ejemplos de estos elementos son las etiquetas DIV, P, A, TABLE, UL, etc.
+Un elemento del MOD representa un elemento HTML. Esto significa que los elementos MOD son todos aquellos elementos HTML admitidos por el WWW Consortium. Ejemplos de estos elementos son las etiquetas `<div>`, `<p>`, `<a>`, `<table>`, `<ul>`, etc.
 
 ### MOD virtual
 
-El MOD virtual (virtualDOM) es una abstracción de los nodos de la estructura arbórea del MOD. Esta abstracción permite que la actualización de los datos de la interfaz de usuario sea mucho más eficiente. Por ejemplo, en HTML tenemos una tabla con valores dinámicos que el usuario modifica por medio de un formulario. Cada nuevo valor introducido transforma un valor ya existente de la tabla. Sin el MOD virtual, el navegador debe cargar todos los nodos de la estructura del HTML, consumiendo grandes recursos informáticos cuando los cambios son frecuentes o la información es pesada. Gracias al MOD virtual, el framework en el que se está ejecutando el código (React, por ejemplo) guarda una abstracción o copia ‘ideal’ del MOD, de tal manera que, al actualizar los datos, se carguen solamente los nuevos valores del nodo modificado y no toda la estructura y objetos del documento. 
+El MOD virtual (virtualDOM) es una abstracción de los nodos de la estructura arbórea del MOD. Esta abstracción permite que la actualización de los datos de la interfaz de usuario sea mucho más eficiente. Por ejemplo, en HTML tenemos una tabla con valores dinámicos que el usuario modifica por medio de un formulario. Cada nuevo valor introducido transforma un valor ya existente de la tabla. Sin el MOD virtual, el navegador debe cargar todos los nodos de la estructura del HTML, consumiendo grandes recursos informáticos cuando los cambios son frecuentes o la información es pesada. Gracias al MOD virtual, el framework en el que se está ejecutando el código (React, por ejemplo) guarda una abstracción o copia ‘ideal’ del MOD, de tal manera que, al actualizar los datos, se carguen solamente los nuevos valores del nodo modificado y no toda la estructura y objetos del documento.
 
 ### Eventos Sensibles (Eventlisteners)
   
-El Eventlistener es un método del DOM que es llamado según la acción que haya sido configurada para ello. El Eventlistener permite por ejemplo que, al hacer click a un botón, se abra un cuadro de diálogo. Es literalmente un método que está a la escucha de que ocurra algún evento para el cual está programado escuchar. Con addEventListener podemos registrar un evento que ocurre no sólo en el HTML sino en todo el DOM, así como agregar más de un listener a un solo evento, es decir, que un mismo evento active varias funciones por ejemplo.
+El `eventlistener` es un método del DOM que es llamado según la acción que haya sido configurada para ello. El `eventlistener` permite por ejemplo que, al hacer clic a un botón, se abra un cuadro de diálogo. Es literalmente un método que está a la escucha de que ocurra algún evento para el cual está programado escuchar. Con `addEventListener` podemos registrar un evento que ocurre no sólo en el HTML sino en todo el DOM, así como agregar más de un *listener* a un solo evento, es decir, que un mismo evento active varias funciones por ejemplo.
 
 ### Sistema de control de versiones
 
