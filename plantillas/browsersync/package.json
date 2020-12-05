@@ -1,0 +1,13 @@
+{
+  "name": "bs-node",
+  "version": "0.0.1",
+  "main": "index.html",
+  "author": "Juan Camilo González Jiménez <info@juancgonzalez.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node servidor.js"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.13"
+  }
+}
