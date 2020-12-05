@@ -1,7 +1,6 @@
 {
   "name": "parcel",
   "version": "0.0.1",
-  "main": "index.js",
   "author": "Juan Camilo González Jiménez <info@juancgonzalez.com>",
   "license": "MIT",
   "scripts": {

@@ -165,6 +165,14 @@ Vamos a hacer de la pantalla un espacio para pintar. Vamos a usar la analogía d
 
 Pintar un bodegón observándolo directamente en sus casas. Es pintura digital al natural pero la manera de componer esta imagen en la pantalla es a partir de bloques y formas de color en HTML.
 
+### Instrucciones
+
+- Crear una rama llamada `html-SU-NOMBRE`.
+- Crear una carpeta con su nombre en `/ejercicios/HTML/`. Le nombre de la carpeta sin tildes o espacios.
+- Allí ponen sus archivos (Para hacer el desarrollo más amigable les recomiendo usar una plantilla como la de "browsersync" para tener *livereload* mientras escriben el código.)
+- Cuando terminen hace un *Pull Request*
+- Esperan a que lo revise y cuando lo apruebe y yo haga *merge*, pueden eliminar la rama que crearon para esto.
+
 ### Requisitos
 
 - Sólo debe producirse 1 pedido al servidor: que nos mande un `index.html`.
