@@ -1,6 +1,6 @@
-# HTML
+# El archivo index.html
 
-Estos ejercicios contienen solamente un archivo: `index.html`. Es el único archivo que es absolutamente indispensable para una página de Internet.
+El archivo `index.html` es el único que es absolutamente indispensable para una página de Internet.
 
 El nombre es **importante** para un servidor. Si creamos una carpeta en un servidor y ponemos el archivo `index.html`, este es el primer archivo que se le envía al usuario.
 
@@ -28,7 +28,7 @@ Veamos cómo funciona una página web sencilla.
     | Explorador |                       | Servidor |
      ------------                         ----------
           |
-Escribimos una url  
+Escribimos una url
 (Petición http con método GET)
           |
           |
@@ -133,6 +133,7 @@ en adelante.
 ¡¡¡¡Mierda!!!!! que paseo para mostrar una página muy sencilla. Esto sucede bastante rápido generalmente, pero debemos tener en cuenta este proceso a la hora de crear cualquier aplicación. No sólo para ser conscientes de cuanto pesan los recursos que ponemos en el servidor, sino también para entender que hace cada archivo: HTML, CSS y JavaScript.
 
 ¿Porqué es importante entonces llamar el HTML `index.html`?
+
 Porque en la petición HTTP el usuario no tiene cómo saber el nombre del HTML que pusimos. Así que todo servidor responde a esa primera petición con el archivo `index.html`. Todo los otros recursos que están dentro del HTML tiene nombres y esos pueden ser lo que sea.
 
 ## Iniciar un HTML
@@ -155,57 +156,4 @@ Si no queremos entrar al terminal, ejecutar comandos y demás, podemos desarroll
 
 Sirve para desarrollar sin las complicaciones de montar un servidor en Internet, incluso funciona sin conexión a Internet (si todos los recursos los tenemos en el computador). Es la forma de trabajar aplicaciones más robustas y como desarrolladores es fundamental saber cómo trabajar localmente. Es donde tenemos más libertad de experimentar, no tenemos limitaciones de espacio (el disco duro del computador), tampoco de velocidad ya que los archivos no se tiene que descargar. Parece la más complicada inicialmente, pero es el método más recomendado a largo plazo.
 
-Ver [Plantillas](/plantillas/README.md) para ver formas de crear un servidor local.
-
-## Ejercicio
-
-Vamos a hacer de la pantalla un espacio para pintar. Vamos a usar la analogía del lienzo y el bodegón. Todo debe quedar en un sólo archivo `index.html`.
-
-### Objetivo
-
-Pintar un bodegón observándolo directamente en sus casas. Es pintura digital al natural pero la manera de componer esta imagen en la pantalla es a partir de bloques y formas de color en HTML.
-
-### Instrucciones
-
-- Crear una rama llamada `html-SU-NOMBRE`.
-- Crear una carpeta con su nombre en `/ejercicios/HTML/`. Le nombre de la carpeta sin tildes o espacios.
-- Allí ponen sus archivos (Para hacer el desarrollo más amigable les recomiendo usar una plantilla como la de "browsersync" para tener *livereload* mientras escriben el código.)
-- Cuando terminen hace un *Pull Request*
-- Esperan a que lo revise y cuando lo apruebe y yo haga *merge*, pueden eliminar la rama que crearon para esto.
-
-### Requisitos
-
-- Sólo debe producirse 1 pedido al servidor: que nos mande un `index.html`.
-- Dentro de este no pueden incluir imágenes externas, fuentes, sonidos, videos, etc. Sólo vamos a trabajar con bloques de HTML y CSS dentro del mismo archivo de HTML.
-- Pueden usar CSS "enlinea" o dentro del tag `<style>`:
-
-**CSS enlinea**
-
-```html
-<div style="background-color:#e03f34;"></div>
-```
-
-**CSS en `<style>`**
-
-```html
-<head>
-  <!-- ... otros tags ... -->
-  <style>
-    .fondoRojo {
-      background-color: #e03f34;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="fondoRojo"></div>
-</body>
-```
-
-- Debe tener un nombre que se imprima en la pestaña del explorador (`<title>` dentro de `<head>`).
-- No pueden usar JavaScript, sólo HTML y CSS.
-- El único tag de html que **NO** pueden usar es `svg`.
-
-¿Inspiración? Tatsuo Horiuchi pinta en Excel :)
-
-[![Tatsuo Horiuchi](https://img.youtube.com/vi/OrwBc6PwAcY/0.jpg)](https://www.youtube.com/watch?v=OrwBc6PwAcY)
+Ver [Plantillas](../plantillas) para conocer formas de crear un servidor local.
