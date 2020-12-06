@@ -61,3 +61,4 @@ Ir a [Glosario](Glosario.md)
 - ..:: Hugo Idárraga ::..
 - ..:: Lina Orejuela ::../LaTiNx - CyBorG95!
 - ..:: Julián García ::..
+- ..:: João Gabriel Almeida ::..
