@@ -2,6 +2,11 @@
 
 Para hacer de una carpeta en el computador un servidor local que expone HTML estático.
 
+- :white_check_mark: No requiere dependencias, sólo hay que tener Python instalado.
+- :white_check_mark: Simple de iniciar y comenzar a trabajar.
+- :x: No tiene _Live Reload_.
+- :x: No compila el código.
+
 ## Python 2
 
 En el terminal vamos a la carpeta que contenga el `index.html` y corremos este comando

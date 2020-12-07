@@ -4,9 +4,9 @@
   "author": "Juan Camilo González Jiménez <info@juancgonzalez.com>",
   "license": "MIT",
   "scripts": {
-    "clean": "rimraf dist/",
-    "start": "yarn run clean && parcel src/index.html -p 8080",
-    "build": "parcel build index.html"
+    "clean": "rimraf www/",
+    "start": "yarn run clean && parcel serve src/index.html --out-dir www -p 8080",
+    "build": "yarn run clean && parcel build src/index.html --out-dir www"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4"

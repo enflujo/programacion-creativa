@@ -1,5 +1,4 @@
 # Carpetas de desarrollo
-dist
 node_modules
 .cache
 *.log
