@@ -2,6 +2,7 @@
 
 Una serie de términos que nos sirven para tener un lenguaje común y aprender a buscar soluciones a problemas específicos.
 
+<!-- prettier-ignore -->
 |Español|Inglés|
 |---|---|
 |[Tipos de variables (diferencias entre `const`, `let`, `var`)](#tipos-de-variables)|Variables|
@@ -37,7 +38,7 @@ Una serie de términos que nos sirven para tener un lenguaje común y aprender a
 
 ## Ejercicio
 
-- Crear un branch `terminos-NOMBRE`.
+- Crear un branch con el nombre `glosario`.
 - Seleccionar al menos 2 términos (más si quieren) y escribir definiciones cortas de estos en un lenguaje que tenga sentido para ustedes. Si el término ya esta definido en "Definiciones" pueden sugerir cambios o agregar contenido.
 - Buscar 1 término adicional que les interesa entender, sumarlos a la lista y escribir su definición corta.
 - Hacer un hipervínculo desde el término en español en la tabla y la definición usando anclas.
@@ -56,7 +57,7 @@ Sass y Less son preprocesadores de CSS. Un preprocesador permite ampliar las pos
 
 ### Compilador / Transpilador (Babel)
 
-Los lenguajes de programación se ubican en diferentes rangos de abstracción, un lenguaje de alto nivel es el que se acerca a la forma de escribir / expresar humana, mientras que uno de bajo nivel se acerca al lenguaje máquina (formado por unos y ceros). Los compiladores traducen de un lenguaje a otro para que pueda ser leído y ejecutado sin problemas, esa traducción puede ser de un lenguaje de alto nivel a uno de bajo nivel. 
+Los lenguajes de programación se ubican en diferentes rangos de abstracción, un lenguaje de alto nivel es el que se acerca a la forma de escribir / expresar humana, mientras que uno de bajo nivel se acerca al lenguaje máquina (formado por unos y ceros). Los compiladores traducen de un lenguaje a otro para que pueda ser leído y ejecutado sin problemas, esa traducción puede ser de un lenguaje de alto nivel a uno de bajo nivel.
 Cuando la traducción se da entre el mismo lenguaje o se mantiene el mismo nivel de abstracción se usa también la palabra transpilación, por ejemplo: Babel traduce de JavaScript ES6 a ES5 para aumentar su compatibilidad sin cambiar de lenguaje. Un equivalente humano sería traducir de un idioma a otro (compilar) o hacer el mismo proceso de traducción de un dialecto a otro dentro del mismo idioma (transpilar).
 
 ### Programación Creativa
@@ -65,7 +66,7 @@ Negociar con las máquinas un gesto artístico. Es un acto de agenciamiento entr
 
 ### Programación orientada a objetos POO
 
-Es un paradigma de programación (es decir, una forma de entender la construcción de un programa) en el cual se estructura el código en piezas simples y reutilizables llamadas clases, a partir de las cuales se crean objetos. Estos objetos y clases se relacionan entre sí, tienen ciertas características (atributos) y son capaces de llevar a cabo ciertas acciones (funciones) dentro del programa. Algunas clases (hijas) pueden heredar atributos y funciones de otras clases (madres). `<br>` Típico ejemplo: Una clase madre Animal puede tener clases hijas Perro, Gato, Vaca. Todos los objetos de la clase Animal (y por extensión Perro, Gato, Vaca) tendrán un color, un peso, un tamaño (atributos) y podrán desplazarse y alimentarse (funciones). Un objeto de la clase Gato, por ejemplo, heredará de su clase madre Animal los atributos y funciones anteriores y sumará los suyos propios: colorDeBigotes (atributo) y maullar (función). 
+Es un paradigma de programación (es decir, una forma de entender la construcción de un programa) en el cual se estructura el código en piezas simples y reutilizables llamadas clases, a partir de las cuales se crean objetos. Estos objetos y clases se relacionan entre sí, tienen ciertas características (atributos) y son capaces de llevar a cabo ciertas acciones (funciones) dentro del programa. Algunas clases (hijas) pueden heredar atributos y funciones de otras clases (madres). `<br>` Típico ejemplo: Una clase madre Animal puede tener clases hijas Perro, Gato, Vaca. Todos los objetos de la clase Animal (y por extensión Perro, Gato, Vaca) tendrán un color, un peso, un tamaño (atributos) y podrán desplazarse y alimentarse (funciones). Un objeto de la clase Gato, por ejemplo, heredará de su clase madre Animal los atributos y funciones anteriores y sumará los suyos propios: colorDeBigotes (atributo) y maullar (función).
 
 ### Interfaz de Programación de Aplicaciones API
 
@@ -77,13 +78,13 @@ Las variables son elementos empleados para almacenar un valor. Estos valores pue
 
 ### Tipos de funciones
 
-En JavaScript, una función es el conjunto de pasos que el navegador debe seguir para realizar una acción o calcular un valor. Para que estos procedimientos o pasos puedan ser denominados una función, deben haber unos datos de entrada y otros de salida. En general, casi todas las funciones están compuestas de un nombre o identificador (como en las variables), una lista de parámetros y las declaraciones de JavaScript que definen la función. Por más compleja que sea ésta, en el fondo toda función es un *valor*, que podemos emplear en otras funciones o en otras partes del bloque de código.
+En JavaScript, una función es el conjunto de pasos que el navegador debe seguir para realizar una acción o calcular un valor. Para que estos procedimientos o pasos puedan ser denominados una función, deben haber unos datos de entrada y otros de salida. En general, casi todas las funciones están compuestas de un nombre o identificador (como en las variables), una lista de parámetros y las declaraciones de JavaScript que definen la función. Por más compleja que sea ésta, en el fondo toda función es un _valor_, que podemos emplear en otras funciones o en otras partes del bloque de código.
 
 Dependiendo de la sintaxis, puede haber una declaración de función (Function Declaration) o una expresión de función (Function Expression). En la primera se declaran todos los elementos de la función: identificador, parámetros y declaraciones (sentencias), mientras que la segunda puede ser una función no declarada o anónima, integrada al interior de una expresión u otra construcción sintáctica. En este caso, la expresión de función es un valor, mientras que la declaración de función es un bloque de código. Por esta razón, se recomienda poner un punto y coma al final de la expresión de función, lo cual resulta innecesario en el caso de la declaración de función. Una otra diferencia estriba en el ámbito (scope) de cada una de estas funciones. Mientras que la declaración de función es reconocida globalmente cuando aparece como una sentencia separada (ya que puede ser elevada (hoisted)), el ámbito de la expresión de función está determinado por el lugar dentro del cual la expresión ha sido creada. Lo mismo ocurre con las funciones anidadas: sólo se puede acceder a ellas al interior del bloque de código en el que se encuentran.
 
 Una característica de las funciones en JavaScript es que, a diferencia de otros lenguajes de programación, éstas deben ser llamadas para ejecutarse. El ámbito de las llamadas de activación de una función está determinado por el lugar que ocupa la función dentro del código. Si la llamada está por fuera del alcance de la función, ésta no se activará.
 
-Junto a las expresiones de funciones y  las declaraciones de funciones, hay otras sintaxis para construirlas. Una de estas es la función flecha (Arrow Function). Las funciones flecha siempre son más cortas que las otras funciones y son además siempre anónimas, es decir, no poseen un identificador. Se consideran una alternativa más concisas frente a una expresión de función tradicional. Así, podríamos pasar de una sintaxis tradicional a la sintaxis de la función flecha así:
+Junto a las expresiones de funciones y las declaraciones de funciones, hay otras sintaxis para construirlas. Una de estas es la función flecha (Arrow Function). Las funciones flecha siempre son más cortas que las otras funciones y son además siempre anónimas, es decir, no poseen un identificador. Se consideran una alternativa más concisas frente a una expresión de función tradicional. Así, podríamos pasar de una sintaxis tradicional a la sintaxis de la función flecha así:
 
 ```js
 // 1)
@@ -107,7 +108,7 @@ a => a * 10;
 
 El MOD es una interfaz multiplataforma que trata la estructura del documento HTML o XML en forma de árbol. Las ramas de este árbol terminan en nodos: objetos que representan las partes de las que se compone el documento. Así, la estructura más común de el MOD sería:
 
-```md
+```bash
 documento
   /head
   /body
@@ -126,8 +127,8 @@ Un elemento del MOD representa un elemento HTML. Esto significa que los elemento
 El MOD virtual (virtualDOM) es una abstracción de los nodos de la estructura arbórea del MOD. Esta abstracción permite que la actualización de los datos de la interfaz de usuario sea mucho más eficiente. Por ejemplo, en HTML tenemos una tabla con valores dinámicos que el usuario modifica por medio de un formulario. Cada nuevo valor introducido transforma un valor ya existente de la tabla. Sin el MOD virtual, el navegador debe cargar todos los nodos de la estructura del HTML, consumiendo grandes recursos informáticos cuando los cambios son frecuentes o la información es pesada. Gracias al MOD virtual, el framework en el que se está ejecutando el código (React, por ejemplo) guarda una abstracción o copia ‘ideal’ del MOD, de tal manera que, al actualizar los datos, se carguen solamente los nuevos valores del nodo modificado y no toda la estructura y objetos del documento.
 
 ### Eventos Sensibles (Eventlisteners)
-  
-El `eventlistener` es un método del DOM que es llamado según la acción que haya sido configurada para ello. El `eventlistener` permite por ejemplo que, al hacer clic a un botón, se abra un cuadro de diálogo. Es literalmente un método que está a la escucha de que ocurra algún evento para el cual está programado escuchar. Con `addEventListener` podemos registrar un evento que ocurre no sólo en el HTML sino en todo el DOM, así como agregar más de un *listener* a un solo evento, es decir, que un mismo evento active varias funciones por ejemplo.
+
+El `eventlistener` es un método del DOM que es llamado según la acción que haya sido configurada para ello. El `eventlistener` permite por ejemplo que, al hacer clic a un botón, se abra un cuadro de diálogo. Es literalmente un método que está a la escucha de que ocurra algún evento para el cual está programado escuchar. Con `addEventListener` podemos registrar un evento que ocurre no sólo en el HTML sino en todo el DOM, así como agregar más de un _listener_ a un solo evento, es decir, que un mismo evento active varias funciones por ejemplo.
 
 ### Sistema de control de versiones
 

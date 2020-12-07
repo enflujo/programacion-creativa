@@ -156,4 +156,4 @@ Si no queremos entrar al terminal, ejecutar comandos y demás, podemos desarroll
 
 Sirve para desarrollar sin las complicaciones de montar un servidor en Internet, incluso funciona sin conexión a Internet (si todos los recursos los tenemos en el computador). Es la forma de trabajar aplicaciones más robustas y como desarrolladores es fundamental saber cómo trabajar localmente. Es donde tenemos más libertad de experimentar, no tenemos limitaciones de espacio (el disco duro del computador), tampoco de velocidad ya que los archivos no se tiene que descargar. Parece la más complicada inicialmente, pero es el método más recomendado a largo plazo.
 
-Ver [Plantillas](../plantillas) para conocer formas de crear un servidor local.
+Ver [Plantillas](../../plantillas) para conocer formas de crear un servidor local.
