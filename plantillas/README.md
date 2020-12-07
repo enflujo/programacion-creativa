@@ -22,13 +22,13 @@ Una pista es que nunca encontramos un `index.html` sino que este archivo tiene o
 
 ### Sólo servidor
 
-- [browsersync]('./browsersync')
-- [simple-node]('./simple-node')
-- [simple-python]('./simple-python')
+- browsersync
+- simple-node
+- simple-python
 
 ### Servidor desde compilador
 
-- [parcel]('./parcel')
-- rollup
-- snowpack
-- [webpack](./webpack)
+- parcel
+- _rollup_
+- _snowpack_
+- webpack
