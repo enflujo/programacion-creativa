@@ -6,7 +6,7 @@ Es un buen ejercicio para entender la idea de `loops` en JavaScript ya que les s
 
 ## Requisitos
 
-- Como en todos los ejercicios, seguir las [instrucciones generales](../ejercicios).
+- Como en todos los ejercicios, seguir las [instrucciones generales](../).
 - Crear un `<canvas>` en el `index.html`.
 - En JavaScript, hacer que el `canvas` ocupe la pantalla completa.
 - Crear al menos 3 _loops_ pueden ser: `for` `while` o `forEach`.
