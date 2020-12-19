@@ -73,7 +73,7 @@ El `package.json` es algo así:
 }
 ```
 
-El archivo `.girignore` es algo así:
+El archivo `.gitignore` es algo así:
 
 ```bash
 # Carpetas de desarrollo
