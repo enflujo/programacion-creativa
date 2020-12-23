@@ -1,3 +1,5 @@
+![Logo Programación Creativa @jeanniffer](./docs/pc-social.png)
+
 # Programación Creativa con JavaScript
 
 Este espacio lo vamos a utilizar como introducción a la programación creativa.
@@ -11,6 +13,8 @@ A veces es de estructura jerárquica y a veces es rizomática.
 A veces los guío y a veces los motivo a proponer derivas.
 
 A veces les ayudo y a veces los instigo.
+
+Los ejercicios quedan publicados en: https://enflujo.github.io/programacion-creativa/
 
 ## Contenido
 
