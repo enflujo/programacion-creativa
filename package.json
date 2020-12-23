@@ -1,0 +1,26 @@
+{
+  "name": "programacion-creativa",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/enflujo/programacion-creativa.git",
+  "author": "Juan Camilo González Jiménez <j.gonzalezj@uniandes.edu.co>",
+  "license": "MIT",
+  "scripts": {
+    "build": "nodemon ./sitio/inicio.js",
+    "start": "nodemon ./admin"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "@koa/router": "^10.0.0",
+    "concurrently": "^5.3.0",
+    "cross-spawn": "^7.0.3",
+    "ejs": "^3.1.5",
+    "fs-extra": "^9.0.1",
+    "koa": "^2.13.0",
+    "koa-ejs": "^4.3.0",
+    "lokijs": "^1.5.11",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.2.1",
+    "wait-on": "^5.2.0"
+  }
+}

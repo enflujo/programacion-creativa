@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entre estar dormido y servir el primer café por la mañana</title>
+    <style>
+      html {
+        box-sizing: border-box;
+        height: 100%;
+      }
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #fondo {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(199, 170, 132);
+      }
+
+      #marco {
+        width: 500px;
+        height: 500px;
+        background-color: antiquewhite;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      #plato {
+        margin-top: 350px;
+        margin-left: 80px;
+        width: 300px;
+        height: 100px;
+        border-radius: 50%;
+        background-image: linear-gradient(to right, #333 1%, rgba(255, 255, 255, 0) 20%);
+        background-position: top;
+        background-size: 2px 100px;
+        background-repeat: repeat-x;
+        position: relative;
+        z-index: 1;
+      }
+
+      .onda {
+        position: absolute;
+        border-radius: 50%;
+        cursor: grabbing;
+        filter: blur(0px);
+      }
+
+      .onda:hover {
+        animation: tocarOnda 0.3s alternate infinite;
+      }
+
+      @keyframes tocarOnda {
+        0% {
+          filter: blur(0px);
+        }
+
+        100% {
+          filter: blur(2px);
+        }
+      }
+
+      #plato .onda {
+        border: 2px dotted #d0ccc7;
+      }
+
+      #plato .onda:nth-child(1) {
+        width: 250px;
+        height: 80px;
+        top: 8px;
+        left: 25px;
+      }
+
+      #plato .onda:nth-child(2) {
+        width: 230px;
+        height: 70px;
+        top: 14px;
+        left: 35px;
+      }
+
+      #taza {
+        width: 240px;
+        height: 250px;
+        left: 130px;
+        top: 170px;
+        position: absolute;
+        background-color: rgba(66, 61, 57, 0.418);
+        z-index: 2;
+      }
+
+      #taza .onda {
+        border: 1px dashed #ffffffd3;
+      }
+      /*base pequeña*/
+      #taza .onda:nth-child(1) {
+        width: 80px;
+        height: 20px;
+        bottom: 8px;
+        left: 50px;
+      }
+
+      #taza .onda:nth-child(2) {
+        width: 100px;
+        height: 20px;
+        bottom: 12px;
+        left: 40px;
+      }
+
+      #taza .onda:nth-child(3) {
+        width: 120px;
+        height: 20px;
+        bottom: 18px;
+        left: 30px;
+      }
+      /*cilindro*/
+      #taza .onda:nth-child(4) {
+        width: 130px;
+        height: 19px;
+        bottom: 24px;
+        left: 25px;
+      }
+
+      #taza .onda:nth-child(5) {
+        width: 130px;
+        height: 19px;
+        bottom: 28px;
+        left: 30px;
+      }
+
+      #taza .onda:nth-child(6) {
+        width: 130px;
+        height: 19px;
+        bottom: 32px;
+        left: 25px;
+      }
+
+      #taza .onda:nth-child(7) {
+        width: 130px;
+        height: 19px;
+        bottom: 36px;
+        left: 30px;
+      }
+
+      #taza .onda:nth-child(8) {
+        width: 130px;
+        height: 19px;
+        bottom: 40px;
+        left: 25px;
+      }
+
+      #taza .onda:nth-child(9) {
+        width: 130px;
+        height: 19px;
+        bottom: 44px;
+        left: 30px;
+      }
+
+      #taza .onda:nth-child(10) {
+        width: 130px;
+        height: 19px;
+        bottom: 48px;
+        left: 25px;
+      }
+
+      #taza .onda:nth-child(11) {
+        width: 130px;
+        height: 19px;
+        bottom: 52px;
+        left: 30px;
+      }
+
+      #taza .onda:nth-child(12) {
+        width: 130px;
+        height: 19px;
+        bottom: 56px;
+        left: 25px;
+      }
+
+      #taza .onda:nth-child(13) {
+        width: 130px;
+        height: 19px;
+        bottom: 60px;
+        left: 30px;
+      }
+
+      #taza .onda:nth-child(14) {
+        width: 130px;
+        height: 19px;
+        bottom: 64px;
+        left: 25px;
+      }
+
+      #taza .onda:nth-child(15) {
+        width: 130px;
+        height: 19px;
+        bottom: 68px;
+        left: 30px;
+      }
+
+      #taza .onda:nth-child(16) {
+        width: 130px;
+        height: 19px;
+        bottom: 72px;
+        left: 25px;
+      }
+
+      #taza .onda:nth-child(17) {
+        width: 130px;
+        height: 19px;
+        bottom: 76px;
+        left: 30px;
+      }
+      /*copa*/
+      #taza .onda:nth-child(18) {
+        width: 140px;
+        height: 19px;
+        bottom: 78px;
+        left: 22px;
+      }
+
+      #taza .onda:nth-child(19) {
+        width: 150px;
+        height: 19px;
+        bottom: 80px;
+        left: 18px;
+      }
+
+      #taza .onda:nth-child(20) {
+        width: 160px;
+        height: 19px;
+        bottom: 82px;
+        left: 14px;
+      }
+
+      #lado .linea {
+        position: absolute;
+        transform: rotate(24deg);
+        border-radius: 50%;
+        border: 2px dotted rgba(255, 255, 255, 0.945);
+        clip-path: polygon(0 0, 50% 0%, 70% 98%, 0 100%);
+      }
+
+      #lado .linea:nth-child(1) {
+        width: 80px;
+        height: 37px;
+        bottom: 35px;
+        left: -20px;
+        border-radius: 50%;
+      }
+
+      #lado .linea:nth-child(2) {
+        width: 76px;
+        height: 38px;
+        bottom: 38px;
+        left: -18px;
+        opacity: 0.6;
+      }
+
+      #humo .bloque {
+        opacity: 0;
+        position: absolute;
+        top: 300px;
+        left: 50%;
+        width: 5%;
+        height: 5%;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.925), rgba(255, 255, 255, 0.863));
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        filter: blur(20px);
+        z-index: 9;
+      }
+
+      #humo .bloque:nth-child(1) {
+        animation: humo1 5s infinite;
+      }
+
+      #humo .bloque:nth-child(2) {
+        animation: humo2 7s infinite;
+      }
+
+      @keyframes humo1 {
+        20% {
+          opacity: 1;
+        }
+
+        100% {
+          width: 10%;
+          height: 20%;
+          margin-top: -10%;
+          margin-left: 5%;
+          opacity: 0;
+        }
+      }
+
+      @keyframes humo2 {
+        20% {
+          opacity: 1;
+        }
+
+        100% {
+          width: 10%;
+          height: 20%;
+          margin-top: -10%;
+          margin-left: 3%;
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="marco">
+      <div id="humo">
+        <span class="bloque"></span>
+        <span class="bloque"></span>
+      </div>
+      <div id="taza">
+        <!--base pequeña-->
+        <span class="onda 1"></span>
+        <span class="onda 2"></span>
+        <span class="onda 3"></span>
+        <!--cilindro-->
+        <span class="onda 4"></span>
+        <span class="onda 5"></span>
+        <span class="onda 6"></span>
+        <span class="onda 7"></span>
+        <span class="onda 8"></span>
+        <span class="onda 9"></span>
+        <span class="onda 10"></span>
+        <span class="onda 11"></span>
+        <span class="onda 12"></span>
+        <span class="onda 13"></span>
+        <span class="onda 14"></span>
+        <span class="onda 15"></span>
+        <span class="onda 16"></span>
+        <span class="onda 17"></span>
+        <!--copa-->
+        <span class="onda 18"></span>
+        <span class="onda 19"></span>
+        <span class="onda 20"></span>
+        <!--lado-->
+        <span id="lado">
+          <span class="linea"></span>
+          <span class="linea"></span>
+        </span>
+      </div>
+      <div id="plato"><span class="onda"></span><span class="onda"></span></div>
+    </div>
+
+    <div id="fondo"></div>
+  </body>
+</html>
