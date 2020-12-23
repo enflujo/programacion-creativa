@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.typekit.net/ksv6tvg.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <meta property="og:title" content="Programación Creativa" />
+    <meta property="og:site_name" content="EnFlujo" />
+    <meta property="og:url" content="https://enflujo.github.io/programacion-creativa/" />
+    <meta
+      property="og:description"
+      content="Un espacio para aprender sobre programación, con intensiones de creación artística."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./pc-social.png" />
+
+    <title>Programación Creativa</title>
+  </head>
+  <body>
+    <header>
+      <div id="logo"></div>
+      <h1 id="titulo">Programación Creativa</h1>
+    </header>
+
+    <main>
+      <% htmlWebpackPlugin.options.entradas.forEach((entrada) => { %>
+      <div class="entrada">
+        <a class="enlace" href="./<%= entrada.usuario %>/<%= entrada.ejercicio %>"></a>
+
+        <iframe
+          src="./<%= entrada.usuario %>/<%= entrada.ejercicio %>"
+          width="1200"
+          height="640"
+          frameborder="0"
+        ></iframe>
+
+        <div class="info">
+          <a href="https://github.com/<%= entrada.usuario %>" target="_blank">@<%= entrada.usuario %></a>
+          <span class="ejercicio"> | Ejercicio: <%= entrada.ejercicio %></span>
+        </div>
+      </div>
+
+      <% }) %>
+    </main>
+
+    <footer>
+      <a href="https://github.com/enflujo/programacion-creativa">
+        <img src="<%=require('./imgs/GitHub-Mark-Light-32px.png')%>" alt="Enlace a Github" />
+      </a>
+    </footer>
+  </body>
+</html>
