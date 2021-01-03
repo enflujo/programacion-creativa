@@ -82,17 +82,58 @@
         color: #dfc673;
         cursor: pointer;
       }
+      .switch {
+        display: inline-block;
+        position: relative;
+        width: 50px;
+        height: 25px;
+        border-radius: 20px;
+        background: #dfd9ea;
+        transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+        vertical-align: middle;
+        cursor: pointer;
+      }
+      .switch::before {
+        content: '';
+        position: absolute;
+        top: 1px;
+        left: 2px;
+        width: 22px;
+        height: 22px;
+        background: #fafafa;
+        border-radius: 50%;
+        transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1), background 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+          box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .switch:active::before {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28), 0 0 0 20px rgba(128, 128, 128, 0.1);
+      }
+      input:checked + .switch {
+        background: #72da67;
+      }
+      input:checked + .switch::before {
+        left: 27px;
+        background: #fff;
+      }
+      input:checked + .switch:active::before {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28), 0 0 0 20px rgba(0, 150, 136, 0.2);
+      }
     </style>
   </head>
   <body>
     <ul>
-      <% ejercicios.forEach((ejercicio) => { %>
+      <% ejercicios.forEach((ejercicio, i) => { %>
       <li>
         <span class="ejercicio-nombre"><%= ejercicio.nombre %></span>
         <% if (ejercicio.entradas.length) { %>
         <ul>
-          <% ejercicio.entradas.forEach((entrada) => { %>
+          <% ejercicio.entradas.forEach((entrada, j) => { %>
           <li class="entrada">
+            <input type="checkbox" hidden id="entrada-<%= i %>-<%= j %>" <%= entrada.exportada ? 'checked' : '' %>
+            onchange="exportar('<%= entrada.info.rutaArchivos %>', '<%= entrada.usuario %>', '<%= ejercicio.nombre %>',
+            this)"/>
+            <label class="switch" for="entrada-<%= i %>-<%= j %>"></label>
+
             <span class="fab fa-github-alt">
               <a href="https://github.com/<%= entrada.usuario %>" target="_blank"><%= entrada.usuario %></a>
             </span>
@@ -106,12 +147,6 @@
               ><%= script %></span
             >
             <% } %> <% } %>
-            <!-- Exportar -->
-            <span
-              class="exportar fas fa-file-export"
-              onclick="exportar('<%= entrada.info.rutaArchivos %>', '<%= entrada.usuario %>', '<%= ejercicio.nombre %>')"
-              >Exportar</span
-            >
           </li>
           <% }); %>
         </ul>
@@ -146,9 +181,10 @@
         });
       }
 
-      function exportar(ruta, usuario, ejercicio) {
-        console.log(usuario, ejercicio, ruta);
-        fetch(`/exportar?ruta=${ruta}&usuario=${usuario}&ejercicio=${ejercicio}`);
+      function exportar(ruta, usuario, ejercicio, ele) {
+        console.log(ele.checked);
+        //console.log(usuario, ejercicio, ruta);
+        fetch(`/exportar?ruta=${ruta}&usuario=${usuario}&ejercicio=${ejercicio}&exportar=${ele.checked}`);
       }
     </script>
   </body>
