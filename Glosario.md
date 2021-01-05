@@ -5,37 +5,36 @@ Una serie de términos que nos sirven para tener un lenguaje común y aprender a
 <!-- prettier-ignore -->
 |Español|Inglés|
 |---|---|
-|[Tipos de variables (diferencias entre `const`, `let`, `var`)](#tipos-de-variables)|Variables|
-|[Tipos de funciones (`function(){...}` vs. `() => {...}` vs. `() => ...` )](#tipos-de-funciones)|Arrow functions|
-|[Modelo de Objetos del Documento (MOD)](#modelo-de-objetos-del-documento-mod)|Document Object Model (DOM)|
-|[Elementos del MOD](#elementos-del-mod)|DOM Elements|
-|[MOD virtual](#mod-virtual)|Virtual DOM|
-|Manipulación del MOD|DOM Manipulation|
-|[Eventos Sensibles](#eventos-sensibles-eventlisteners)|Eventlisteners|
-|[Sintaxis](#sintaxis)|Sintax|
-|JavaScript Nativo|Vanilla JavaScript|
-|JavaScript Compilado (ES6 o TypeScript -> JS)|Compiled JavaScript|
-|CSS Nativo|CSS / Vanilla CSS|
-|[CSS Compilado (SASS o LESS -> CSS)](#css-compilado-SASS-o-LESS-->-CSS)|Compiled CSS / superset of CSS|
 |[Compilador / Transpilador (Babel)](#compilador-/-transpilador-babel) [ref.](https://www.stevefenton.co.uk/2012/11/compiling-vs-transpiling/)|Compiler / Transpiler|
-|Empaquetador (Webpack, Parcel, Rollup, Snowpack, ...)|Bundler|
-|Manipulación de pixeles|Pixel Manipulation|
-|[Dibujo Generativo](dibujo-generativo)|Generative Drawing|
-|[Telemática](#telemática)|Telematic|
-|[Programación creativa](#programación-creativa)|Creative Programing|
 |Comunicación en tiempo real (WebSockets, WebRTC)|Real-time communication|
-|Sincrónico - Asincrónico (Promises, Async, Await)|Blocking - Non-Blocking / Synchronous - Asynchronous|
-|[Programación orientada a objetos (POO)](#programación-orientada-a-objetos-poo)|Object Oriented Programming (OOP)|
+|[CSS Compilado (SASS o LESS -> CSS)](#css-compilado-SASS-o-LESS-->-CSS)|Compiled CSS / superset of CSS|
+|CSS Nativo|CSS / Vanilla CSS|
+|[Dibujo Generativo](#dibujo-generativo)|Generative Drawing|
+|[Elementos del MOD](#elementos-del-mod)|DOM Elements|
+|Empaquetador (Webpack, Parcel, Rollup, Snowpack, ...)|Bundler|
+|[Eventos Sensibles](#eventos-sensibles-eventlisteners)|Eventlisteners|
 |Frontal - *backend* / servidor (JS, NodeJS) |Frontend - Backend|
-|Paquetes|Package Manager (NPM)|
-|Interfaz programable de aplicación|Application Programmable Interface (API)|
-|Lógica vs. Algoritmo|Logic vs. Algorithms|
-|Vectores|Vectors|
-|Matrices, Matriz|Matrices, Matrix|
-|Render con CPU vs. GPU (contexto del `canvas` 2d vs WebGL)|CPU vs GPU rendering|
 |[Interfaz de Programación de Aplicaciones (API)](#interfaz-de-programación-de-aplicaciones-api)|Application Programming Interface API|
+|JavaScript Compilado (ES6 o TypeScript -> JS)|Compiled JavaScript|
+|JavaScript Nativo|Vanilla JavaScript|
+|Lógica vs. Algoritmo|Logic vs. Algorithms|
+|Manipulación del MOD|DOM Manipulation|
+|Manipulación de pixeles|Pixel Manipulation|
+|Matrices, Matriz|Matrices, Matrix|
+|[Modelo de Objetos del Documento (MOD)](#modelo-de-objetos-del-documento-mod)|Document Object Model (DOM)|
+|[MOD virtual](#mod-virtual)|Virtual DOM|
+|Paquetes|Package Manager (NPM)|
+|[Programación creativa](#programación-creativa)|Creative Programing|
+|[Programación orientada a objetos (POO)](#programación-orientada-a-objetos-poo)|Object Oriented Programming (OOP)|
+|Render con CPU vs. GPU (contexto del `canvas` 2d vs WebGL)|CPU vs GPU rendering|
+|Sincrónico - Asincrónico (Promises, Async, Await)|Blocking - Non-Blocking / Synchronous - Asynchronous|
+|[Sintaxis](#sintaxis)|Sintax|
 |[Sistema de control de versiones](#sistema-de-control-de-versiones)|Version Control System (VCS)|
+|[Telemática](#telemática)|Telematic|
+|[Tipos de funciones (`function(){...}` vs. `() => {...}` vs. `() => ...` )](#tipos-de-funciones)|Arrow functions|
+|[Tipos de variables (diferencias entre `const`, `let`, `var`)](#tipos-de-variables)|Variables|
 |[Live coding](#live-coding)|Live coding|
+|Vectores|Vectors|
 
 ## Ejercicio
 
@@ -48,7 +47,7 @@ Una serie de términos que nos sirven para tener un lenguaje común y aprender a
 
 Definiciones no-técnicas de conceptos técnicos.
 
-----------
+---
 
 ### Compilador / Transpilador (Babel)
 
@@ -77,14 +76,15 @@ Conjunto de reglas que hacen posible la comunicación entre distintas aplicacion
 
 ### Live coding (Código en vivo)
 
-Definición tomada de [Proyecto-IDIS]: 
+Definición tomada de [Proyecto-IDIS]:
+
 Live coding se refiere a una forma de arte performático y técnica creativa que se basa en el uso de programación interactiva de manera improvisada. Presentaciones en vivo donde uno o varios Live Coders (programadores en vivo) generan visuales y música a medida que avanza la presentación. Tanto las visuales como la escritura del código deben ser proyectadas, la idea es la de improvisar mediante el uso de la escritura de código, para generar un espectáculo audiovisual interactivo para el espectador.
 
 Una plataforma para hacer visuales en vivo con live coding basada en el explorador web y hecha a partir de WebRTC es [Hydra], de [Olivia Jack].
 
-[Proyecto-IDIS]: https://proyectoidis.org/live-coding/
-[Hydra]: https://hydra.ojack.xyz/
-[Olivia Jack]: https://ojack.xyz/articles/hydra/index.html
+[proyecto-idis]: https://proyectoidis.org/live-coding/
+[hydra]: https://hydra.ojack.xyz/
+[olivia jack]: https://ojack.xyz/articles/hydra/index.html
 
 ### Modelo de Objetos del Documento (MOD)
 
@@ -120,14 +120,16 @@ La forma, las reglas y la estructura que debe tener un lenguaje de programación
 
 Del libro [Telematic embrace] de Roy Ascott:
 
-- “computer-mediated communications networking between geographically dispersed individuals and institutions . . . and between the human mind and artificial systems of intelligence and perception” (p. 9)
-**_Comunicaciones mediadas por redes computacionales entre individuxs e instituciones geográficamente dispersxs (en diferentes lugares)... y entre la mente humana y sistemas de inteligencia y percepción artificial_** ; 
+> “computer-mediated communications networking between geographically dispersed individuals and institutions . . . and between the human mind and artificial systems of intelligence and perception”
+> (p. 9)
+>
+> **_Comunicaciones mediadas por redes computacionales entre individuxs e instituciones geográficamente dispersxs (en diferentes lugares)... y entre la mente humana y sistemas de inteligencia y percepción artificial_**;
 
-- "The rubric “telematics” not only refers to the convergence of computers and telecommunications systems but qualifies a whole class of consciousness and culture in which new modalities of knowledge and the means of their distribution are being tested and extended. Telematics implies interaction, negotiation, and collaboration amongst human beings and intelligent machines. Telematic process involves ambiguity, uncertainty, and incompleteness; meaning is not given but negotiated, endlessly reconstituted and redefined; truth, always relative, does not lie in an absolute location but is embedded in process, is telematically inscribed in the networking that is human behaviour at its most liberated." (p. 202) 
-**_La palabra "telemática" no sólo se refiere a la convergencia entre computadores y sistemas de telecomunicación sino que además califica una forma completa de conciencia y cultura en la que nuevas modalidades de conocimiento y sus medios de su distribución son testeados y extendidos. Telemática implica interacción, negociación y colaboración entre seres humanos y máquinas inteligentes. Los procesos telemáticos involucran ambiguedad, incertidumbre e incompletud; el significado no está dado sino que se negocia, perpetuaemente reconstituidos y redefinidos; la verdad, siempre relativa, no recae en una autoridad absoluta sino que es integrada en el proceso, está telematicamente inscrita en la red que constituye el comportamiento humano en su forma más libre"._**
+> "The rubric “telematics” not only refers to the convergence of computers and telecommunications systems but qualifies a whole class of consciousness and culture in which new modalities of knowledge and the means of their distribution are being tested and extended. Telematics implies interaction, negotiation, and collaboration amongst human beings and intelligent machines. Telematic process involves ambiguity, uncertainty, and incompleteness; meaning is not given but negotiated, endlessly reconstituted and redefined; truth, always relative, does not lie in an absolute location but is embedded in process, is telematically inscribed in the networking that is human behaviour at its most liberated." (p. 202)
+>
+> **_La palabra "telemática" no sólo se refiere a la convergencia entre computadores y sistemas de telecomunicación sino que además califica una forma completa de conciencia y cultura en la que nuevas modalidades de conocimiento y sus medios de su distribución son testeados y extendidos. Telemática implica interacción, negociación y colaboración entre seres humanos y máquinas inteligentes. Los procesos telemáticos involucran ambiguedad, incertidumbre e incompletud; el significado no está dado sino que se negocia, perpetuaemente reconstituidos y redefinidos; la verdad, siempre relativa, no recae en una autoridad absoluta sino que es integrada en el proceso, está telematicamente inscrita en la red que constituye el comportamiento humano en su forma más libre"._**
 
-[Telematic embrace]: https://drive.google.com/file/d/1T2RzUeWnkB23X7mVr2dwHorU0rO_C4VZ/view?usp=sharing
-
+[Telematic Embrace](https://drive.google.com/file/d/1T2RzUeWnkB23X7mVr2dwHorU0rO_C4VZ/view?usp=sharing)
 
 ### Tipos de variables
 
