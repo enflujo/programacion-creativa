@@ -1,11 +1,303 @@
 <html>
 	<head>
 		<title>Bodeguita</title>
-		<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<style>
+			*{
+				padding: 0;
+				margin:0;
+				font-family: inconsolata;
+				font-size: 12px;
+				font-weight: normal;
+				text-decoration: none;
+			}
+
+			body{
+				background: black;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 99vw;
+				height: 99vh;
+			}
+
+			.chair{
+				position: absolute;
+				top:90px;
+				left: calc(95vw - 300px);
+				width: 300px;
+				height: 300px;
+			}
+
+			.sit{
+				display: flex;
+				border:1px solid white;
+				transform: rotate3d(1, 2, -1, 160deg);
+				width: 100px;
+				height: 100px;
+			}
+
+			.leg-l{
+				display: flex;
+				position:relative;
+				top:-112px;
+				left:-20px;
+				height: 70px;
+				width: 1px;
+				background: white;
+			}
+
+			.leg-r{
+				display: flex;
+				position:relative;
+				top:-58px;
+				left:121px;
+				height: 70px;
+				width: 1px;
+				background: white;
+			}
+
+			.leg-b{
+				display: flex;
+				position:relative;
+				top:-148px;
+				left:60px;
+				height: 70px;
+				width: 1px;
+				background: white;
+			}
+
+			.leg-h{
+				display: flex;
+				position:relative;
+				top:-400px;
+				left:121px;
+				height: 140px;
+				width: 1px;
+				background: white;
+			}
+			.leg-hl{
+				display: flex;
+				position:relative;
+				top:-584px;
+				left:42px;
+				height: 140px;
+				width: 1px;
+				background: white;
+			}
+
+			@keyframes example1{
+			  0%   {top: 0px;}
+			  100% {top: 95vh;}
+			}
+
+
+			@keyframes example{
+			  0%   {top: 0px;}
+			  100% {top: 95vh;}
+			}
+
+
+			/* The element to apply the animation to */
+			.a{
+				position: absolute;
+				top: 0px;
+				height: 13px;
+				width: 1px;
+				background-color: white;
+				-webkit-animation-name: example; 
+				-webkit-animation-duration: 2s; 
+				-webkit-animation-iteration-count: infinite;
+				-webkit-animation-timing-function: linear;
+				-moz-animation-name: example; 
+				-moz-animation-duration: 2s; 
+				-moz-animation-iteration-count: infinite;
+				-moz-animation-timing-function: linear;
+				animation-name: example; 
+				animation-duration: 2s; 
+				animation-iteration-count: infinite;
+				animation-timing-function: linear;
+			}
+			.b{
+				left:10vw;
+				animation-duration: 3s; 
+				animation-name: example1; 
+			}
+			.c{
+				left:16vw;
+				animation-duration: 1.5s; 
+			}
+			.d{
+				left:36vw;
+				animation-duration: 2.9s;
+				animation-name: example1;
+			}
+			.g{
+				left:67vw;
+				animation-duration: 2s; 
+			}
+			.f{
+				left:73vw;
+				animation-duration: 3.2s; 
+			}
+			.m{
+				left:85vw;
+				animation-duration: 1.7s;
+				animation-name: example1; 
+			}
+			.i{
+				left:24vw;
+				animation-duration: 2.1s;
+				animation-name: example; 
+			}
+			.j{
+				left:93vw;
+				animation-duration: 1.1s;
+				animation-name: example1; 
+			}
+			.k{
+				left:60vw;
+				animation-duration: 3.7s;
+				animation-name: example1; 
+			}
+			.l{
+				left:15vw;
+				animation-duration: 2.7s;
+				animation-name: example; 
+			}
+
+
+			@keyframes circle{
+			  0%   {border-top-left-radius:30px}
+			  50% {border-top-left-radius:0px;
+			  		}
+			  100% {border-top-left-radius:30px}
+
+			}
+			@keyframes circle2{
+			  0%   {border-top-left-radius:30px;
+			  transform: scaleX(-1); }
+			  50% {border-top-left-radius:0px;
+			  	transform: scaleX(-1); 
+			  		}
+			  100% {border-top-left-radius:30px;
+			  transform: scaleX(-1); }
+
+			}
+			.h{
+				border-radius: 30px;
+				border-top: 1px solid white;
+				width: 30px;
+				height: 50px;
+				-webkit-animation-name: circle; 
+				-webkit-animation-duration: 2s; 
+				-webkit-animation-iteration-count: infinite;
+				-webkit-animation-timing-function: linear;
+				-moz-animation-name: circle; 
+				-moz-animation-duration: 2s; 
+				-moz-animation-iteration-count: infinite;
+				-moz-animation-timing-function: linear;
+				animation-name: circle; 
+				animation-duration: 1s; 
+				animation-iteration-count: infinite;
+				animation-timing-function: linear;
+			}
+			.hl{
+				animation-name: circle2; 
+				transform: scaleX(-1); 
+			}
+			.line{
+				width: 2px;
+				height: 1px;
+				background: white;
+				position: absolute;
+			}
+
+			@keyframes turn {
+			  from { transform: rotate3d(0, 0, 0, 0); }
+			  to { transform: rotate3d(1, 1, 0, 360deg); }
+			}
+
+			.container {
+			  width: 200px;
+			  height: 200px;
+			  perspective: 500px;
+			  animation: move 100s linear infinite;
+			}
+
+
+			.cube:hover{
+				animation-play-state: running;
+			}
+			.cube {
+				transform: rotate3d(1, 1, 0, 360deg);
+			  animation-play-state: paused; 
+			  position: relative;
+			  width: 100px;
+			  height: 100px;
+			  transform-style: preserve-3d;
+			  animation: turn 10s linear infinite;
+			}
+			.animated {
+			    -webkit-animation-duration: 30s;
+			    animation-duration: 10s;
+			    -webkit-animation-iteration-count: infinite;
+			    animation-iteration-count: infinite;
+			    -webkit-animation-fill-mode: both;
+			    animation-fill-mode: both;
+			    -webkit-animation-play-state: paused; 
+			    animation-play-state: paused; 
+			}
+
+			.face:hover{
+			}
+			.face {
+
+			  width: 200px;
+			  border:1px solid white;
+			  height: 200px;
+			  background: black;
+			  color: white;
+			  position: absolute;
+			  display: flex;
+			  align-items: center;
+			  justify-content: center;
+			}
+
+			.front {
+			  transform: translateZ(100px);
+			}
+
+			.back {
+			  transform: translateZ(-100px) rotateY(180deg);
+			}
+
+			.left {
+			  transform: translateX(-100px) rotateY(-90deg);
+			}
+
+			.right {
+			  transform: translateX(100px) rotateY(90deg);
+			}
+
+			.top {
+			  transform: translateY(-100px) rotateX(90deg);
+			}
+
+			.bottom {
+			  transform: translateY(100px) rotateX(-90deg);
+			}
+
+			@media (prefers-reduced-motion: reduce) {
+			  .cube {
+			    animation: none;
+			    transform: rotate3d(1, 1, 0, 45deg);
+			  }
+			}
+		</style>
 	</head>
 	<body class='cnt'>
+		
+		<!-- AGUITA DESTILADA -->
 		<div class='g'>
 			<div class='a'></div>
 			<div class='a b'></div>
@@ -20,31 +312,28 @@
 			<div class='a l'></div>
 
 		</div>
-	<div class="container">
-	  <div class="cube animated">
-	    <a href="index2.html" class="face top"><span style="padding: 10px;">tabique</span></a>
-	    <a href="index2.html" class="face bottom"><span style="padding: 10px;">sombra de pata frontal izq.</span></a>
-	    <a href="index2.html" class="face left"><span style="padding: 10px;">asiento y madera</span></a>
-	    <a href="index2.html" class="face right"><span style="padding: 10px;">pata frontal izq.</span></a>
-	    <a href="index2.html" class="face front"><span style="padding: 10px;">si yo me aceria a mi, sin detenimiento, pudiera medirme como un ilusion</span></a>
-	    <a href="index2.html" class="face back"><span style="padding: 10px;">respaldar</span></a>
-	  </div>
-	</div>
 
-	<div class="chair">
-		<span class='sit'></span>
+		<!-- CUBO ENSILLADO -->
+		<div class="container">
+		  <div class="cube animated">
+		    <a href="https://www.google.com/search?q=silla&sxsrf=ALeKk01Ht08jlXUH_p0fMIXR5eYd-VOjDA:1609983867953&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjRjqyk2YjuAhVGwVkKHUkfBNUQ_AUoAXoECBAQAw&biw=1536&bih=722" class="face top"><span style="padding: 10px;">tabique</span></a>
+		    <a href="https://www.google.com/search?q=silla+china&tbm=isch&ved=2ahUKEwjt09fJ2YjuAhUHczABHbQCBF8Q2-cCegQIABAA&oq=silla+china&gs_lcp=CgNpbWcQAzICCAAyAggAMgIIADICCAAyBggAEAgQHjIGCAAQCBAeMgYIABAIEB4yBggAEAgQHjoECCMQJzoECAAQQ1C_ZFiTamCwa2gAcAB4AIABS4gB9gKSAQE3mAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=ymf2X-3GD4fmwbkPtIWQ-AU&bih=722&biw=1536" class="face bottom"><span style="padding: 10px;">sombra de pata frontal izq.</span></a>
+		    <a href="https://www.google.com/search?q=silla+electrica&tbm=isch&ved=2ahUKEwiCqbfF2YjuAhU0ajABHesjCb8Q2-cCegQIABAA&oq=silla+electrica&gs_lcp=CgNpbWcQAzICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAA6BAgAEBM6CAgAEAcQHhATOgYIABAHEB5Q7DhYpT1gwD5oAHAAeACAATuIAcoCkgEBNpgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=wWf2X8LEFLTUwbkP68ek-As&bih=722&biw=1536" class="face left"><span style="padding: 10px;">asiento y madera</span></a>
+		    <a href="https://www.google.com/search?q=kosuth+silla&tbm=isch&ved=2ahUKEwiJkYW52YjuAhUHazABHZA4Cq0Q2-cCegQIABAA&oq=silla+kosu&gs_lcp=CgNpbWcQARgAMgYIABAIEB46BAgjECc6AggAOgQIABBDUNETWIhVYN1baARwAHgAgAE2iAHnApIBATeYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=p2f2X8mhFYfWwbkPkPGo6Ao&bih=722&biw=1536" class="face right"><span style="padding: 10px;">pata frontal izq.</span></a>
+		    <a href="https://www.google.com/search?q=silla&sxsrf=ALeKk01Ht08jlXUH_p0fMIXR5eYd-VOjDA:1609983867953&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjRjqyk2YjuAhVGwVkKHUkfBNUQ_AUoAXoECBAQAw&biw=1536&bih=722" class="face front"><span style="padding: 10px;">si yo me aceria a mi, sin detenimiento, pudiera medirme como un ilusion</span></a>
+		    <a href="https://www.google.com/search?q=kosuth+silla&tbm=isch&ved=2ahUKEwiJkYW52YjuAhUHazABHZA4Cq0Q2-cCegQIABAA&oq=silla+kosu&gs_lcp=CgNpbWcQARgAMgYIABAIEB46BAgjECc6AggAOgQIABBDUNETWIhVYN1baARwAHgAgAE2iAHnApIBATeYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=p2f2X8mhFYfWwbkPkPGo6Ao&bih=722&biw=1536"><span style="padding: 10px;">respaldar</span></a>
+		  </div>
+		</div>
 
-		<span class='leg-r'></span>
-		<span class='leg-l'></span>
-
-
-		<span class='leg-b'></span>
-
-		<span class='leg-h'></span>
-		<span class='leg-hl'></span>
-
-
-	</div>
+		<!-- SILLA ESQUINADA -->
+		<div class="chair">
+			<span class='sit'></span>
+			<span class='leg-r'></span>
+			<span class='leg-l'></span>
+			<span class='leg-b'></span>
+			<span class='leg-h'></span>
+			<span class='leg-hl'></span>
+		</div>
 
 	</body>
 </html>
