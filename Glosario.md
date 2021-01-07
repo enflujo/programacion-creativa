@@ -5,36 +5,36 @@ Una serie de términos que nos sirven para tener un lenguaje común y aprender a
 <!-- prettier-ignore -->
 |Español|Inglés|
 |---|---|
-|[Tipos de variables (diferencias entre `const`, `let`, `var`)](#tipos-de-variables)|Variables|
-|[Tipos de funciones (`function(){...}` vs. `() => {...}` vs. `() => ...` )](#tipos-de-funciones)|Arrow functions|
-|[Modelo de Objetos del Documento (MOD)](#modelo-de-objetos-del-documento-mod)|Document Object Model (DOM)|
-|[Elementos del MOD](#elementos-del-mod)|DOM Elements|
-|[MOD virtual](#mod-virtual)|Virtual DOM|
-|Manipulación del MOD|DOM Manipulation|
-|[Eventos Sensibles](#eventos-sensibles-eventlisteners)|Eventlisteners|
-|[Sintaxis](#sintaxis)|Sintax|
-|JavaScript Nativo|Vanilla JavaScript|
-|JavaScript Compilado (ES6 o TypeScript -> JS)|Compiled JavaScript|
-|CSS Nativo|CSS / Vanilla CSS|
-|[CSS Compilado (SASS o LESS -> CSS)](#css-compilado-SASS-o-LESS-->-CSS)|Compiled CSS / superset of CSS|
 |[Compilador / Transpilador (Babel)](#compilador-/-transpilador-babel) [ref.](https://www.stevefenton.co.uk/2012/11/compiling-vs-transpiling/)|Compiler / Transpiler|
-|Empaquetador (Webpack, Parcel, Rollup, Snowpack, ...)|Bundler|
-|Manipulación de pixeles|Pixel Manipulation|
-|Dibujo Generativo|Generative Drawing|
-|Telemática|Telematic|
-|[Programación creativa](#programación-creativa)|Creative Programing|
 |Comunicación en tiempo real (WebSockets, WebRTC)|Real-time communication|
-|Sincrónico - Asincrónico (Promises, Async, Await)|Blocking - Non-Blocking / Synchronous - Asynchronous|
-|[Programación orientada a objetos (POO)](#programación-orientada-a-objetos-poo)|Object Oriented Programming (OOP)|
+|[CSS Compilado (SASS o LESS -> CSS)](#css-compilado-SASS-o-LESS-->-CSS)|Compiled CSS / superset of CSS|
+|CSS Nativo|CSS / Vanilla CSS|
+|[Dibujo Generativo](#dibujo-generativo)|Generative Drawing|
+|[Elementos del MOD](#elementos-del-mod)|DOM Elements|
+|Empaquetador (Webpack, Parcel, Rollup, Snowpack, ...)|Bundler|
+|[Eventos Sensibles](#eventos-sensibles-eventlisteners)|Eventlisteners|
 |Frontal - *backend* / servidor (JS, NodeJS) |Frontend - Backend|
-|Paquetes|Package Manager (NPM)|
-|Interfaz programable de aplicación|Application Programmable Interface (API)|
-|Lógica vs. Algoritmo|Logic vs. Algorithms|
-|Vectores|Vectors|
-|Matrices, Matriz|Matrices, Matrix|
-|Render con CPU vs. GPU (contexto del `canvas` 2d vs WebGL)|CPU vs GPU rendering|
 |[Interfaz de Programación de Aplicaciones (API)](#interfaz-de-programación-de-aplicaciones-api)|Application Programming Interface API|
+|JavaScript Compilado (ES6 o TypeScript -> JS)|Compiled JavaScript|
+|JavaScript Nativo|Vanilla JavaScript|
+|Lógica vs. Algoritmo|Logic vs. Algorithms|
+|Manipulación del MOD|DOM Manipulation|
+|Manipulación de pixeles|Pixel Manipulation|
+|Matrices, Matriz|Matrices, Matrix|
+|[Modelo de Objetos del Documento (MOD)](#modelo-de-objetos-del-documento-mod)|Document Object Model (DOM)|
+|[MOD virtual](#mod-virtual)|Virtual DOM|
+|Paquetes|Package Manager (NPM)|
+|[Programación creativa](#programación-creativa)|Creative Programing|
+|[Programación orientada a objetos (POO)](#programación-orientada-a-objetos-poo)|Object Oriented Programming (OOP)|
+|Render con CPU vs. GPU (contexto del `canvas` 2d vs WebGL)|CPU vs GPU rendering|
+|Sincrónico - Asincrónico (Promises, Async, Await)|Blocking - Non-Blocking / Synchronous - Asynchronous|
+|[Sintaxis](#sintaxis)|Sintax|
 |[Sistema de control de versiones](#sistema-de-control-de-versiones)|Version Control System (VCS)|
+|[Telemática](#telemática)|Telematic|
+|[Tipos de funciones (`function(){...}` vs. `() => {...}` vs. `() => ...` )](#tipos-de-funciones)|Arrow functions|
+|[Tipos de variables (diferencias entre `const`, `let`, `var`)](#tipos-de-variables)|Variables|
+|[Live coding](#live-coding)|Live coding|
+|Vectores|Vectors|
 
 ## Ejercicio
 
@@ -47,18 +47,62 @@ Una serie de términos que nos sirven para tener un lenguaje común y aprender a
 
 Definiciones no-técnicas de conceptos técnicos.
 
-### Sintaxis
-
-La forma, las reglas y la estructura que debe tener un lenguaje de programación para que la máquina lo entienda correctamente.
-
-### CSS Compilado (SASS o LESS -> CSS)
-
-Sass y Less son preprocesadores de CSS. Un preprocesador permite ampliar las posibilidades de un lenguaje (en este caso CSS) mediante una sintaxis específica. Del lado humano SASS y LESS nos ayudan a escribir de forma más organizada, sintetizada y legible los estilos de una página web usando características que no están presentes en CSS nativo, como variables, anidamientos de estilo, operaciones y mixins... Del otro lado, la máquina se encarga de traducir (compilar) el archivo .less o .scss a la sintaxis nativa de CSS.
+---
 
 ### Compilador / Transpilador (Babel)
 
 Los lenguajes de programación se ubican en diferentes rangos de abstracción, un lenguaje de alto nivel es el que se acerca a la forma de escribir / expresar humana, mientras que uno de bajo nivel se acerca al lenguaje máquina (formado por unos y ceros). Los compiladores traducen de un lenguaje a otro para que pueda ser leído y ejecutado sin problemas, esa traducción puede ser de un lenguaje de alto nivel a uno de bajo nivel.
 Cuando la traducción se da entre el mismo lenguaje o se mantiene el mismo nivel de abstracción se usa también la palabra transpilación, por ejemplo: Babel traduce de JavaScript ES6 a ES5 para aumentar su compatibilidad sin cambiar de lenguaje. Un equivalente humano sería traducir de un idioma a otro (compilar) o hacer el mismo proceso de traducción de un dialecto a otro dentro del mismo idioma (transpilar).
+
+### CSS Compilado (SASS o LESS -> CSS)
+
+Sass y Less son preprocesadores de CSS. Un preprocesador permite ampliar las posibilidades de un lenguaje (en este caso CSS) mediante una sintaxis específica. Del lado humano SASS y LESS nos ayudan a escribir de forma más organizada, sintetizada y legible los estilos de una página web usando características que no están presentes en CSS nativo, como variables, anidamientos de estilo, operaciones y mixins... Del otro lado, la máquina se encarga de traducir (compilar) el archivo .less o .scss a la sintaxis nativa de CSS.
+
+### Dibujo generativo
+
+Gráficas creadas o modificadas a partir de una serie de órdenes lógicas (algoritmos).
+
+### Elementos del MOD
+
+Un elemento del MOD representa un elemento HTML. Esto significa que los elementos MOD son todos aquellos elementos HTML admitidos por el WWW Consortium. Ejemplos de estos elementos son las etiquetas `<div>`, `<p>`, `<a>`, `<table>`, `<ul>`, etc.
+
+### Eventos Sensibles (Eventlisteners)
+
+El `eventlistener` es un método del DOM que es llamado según la acción que haya sido configurada para ello. El `eventlistener` permite por ejemplo que, al hacer clic a un botón, se abra un cuadro de diálogo. Es literalmente un método que está a la escucha de que ocurra algún evento para el cual está programado escuchar. Con `addEventListener` podemos registrar un evento que ocurre no sólo en el HTML sino en todo el DOM, así como agregar más de un _listener_ a un solo evento, es decir, que un mismo evento active varias funciones por ejemplo.
+
+### Interfaz de Programación de Aplicaciones API
+
+Conjunto de reglas que hacen posible la comunicación entre distintas aplicaciones, por ejemplo entre sistemas operativos, bases de datos, redes sociales y otras plataformas online. Son especialmente útiles porque permiten aprovechar fragmentos de código de un programa en otro, sin necesidad de reinventarlos ni reescribirlos.
+
+### Live coding (Código en vivo)
+
+Definición tomada de [Proyecto-IDIS]:
+
+Live coding se refiere a una forma de arte performático y técnica creativa que se basa en el uso de programación interactiva de manera improvisada. Presentaciones en vivo donde uno o varios Live Coders (programadores en vivo) generan visuales y música a medida que avanza la presentación. Tanto las visuales como la escritura del código deben ser proyectadas, la idea es la de improvisar mediante el uso de la escritura de código, para generar un espectáculo audiovisual interactivo para el espectador.
+
+Una plataforma para hacer visuales en vivo con live coding basada en el explorador web y hecha a partir de WebRTC es [Hydra], de [Olivia Jack].
+
+[proyecto-idis]: https://proyectoidis.org/live-coding/
+[hydra]: https://hydra.ojack.xyz/
+[olivia jack]: https://ojack.xyz/articles/hydra/index.html
+
+### Modelo de Objetos del Documento (MOD)
+
+El MOD es una interfaz multiplataforma que trata la estructura del documento HTML o XML en forma de árbol. Las ramas de este árbol terminan en nodos: objetos que representan las partes de las que se compone el documento. Así, la estructura más común de el MOD sería:
+
+```bash
+documento
+  /head
+  /body
+    //section
+      ///p
+```
+
+Del 'Document Object', es decir del 'documento', nacen dos ramas: `/head` y `/body`. De body nacen más ramas, que serían `//section` y dentro de ella `///p`. El final de cada una de estas ramas es un objeto que pude contener tanto un elemento como un método del MOD. Toda la estructura, el contenido y el estilo de los nodos pueden ser modificados por medio de los métodos MOD.
+
+### MOD virtual
+
+El MOD virtual (virtualDOM) es una abstracción de los nodos de la estructura arbórea del MOD. Esta abstracción permite que la actualización de los datos de la interfaz de usuario sea mucho más eficiente. Por ejemplo, en HTML tenemos una tabla con valores dinámicos que el usuario modifica por medio de un formulario. Cada nuevo valor introducido transforma un valor ya existente de la tabla. Sin el MOD virtual, el navegador debe cargar todos los nodos de la estructura del HTML, consumiendo grandes recursos informáticos cuando los cambios son frecuentes o la información es pesada. Gracias al MOD virtual, el framework en el que se está ejecutando el código (React, por ejemplo) guarda una abstracción o copia ‘ideal’ del MOD, de tal manera que, al actualizar los datos, se carguen solamente los nuevos valores del nodo modificado y no toda la estructura y objetos del documento.
 
 ### Programación Creativa
 
@@ -68,9 +112,24 @@ Negociar con las máquinas un gesto artístico. Es un acto de agenciamiento entr
 
 Es un paradigma de programación (es decir, una forma de entender la construcción de un programa) en el cual se estructura el código en piezas simples y reutilizables llamadas clases, a partir de las cuales se crean objetos. Estos objetos y clases se relacionan entre sí, tienen ciertas características (atributos) y son capaces de llevar a cabo ciertas acciones (funciones) dentro del programa. Algunas clases (hijas) pueden heredar atributos y funciones de otras clases (madres). `<br>` Típico ejemplo: Una clase madre Animal puede tener clases hijas Perro, Gato, Vaca. Todos los objetos de la clase Animal (y por extensión Perro, Gato, Vaca) tendrán un color, un peso, un tamaño (atributos) y podrán desplazarse y alimentarse (funciones). Un objeto de la clase Gato, por ejemplo, heredará de su clase madre Animal los atributos y funciones anteriores y sumará los suyos propios: colorDeBigotes (atributo) y maullar (función).
 
-### Interfaz de Programación de Aplicaciones API
+### Sintaxis
 
-Conjunto de reglas que hacen posible la comunicación entre distintas aplicaciones, por ejemplo entre sistemas operativos, bases de datos, redes sociales y otras plataformas online. Son especialmente útiles porque permiten aprovechar fragmentos de código de un programa en otro, sin necesidad de reinventarlos ni reescribirlos.
+La forma, las reglas y la estructura que debe tener un lenguaje de programación para que la máquina lo entienda correctamente.
+
+### Telemática
+
+Del libro [Telematic embrace] de Roy Ascott:
+
+> “computer-mediated communications networking between geographically dispersed individuals and institutions . . . and between the human mind and artificial systems of intelligence and perception”
+> (p. 9)
+>
+> **_Comunicaciones mediadas por redes computacionales entre individuxs e instituciones geográficamente dispersxs (en diferentes lugares)... y entre la mente humana y sistemas de inteligencia y percepción artificial_**;
+
+> "The rubric “telematics” not only refers to the convergence of computers and telecommunications systems but qualifies a whole class of consciousness and culture in which new modalities of knowledge and the means of their distribution are being tested and extended. Telematics implies interaction, negotiation, and collaboration amongst human beings and intelligent machines. Telematic process involves ambiguity, uncertainty, and incompleteness; meaning is not given but negotiated, endlessly reconstituted and redefined; truth, always relative, does not lie in an absolute location but is embedded in process, is telematically inscribed in the networking that is human behaviour at its most liberated." (p. 202)
+>
+> **_La palabra "telemática" no sólo se refiere a la convergencia entre computadores y sistemas de telecomunicación sino que además califica una forma completa de conciencia y cultura en la que nuevas modalidades de conocimiento y sus medios de su distribución son testeados y extendidos. Telemática implica interacción, negociación y colaboración entre seres humanos y máquinas inteligentes. Los procesos telemáticos involucran ambiguedad, incertidumbre e incompletud; el significado no está dado sino que se negocia, perpetuaemente reconstituidos y redefinidos; la verdad, siempre relativa, no recae en una autoridad absoluta sino que es integrada en el proceso, está telematicamente inscrita en la red que constituye el comportamiento humano en su forma más libre"._**
+
+[Telematic Embrace](https://drive.google.com/file/d/1T2RzUeWnkB23X7mVr2dwHorU0rO_C4VZ/view?usp=sharing)
 
 ### Tipos de variables
 
@@ -103,32 +162,6 @@ function(a) {
 // 4)
 a => a * 10;
 ```
-
-### Modelo de Objetos del Documento (MOD)
-
-El MOD es una interfaz multiplataforma que trata la estructura del documento HTML o XML en forma de árbol. Las ramas de este árbol terminan en nodos: objetos que representan las partes de las que se compone el documento. Así, la estructura más común de el MOD sería:
-
-```bash
-documento
-  /head
-  /body
-    //section
-      ///p
-```
-
-Del 'Document Object', es decir del 'documento', nacen dos ramas: `/head` y `/body`. De body nacen más ramas, que serían `//section` y dentro de ella `///p`. El final de cada una de estas ramas es un objeto que pude contener tanto un elemento como un método del MOD. Toda la estructura, el contenido y el estilo de los nodos pueden ser modificados por medio de los métodos MOD.
-
-### Elementos del MOD
-
-Un elemento del MOD representa un elemento HTML. Esto significa que los elementos MOD son todos aquellos elementos HTML admitidos por el WWW Consortium. Ejemplos de estos elementos son las etiquetas `<div>`, `<p>`, `<a>`, `<table>`, `<ul>`, etc.
-
-### MOD virtual
-
-El MOD virtual (virtualDOM) es una abstracción de los nodos de la estructura arbórea del MOD. Esta abstracción permite que la actualización de los datos de la interfaz de usuario sea mucho más eficiente. Por ejemplo, en HTML tenemos una tabla con valores dinámicos que el usuario modifica por medio de un formulario. Cada nuevo valor introducido transforma un valor ya existente de la tabla. Sin el MOD virtual, el navegador debe cargar todos los nodos de la estructura del HTML, consumiendo grandes recursos informáticos cuando los cambios son frecuentes o la información es pesada. Gracias al MOD virtual, el framework en el que se está ejecutando el código (React, por ejemplo) guarda una abstracción o copia ‘ideal’ del MOD, de tal manera que, al actualizar los datos, se carguen solamente los nuevos valores del nodo modificado y no toda la estructura y objetos del documento.
-
-### Eventos Sensibles (Eventlisteners)
-
-El `eventlistener` es un método del DOM que es llamado según la acción que haya sido configurada para ello. El `eventlistener` permite por ejemplo que, al hacer clic a un botón, se abra un cuadro de diálogo. Es literalmente un método que está a la escucha de que ocurra algún evento para el cual está programado escuchar. Con `addEventListener` podemos registrar un evento que ocurre no sólo en el HTML sino en todo el DOM, así como agregar más de un _listener_ a un solo evento, es decir, que un mismo evento active varias funciones por ejemplo.
 
 ### Sistema de control de versiones
 
