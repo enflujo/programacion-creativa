@@ -54,3 +54,4 @@ Ir a [Glosario](Glosario.md)
 - ..:: Lina Orejuela ::../LaTiNx - CyBorG95!
 - ..:: Julián García ::..
 - ..:: João Gabriel Almeida ::..
+- ..:: Fabio o Ferio o F Bonfanti Ruggiero ::..
