@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>resaquita</title>
+
+    <style>
+      html {
+        box-sizing: border-box;
+        height: 100%;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+        position: absolute;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      img {
+        top: 25px;
+        left: 100px;
+        width: 150vmin;
+        opacity: 0.5;
+        z-index: 1;
+      }
+
+      #fondo {
+        width: 100vw;
+        height: 100vh;
+        background: rgb(253,184,215);
+background: linear-gradient(0deg, rgba(253,184,215,1) 0%, rgba(255,220,188,1) 100%);      }
+
+      #encuadre {
+        width: 920px;
+        height: 555px;
+        background-color: #FFF4EB;
+        left: 260px;
+        top: 130px;
+      }
+
+      .bordes {
+        border-radius: 130px;
+      }
+
+      .mesa {
+        width: 920px;
+        height: 170px;
+        background-color: #1F3877;
+        left: 50%;
+        top: 85%;
+        border-bottom-right-radius: 130px;
+        border-bottom-left-radius: 130px;
+        transform: translate(-50%, -50%);
+      }
+
+      #frutas {
+        width: 300px;
+        height: 300px;
+        left: 450px;
+        top: 400px;
+      }
+
+      .circular {
+        border-radius: 150px;
+      }
+
+      #frutas .uno {
+        width: 115px;
+        height: 115px;
+        background-color: #ffec9c;
+        top: 50px;
+        left: 65px;
+      }
+
+      #frutas .dos {
+        width: 130px;
+        height: 130px;
+        background-color: #f7ebda;
+        border-style: solid;
+        border-width: 5px;
+        border-color: #FC956F;
+        position: relative;
+        top: 70px;
+        left: 120px;
+        display: flex;
+        justify-content: center;
+      }
+
+      #frutas .dos .cajapulpa1 {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 50%;
+        border-radius: 50px;
+      }
+
+      #frutas .dos .cajapulpa1 .arriba {
+        height: 30px;
+        width: 30px;
+        top: 3px;
+        background-color: #FC956F;
+      }
+
+      #frutas .dos .cajapulpa1 .abajo {
+        height: 30px;
+        width: 30px;
+        bottom: 3px;
+        background-color: #FC956F;
+      }
+
+      #frutas .dos .cajapulpa1 .union1 {
+        top: 15px;
+        border-top: 42px solid #FC956F;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+      }
+
+      #frutas .dos .cajapulpa1 .union2 {
+        position: relative;
+        bottom: 15px;
+        border-top: 42px solid #FC956F;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        transform: rotate(180deg);
+      }
+
+      #frutas .dos .cajapulpa2 {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 50%;
+        border-radius: 50px;
+        transform: rotate(135deg);
+      }
+
+      #frutas .dos .cajapulpa2 .arriba {
+        height: 30px;
+        width: 30px;
+        top: 3px;
+        background-color: #FC956F;
+      }
+
+      #frutas .dos .cajapulpa2 .abajo {
+        height: 30px;
+        width: 30px;
+        bottom: 3px;
+        background-color: #FC956F;
+      }
+
+      #frutas .dos .cajapulpa2 .union1 {
+        top: 15px;
+        border-top: 42px solid #FC956F;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+      }
+
+      #frutas .dos .cajapulpa2 .union2 {
+        position: relative;
+        bottom: 15px;
+        border-top: 42px solid #FC956F;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        transform: rotate(180deg);
+      }
+
+      #frutas .dos .cajapulpa3 {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 50%;
+        border-radius: 50px;
+        transform: rotate(90deg);
+      }
+
+      #frutas .dos .cajapulpa3 .arriba {
+        height: 30px;
+        width: 30px;
+        top: 3px;
+        background-color: #FC956F;
+      }
+
+      #frutas .dos .cajapulpa3 .abajo {
+        height: 30px;
+        width: 30px;
+        bottom: 3px;
+        background-color: #FC956F;
+      }
+
+      #frutas .dos .cajapulpa3 .union1 {
+        top: 15px;
+        border-top: 42px solid #FC956F;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+      }
+
+      #frutas .dos .cajapulpa3 .union2 {
+        position: relative;
+        bottom: 15px;
+        border-top: 42px solid #FC956F;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        transform: rotate(180deg);
+      }
+
+      #frutas .dos .cajapulpa4 {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 50%;
+        border-radius: 50px;
+        transform: rotate(45deg);
+      }
+
+      #frutas .dos .cajapulpa4 .arriba {
+        height: 30px;
+        width: 30px;
+        top: 3px;
+        background-color: #FC956F;
+      }
+
+      #frutas .dos .cajapulpa4 .abajo {
+        height: 30px;
+        width: 30px;
+        bottom: 3px;
+        background-color: #FC956F;
+      }
+
+      #frutas .dos .cajapulpa4 .union1 {
+        top: 15px;
+        border-top: 42px solid #FC956F;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+      }
+
+      #frutas .dos .cajapulpa4 .union2 {
+        position: relative;
+        bottom: 15px;
+        border-top: 42px solid #FC956F;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        transform: rotate(180deg);
+      }
+
+      #frutas .tres {
+        top: 180px;
+        left: 30px;
+        width: 160px;
+        height: 80px;
+        background: #FC956F;
+        border-radius: 80px 80px 0 0;
+        transform: rotate(220deg);
+        animation-name: rotacion;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+      }
+
+      #frutas .tres .elipse {
+        display: block;
+        position: absolute;
+        bottom: -30px;
+        width: 160px;
+        height: 60px;
+        border-radius: 100%;
+        background: #FC956F;
+      }
+
+      @keyframes rotacion {
+        0% {
+          transform: rotate(210deg);
+        }
+
+        50% {
+          transform: rotate(220deg);
+        }
+
+        100% {
+          transform: rotate(210deg);
+        }
+      }
+
+      #frutas .tres .elipse_claro {
+        display: block;
+        bottom: -25px;
+        left: 10px;
+        width: 140px;
+        height: 50px;
+        border-radius: 80%;
+        transform: rotate(180deg);
+        background-color: #f7ebda;
+
+      }
+
+      .centrarhor {
+        left: 50%;
+        transform: translate(-50%, 0%);
+      }
+
+      #vaso {
+        left: 780px;
+        top: 330px;
+        border-top: 290px solid rgba(237, 249, 255, 0.63);
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        height: 0;
+        width: 160px;
+        z-index: 1;
+      }
+
+      .superior {
+        top: -310px;
+        left: -20px;
+        width: 160px;
+        height: 40px;
+        border-radius: 100%;
+        background-color: rgba(237, 249, 255, 0.829);
+      }
+
+      .inferior {
+        top: -20px;
+        width: 120px;
+        height: 40px;
+        border-radius: 100%;
+        background-color: rgba(237, 249, 255, 0.63);
+        clip-path: inset(50% 0 0 0);
+        z-index: 1;
+      }
+
+       .jugo {
+        top: -220px;
+        left: -5px;
+        border-top: 200px solid #fc946f7c;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        width: 130px;
+        height: 200px;
+      }
+
+      .jugo .jg {
+        width: 130px;
+        top: -220px;
+        background-color: #ffa889;
+        z-index: 2;
+      }
+      .jugo .jg2 {
+        width: 90px;
+        background-color: #fc946f96;
+        z-index: 2;
+      }
+
+      .jugo .peq1 {
+        width: 10px;
+        height: 10px;
+        background-color: white;
+        left: 30px;
+        animation-name: indecisa2;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+      }
+
+      .jugo .peq2 {
+        width: 10px;
+        height: 10px;
+        left: 50px;
+        top: -150px;
+        animation-name: indecisa;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+      }
+
+      .jugo .peq3 {
+        width: 5px;
+        height: 5px;
+        left: 30px;
+        top: 180px;
+        animation-name: indecisa;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes indecisa {
+        0% {
+          top: -80px;
+          background-color: rgba(255, 255, 255, 0.685);
+        }
+        50% {
+          top: -85px;
+          background-color: rgba(255, 255, 255, 0.37);
+        }
+        100% {
+          top: -80px;
+          background-color: rgba(255, 255, 255, 0.685);
+        }
+      }
+
+      @keyframes indecisa2 {
+        0% {
+          top: -150px;
+          background-color: rgba(255, 255, 255, 0.685);
+        }
+        50% {
+          top: -155px;
+          background-color: rgba(255, 255, 255, 0.37);
+        }
+        100% {
+          top: -150px;
+          background-color: rgba(255, 255, 255, 0.685);
+        }
+      }
+
+      @keyframes posicion {
+        from {
+          top: 0px;
+        }
+        to {
+          top: -120px;
+        }
+      }
+
+      #frutas .dostres {
+        width: 100px;
+        height: 100px;
+        background-color: #f7ebda;
+        border-style: solid;
+        border-width: 5px;
+        border-color: #FC956F;
+        position: relative;
+        top: -250px;
+        left: 280px;
+        display: flex;
+        justify-content: center;
+        z-index: 2;
+      }
+
+      #frutas .dostres .cajapulpa1 {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 50%;
+        border-radius: 50px;
+      }
+
+      #frutas .dostres .cajapulpa1 .arriba {
+        height: 20px;
+        width: 20px;
+        top: 3px;
+        background-color: #FC956F;
+      }
+
+      #frutas .dostres .cajapulpa1 .abajo {
+        height: 20px;
+        width: 20px;
+        bottom: 3px;
+        background-color: #FC956F;
+      }
+
+      #frutas .dostres .cajapulpa1 .union1 {
+        top: 15px;
+        border-top: 30px solid #FC956F;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+      }
+
+      #frutas .dostres .cajapulpa1 .union2 {
+        position: relative;
+        bottom: 15px;
+        border-top: 30px solid #FC956F;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        transform: rotate(180deg);
+      }
+
+      #frutas .dostres .cajapulpa2 {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 50%;
+        border-radius: 50px;
+        transform: rotate(135deg);
+      }
+
+      #frutas .dostres .cajapulpa2 .arriba {
+        height: 20px;
+        width: 20px;
+        top: 3px;
+        background-color: #FC956F;
+      }
+
+      #frutas .dostres .cajapulpa2 .abajo {
+        height: 20px;
+        width: 20px;
+        bottom: 3px;
+        background-color: #FC956F;
+      }
+
+      #frutas .dostres .cajapulpa2 .union1 {
+        top: 15px;
+        border-top: 30px solid #FC956F;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+      }
+
+      #frutas .dostres .cajapulpa2 .union2 {
+        position: relative;
+        bottom: 15px;
+        border-top: 30px solid #FC956F;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        transform: rotate(180deg);
+      }
+
+      #frutas .dostres .cajapulpa3 {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 50%;
+        border-radius: 50px;
+        transform: rotate(90deg);
+      }
+
+      #frutas .dostres .cajapulpa3 .arriba {
+        height: 20px;
+        width: 20px;
+        top: 3px;
+        background-color: #FC956F;
+      }
+
+      #frutas .dostres .cajapulpa3 .abajo {
+        height: 20px;
+        width: 20px;
+        bottom: 3px;
+        background-color: #FC956F;
+      }
+
+      #frutas .dostres .cajapulpa3 .union1 {
+        top: 15px;
+        border-top: 30px solid #FC956F;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+      }
+
+      #frutas .dostres .cajapulpa3 .union2 {
+        position: relative;
+        bottom: 15px;
+        border-top: 30px solid #FC956F;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        transform: rotate(180deg);
+      }
+
+      #frutas .dostres .cajapulpa4 {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 50%;
+        border-radius: 50px;
+        transform: rotate(45deg);
+      }
+
+      #frutas .dostres .cajapulpa4 .arriba {
+        height: 20px;
+        width: 20px;
+        top: 3px;
+        background-color: #FC956F;
+      }
+
+      #frutas .dostres .cajapulpa4 .abajo {
+        height: 20px;
+        width: 20px;
+        bottom: 3px;
+        background-color: #FC956F;
+      }
+
+      #frutas .dostres .cajapulpa4 .union1 {
+        top: 15px;
+        border-top: 30px solid #FC956F;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+      }
+
+      #frutas .dostres .cajapulpa4 .union2 {
+        position: relative;
+        bottom: 15px;
+        border-top: 30px solid #FC956F;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        transform: rotate(180deg);
+      }
+
+      #frutas .doscuatro {
+        width: 95px;
+        height: 95px;
+        background-color: #f7ebda;
+        border-style: solid;
+        border-width: 5px;
+        border-color: #FC956F;
+        position: relative;
+        top: -120px;
+        left: 360px;
+        display: flex;
+        justify-content: center;
+        z-index: 3;
+        clip-path: inset(50% 0 0 0);
+        transform: rotate(-45deg);
+        animation-name: rotaciondos;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes rotaciondos {
+        0% {
+          transform: rotate(-45deg);
+        }
+
+        50% {
+          transform: rotate(-30deg);
+        }
+
+        100% {
+          transform: rotate(-45deg);
+        }
+      }
+
+      #frutas .doscuatro .cajapulpa1 {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 50%;
+        border-radius: 50px;
+      }
+
+      #frutas .doscuatro .cajapulpa1 .arriba {
+        height: 20px;
+        width: 20px;
+        top: 3px;
+        background-color: #FC956F;
+      }
+
+      #frutas .doscuatro .cajapulpa1 .abajo {
+        height: 20px;
+        width: 20px;
+        bottom: 3px;
+        background-color: #FC956F;
+      }
+
+      #frutas .doscuatro .cajapulpa1 .union1 {
+        top: 15px;
+        border-top: 30px solid #FC956F;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+      }
+
+      #frutas .doscuatro .cajapulpa1 .union2 {
+        position: relative;
+        bottom: 15px;
+        border-top: 30px solid #FC956F;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        transform: rotate(180deg);
+      }
+
+      #frutas .doscuatro .cajapulpa2 {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 50%;
+        border-radius: 50px;
+        transform: rotate(135deg);
+      }
+
+      #frutas .doscuatro .cajapulpa2 .arriba {
+        height: 20px;
+        width: 20px;
+        top: 3px;
+        background-color: #FC956F;
+      }
+
+      #frutas .doscuatro .cajapulpa2 .abajo {
+        height: 20px;
+        width: 20px;
+        bottom: 3px;
+        background-color: #FC956F;
+      }
+
+      #frutas .doscuatro .cajapulpa2 .union1 {
+        top: 15px;
+        border-top: 30px solid #FC956F;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+      }
+
+      #frutas .doscuatro .cajapulpa2 .union2 {
+        position: relative;
+        bottom: 15px;
+        border-top: 30px solid #FC956F;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        transform: rotate(180deg);
+      }
+
+      #frutas .doscuatro .cajapulpa3 {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 50%;
+        border-radius: 50px;
+        transform: rotate(90deg);
+      }
+
+      #frutas .doscuatro .cajapulpa3 .arriba {
+        height: 20px;
+        width: 20px;
+        top: 3px;
+        background-color: #FC956F;
+      }
+
+      #frutas .doscuatro .cajapulpa3 .abajo {
+        height: 20px;
+        width: 20px;
+        bottom: 3px;
+        background-color: #FC956F;
+      }
+
+      #frutas .doscuatro .cajapulpa3 .union1 {
+        top: 15px;
+        border-top: 30px solid #FC956F;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+      }
+
+      #frutas .doscuatro .cajapulpa3 .union2 {
+        position: relative;
+        bottom: 15px;
+        border-top: 30px solid #FC956F;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        transform: rotate(180deg);
+      }
+
+      #frutas .doscuatro .cajapulpa4 {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 50%;
+        border-radius: 50px;
+        transform: rotate(45deg);
+      }
+
+      #frutas .doscuatro .cajapulpa4 .arriba {
+        height: 20px;
+        width: 20px;
+        top: 3px;
+        background-color: #FC956F;
+      }
+
+      #frutas .doscuatro .cajapulpa4 .abajo {
+        height: 20px;
+        width: 20px;
+        bottom: 3px;
+        background-color: #FC956F;
+      }
+
+      #frutas .doscuatro .cajapulpa4 .union1 {
+        top: 15px;
+        border-top: 30px solid #FC956F;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+      }
+
+      #frutas .doscuatro .cajapulpa4 .union2 {
+        position: relative;
+        bottom: 15px;
+        border-top: 30px solid #FC956F;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        transform: rotate(180deg);
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div id="fondo"></div>
+    <div id="encuadre" class="bordes">
+      <div class="mesa"></div>
+    </div>
+    <div id="frutas">
+      <div class="uno circular"></div>
+      <div class="dos circular">
+        <div class="cajapulpa1">
+          <span class="arriba circular"></span>
+          <span class="abajo circular"></span>
+          <span class="union1"></span>
+          <span class="union2"></span>
+        </div>
+        <div class="cajapulpa2">
+          <span class="arriba circular"></span>
+          <span class="abajo circular"></span>
+          <span class="union1"></span>
+          <span class="union2"></span>
+        </div>
+        <div class="cajapulpa3">
+          <span class="arriba circular"></span>
+          <span class="abajo circular"></span>
+          <span class="union1"></span>
+          <span class="union2"></span>
+        </div>
+        <div class="cajapulpa4">
+          <span class="arriba circular"></span>
+          <span class="abajo circular"></span>
+          <span class="union1"></span>
+          <span class="union2"></span>
+        </div>
+      </div>
+
+      <div class="dostres circular">
+        <div class="cajapulpa1">
+          <span class="arriba circular"></span>
+          <span class="abajo circular"></span>
+          <span class="union1"></span>
+          <span class="union2"></span>
+        </div>
+        <div class="cajapulpa2">
+          <span class="arriba circular"></span>
+          <span class="abajo circular"></span>
+          <span class="union1"></span>
+          <span class="union2"></span>
+        </div>
+        <div class="cajapulpa3">
+          <span class="arriba circular"></span>
+          <span class="abajo circular"></span>
+          <span class="union1"></span>
+          <span class="union2"></span>
+        </div>
+        <div class="cajapulpa4">
+          <span class="arriba circular"></span>
+          <span class="abajo circular"></span>
+          <span class="union1"></span>
+          <span class="union2"></span>
+        </div>
+      </div>
+
+      <div class="doscuatro circular">
+        <div class="cajapulpa1">
+          <span class="arriba circular"></span>
+          <span class="abajo circular"></span>
+          <span class="union1"></span>
+          <span class="union2"></span>
+        </div>
+        <div class="cajapulpa2">
+          <span class="arriba circular"></span>
+          <span class="abajo circular"></span>
+          <span class="union1"></span>
+          <span class="union2"></span>
+        </div>
+        <div class="cajapulpa3">
+          <span class="arriba circular"></span>
+          <span class="abajo circular"></span>
+          <span class="union1"></span>
+          <span class="union2"></span>
+        </div>
+        <div class="cajapulpa4">
+          <span class="arriba circular"></span>
+          <span class="abajo circular"></span>
+          <span class="union1"></span>
+          <span class="union2"></span>
+        </div>
+      </div>
+
+      <div class="tres">
+        <div class="dosdos"></div>
+        <span class="elipse"></span>
+        <span class="elipse_claro"></span>
+      </div>
+    </div>
+
+    <div id="vaso">
+        <div class="jugo">
+          <span class="liquido"> </span>
+          <span class="superior jg"> </span>
+          <span class="inferior jg2"> </span>
+          <span class="circular peq1"></span>
+          <span class="circular peq2"></span>
+          <span class="circular peq3"></span>
+          <span class="circular peq4"></span>
+          <span class="circular peq5"></span>
+        </div>
+        <span class="superior"> </span>
+        <span class="inferior"> </span>
+    </div>
+  </body>
+</html>
