@@ -34,7 +34,7 @@ function extraerInfo(ruta) {
       if (datos.scripts['build']) {
         // Es proyecto con compilador
         respuesta.tipo = 'fa-yarn';
-        respuesta.script = datos.script.build;
+        respuesta.script = datos.scripts.build;
         respuesta.compilado = false;
       } else if (archivos.includes('www')) {
         revisarCompilacion(ruta, respuesta);
@@ -82,6 +82,8 @@ function extraerEntradas(ruta, nombreEjercicio) {
           ruta: entrada.ruta,
           fecha: entrada.fecha,
         });
+      } else if (existe.exportada) {
+        entrada.exportada = true;
       }
     });
   }

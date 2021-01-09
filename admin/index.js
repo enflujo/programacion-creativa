@@ -71,18 +71,26 @@ router.get('/cerrar-script', (ctx) => {
 
 router.get('/exportar', (ctx) => {
   const excluir = ['.gitignore', '.DS_Store'];
-  const { ruta, usuario, ejercicio } = ctx.request.query;
-
-  fsExtra.copySync(ruta, `docs/${usuario}/${ejercicio}`, {
-    overwrite: true,
-    preserveTimestamps: true,
-    filter: (archivo) => !excluir.includes(path.basename(archivo)),
-  });
+  const { ruta, usuario, ejercicio, exportar } = ctx.request.query;
 
   const entrada = bd.findOne({ id: `${usuario}-${ejercicio}` });
-  entrada.exportada = true;
+
+  if (exportar === 'true') {
+    fsExtra.copySync(ruta, `docs/${usuario}/${ejercicio}`, {
+      overwrite: true,
+      preserveTimestamps: true,
+      filter: (archivo) => !excluir.includes(path.basename(archivo)),
+    });
+    console.log(`Ejercicio docs/${usuario}/${ejercicio} exportado!`);
+    entrada.exportada = true;
+  } else {
+    fsExtra.removeSync(`docs/${usuario}/${ejercicio}`);
+    entrada.exportada = false;
+  }
+
   bd.update(entrada);
-  ctx.body = {};
+
+  ctx.body = { entrada: entrada };
 });
 
 app.use(router.routes()).use(router.allowedMethods());
