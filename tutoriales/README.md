@@ -6,9 +6,35 @@ Una serie de tutoriales (sin orden específico) para programación creativa. Cad
 
 Cada programador creativo tiende a desarrollar intereses específicos sobre algunas de estas áreas dependiendo de sus preguntas e intenciones creativas. Esto quiere decir que no deben volverse expertos en cada uno de estos temas, pero si es importante reconocerlos y en algún momento tocarlos para cuando se vuelvan necesarios en sus proyectos.
 
+Como referencia, esta es una lista que va sumando niveles de complejidad.
+
+**Conceptos básicos**
+
+[Infraestructura básica de la web](./html/archivo-index.md)  
+[Tipos de datos](#tipos-de-datos-en-js)  
+[Objetos](#objetos)  
+[Manipulación del DOM](./javascript/manipulacion-dom.md)  
+[Clases](#clases)
+
+**Nivel intermedio**
+
+[Canvas](#canvas)  
+[Animación](#animación)  
+[API](#comunicación-con-api)  
+[Compiladores](/plantillas) _Es de nivel intermedio pero fundamental para el trabajo que hacemos acá_
+
+**Avanzado**
+
+[Manipulación de pixeles](#manipulación-de-pixeles)  
+[Algoritmos](#algoritmos)
+
 ### Tipos de datos en JS
 
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures
+
+### Objetos
+
+### Clases
 
 ### Canvas
 
