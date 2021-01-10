@@ -17,7 +17,7 @@ Como referencia, esta es una lista que va sumando niveles de complejidad.
 
 **Nivel intermedio**
 
-[Clases](./javascript/clases.md)
+[Clases](./javascript/clases.md)  
 [Canvas](#canvas)  
 [Animación](#animación)  
 [API](#comunicación-con-api)  
@@ -75,3 +75,8 @@ El elemento de HTML5 donde podemos crear todo tipo de aplicaciones complejas com
 - Ejemplos de sistemas complejos: https://www.complexity-explorables.org/
 - Nature of code: https://natureofcode.com/book/introduction/
 - Algoritmos en JS: https://github.com/trekhleb/javascript-algorithms
+
+## Otros recursos
+
+- Libro, "Eloquent JavaScript": https://eloquentjavascript.net/
+- Lista de recursos "Awseome Creative Coding": https://github.com/terkelg/awesome-creative-coding
