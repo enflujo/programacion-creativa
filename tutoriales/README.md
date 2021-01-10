@@ -13,11 +13,11 @@ Como referencia, esta es una lista que va sumando niveles de complejidad.
 [Infraestructura básica de la web](./html/archivo-index.md)  
 [Tipos de datos](#tipos-de-datos-en-js)  
 [Objetos](#objetos)  
-[Manipulación del DOM](./javascript/manipulacion-dom.md)  
-[Clases](#clases)
+[Manipulación del DOM](./javascript/manipulacion-dom.md)
 
 **Nivel intermedio**
 
+[Clases](./javascript/clases.md)
 [Canvas](#canvas)  
 [Animación](#animación)  
 [API](#comunicación-con-api)  
