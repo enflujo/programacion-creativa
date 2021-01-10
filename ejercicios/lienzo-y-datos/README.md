@@ -1,6 +1,6 @@
 # Lienzo y Datos
 
-Este ejercicio lo van a hacer por fases, la primera la describo acá y con cáda Pull Request les pido algo adicional para ir complejizando la aplicación.
+Este ejercicio lo van a hacer por fases, la primera la describo acá y con cada Pull Request les pido algo adicional para ir complejizando la aplicación.
 
 ## Fase 1
 
