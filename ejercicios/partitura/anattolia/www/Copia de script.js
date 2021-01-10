@@ -1,20 +1,20 @@
 
 // Canvas
-const c = document.getElementById("myCanvas");
+var c = document.getElementById("myCanvas");
 c.width = window.innerWidth;
 c.height = window.innerHeight;
 
-const ctx = c.getContext("2d");
+var ctx = c.getContext("2d");
 
 //Fondo
 ctx.fillStyle = "#00091d";
 ctx.fillRect(0, 0, c.width, c.height);
 
-const x = window.innerWidth;
-const y = window.innerHeight;
+var x = window.innerWidth;
+var y = window.innerHeight;
 
 
-let separacion = 32;
+var separacion = 32;
 function dibujarLinea(i){
     // Dibujar línea vertical
     ctx.lineTo(i-separacion, y);
@@ -34,9 +34,9 @@ function dibujarCirculo(i,v){
 }
 
 function dibujarDelay(i,v){
-    let gradient = ctx.createLinearGradient(0, 0, 170, 0);
+    var gradient = ctx.createLinearGradient(0, 0, 170, 0);
     
-    let k, j;
+    var k, j;
     for(j=45, k=8; j > 0; j=j-2, k=k+4){
         gradient.addColorStop("0", "rgba(102, 108, 106, 0.2)");
     
@@ -62,7 +62,7 @@ function dibujarNota(i,n){
 }
 
 function dibujarGrilla(){
-    for(let i=0; i < x+64; i=i+separacion){
+    for(var i=0; i < x+64; i=i+separacion){
         ctx.moveTo(i-separacion, 0);
         dibujarLinea(i);
         //ctx.moveTo(i+20, 0);
@@ -72,29 +72,40 @@ function dibujarGrilla(){
 //DIBUJAR SISTEMA
 function dibujarSistema(v){
     //1er tiempo
-    for(let i=0; i < x; i+=256){
+    for(var i=0; i < x; i=i+256){
+        var color = ctx.strokeStyle = "#FF5B79";
         dibujarCirculo(i,v)
         ctx.moveTo(i, i);
+    }
     //4to tiempo
+    for(var i=0; i < x; i=i+256){
         dibujarCirculo(i+96,v)
         ctx.moveTo(i, i);
+    }
     //2er tiempo, 2do compás
+    for(var i=0; i < x; i=i+256){
         dibujarCirculo(i+192,v)
         ctx.moveTo(i, i);
+    }
     //delay 1er tiempo
+    for(var i=0; i < x; i=i+256){
         dibujarDelay(i-20,v);
         ctx.moveTo(i, i);
+    }
     //delay 4to tiempo
+    for(var i=0; i < x; i=i+256){
         dibujarDelay(i+86,v);
         ctx.moveTo(i, i);
+    }
     //delay 2do tiempo, 2do compás
+    for(var i=0; i < x; i=i+256){
         dibujarDelay(i+180,v);
         ctx.moveTo(i, i);
     }
 }
 
 //dibujar todos los sistemas
-for(let i=50; i < y-20; i += 80){
+for(var i=50; i < y-20; i = i+80){
     dibujarSistema(i);
 }
 
