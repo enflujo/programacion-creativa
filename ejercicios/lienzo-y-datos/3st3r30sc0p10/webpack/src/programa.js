@@ -9,7 +9,6 @@ function actualizar() {
     canvas.height = window.innerHeight;
     ctx.strokeStyle = '#990000'
     ctx.lineWidth = 15;
-    
 }
   
 canvas.onmousemove = (evento) => {
