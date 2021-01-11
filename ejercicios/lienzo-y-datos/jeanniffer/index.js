@@ -7,7 +7,7 @@ en el canvas algo dentro de esas coordenadas.
 Paso a paso:
 - Encontrar la posicion x e y del mapa
 - Usar la posición x e y para marcar (de otra forma) la posición del mouse
-- Hacer una condicional que haga que cambie el color / forma del 
+- ¿Cambiar el color?
 */
 
 const miLienzo = document.getElementById('miLienzo');
@@ -22,13 +22,15 @@ miLienzo.onmousemove = (evento) => {
 
   ctx.beginPath();
   ctx.arc(x, y, 10, 0, 2 * Math.PI, false);
-  ctx.fillStyle = '#FF0000';
+  ctx.fillStyle = "#96fffc"
   ctx.fill();
+
   /* Rectangulo
   ctx.beginPath();
   ctx.rect(x-25, y-25, 50, 50);
   ctx.stroke();
 */
+
   console.log(x);
 };
 

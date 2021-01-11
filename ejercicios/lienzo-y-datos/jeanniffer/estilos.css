@@ -16,5 +16,9 @@ body {
   overflow: hidden;
 }
 
+div {
+    color: hsl(139, 80%, 76%);
+}
+
 #miLienzo {
 }
