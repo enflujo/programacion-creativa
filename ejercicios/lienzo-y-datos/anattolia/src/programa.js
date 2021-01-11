@@ -1,7 +1,5 @@
 import './scss/estilos.scss';
 
-console.log('Webpack');
-
 // Canvas
 const c = document.getElementById('lienzo');
 const ctx = c.getContext('2d');
@@ -17,16 +15,13 @@ function actualizar() {
 }
 
 function extraerCoordenadas(evento) {
-  let x = evento.clientX;
-  let y = evento.clientY;
-  let coor = 'Coordenadas: (' + x + ', ' + y + ')';
-  console.log(coor);
+  const x = evento.clientX;
+  const y = evento.clientY;
 }
 
 function dibujarCirculo(i, v) {
   ctx.beginPath();
   ctx.arc(i, v, 8, 0, 2 * Math.PI);
-
   ctx.fill();
 }
 
@@ -39,9 +34,7 @@ c.onmousemove = (evento) => {
   dibujarCirculo(evento.clientX + 5, evento.clientY + 5);
 };
 
-c.onmousedown = () => {
-  actualizar();
-};
-
+c.onmousedown = actualizar;
 window.onresize = actualizar;
+
 actualizar();
