@@ -64,7 +64,6 @@ function animacion(){
   raton.anteriorX = raton.x;
   raton.anteriorY = raton.y;
 
-
   ctx.lineTo(raton.x - aceleracion, raton.anteriorY+ Math.random(0,50));
   ctx.strokeStyle = definirColor(aceleracion,raton.x);//'rgba(255,153,153,0.5)';
   ctx.lineWidth = 1;
