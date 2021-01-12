@@ -69,9 +69,9 @@ function animacion(){
   ctx.strokeStyle = definirColor(aceleracion,raton.x);//'rgba(255,153,153,0.5)';
   ctx.lineWidth = 1;
   ctx.stroke();
-  console.log(aceleracion);
-    // Vuelve a iniciar el loop
-    requestAnimationFrame(animacion);
+  
+  // Vuelve a iniciar el loop
+  requestAnimationFrame(animacion);
 }
 
 c.onmousedown = actualizar;
