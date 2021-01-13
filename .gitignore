@@ -3,6 +3,7 @@ dist
 node_modules
 .cache
 *.log
+.vscode
 
 # Temporales
 .DS_Store
