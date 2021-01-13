@@ -1,10 +1,9 @@
 # Lienzo y Datos
 
-Este ejercicio lo van a hacer por fases, la primera la describo acá y con cáda Pull Request les pido algo adicional para ir complejizando la aplicación.
+Este ejercicio lo van a hacer por fases, la primera la describo acá y con cada Pull Request les pido algo adicional para ir complejizando la aplicación.
 
 ## Fase 1
 
-- Como en todos los ejercicios, seguir las [instrucciones generales](../). (crear branch, etc...)
 - Usar plantilla de webpack.
 - Crear un `<canvas>` en el HTML. Este debe tener un ID único.
 - El Canvas debe ocupar toda la pantalla.
