@@ -1,9 +1,8 @@
 # Carpetas de desarrollo
-dist
+www
 node_modules
 .cache
 *.log
-.vscode
 
 # Temporales
 .DS_Store
@@ -12,4 +11,3 @@ node_modules
 .Trashes
 ehthumbs.db
 Thumbs.db
-_diseño
