@@ -221,3 +221,5 @@ dibujarNota(644, 630); //la8b
 dibujarNota(663, 555); //do
 dibujarNota(680, 590); //fa
 dibujarNota(690, 590);
+
+c.onmousedown = dibujarGrilla;
