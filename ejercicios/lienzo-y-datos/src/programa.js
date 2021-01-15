@@ -78,7 +78,6 @@ function animacion() {
     console.log(tiempo);
     const circulos = new Circle;
     const circulos1 = new Circle;
-    const circulos2 = new Circle;
     let w = 1500 * Math.random();
     let h = 1500 * Math.random();
     aceleracion = calcularDistancia(raton.x, raton.y, raton.anteriorX, raton.anteriorY);
