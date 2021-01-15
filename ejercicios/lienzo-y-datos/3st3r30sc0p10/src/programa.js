@@ -74,6 +74,8 @@ function definirColor(x,y){
 }
 
 function animacion() {
+    let tiempo = new Date().getTime();
+    console.log(tiempo);
     const circulos = new Circle;
     const circulos1 = new Circle;
     let w = 1500 * Math.random();
