@@ -1,37 +1,42 @@
-# Lienzo y Datos
+# Webpack
 
-Este ejercicio lo van a hacer por fases, la primera la describo acá y con cáda Pull Request les pido algo adicional para ir complejizando la aplicación.
+Un compilador robusto con muchas opciones para configurarlo. Si queremos tener control total de la compilación, es la mejor opción.
 
-## Fase 1
+Si quieren aprender sobre compiladores, es bueno aprender Webpack para saber lo que hacen los otros internamente.
 
-- Como en todos los ejercicios, seguir las [instrucciones generales](../). (crear branch, etc...)
-- Usar plantilla de webpack.
-- Crear un `<canvas>` en el HTML. Este debe tener un ID único.
-- El Canvas debe ocupar toda la pantalla.
-- En JS deben:
-  - Buscar en el DOM el canvas por su ID.
-  - Crear 2 eventos: `onresize` y `onmousemove`. En `onresize` deben ajustar el canvas al tamaño de la pantalla y definir las propiedades del contexto. En `onmousemove` deben extraer las coordenadas del mouse y pintar en el canvas algo dentro de esas coordenadas.
+- :white_check_mark: Cada detalle de la compilación la podemos configurar a la medida.
+- :white_check_mark: Uso masivo en la comunidad, muchos tutoriales y extensiones.
+- :white_check_mark: No abstrae tanto como los otros compiladores, lo que le ponemos es lo que hace.
+- :x: La libertad de configuración implica una alta curva de aprendizaje.
+- :x: Puede ser confuso ya que hay tantas formas de configurarlo.
 
-### Ejemplo
+Configurarlo desde cero y que funcione bien toma tiempo, si queremos abstraer ese proceso y comenzar rápido un proyecto puede ser mejor utilizar uno preconfigurado como Parcel, Rollup, Snowpack, etc. (:zap: O usar esta plantilla y modificarla si es necesario :zap:)
 
-```html
-<canvas id="lienzo"></canvas>
+## Lo que esta configurado en esta plantilla
+
+- Compila JS con Babel.
+- Compila SCSS.
+- Usa "autoprefixer" para el CSS (ver `"browserslist" : {...}` en `package.json`)
+- Crea servidor local con `yarn start`.
+- "Live reloading".
+- Minifica HTML, CSS y JS en `yarn build`.
+
+## Instalación
+
+```bash
+yarn
 ```
 
-```js
-const canvas = document.getElementById('lienzo');
-const ctx = canvas.getContext('2d');
+## Iniciar servidor local
 
-function actualizar() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-
-canvas.onmousemove = (evento) => {
-  // extraer del evento las coordenadas y pintar algo en el canvas.
-};
-
-window.onresize = actualizar;
-
-actualizar();
+```bash
+yarn start
 ```
+
+## Compilar archivos para subir a servidor
+
+```bash
+yarn build
+```
+
+Lo que subimos al servidor queda en la carpeta `/www`.
