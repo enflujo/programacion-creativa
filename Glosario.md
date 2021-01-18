@@ -11,7 +11,7 @@ Una serie de términos que nos sirven para tener un lenguaje común y aprender a
 |CSS Nativo|CSS / Vanilla CSS|
 |[Dibujo Generativo](#dibujo-generativo)|Generative Drawing|
 |[Elementos del MOD](#elementos-del-mod)|DOM Elements|
-|Empaquetador (Webpack, Parcel, Rollup, Snowpack, ...)|Bundler|
+|[Empaquetador (Webpack, Parcel, Rollup, Snowpack, ...)](#empaquetador)|Bundler|
 |[Eventos Sensibles](#eventos-sensibles-eventlisteners)|Eventlisteners|
 |Frontal - *backend* / servidor (JS, NodeJS) |Frontend - Backend|
 |[Interfaz de Programación de Aplicaciones (API)](#interfaz-de-programación-de-aplicaciones-api)|Application Programming Interface API|
@@ -65,6 +65,13 @@ Gráficas creadas o modificadas a partir de una serie de órdenes lógicas (algo
 ### Elementos del MOD
 
 Un elemento del MOD representa un elemento HTML. Esto significa que los elementos MOD son todos aquellos elementos HTML admitidos por el WWW Consortium. Ejemplos de estos elementos son las etiquetas `<div>`, `<p>`, `<a>`, `<table>`, `<ul>`, etc.
+
+### Empaquetador
+
+Un empaquetador ('bundler' o 'module bundler') es una herramienta utilizada en el desarrollo Frontend para convertir los distintos archivos de una aplicación web (Javascript, imágenes, JSON, CSS, dependencias, etc.) en un solo archivo ejecutable en el navegador, con el fin de organizarlos y facilitar su manejo. Para esto, a partir de un archivo de entrada, el empaquetador genera un diagrama de las relaciones entre los distintos fragmentos de código y archivos que componen la aplicación. Este diagrama se llama gráfico de dependencias ('dependency graph'). Una vez trazadas las relaciones, todos los archivos son empaquetados en uno solo.`<br>`
+Existen varios empaquetadores, entre ellos Webpack, Parcel, Fusebox, Rollup, etc. Más información sobre empaquetadores:
+['What is module bundler and how does it work?' - Tan Li Hau] https://lihautan.com/what-is-module-bundler-and-how-does-it-work/
+['Build Your Own Webpack' - Ronen Amiel] https://youtu.be/Gc9-7PBqOC8
 
 ### Eventos Sensibles (Eventlisteners)
 
@@ -127,7 +134,7 @@ Del libro [Telematic embrace] de Roy Ascott:
 
 > "The rubric “telematics” not only refers to the convergence of computers and telecommunications systems but qualifies a whole class of consciousness and culture in which new modalities of knowledge and the means of their distribution are being tested and extended. Telematics implies interaction, negotiation, and collaboration amongst human beings and intelligent machines. Telematic process involves ambiguity, uncertainty, and incompleteness; meaning is not given but negotiated, endlessly reconstituted and redefined; truth, always relative, does not lie in an absolute location but is embedded in process, is telematically inscribed in the networking that is human behaviour at its most liberated." (p. 202)
 >
-> **_La palabra "telemática" no sólo se refiere a la convergencia entre computadores y sistemas de telecomunicación sino que además califica una forma completa de conciencia y cultura en la que nuevas modalidades de conocimiento y sus medios de su distribución son testeados y extendidos. Telemática implica interacción, negociación y colaboración entre seres humanos y máquinas inteligentes. Los procesos telemáticos involucran ambiguedad, incertidumbre e incompletud; el significado no está dado sino que se negocia, perpetuaemente reconstituidos y redefinidos; la verdad, siempre relativa, no recae en una autoridad absoluta sino que es integrada en el proceso, está telematicamente inscrita en la red que constituye el comportamiento humano en su forma más libre"._**
+> **_La palabra "telemática" no sólo se refiere a la convergencia entre computadores y sistemas de telecomunicación sino que además califica una forma completa de conciencia y cultura en la que nuevas modalidades de conocimiento y sus medios de su distribución son testeados y extendidos. Telemática implica interacción, negociación y colaboración entre seres humanos y máquinas inteligentes. Los procesos telemáticos involucran ambigüedad, incertidumbre e incompletud; el significado no está dado sino que se negocia, perpetuaemente reconstituidos y redefinidos; la verdad, siempre relativa, no recae en una autoridad absoluta sino que es integrada en el proceso, está telemáticamente inscrita en la red que constituye el comportamiento humano en su forma más libre"._**
 
 [Telematic Embrace](https://drive.google.com/file/d/1T2RzUeWnkB23X7mVr2dwHorU0rO_C4VZ/view?usp=sharing)
 
@@ -137,9 +144,9 @@ Las variables son elementos empleados para almacenar un valor. Estos valores pue
 
 ### Tipos de funciones
 
-En JavaScript, una función es el conjunto de pasos que el navegador debe seguir para realizar una acción o calcular un valor. Para que estos procedimientos o pasos puedan ser denominados una función, deben haber unos datos de entrada y otros de salida. En general, casi todas las funciones están compuestas de un nombre o identificador (como en las variables), una lista de parámetros y las declaraciones de JavaScript que definen la función. Por más compleja que sea ésta, en el fondo toda función es un _valor_, que podemos emplear en otras funciones o en otras partes del bloque de código.
+En JavaScript, una función es el conjunto de pasos que el navegador debe seguir para realizar una acción o calcular un valor. Para que estos procedimientos o pasos puedan ser denominados una función, debe haber unos datos de entrada y otros de salida. En general, casi todas las funciones están compuestas de un nombre o identificador (como en las variables), una lista de parámetros y las declaraciones de JavaScript que definen la función. Por más compleja que sea ésta, en el fondo toda función es un _valor_, que podemos emplear en otras funciones o en otras partes del bloque de código.
 
-Dependiendo de la sintaxis, puede haber una declaración de función (Function Declaration) o una expresión de función (Function Expression). En la primera se declaran todos los elementos de la función: identificador, parámetros y declaraciones (sentencias), mientras que la segunda puede ser una función no declarada o anónima, integrada al interior de una expresión u otra construcción sintáctica. En este caso, la expresión de función es un valor, mientras que la declaración de función es un bloque de código. Por esta razón, se recomienda poner un punto y coma al final de la expresión de función, lo cual resulta innecesario en el caso de la declaración de función. Una otra diferencia estriba en el ámbito (scope) de cada una de estas funciones. Mientras que la declaración de función es reconocida globalmente cuando aparece como una sentencia separada (ya que puede ser elevada (hoisted)), el ámbito de la expresión de función está determinado por el lugar dentro del cual la expresión ha sido creada. Lo mismo ocurre con las funciones anidadas: sólo se puede acceder a ellas al interior del bloque de código en el que se encuentran.
+Dependiendo de la sintaxis, puede haber una declaración de función (Function Declaration) o una expresión de función (Function Expression). En la primera se declaran todos los elementos de la función: identificador, parámetros y declaraciones (sentencias), mientras que la segunda puede ser una función no declarada o anónima, integrada al interior de una expresión u otra construcción sintáctica. En este caso, la expresión de función es un valor, mientras que la declaración de función es un bloque de código. Por esta razón, se recomienda poner un punto y coma al final de la expresión de función, lo cual resulta innecesario en el caso de la declaración de función. Una otra diferencia estriba en el ámbito (scope) de cada una de estas funciones. Mientras que la declaración de función es reconocida globalmente cuando aparece como una sentencia separada (ya que puede ser elevada (hoisted)), el ámbito de la expresión de función está determinado por el lugar dentro del cual la expresión ha sido creada. Lo mismo ocurre con las funciones anidadas: sólo se puede acceder a ellas en el interior del bloque de código en el que se encuentran.
 
 Una característica de las funciones en JavaScript es que, a diferencia de otros lenguajes de programación, éstas deben ser llamadas para ejecutarse. El ámbito de las llamadas de activación de una función está determinado por el lugar que ocupa la función dentro del código. Si la llamada está por fuera del alcance de la función, ésta no se activará.
 
