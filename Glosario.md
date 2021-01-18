@@ -68,9 +68,12 @@ Un elemento del MOD representa un elemento HTML. Esto significa que los elemento
 
 ### Empaquetador
 
-Un empaquetador ('bundler' o 'module bundler') es una herramienta utilizada en el desarrollo Frontend para convertir los distintos archivos de una aplicación web (Javascript, imágenes, JSON, CSS, dependencias, etc.) en un solo archivo ejecutable en el navegador, con el fin de organizarlos y facilitar su manejo. Para esto, a partir de un archivo de entrada, el empaquetador genera un diagrama de las relaciones entre los distintos fragmentos de código y archivos que componen la aplicación. Este diagrama se llama gráfico de dependencias ('dependency graph'). Una vez trazadas las relaciones, todos los archivos son empaquetados en uno solo.`<br>`
-Existen varios empaquetadores, entre ellos Webpack, Parcel, Fusebox, Rollup, etc. Más información sobre empaquetadores:
+Un empaquetador ('bundler' o 'module bundler') es una herramienta utilizada en el desarrollo Frontend para convertir los distintos archivos de una aplicación web (Javascript, imágenes, JSON, CSS, dependencias, etc.) en un solo archivo ejecutable en el navegador, con el fin de organizarlos y facilitar su manejo. Para esto, a partir de un archivo de entrada, el empaquetador genera un diagrama de las relaciones entre los distintos fragmentos de código y archivos que componen la aplicación. Este diagrama se llama gráfico de dependencias ('dependency graph'). Una vez trazadas las relaciones, todos los archivos son empaquetados en uno solo. Existen varios empaquetadores, entre ellos Webpack, Parcel, Fusebox, Rollup, etc. 
+
+Más información sobre empaquetadores:
+
 ['What is module bundler and how does it work?' - Tan Li Hau] https://lihautan.com/what-is-module-bundler-and-how-does-it-work/
+
 ['Build Your Own Webpack' - Ronen Amiel] https://youtu.be/Gc9-7PBqOC8
 
 ### Eventos Sensibles (Eventlisteners)
