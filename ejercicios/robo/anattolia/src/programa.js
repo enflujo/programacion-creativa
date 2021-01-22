@@ -19,8 +19,8 @@ function extractFrames() {
   var pro = document.querySelector('#progress');
 
   function initCanvas(e) {
-    canvas.width = this.videoWidth / 30;
-    canvas.height = this.videoHeight / 30;
+    canvas.width = this.videoWidth / 2;
+    canvas.height = this.videoHeight / 2;
     //canvas.width = window.innerWidth;
     //canvas.height = window.innerHeight;
   }
@@ -51,8 +51,8 @@ function extractFrames() {
   function onend(e) {
     // tile.width = Math.ceil(window.innerWidth / tile.cantidadX);
     //tile.height = Math.ceil(window.innerHeight / tile.cantidadY);
-    tile.width = this.videoWidth / 2;
-    tile.height = this.videoHeight / 2;
+    tile.width = this.videoWidth / 3;
+    tile.height = this.videoHeight / 3;
     var img;
     // do whatever with the frames
     for (var i = 0; i < array.length; i++) {

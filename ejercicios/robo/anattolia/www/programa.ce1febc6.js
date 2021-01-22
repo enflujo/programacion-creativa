@@ -118,6 +118,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"programa.js":[function(require,module,exports) {
+//Idea: código en p5 tomado de: http://www.generative-gestaltung.de/2/sketches/?01_P/P_4_2_2_01
+//Alternativa en js que encontré: https://stackoverflow.com/questions/32699721/javascript-extract-video-frames-reliably
 var tile = {
   cantidadX: 5,
   cantidadY: 6,
@@ -142,8 +144,8 @@ function extractFrames() {
   var pro = document.querySelector('#progress');
 
   function initCanvas(e) {
-    canvas.width = this.videoWidth / 30;
-    canvas.height = this.videoHeight / 30; //canvas.width = window.innerWidth;
+    canvas.width = this.videoWidth / 2;
+    canvas.height = this.videoHeight / 2; //canvas.width = window.innerWidth;
     //canvas.height = window.innerHeight;
   }
 
@@ -175,8 +177,8 @@ function extractFrames() {
   function onend(e) {
     // tile.width = Math.ceil(window.innerWidth / tile.cantidadX);
     //tile.height = Math.ceil(window.innerHeight / tile.cantidadY);
-    tile.width = this.videoWidth / 2;
-    tile.height = this.videoHeight / 2;
+    tile.width = this.videoWidth / 3;
+    tile.height = this.videoHeight / 3;
     var img; // do whatever with the frames
 
     for (var i = 0; i < array.length; i++) {
@@ -228,7 +230,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65534" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55016" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
