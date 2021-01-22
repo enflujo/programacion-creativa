@@ -1,30 +1,12 @@
-# Parcel
+Ejercicio de copia de un código o un resultado de código creativo.
 
-Uno de tantos compiladores que tiene la opción de crear un servidor local.
+El resultado original: http://www.generative-gestaltung.de/2/sketches/?01_P/P_4_2_2_01
+El código original en p5: https://editor.p5js.org/generative-design/sketches/P_4_2_2_01
+La alternativa que encontré hasta ahora, basada en: https://stackoverflow.com/questions/32699721/javascript-extract-video-frames-reliably
 
-- :white_check_mark: Compila el JS a ES6 con Babel usando una configuración básica (se puede extender).
-- :white_check_mark: Tiene "Live reload" predeterminado.
-- :white_check_mark: Mínima configuración para comenzar rápido escribiendo código.
-- :white_check_mark: "HMR" incluido, recompila rápido al guardar cambios en el código.
-- :x: Al tener tantas opciones preconfiguradas, puede ser un poco pesado.
-- :x: Abstrae mucho la configuración, si necesita más control sobre el compilador es mejor usar Webpack.
+Dibuja en un canvas los frames de un video.
 
-## Instalación
+TODO:
 
-```bash
-yarn
-```
-
-## Iniciar servidor local
-
-```bash
-yarn start
-```
-
-## Compilar archivos para subir a servidor
-
-```bash
-yarn build
-```
-
-Lo que subimos al servidor queda en la carpeta `/www`.
+1. Que, en vez de subir el video desde el disco propio, se pueda halar el video desde una URL.
+2. Agregar una pausa entre cuadros.
