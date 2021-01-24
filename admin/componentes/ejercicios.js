@@ -36,6 +36,7 @@ function extraerInfo(ruta) {
         respuesta.tipo = 'fa-yarn';
         respuesta.script = datos.scripts.build;
         respuesta.compilado = false;
+        revisarCompilacion(ruta, respuesta);
       } else if (archivos.includes('www')) {
         revisarCompilacion(ruta, respuesta);
       } else {
