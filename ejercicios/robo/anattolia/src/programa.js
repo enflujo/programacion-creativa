@@ -1,11 +1,6 @@
-//Adaptación de código en p5 tomado de: http://www.generative-gestaltung.de/2/sketches/?01_P/P_4_2_2_01
-
-/* PREGUNTA: Quiero que pinte los frames del video que le paso en el campo de texto.
-Con el primero funciona pero de ahí para adelante no, aunque en consola sí imprime
-la información, entonces asumo que sí se está ejecutando la función dibujarVideo().
-¿Por qué no se ve? :)
+/*
+Adaptación de código en p5 tomado de: http://www.generative-gestaltung.de/2/sketches/?01_P/P_4_2_2_01
 */
-
 const dimension = window.innerWidth;
 const tileCountX = 9;
 const tileCountY = 12;
@@ -27,11 +22,9 @@ let urlParam = document.getElementById('url');
 lienzo.width = dimension;
 lienzo.height = dimension;
 
-//video.src = 'https://juancgonzalez.com/labmoviles/suenos/capa1/nuevos_f/arboles_noche.mp4';
-
 function cargarVideo() {
   video.onloadedmetadata = () => {
-    console.log('Video cargado: ' + video.src);
+    //console.log('Video cargado: ' + video.src);
     dibujarVideo();
   };
 }
@@ -39,7 +32,7 @@ btnNuevoVid.onmousedown = () => {
   prepare_link();
 };
 btnPlay.onmousedown = () => {
-  console.log('play');
+  //console.log('play');
   ctx.clearRect(0, 0, dimension, dimension);
   dibujarVideo();
 };
@@ -48,9 +41,8 @@ function prepare_link() {
   var urlParam = document.getElementById('url');
   video.src = urlParam.value;
   currentImage = 0;
-  //ctx.fillStyle = '#00091d';
-  //ctx.fillRect(0, 0, dimension, dimension);
-  return video.src;
+  grillaX = 0;
+  grillaY = 0;
 }
 
 function map(valor, x1, y1, x2, y2) {
@@ -66,8 +58,8 @@ function dibujarVideo() {
   currentImage++;
 
   const nextTime = map(currentImage, 0, imageCount, 0, video.duration);
-  console.log('seek to: ' + video.currentTime);
-  console.log(video.src);
+  //console.log('seek to: ' + video.currentTime);
+  //console.log(video.src);
   video.currentTime = nextTime;
   grillaX++;
 
@@ -83,5 +75,3 @@ function dibujarVideo() {
     animacion = requestAnimationFrame(dibujarVideo);
   }
 }
-
-//cargarVideo();
