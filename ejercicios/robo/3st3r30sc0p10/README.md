@@ -40,3 +40,4 @@ yarn build
 ```
 
 Lo que subimos al servidor queda en la carpeta `/www`.
+//
