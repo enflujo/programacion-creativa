@@ -11,10 +11,11 @@ function resize() {
 }
 
 function setup() {
+    resize()
+    draw();
     ctx.fillStyle = '#000';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     canvas.onmousedown = () => {
-        draw();
         for (let i = 0; i < 200; i++) {
             p.push(new particle());
         }
@@ -32,6 +33,7 @@ function draw() {
         p[i].step();
         p[i].display();
     }
+    requestAnimationFrame(draw);
 }
 
 function fade() {
@@ -50,9 +52,9 @@ function purge() {
     for (let i = 0; i < p.length; i++){
         let x1 = 0;
         let y1 = 0;
-        let x2 = p.indexOf(i).xv;
-        let y2 = p.indexOf(i).yv;
-        if (getDistance(x1, y1, x2, y2) < 0.2 && p.indexOf(i).y > height*0.99 - p.indexOf(i).length) {
+        let x2 = p[i].xv;
+        let y2 = p[i].yv;
+        if (getDistance(x1, y1, x2, y2) < 0.2 && p[i].y > canvas.height*0.99 - p[i].length) {
             p.splice(i, i);
         }
     }
@@ -129,7 +131,7 @@ class particle {
 }
 
 
-window.onresize = resize();
+resize();
 setup();
 
 
