@@ -1,19 +1,5 @@
-# Espejo
+import './scss/estilos.scss';
 
-Este va a ser una introducción a un concepto importante al usar imágenes en el Canvas que es la **manipulación de pixeles** (_pixel manipulation_). A pesar de que es introductorio, hay que tener buenas bases de JS, Loops y Canvas. Este concepto nos sirve para crear efectos (lo que vamos a hacer acá), pero también para analizar imágenes (inteligencia artificial), extraer información visual (visión computacional _computer vision_), y muchas cosas más.
-
-Para este ejercicio van a tomar como punto de partida un código que ya está avanzado y luego crear sus propios efectos usando lo que saben de pintar en canvas.
-
-## Objetivo
-
-- Crear 2 efectos adicionales a los que están en el ejemplo.
-- Documentar con comentarios su propio código, explicar cómo funciona.
-
-## Ejemplo
-
-El ejemplo completo lo encuentran en la carpeta ["./1cgonza/"](./1cgonza). Este es el JS inicial:
-
-```js
 // El lienzo que tenemos en HTML y es visible
 const lienzo = document.getElementById('lienzo');
 const ctx = lienzo.getContext('2d', { alpha: false });
@@ -29,6 +15,8 @@ const anchoPixel = 15;
 const altoPixel = 15;
 const blancoNegro = document.getElementById('byn');
 const pepas = document.getElementById('pepas');
+const cambiar = document.getElementById('cambiar');
+const colorear = document.getElementById('colorear');
 let pixeles = [];
 let datosImagen;
 
@@ -80,7 +68,7 @@ actualizar();
  * Pasa por cada pixel y cambia cada canal (RGB) por el promedio de color de todos los canales.
  */
 blancoNegro.onclick = () => {
-  // Sólo hacemos esto si la imagen ya cargó y hay pixeles.
+  // Sólo hacemos esto si la imágen ya cargo y hay pixeles.
   if (pixeles.length) {
     // Pasamos por cada pixel. Miren que saltamos 4 posiciones en cada ciclo.
     // Esto es porque hay 4 valores por pixel: Rojo, Verde, Azul y Alpha
@@ -101,12 +89,12 @@ blancoNegro.onclick = () => {
 
 /**
  * Efecto pepas
- * Definimos una cuadrícula y sacamos el color promedio de cada celda. Con eso pintamos un círculo del color promedio.
+ * Definimos una cuadrícula y sacamos el color promedio de cada celda. Con eso pintamos un circulo del color promedio.
  * El efecto es una especie de pixelación de la imagen.
  */
 pepas.onclick = () => {
   if (pixeles.length) {
-    // El centro de una pepa es siempre el mismo, entonces lo podemos definir antes de entrar a los loops.
+    // El centro de una pepa es siempre el mismo, entonces lo definimos podemos definir antes de entrar a los loops.
     const centroPepa = { x: anchoPixel / 2, y: altoPixel / 2 };
 
     // Borramos el canvas que se ve en pantalla (los pixeles están en el otro así que tenemos acceso a ellos).
@@ -152,7 +140,7 @@ pepas.onclick = () => {
         promedio[2] = (promedio[2] / numPixeles) | 0;
 
         // Definimos el color promedio en el contexto para pintar lo que queremos de ese color.
-        // En este caso voy a pintar un circulo usando arc()
+        // En este caso voy a pintar un círculo usando arc()
         ctx.fillStyle = `rgb(${promedio.join(',')})`;
         ctx.beginPath();
         ctx.arc(x + centroPepa.x, y + centroPepa.y, centroPepa.x, 0, DOS_PI);
@@ -161,4 +149,60 @@ pepas.onclick = () => {
     }
   }
 };
-```
+
+/**
+ * Cambiar color
+ * Recorre los pixeles y reemplaza en cada pixel cada uno de los valores (rgb)
+ * por otro, como si se girarala paleta.
+ */
+
+cambiar.onclick = () => {
+  if (pixeles.length) {
+    for (let i = 0; i < pixeles.length; i += 4) {
+      const rojo = pixeles[i];
+      const verde = pixeles[i + 1];
+      const azul = pixeles[i + 2];
+      pixeles[i] = azul;
+      pixeles[i + 1] = verde;
+      pixeles[i + 2] = rojo;
+    }
+
+    ctx.putImageData(datosImagen, 0, 0);
+  }
+};
+
+/**
+ * Colorear
+ * Recorre los pixeles comparándolos con un umbral. Si los tres valores rgb son
+ * menores que 127, los reemplaza para formar el gris del fondo. De lo contrario,
+ * evalúa cada valor y lo reemplaza por azul, rojo o amarillo, dependiendo del
+ * primer valor que encuentre por encima de 127.
+ */
+colorear.onclick = () => {
+  if (pixeles.length) {
+    for (let i = 0; i < pixeles.length; i += 4) {
+      const rojo = pixeles[i];
+      const verde = pixeles[i + 1];
+      const azul = pixeles[i + 2];
+      if (verde < 120 && rojo < 120 && azul < 120) {
+        pixeles[i] = 46;
+        pixeles[i + 1] = 48;
+        pixeles[i + 2] = 47;
+      } else if (azul >= 120) {
+        pixeles[i] = 0;
+        pixeles[i + 1] = 105;
+        pixeles[i + 2] = 207;
+      } else if (rojo >= 120) {
+        pixeles[i] = 255;
+        pixeles[i + 1] = 55;
+        pixeles[i + 2] = 57;
+      } else if (verde >= 120) {
+        pixeles[i] = 200;
+        pixeles[i + 1] = 155;
+        pixeles[i + 2] = 0;
+      }
+    }
+
+    ctx.putImageData(datosImagen, 0, 0);
+  }
+};
