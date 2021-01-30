@@ -55,7 +55,7 @@ function purge() {
         let x2 = p[i].xv;
         let y2 = p[i].yv;
         if (getDistance(x1, y1, x2, y2) < 0.2 && p[i].y > canvas.height*0.99 - p[i].length) {
-            p.splice(i, i);
+            p.splice(i, 1);
         }
     }
 }
@@ -63,9 +63,9 @@ function purge() {
 class particle {
     constructor(x, px, y, py, dir, mag, xv, yv, size, friction, gravity) {
         this.x = raton.x;
-        this.px = raton.x;
+        this.px = this.x;
         this.y = raton.y;
-        this.py = raton.y;
+        this.py = this.y;
         this.dir = Math.random(0, 2 * Math.PI);
         this.mag = 5 * (((canvas.width / 1920) * aleatorio(0, 5)) + 0.1);
         this.xv = this.mag * Math.cos(this.dir);
