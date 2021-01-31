@@ -16,7 +16,7 @@ function setup() {
     ctx.fillStyle = '#000';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     canvas.onmousedown = () => {
-        for (let i = 0; i < 200; i++) {
+        for (let i = 0; i < 800; i++) {
             p.push(new particle());
         }
     }    
@@ -37,9 +37,8 @@ function draw() {
 }
 
 function fade() {
-    ctx.beginPath();
     ctx.fillStyle = 'rgba(0, 0, 0, 0.25)'
-    ctx.rect(0, 0, canvas.width, canvas.height);
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
 function getDistance(x1, y1, x2, y2) { 
@@ -54,7 +53,7 @@ function purge() {
         let y1 = 0;
         let x2 = p[i].xv;
         let y2 = p[i].yv;
-        if (getDistance(x1, y1, x2, y2) < 0.2 && p[i].y > canvas.height*0.99 - p[i].length) {
+        if (getDistance(x1, y1, x2, y2) < 0.2 && p[i].y > canvas.height*0.99 - p[i].size) {
             p.splice(i, 1);
         }
     }
@@ -66,7 +65,7 @@ class particle {
         this.px = this.x;
         this.y = raton.y;
         this.py = this.y;
-        this.dir = Math.random(0, 2 * Math.PI);
+        this.dir = aleatorio(0, 2 * Math.PI);
         this.mag = 5 * (((canvas.width / 1920) * aleatorio(0, 5)) + 0.1);
         this.xv = this.mag * Math.cos(this.dir);
         this.yv = this.mag * Math.sin(this.dir);
@@ -90,7 +89,7 @@ class particle {
         this.py = this.y;
         this.x += this.xv;
         this.y += this.yv;
-        this.yv = this.gravity;
+        this.yv += this.gravity;
         //derecha
         if (this.x > canvas.width - (this.size / 2)) {
             this.x -= this.xv;
@@ -131,8 +130,8 @@ class particle {
 }
 
 
-resize();
 setup();
+
 
 
 
