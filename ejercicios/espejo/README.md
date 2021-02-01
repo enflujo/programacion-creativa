@@ -2,7 +2,7 @@
 
 Este va a ser una introducción a un concepto importante al usar imágenes en el Canvas que es la **manipulación de pixeles** (_pixel manipulation_). A pesar de que es introductorio, hay que tener buenas bases de JS, Loops y Canvas. Este concepto nos sirve para crear efectos (lo que vamos a hacer acá), pero también para analizar imágenes (inteligencia artificial), extraer información visual (visión computacional _computer vision_), y muchas cosas más.
 
-Para este ejercicio van a tomar como punto de partida un código que ya está avanzado y luego crear sus propios efectos usando lo que saben de pintar en canvas.
+Para este ejercicio van a tomar como punto de partida un código que ya esta avanzado y luego crear sus propios efectos usando lo que saben de pintar en canvas.
 
 ## Objetivo
 
@@ -43,14 +43,14 @@ async function buscar() {
   // esto es necesario para poder pintar en el canvas una imagen que viene de otro servidor. Ver "tainted canvas"
   img.crossOrigin = 'Anonymous';
   img.onload = () => {
-    // Cuando cargue la imagen, definimos las dimensiones a partir de su tamaño.
+    // Cuando cargue la imágen, definimos las dimensiones a partir de su tamaño.
     dimensiones.imgAncho = img.naturalWidth;
     dimensiones.imgAlto = img.naturalHeight;
 
-    // Pintamos la imagen original en el canvas que no se ve en la pantalla, para tener los pixeles en ese canvas
+    // Pintamos la imágen original en el canvas que no se ve en la pantalla, para tener los pixeles en ese canvas
     ctx2.drawImage(img, 0, 0);
 
-    // Para iniciar, pintamos la imagen original en el canvas que sí se ve, luego aplicamos efectos en este canvas.
+    // Para iniciar, pintamos la imagen original en el canvas que si se ve, luego aplicamos efectos en este canvas.
     ctx.drawImage(img, 0, 0);
 
     // extraemos los datos de la imagen
@@ -80,7 +80,7 @@ actualizar();
  * Pasa por cada pixel y cambia cada canal (RGB) por el promedio de color de todos los canales.
  */
 blancoNegro.onclick = () => {
-  // Sólo hacemos esto si la imagen ya cargó y hay pixeles.
+  // Sólo hacemos esto si la imágen ya cargó y hay pixeles.
   if (pixeles.length) {
     // Pasamos por cada pixel. Miren que saltamos 4 posiciones en cada ciclo.
     // Esto es porque hay 4 valores por pixel: Rojo, Verde, Azul y Alpha
@@ -101,12 +101,12 @@ blancoNegro.onclick = () => {
 
 /**
  * Efecto pepas
- * Definimos una cuadrícula y sacamos el color promedio de cada celda. Con eso pintamos un círculo del color promedio.
- * El efecto es una especie de pixelación de la imagen.
+ * Definimos una cuadricula y sacamos el color promedio de cada celda. Con eso pintamos un circulo del color promedio.
+ * El efecto es una especie de pixelación de la imágen.
  */
 pepas.onclick = () => {
   if (pixeles.length) {
-    // El centro de una pepa es siempre el mismo, entonces lo podemos definir antes de entrar a los loops.
+    // El centro de una pepa es siempre el mismo, entonces lo definimos podemos definir antes de entrar a los loops.
     const centroPepa = { x: anchoPixel / 2, y: altoPixel / 2 };
 
     // Borramos el canvas que se ve en pantalla (los pixeles están en el otro así que tenemos acceso a ellos).
