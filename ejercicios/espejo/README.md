@@ -47,10 +47,10 @@ async function buscar() {
     dimensiones.imgAncho = img.naturalWidth;
     dimensiones.imgAlto = img.naturalHeight;
 
-    // Pintamos la imágen original en el canvas que no se ve en la pantalla, para tener los pixeles en ese canvas
+    // Pintamos la imagen original en el canvas que no se ve en la pantalla, para tener los pixeles en ese canvas
     ctx2.drawImage(img, 0, 0);
 
-    // Para iniciar, pintamos la imagen original en el canvas que si se ve, luego aplicamos efectos en este canvas.
+    // Para iniciar, pintamos la imagen original en el canvas que sí se ve, luego aplicamos efectos en este canvas.
     ctx.drawImage(img, 0, 0);
 
     // extraemos los datos de la imagen
@@ -80,7 +80,7 @@ actualizar();
  * Pasa por cada pixel y cambia cada canal (RGB) por el promedio de color de todos los canales.
  */
 blancoNegro.onclick = () => {
-  // Sólo hacemos esto si la imágen ya cargó y hay pixeles.
+  // Sólo hacemos esto si la imagen ya cargó y hay pixeles.
   if (pixeles.length) {
     // Pasamos por cada pixel. Miren que saltamos 4 posiciones en cada ciclo.
     // Esto es porque hay 4 valores por pixel: Rojo, Verde, Azul y Alpha
@@ -101,12 +101,12 @@ blancoNegro.onclick = () => {
 
 /**
  * Efecto pepas
- * Definimos una cuadricula y sacamos el color promedio de cada celda. Con eso pintamos un circulo del color promedio.
- * El efecto es una especie de pixelación de la imágen.
+ * Definimos una cuadrícula y sacamos el color promedio de cada celda. Con eso pintamos un círculo del color promedio.
+ * El efecto es una especie de pixelación de la imagen.
  */
 pepas.onclick = () => {
   if (pixeles.length) {
-    // El centro de una pepa es siempre el mismo, entonces lo definimos podemos definir antes de entrar a los loops.
+    // El centro de una pepa es siempre el mismo, entonces lo podemos definir antes de entrar a los loops.
     const centroPepa = { x: anchoPixel / 2, y: altoPixel / 2 };
 
     // Borramos el canvas que se ve en pantalla (los pixeles están en el otro así que tenemos acceso a ellos).
