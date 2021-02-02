@@ -48,7 +48,7 @@ sudo apt-get install nodejs git yarn
 
 ## Editor de código
 
-Recomiendo [VSCode](https://code.visualstudio.com/)
+Para escribir en lenguajes de programación se necesita un editor de código. Hay muchos, unos más sencillos (editores de texto plano), y otros más complejos conocidos como Entornos de Desarrollo Integrado o Integrated Development Environment (IDE). Por consenso y porque nos gustan algunas de sus herramientas, en este espacio usamos Visual Studio Code. Puedes descargarlo aquí: [VSCode](https://code.visualstudio.com/).
 
 ## Algunas extensiones recomendadas para VSCode
 
@@ -75,5 +75,5 @@ Conceptos clave para trabajar con Git y GitHub en repositorios (proyectos) compa
 
 1. Fork: copiar el código de otra persona en el propio repositorio para modificarlo.
 2. Pull: enviar los cambios realizados a la otra persona para que los apruebe (Pull Request). 
-3. Merge (fusión): Integrar los cambios hechos por otros al repositorio original, una vez aprobados.
-4. Branch (rama): bifurcaciones dentro de un mismo repositorio que permiten tener distintas versiones de los archivos. La rama principal en Git y GitHub solía llamarse Master pero en las últimas versiones se llama Main por polémicas sobre el lenguaje, las jerarquías y el racismo (a las ramas que no eran Master se les llamaba slaves). 
+3. Merge (fusionar): Integrar los cambios hechos por otros al repositorio original, una vez aprobados.
+4. Branch(es) (rama(s)): bifurcaciones dentro de un mismo repositorio que permiten tener distintas versiones de los archivos. La rama principal en Git y GitHub solía llamarse Master pero en las últimas versiones se llama Main por polémicas sobre el lenguaje, las jerarquías, el racismo y la esclavitud (a las ramas que no eran Master se les llamaba 'slaves'). 
