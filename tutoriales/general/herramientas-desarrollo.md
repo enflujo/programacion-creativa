@@ -68,9 +68,9 @@ Por consenso y porque nos gustan algunas de sus herramientas, en este espacio us
 
 ## Sobre Git y Github
 
-[Git] (https://git-scm.com/) es un software de control de versiones para desarrolladores, es decir, permite manejar distintas versiones de un solo archivo o proyecto e ir y venir entre versiones cómodamente, como si pudiéramos pasear entre dimensiones paralelas de un mismo mundo, probar cosas distintas en cada una y volver atrás, si hace falta. 
+[Git](https://git-scm.com/) es un software de control de versiones para desarrolladores, es decir, permite manejar distintas versiones de un solo archivo o proyecto e ir y venir entre versiones cómodamente, como si pudiéramos pasear entre dimensiones paralelas de un mismo mundo, probar cosas distintas en cada una y volver atrás, si hace falta. 
 
-[Github] (https://github.com/) es una plataforma web para alojar archivos de código que facilita la colaboración entre varias personas que usan Git. Al igual que este, permite controlar los cambios y las versiones de los archivos y, además, sirve para la gestión y la organización de los proyectos. A veces puede ser confuso y tal vez frustrante pero es muy útil. 
+[Github](https://github.com/) es una plataforma web para alojar archivos de código que facilita la colaboración entre varias personas que usan Git. Al igual que este, permite controlar los cambios y las versiones de los archivos y, además, sirve para la gestión y la organización de los proyectos. A veces puede ser confuso y tal vez frustrante pero es muy útil. 
 
 Conceptos clave para trabajar con Git y GitHub en repositorios (proyectos) compartidos:
 
