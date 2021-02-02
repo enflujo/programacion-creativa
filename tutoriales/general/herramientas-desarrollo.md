@@ -48,7 +48,8 @@ sudo apt-get install nodejs git yarn
 
 ## Editor de código
 
-Para escribir en lenguajes de programación se necesita un editor de código. Hay muchos, unos más sencillos (editores de texto plano), y otros más complejos conocidos como Entornos de Desarrollo Integrado o Integrated Development Environment (IDE). Por consenso y porque nos gustan algunas de sus herramientas, en este espacio usamos Visual Studio Code. Puedes descargarlo aquí: [VSCode](https://code.visualstudio.com/).
+Por consenso y porque nos gustan algunas de sus herramientas, en este espacio usamos Visual Studio Code. Puedes descargarlo aquí: [VSCode](https://code.visualstudio.com/).
+[Breve guía de configuración]('/tutoriales(vscode.md')
 
 ## Algunas extensiones recomendadas para VSCode
 
