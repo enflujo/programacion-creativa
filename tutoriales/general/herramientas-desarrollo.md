@@ -78,3 +78,5 @@ Conceptos clave para trabajar con Git y GitHub en repositorios (proyectos) compa
 2. Pull: enviar los cambios realizados a la otra persona para que los apruebe (Pull Request). 
 3. Merge (fusionar): Integrar los cambios hechos por otros al repositorio original, una vez aprobados.
 4. Branch(es) (rama(s)): bifurcaciones dentro de un mismo repositorio que permiten tener distintas versiones de los archivos. La rama principal en Git y GitHub solía llamarse Master pero en las últimas versiones se llama Main por polémicas sobre el lenguaje, las jerarquías, el racismo y la esclavitud (a las ramas que no eran Master se les llamaba 'slaves'). 
+
+[Más sobre el trabajo con Git y GitHub]('/tutoriales/git-github/guia_breve.md')
