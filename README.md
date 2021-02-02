@@ -29,7 +29,7 @@ Configurar su computador instalando las herramientas necesarias. Ver [Herramient
 
 ## Ejercicio 2: Entrar al taller
 
-El trabajo lo vamos a realizar en este repositorio de Github. Pare eso debemos aprender un poco del trabajo con "Git".
+El trabajo lo vamos a realizar en este repositorio de Github. Para eso debemos aprender un poco del trabajo con "Git".
 
 Continuando con la lógica anterior, deben buscar en Internet cómo hacer lo siguiente:
 
