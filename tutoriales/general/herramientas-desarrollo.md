@@ -23,7 +23,7 @@ Ya viene con APT _(Advanced Package Tool)_. Comando para ejecutarlo es: `apt-get
 Con el gestor instalado para su sistema operativo, instalar:
 
 - NodeJS
-- [Git](#git)
+- [Git](#sobre-git-y-github)
 - Yarn
 
 ### Windows
@@ -65,4 +65,4 @@ Recomiendo [VSCode](https://code.visualstudio.com/)
 - Color Picker
 - CodeStream
 
-## Pistas sobre Git y Girhub
+## Sobre Git y Github
