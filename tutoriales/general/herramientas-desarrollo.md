@@ -49,7 +49,7 @@ sudo apt-get install nodejs git yarn
 ## Editor de código
 
 Por consenso y porque nos gustan algunas de sus herramientas, en este espacio usamos Visual Studio Code. Puedes descargarlo aquí: [VSCode](https://code.visualstudio.com/).
-[Breve guía de configuración]('/tutoriales(vscode.md')
+[Breve guía de configuración]('/tutoriales/vscode.md')
 
 ## Algunas extensiones recomendadas para VSCode
 
