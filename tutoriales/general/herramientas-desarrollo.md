@@ -74,7 +74,7 @@ Recomiendo [VSCode](https://code.visualstudio.com/)
 Conceptos clave para trabajar con Git y GitHub en repositorios (proyectos) compartidos:
 
 1. Fork: copiar el código de otra persona en el propio repositorio para modificarlo.
-2. Pull Request: enviar los cambios realizados a la otra persona para que los apruebe. 
+2. Pull Request: enviar los cambios realizados a la persona dueña del repositorio original (del fork -> al repo original) para que los apruebe. 
 3. Merge (fusionar): Integrar los cambios hechos por otros al repositorio original, una vez aprobados.
 4. Branch(es) (rama(s)): bifurcaciones dentro de un mismo repositorio que permiten tener distintas versiones de los archivos. La rama principal en Git y GitHub solía llamarse Master pero en las últimas versiones se llama Main por polémicas sobre el lenguaje, las jerarquías, el racismo y la esclavitud (a las ramas que no eran Master se les llamaba 'slaves'). 
 5. Pull: Actualizar localmente su código con los cambios de un repositorio.
