@@ -1,7 +1,6 @@
 /**  
-Nuevo ejercicio de robo para practicar la traducción de Processing a Jacascript 
-y el uso de clases y objetos en simulación de partículas.
-Tomado de: https://www.openprocessing.org/sketch/1030194
+ Nuevo ejercicio de robo para practicar partículas.
+Tomado de: 
 */
 
 import './scss/estilos.scss';
@@ -26,7 +25,6 @@ function setup() {
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   nParticles = 40;
-  ctx.fillStyle = `hsla(${Particle.h},${Particle.s}%,${Particle.b}%, 0.7)`;
   for (let i = 0; i < nParticles; i++) {
     p.push(new Particle(canvas.width / 2, canvas.height / 2, 200, hue));
   }
@@ -45,15 +43,15 @@ function draw() {
     p[i].move();
   }
 
-  canvas.onmousedown = () => {
-    hue = random(0, 365);
-    for (let i = 0; i <= 30; i++) {
-      let alpha = 1;
-      p.push(new Particle(mouseX, mouseY, 200, hue));
-    }
-  };
   requestAnimationFrame(draw);
 }
+
+canvas.onmousedown = () => {
+  hue = random(0, 365);
+  for (let i = 0; i <= 30; i++) {
+    p.push(new Particle(mouseX, mouseY, 200, hue));
+  }
+};
 
 function random(min, max) {
   min = Math.ceil(min);
@@ -85,7 +83,6 @@ class Particle {
     this.moveY = this.moveY + 0.1;
     this.y = this.y + this.moveY;
     ctx.fillStyle = `hsla(${this.h},${this.s}%,${this.b}%,${this.alpha})`;
-    this.alpha = this.alpha - 0.005;
 
     ellipse(this.x, this.y, this.width);
   }
