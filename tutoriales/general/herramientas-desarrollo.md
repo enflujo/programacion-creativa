@@ -63,6 +63,8 @@ Recomiendo [VSCode](https://code.visualstudio.com/)
 - Github Markdown Preview + sus Extensions Packs.
 - Android iOS Emulator
 - Color Picker
+- CodeStream
+
 # Herramientas de desarrollo
 
 Esta es una lista básica de herramientas para tener un taller local de desarrollo. Sobre esta base pueden instalar otras herramientas y extensiones según el gusto de cada uno.
