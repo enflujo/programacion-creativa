@@ -37,4 +37,4 @@ window.onresize = actualizar;
 actualizar();
 
 
-console.log('Webpack');
+
