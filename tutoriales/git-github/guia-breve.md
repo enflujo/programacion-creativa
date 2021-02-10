@@ -155,10 +155,13 @@ git commit -m "Arreglé el error..." -m "Descripción detallada del error"
 git push origin <nombre-de-branch>
 ```
 
+Para integrar los cambios al repositorio original deben ubicarse en la copia del repositorio que se encuentra en su cuenta de GitHub y seleccionar la rama que acaban de actualizar. El botón está en la parte superior izquierda de la pantalla y por defecto es "main". Una vez ahí, deben abrir un Pull request. Si no hay errores ni conflictos, el administrador del repositorio aprobará los cambios. De lo contrario, les pedirá que corrijan sus archivos.
+
+
 ## Enlaces
 
 - [Git and GitHub for Beginners (Video)](https://youtu.be/RGOj5yH7evk)
 - [Git Forking & Fetch (Video)](hhttps://youtu.be/deEYHVpE1c8) 
 - [Lil Git and Github Tutorial (Video)](https://youtu.be/PdLTopQ253g)
 - [Generate SSH Key (Articulo)](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-- [Introducción a Git y Github (Lista de videos)](https://youtube.com/playlist?list=PLozRqGzj97d02YjR5JVqDwN2K0cAiT7VK)
+- [Introducción a Git y Github (Lista de videos)](https://youtube.com/playlist?list=PLozRqGzj97d02YjR5JVqDwN2K0cAiT7VK) 
