@@ -8,12 +8,7 @@ let color = "white"
 let aceleracion = 0;
 
 function ChangeColor(){
-let hexcode = "";
-for (var i = 0 ; i < 6 ; i++){
-let random_index = Math.floor(Math.random() * hex_numbers.length); 
-hexcode += hex_numbers[random_index];
-};
-color = "#" + hexcode;
+
 console.log(hexcode);
 }
 
@@ -21,19 +16,28 @@ console.log(hexcode);
 function actualizar() {
   c.width = window.innerWidth;
   c.height = window.innerHeight;
-ctx.fillStyle = color;
+ctx.fillStyle = "white";
 ctx.fillRect(0, 0, c.width, c.height);
 
 };
 
-c.onclick = ChangeColor();
+c.onclick = actualizar;
 
 c.onmousemove = (evento) => {
 raton.x = evento.clientX;
 raton.y = evento.clientY;
 ctx.beginPath();
-ctx.arc(raton.x, 50, raton.y, 0, 2 * Math.PI);
+ctx.arc(raton.x, 50, raton.y, 10, 2 * Math.PI);
+ctx.lineTo(0, raton.y);
 ctx.stroke();
+let hexcode = "";
+for (var i = 0 ; i < 6 ; i++){
+let random_index = Math.floor(Math.random() * hex_numbers.length); 
+hexcode += hex_numbers[random_index];
+};
+color = "#" + hexcode;
+ctx.strokeStyle = color;
+
 };
 window.onresize = actualizar;
 actualizar();
