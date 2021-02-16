@@ -1,5 +1,5 @@
 import Papa from 'papaparse';
-import csv from './datos.csv'; // Suponiendo que el .csv esta junto a tu js
+import csv from './datos2.csv'; // Suponiendo que el .csv esta junto a tu js
 
 Papa.parse(csv, {
   download: true, // Este es necesario para que descargue el archivo csv tuyo
