@@ -10,7 +10,20 @@ module.exports = merge(base, {
     contentBase: path.join(__dirname, 'www'),
   },
   module: {
+      
     rules: [
+        {
+  test: /\.(txt|csv|mmdb)$/,
+  use: [
+    {
+      loader: 'file-loader',
+      options: {
+        name: "[path][name].[ext]",
+        emitFile: true,
+      },
+    },
+  ],
+},
       {
         test: /\.(css|scss)$/,
         use: [

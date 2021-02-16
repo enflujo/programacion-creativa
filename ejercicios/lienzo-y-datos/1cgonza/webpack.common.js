@@ -11,6 +11,18 @@ module.exports = {
   },
   module: {
     rules: [
+        {
+  test: /\.(txt|csv|mmdb)$/,
+  use: [
+    {
+      loader: 'file-loader',
+      options: {
+        name: "[path][name].[ext]",
+        emitFile: true,
+      },
+    },
+  ],
+},
       {
         test: /\.js$/,
         exclude: /node_modules/,

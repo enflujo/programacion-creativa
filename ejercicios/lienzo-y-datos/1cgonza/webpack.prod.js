@@ -9,6 +9,18 @@ module.exports = merge(base, {
   target: ['es5', 'browserslist'],
   module: {
     rules: [
+        {
+  test: /\.(txt|csv|mmdb)$/,
+  use: [
+    {
+      loader: 'file-loader',
+      options: {
+        name: "[path][name].[ext]",
+        emitFile: true,
+      },
+    },
+  ],
+},
       {
         test: /\.(css|scss)$/,
         use: [
@@ -29,6 +41,22 @@ module.exports = merge(base, {
           },
         ],
       },
+<<<<<<< Updated upstream:ejercicios/lienzo-y-datos/1cgonza/webpack.prod.js
+=======
+        {
+  test: /\.(txt|csv|mmdb)$/,
+  use: [
+    {
+      loader: 'file-loader',
+      options: {
+        name: "[path][name].[ext]",
+        emitFile: true,
+      },
+    },
+      
+  ],
+},
+>>>>>>> Stashed changes:proyecto visualización/webpack.prod.js
     ],
   },
   plugins: [new CleanWebpackPlugin(), new MiniCssExtractPlugin()],
