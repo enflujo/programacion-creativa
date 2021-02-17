@@ -34,7 +34,7 @@ Usando una plantilla con Babel (Webpack o Parcel) crear los siguientes archivos.
     <title>PONER ACÁ EL NOMBRE DE SU PROYECTO</title>
   </head>
   <body>
-    <main>
+    <main id="main">
       <canvas id="lienzo"></canvas>
     </main>
   </body>
