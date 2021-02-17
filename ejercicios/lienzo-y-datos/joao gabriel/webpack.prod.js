@@ -29,18 +29,6 @@ module.exports = merge(base, {
           },
         ],
       },
-        {
-  test: /\.(txt|csv|mmdb)$/,
-  use: [
-    {
-      loader: 'file-loader',
-      options: {
-        name: "[path][name].[ext]",
-        emitFile: true,
-      },
-    },
-  ],
-},
     ],
   },
   plugins: [new CleanWebpackPlugin(), new MiniCssExtractPlugin()],

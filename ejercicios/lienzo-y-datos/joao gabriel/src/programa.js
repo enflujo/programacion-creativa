@@ -1,45 +1,46 @@
 import './scss/estilos.scss';
-const c = document.getElementById('lienzo');
-const botón = document.getElementById("teste");
-const ctx = c.getContext('2d');
-const raton = { x: 0, y: 0, anteriorX: 0, anteriorY: 0 };
-const hex_numbers = ["1","2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"]
-let hexcode = "";
-let color = "white";
-let aceleracion = 0;
+import Papa from 'papaparse';
+import csv from './datos.csv';
 
-function ChangeColor(){
-let hexcode = "";
-for (var i = 0 ; i < 6 ; i++){
-let random_index = Math.floor(Math.random() * hex_numbers.length); 
-hexcode += hex_numbers[random_index];
-};
-color = "#" + hexcode;
-console.log(hexcode);
-};
+let intencionalidad = [];
+let activismo = 0
+    
+Papa.parse(csv, {
+  download: true, // Este es necesario para que descargue el archivo csv tuyo
+  header: true, // Para que lea la primera fila como variables
+  delimiter: ',',
+  complete: inicio,
+});
 
+// Esta función corre cuando Papaparse termina de convertir los datos
+function inicio(datos) {
+    const index = datos.data
+    console.log(datos); // Aquí puedes ver tus datos y comenzar a trabajar con ellos en JS
+ 
+    
+    for (let i=0; i < 219; i++){
+        let intencion = String(index[i].INTENCIONALIDAD)
+        if (intencion.includes(",") == true){
+            let separados = index[i].INTENCIONALIDAD.split(",")
+            for (let i=0; i < separados.length; i++){
+             intencionalidad.push(separados[i])   
+            }
+        }
+            else {
+                intencionalidad.push(String(index[i].INTENCIONALIDAD))
+            }
+        
+        }
+  
+  for (let i=0; i <intencionalidad.length; i++){
+      if ( (intencionalidad[i] == '"activismo"' ) || (intencionalidad[i] == '"Activismo"') 
+          || (intencionalidad[i] == ' "activismo"') || (intencionalidad[i] == ' "Activismo"')
+         || (intencionalidad[i] == ' "activismo"') || (intencionalidad[i] == '"Afirmacion de grupo" "Activismo"')
+         || (intencionalidad[i] == '"ativismo"') || (intencionalidad[i] == 'Â¨activismoÂ¨')){
+          activismo = activismo+1
+      } 
+  }
+    console.log(intencionalidad.sort())
+     console.log(activismo)
+}
 
-c.onclick = ChangeColor();
-
-function actualizar() {
-  c.width = window.innerWidth;
-  c.height = window.innerHeight;
-  ctx.fillStyle = color;
-  ctx.fillRect(0, 0, c.width, c.height);
-
-};
-
-
-
-c.onmousemove = (evento) => {
-raton.x = evento.clientX;
-raton.y = evento.clientY;
-ctx.beginPath();
-ctx.arc(raton.x, 50, raton.y, 0, 2 * Math.PI);
-ctx.stroke();
-};
-window.onresize = actualizar;
-actualizar();
-
-
-console.log('Webpack');
