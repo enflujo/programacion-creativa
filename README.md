@@ -56,3 +56,4 @@ Ir a [Glosario](Glosario.md)
 - ..:: João Gabriel Almeida ::..
 - ..:: Fabio o Ferio o F Bonfanti Ruggiero ::..
 - ..:: Alejo Forero ::..
+- ..:: Andrea Muñoz Álvarez ::..
