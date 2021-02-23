@@ -45,7 +45,7 @@ let int_pregunta = 0
 let int_otros = 0
 let int_mujer = 0
 
-//compartidas por intencionalidades 
+//compartidas por intencionalidades
 
 let total_compartidos = 0
 let comp_activismo = 0
@@ -166,7 +166,7 @@ let texto_mujer = 0
 // fotos por intencionalidad
 
 let comp_fotos = 0
-let int_fotos = 0 
+let int_fotos = 0
 let total_fotos = 0
 let fotos_activismo = 0
 let fotos_mediacion = 0
@@ -407,17 +407,17 @@ Papa.parse(csv, {
 function inicio(datos) {
     const index = datos.data
     console.log(datos); // Aquí puedes ver tus datos y comenzar a trabajar con ellos en JS
-    
+
     // tester de categorias - lista organizada en set para verificar posibles categorias erradas
-    
-    for (let i = 0; i < index.length; i++) { 
+
+    for (let i = 0; i < index.length; i++) {
   let categoria = String(index[i].PAIS);
     tester.push(categoria)
     }
     tester.forEach(item => set.add(item))
     console.log(set)
-  
-   
+
+
  /* if (intencion.includes(",")) { // Puedes borrar el == true ya que si es en si mismo true pues pasa o no el if()
     let separados = index[i].INTENCIONALIDAD.split(",");
     for (let ii = 0; ii < separados.length; ii++) {
@@ -427,113 +427,113 @@ function inicio(datos) {
     intencionalidad.push(index[i].INTENCIONALIDAD);
   }
 }*/
-  
+
 
     // correlaciones intencionalidad
-  
+
   for (let i=0; i <index.length; i++){
-      const inte = String(index[i].INTENCIONALIDAD).toLowerCase().trim(); 
+      const inte = String(index[i].INTENCIONALIDAD).toLowerCase().trim();
       const grupo_pagina = String(index[i].GRUPO).toLowerCase().trim();
-      const tipo = String(index[i].TIPO).toLowerCase().trim(); 
+      const tipo = String(index[i].TIPO).toLowerCase().trim();
       const pais = String(index[i].DOCUMENT_POSITION_CONTAINS).toLowerCase().trim();
-      
+
       // vuelve esto lowercase y borra espacios al principio o fin.
   if (inte.includes('tivismo')) {
     activismo += 1;
     int_activismo = int_activismo +  parseFloat(index[i].INTERACCIONES)
-    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)  
+    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)
     comp_activismo = comp_activismo + parseFloat(index[i].COMPARTIDAS)
     total_compartidos = total_compartidos + parseFloat(index[i].COMPARTIDAS)
     if (grupo_pagina.includes("grupo")){
         grupo_activismo += 1
         total_grupo += 1
         comp_grupo = comp_grupo + parseFloat(index[i].COMPARTIDAS)
-        int_grupo = int_grupo + parseFloat(index[i].INTERACCIONES) 
+        int_grupo = int_grupo + parseFloat(index[i].INTERACCIONES)
     }
     if (grupo_pagina.includes("pagina")){
         pagina_activismo += 1
-        total_pagina += 1 
+        total_pagina += 1
         comp_pagina = comp_pagina + parseFloat(index[i].COMPARTIDAS)
         int_pagina = int_pagina + parseFloat(index[i].INTERACCIONES)
     }
     if (tipo.includes("texto") || tipo.includes("escrito")){
-       texto_activismo += 1 
-       total_texto += 1 
+       texto_activismo += 1
+       total_texto += 1
        int_texto = int_texto + parseFloat(index[i].INTERACCIONES)
        comp_texto = comp_texto + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("video")){
-       video_activismo += 1 
-       total_video += 1 
+       video_activismo += 1
+       total_video += 1
        int_video = int_video + parseFloat(index[i].INTERACCIONES)
        comp_video = comp_video + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("foto")){
-       fotos_activismo += 1 
-       total_fotos += 1 
+       fotos_activismo += 1
+       total_fotos += 1
        int_fotos = int_fotos + parseFloat(index[i].INTERACCIONES)
        comp_fotos = comp_fotos + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("meme")){
-       memes_activismo += 1 
-       total_memes += 1 
+       memes_activismo += 1
+       total_memes += 1
        int_memes = int_memes + parseFloat(index[i].INTERACCIONES)
        comp_memes = comp_memes + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("fotomontaje")){
-       fotomontaje_activismo += 1 
-       total_fotomontaje += 1 
+       fotomontaje_activismo += 1
+       total_fotomontaje += 1
        int_fotomontaje = int_fotomontaje + parseFloat(index[i].INTERACCIONES)
        comp_fotomontaje = comp_fotomontaje + parseFloat(index[i].COMPARTIDAS)
-    } 
+    }
     if (pais.includes("dominicana")){
-       rep_dominicana_activismo += 1 
-       total_rep_dominicana += 1 
+       rep_dominicana_activismo += 1
+       total_rep_dominicana += 1
        int_rep_dominicana = int_rep_dominicana + parseFloat(index[i].INTERACCIONES)
        comp_rep_dominicana = comp_rep_dominicana + parseFloat(index[i].COMPARTIDAS)
     }
     if (pais.includes("eua") || pais.includes("usa") || pais.includes("eeuu")){
-       eua_activismo += 1 
-       total_eua += 1 
+       eua_activismo += 1
+       total_eua += 1
        int_eua = int_eua + parseFloat(index[i].INTERACCIONES)
        comp_eua = comp_eua + parseFloat(index[i].COMPARTIDAS)
         }
       if (pais.includes("colombia")){
-       colombia_activismo += 1 
-       total_colombia += 1 
+       colombia_activismo += 1
+       total_colombia += 1
        int_colombia = int_colombia + parseFloat(index[i].INTERACCIONES)
        comp_colombia = comp_colombia + parseFloat(index[i].COMPARTIDAS)
         }
       if (pais.includes("ecuador")){
-       ecuador_activismo += 1 
-       total_ecuador += 1 
+       ecuador_activismo += 1
+       total_ecuador += 1
        int_ecuador= int_ecuador + parseFloat(index[i].INTERACCIONES)
        comp_ecuador = comp_ecuador + parseFloat(index[i].COMPARTIDAS)
         }
       if (pais.includes("xico")){
-       mexico_activismo += 1 
-       total_mexico += 1 
+       mexico_activismo += 1
+       total_mexico += 1
        int_mexico= int_mexico + parseFloat(index[i].INTERACCIONES)
        comp_mexico = comp_mexico + parseFloat(index[i].COMPARTIDAS)
         }
       if (pais.includes("ghana")){
-       ghana_activismo += 1 
-       total_ghana += 1 
+       ghana_activismo += 1
+       total_ghana += 1
        int_ghana= int_ghana + parseFloat(index[i].INTERACCIONES)
        comp_ghana = comp_ghana + parseFloat(index[i].COMPARTIDAS)
         }
-      
-    
+
+
       }
-    
-      
+
+
    if (inte.includes('mediac')) {
     mediacion += 1;
     int_mediacion = int_mediacion + parseFloat(index[i].INTERACCIONES)
     comp_mediacion = comp_mediacion + parseFloat(index[i].COMPARTIDAS)
-    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)  
+    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)
     total_compartidos = total_compartidos + parseFloat(index[i].COMPARTIDAS)
-    
+
     if (grupo_pagina.includes("grupo")){
         grupo_mediacion += 1
         total_grupo += 1
@@ -547,44 +547,44 @@ function inicio(datos) {
         int_pagina = int_pagina + parseFloat(index[i].INTERACCIONES)
     }
     if (tipo.includes("texto") || tipo.includes("escrito")){
-       texto_mediacion += 1 
-       total_texto += 1 
+       texto_mediacion += 1
+       total_texto += 1
        int_texto = int_texto + parseFloat(index[i].INTERACCIONES)
        comp_texto = comp_texto + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("video")){
-       video_mediacion += 1 
-       total_video += 1 
+       video_mediacion += 1
+       total_video += 1
        int_video = int_video + parseFloat(index[i].INTERACCIONES)
        comp_video = comp_video + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("foto")){
-       fotos_mediacion += 1 
-       total_fotos += 1 
+       fotos_mediacion += 1
+       total_fotos += 1
        int_fotos = int_fotos + parseFloat(index[i].INTERACCIONES)
        comp_fotos = comp_fotos + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("meme")){
-       memes_mediacion += 1 
-       total_memes += 1 
+       memes_mediacion += 1
+       total_memes += 1
        int_memes = int_memes + parseFloat(index[i].INTERACCIONES)
        comp_memes = comp_memes + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("fotomontaje")){
-       fotomontaje_mediacion += 1 
-       total_fotomontaje += 1 
+       fotomontaje_mediacion += 1
+       total_fotomontaje += 1
        int_fotomontaje = int_fotomontaje + parseFloat(index[i].INTERACCIONES)
        comp_fotomontaje = comp_fotomontaje + parseFloat(index[i].COMPARTIDAS)
     }
-   
+
    }
     if (inte.includes('oda')) {
     oda += 1;
     int_oda = int_oda + parseFloat(index[i].INTERACCIONES)
     comp_oda = comp_oda + parseFloat(index[i].COMPARTIDAS)
-    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)  
+    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)
     total_compartidos = total_compartidos + parseFloat(index[i].COMPARTIDAS)
-        
+
     if (grupo_pagina.includes("grupo")){
         grupo_oda += 1
         total_grupo += 1
@@ -598,44 +598,44 @@ function inicio(datos) {
         int_pagina = int_pagina + parseFloat(index[i].INTERACCIONES)
     }
     if (tipo.includes("texto") || tipo.includes("escrito")){
-       texto_oda += 1 
-       total_texto += 1 
+       texto_oda += 1
+       total_texto += 1
        int_texto = int_texto + parseFloat(index[i].INTERACCIONES)
        comp_texto = comp_texto + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("video")){
-       video_oda += 1 
-       total_video += 1 
+       video_oda += 1
+       total_video += 1
        int_video = int_video + parseFloat(index[i].INTERACCIONES)
        comp_video = comp_video + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("foto")){
-       fotos_oda += 1 
-       total_fotos += 1 
+       fotos_oda += 1
+       total_fotos += 1
        int_fotos = int_fotos + parseFloat(index[i].INTERACCIONES)
        comp_fotos = comp_fotos + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("meme")){
-       memes_oda += 1 
-       total_memes += 1 
+       memes_oda += 1
+       total_memes += 1
        int_memes = int_memes + parseFloat(index[i].INTERACCIONES)
        comp_memes = comp_memes + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("fotomontaje")){
-       fotomontaje_oda += 1 
-       total_fotomontaje += 1 
+       fotomontaje_oda += 1
+       total_fotomontaje += 1
        int_fotomontaje = int_fotomontaje + parseFloat(index[i].INTERACCIONES)
        comp_fotomontaje = comp_fotomontaje + parseFloat(index[i].COMPARTIDAS)
     }
-    
+
     }
        if (inte.includes('publicidad')) {
     publicidad += 1;
     int_publicidad = int_publicidad + parseFloat(index[i].INTERACCIONES)
     comp_publicidad = comp_publicidad + parseFloat(index[i].COMPARTIDAS)
-    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)  
+    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)
     total_compartidos = total_compartidos + parseFloat(index[i].COMPARTIDAS)
-           
+
     if (grupo_pagina.includes("grupo")){
         grupo_publicidad += 1
         total_grupo += 1
@@ -649,43 +649,43 @@ function inicio(datos) {
         int_pagina = int_pagina + parseFloat(index[i].INTERACCIONES)
     }
     if (tipo.includes("texto") || tipo.includes("escrito")){
-       texto_publicidad += 1 
-       total_texto += 1 
+       texto_publicidad += 1
+       total_texto += 1
        int_texto = int_texto + parseFloat(index[i].INTERACCIONES)
        comp_texto = comp_texto + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("video")){
-       video_publicidad += 1 
-       total_video += 1 
+       video_publicidad += 1
+       total_video += 1
        int_video = int_video + parseFloat(index[i].INTERACCIONES)
        comp_video = comp_video + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("foto")){
-       fotos_publicidad += 1 
-       total_fotos += 1 
+       fotos_publicidad += 1
+       total_fotos += 1
        int_fotos = int_fotos + parseFloat(index[i].INTERACCIONES)
        comp_fotos = comp_fotos + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("meme")){
-       memes_publicidad += 1 
-       total_memes += 1 
+       memes_publicidad += 1
+       total_memes += 1
        int_memes = int_memes + parseFloat(index[i].INTERACCIONES)
        comp_memes = comp_memes + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("fotomontaje")){
-       fotomontaje_publicidad += 1 
-       total_fotomontaje += 1 
+       fotomontaje_publicidad += 1
+       total_fotomontaje += 1
        int_fotomontaje = int_fotomontaje + parseFloat(index[i].INTERACCIONES)
        comp_fotomontaje = comp_fotomontaje + parseFloat(index[i].COMPARTIDAS)
     }
 
-      } 
- 
+      }
+
        if (inte.includes('soporte')) {
     soporte += 1;
     int_soporte = int_soporte + parseFloat(index[i].INTERACCIONES)
     comp_soporte = comp_soporte + parseFloat(index[i].COMPARTIDAS)
-    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)  
+    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)
     total_compartidos = total_compartidos + parseFloat(index[i].COMPARTIDAS)
        if (grupo_pagina.includes("grupo")){
         grupo_soporte += 1
@@ -700,44 +700,44 @@ function inicio(datos) {
         int_pagina = int_pagina + parseFloat(index[i].INTERACCIONES)
     }
     if (tipo.includes("texto") || tipo.includes("escrito")){
-       texto_soporte += 1 
-       total_texto += 1 
+       texto_soporte += 1
+       total_texto += 1
        int_texto = int_texto + parseFloat(index[i].INTERACCIONES)
        comp_texto = comp_texto + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("video")){
-       video_soporte += 1 
-       total_video += 1 
+       video_soporte += 1
+       total_video += 1
        int_video = int_video + parseFloat(index[i].INTERACCIONES)
        comp_video = comp_video + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("foto")){
-       fotos_soporte += 1 
-       total_fotos += 1 
+       fotos_soporte += 1
+       total_fotos += 1
        int_fotos = int_fotos + parseFloat(index[i].INTERACCIONES)
        comp_fotos = comp_fotos + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("meme")){
-       memes_soporte += 1 
-       total_memes += 1 
+       memes_soporte += 1
+       total_memes += 1
        int_memes = int_memes + parseFloat(index[i].INTERACCIONES)
        comp_memes = comp_memes + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("fotomontaje")){
-       fotomontaje_soporte += 1 
-       total_fotomontaje += 1 
+       fotomontaje_soporte += 1
+       total_fotomontaje += 1
        int_fotomontaje = int_fotomontaje + parseFloat(index[i].INTERACCIONES)
        comp_fotomontaje = comp_fotomontaje + parseFloat(index[i].COMPARTIDAS)
     }
        }
-   
+
        if (inte.includes('spam')) {
     spam += 1;
     int_spam = int_spam + parseFloat(index[i].INTERACCIONES)
     comp_spam = comp_spam + parseFloat(index[i].COMPARTIDAS)
-    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)  
+    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)
     total_compartidos = total_compartidos + parseFloat(index[i].COMPARTIDAS)
-           
+
        if (grupo_pagina.includes("grupo")){
         grupo_spam += 1
         total_grupo += 1
@@ -751,45 +751,45 @@ function inicio(datos) {
         int_pagina = int_pagina + parseFloat(index[i].INTERACCIONES)
     }
     if (tipo.includes("texto") || tipo.includes("escrito")){
-       texto_spam += 1 
-       total_texto += 1 
+       texto_spam += 1
+       total_texto += 1
        int_texto = int_texto + parseFloat(index[i].INTERACCIONES)
        comp_texto = comp_texto + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("video")){
-       video_spam += 1 
-       total_video += 1 
+       video_spam += 1
+       total_video += 1
        int_video = int_video + parseFloat(index[i].INTERACCIONES)
        comp_video = comp_video + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("foto")){
-       fotos_spam += 1 
-       total_fotos += 1 
+       fotos_spam += 1
+       total_fotos += 1
        int_fotos = int_fotos + parseFloat(index[i].INTERACCIONES)
        comp_fotos = comp_fotos + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("meme")){
-       memes_spam += 1 
-       total_memes += 1 
+       memes_spam += 1
+       total_memes += 1
        int_memes = int_memes + parseFloat(index[i].INTERACCIONES)
        comp_memes = comp_memes + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("fotomontaje")){
-       fotomontaje_spam += 1 
-       total_fotomontaje += 1 
+       fotomontaje_spam += 1
+       total_fotomontaje += 1
        int_fotomontaje = int_fotomontaje + parseFloat(index[i].INTERACCIONES)
        comp_fotomontaje = comp_fotomontaje + parseFloat(index[i].COMPARTIDAS)
     }
-    
+
       }
        if (inte.includes('afirmaci')) {
     afirmacion_de_grupo += 1;
     int_afirmacion_de_grupo = int_afirmacion_de_grupo + parseFloat(index[i].INTERACCIONES)
     comp_afirmacion_de_grupo = comp_afirmacion_de_grupo + parseFloat(index[i].COMPARTIDAS)
-    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)  
+    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)
     total_compartidos = total_compartidos + parseFloat(index[i].COMPARTIDAS)
-           
-           
+
+
     if (grupo_pagina.includes("grupo")){
         grupo_afirmacion_de_grupo += 1
         total_grupo += 1
@@ -803,32 +803,32 @@ function inicio(datos) {
         int_pagina = int_pagina + parseFloat(index[i].INTERACCIONES)
     }
     if (tipo.includes("texto") || tipo.includes("escrito")){
-       texto_afirmacion_de_grupo += 1 
-       total_texto += 1 
+       texto_afirmacion_de_grupo += 1
+       total_texto += 1
        int_texto = int_texto + parseFloat(index[i].INTERACCIONES)
        comp_texto = comp_texto + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("video")){
-       video_afirmacion_de_grupo += 1 
-       total_video += 1 
+       video_afirmacion_de_grupo += 1
+       total_video += 1
        int_video = int_video + parseFloat(index[i].INTERACCIONES)
        comp_video = comp_video + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("foto")){
-       fotos_afirmacion_de_grupo += 1 
-       total_fotos += 1 
+       fotos_afirmacion_de_grupo += 1
+       total_fotos += 1
        int_fotos = int_fotos + parseFloat(index[i].INTERACCIONES)
        comp_fotos = comp_fotos + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("meme")){
-       memes_afirmacion_de_grupo += 1 
-       total_memes += 1 
+       memes_afirmacion_de_grupo += 1
+       total_memes += 1
        int_memes = int_memes + parseFloat(index[i].INTERACCIONES)
        comp_memes = comp_memes + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("fotomontaje")){
-       fotomontaje_afirmacion_de_grupo += 1 
-       total_fotomontaje += 1 
+       fotomontaje_afirmacion_de_grupo += 1
+       total_fotomontaje += 1
        int_fotomontaje = int_fotomontaje + parseFloat(index[i].INTERACCIONES)
        comp_fotomontaje = comp_fotomontaje + parseFloat(index[i].COMPARTIDAS)
     }
@@ -837,9 +837,9 @@ function inicio(datos) {
     chiste += 1;
     int_chiste = int_chiste + parseFloat(index[i].INTERACCIONES)
     comp_chiste = comp_chiste + parseFloat(index[i].COMPARTIDAS)
-    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)  
+    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)
     total_compartidos = total_compartidos + parseFloat(index[i].COMPARTIDAS)
-           
+
            if (grupo_pagina.includes("grupo")){
         grupo_chiste += 1
         total_grupo += 1
@@ -853,32 +853,32 @@ function inicio(datos) {
         int_pagina = int_pagina + parseFloat(index[i].INTERACCIONES)
     }
     if (tipo.includes("texto") || tipo.includes("escrito")){
-       texto_chiste += 1 
-       total_texto += 1 
+       texto_chiste += 1
+       total_texto += 1
        int_texto = int_texto + parseFloat(index[i].INTERACCIONES)
        comp_texto = comp_texto + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("video")){
-       video_chiste += 1 
-       total_video += 1 
+       video_chiste += 1
+       total_video += 1
        int_video = int_video + parseFloat(index[i].INTERACCIONES)
        comp_video = comp_video + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("foto")){
-       fotos_chiste += 1 
-       total_fotos += 1 
+       fotos_chiste += 1
+       total_fotos += 1
        int_fotos = int_fotos + parseFloat(index[i].INTERACCIONES)
        comp_fotos = comp_fotos + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("meme")){
-       memes_chiste += 1 
-       total_memes += 1 
+       memes_chiste += 1
+       total_memes += 1
        int_memes = int_memes + parseFloat(index[i].INTERACCIONES)
        comp_memes = comp_memes + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("fotomontaje")){
-       fotomontaje_chiste += 1 
-       total_fotomontaje += 1 
+       fotomontaje_chiste += 1
+       total_fotomontaje += 1
        int_fotomontaje = int_fotomontaje + parseFloat(index[i].INTERACCIONES)
        comp_fotomontaje = comp_fotomontaje + parseFloat(index[i].COMPARTIDAS)
     }
@@ -887,9 +887,9 @@ function inicio(datos) {
     coronavirus += 1;
     int_coronavirus = int_coronavirus + parseFloat(index[i].INTERACCIONES)
     comp_coronavirus = comp_coronavirus + parseFloat(index[i].COMPARTIDAS)
-    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)  
+    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)
     total_compartidos = total_compartidos + parseFloat(index[i].COMPARTIDAS)
-           
+
           if (grupo_pagina.includes("grupo")){
         grupo_coronavirus += 1
         total_grupo += 1
@@ -903,32 +903,32 @@ function inicio(datos) {
         int_pagina = int_pagina + parseFloat(index[i].INTERACCIONES)
     }
     if (tipo.includes("texto") || tipo.includes("escrito")){
-       texto_coronavirus += 1 
-       total_texto += 1 
+       texto_coronavirus += 1
+       total_texto += 1
        int_texto = int_texto + parseFloat(index[i].INTERACCIONES)
        comp_texto = comp_texto + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("video")){
-       video_coronavirus += 1 
-       total_video += 1 
+       video_coronavirus += 1
+       total_video += 1
        int_video = int_video + parseFloat(index[i].INTERACCIONES)
        comp_video = comp_video + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("foto")){
-       fotos_coronavirus += 1 
-       total_fotos += 1 
+       fotos_coronavirus += 1
+       total_fotos += 1
        int_fotos = int_fotos + parseFloat(index[i].INTERACCIONES)
        comp_fotos = comp_fotos + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("meme")){
-       memes_coronavirus += 1 
-       total_memes += 1 
+       memes_coronavirus += 1
+       total_memes += 1
        int_memes = int_memes + parseFloat(index[i].INTERACCIONES)
        comp_memes = comp_memes + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("fotomontaje")){
-       fotomontaje_coronavirus += 1 
-       total_fotomontaje += 1 
+       fotomontaje_coronavirus += 1
+       total_fotomontaje += 1
        int_fotomontaje = int_fotomontaje + parseFloat(index[i].INTERACCIONES)
        comp_fotomontaje = comp_fotomontaje + parseFloat(index[i].COMPARTIDAS)
     }
@@ -937,9 +937,9 @@ function inicio(datos) {
     duelo += 1;
     int_duelo = int_duelo + parseFloat(index[i].INTERACCIONES)
     comp_duelo = comp_duelo + parseFloat(index[i].COMPARTIDAS)
-    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)  
+    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)
     total_compartidos = total_compartidos + parseFloat(index[i].COMPARTIDAS)
-           
+
     if (grupo_pagina.includes("grupo")){
         grupo_duelo += 1
         total_grupo += 1
@@ -953,45 +953,45 @@ function inicio(datos) {
         int_pagina = int_pagina + parseFloat(index[i].INTERACCIONES)
     }
     if (tipo.includes("texto") || tipo.includes("escrito")){
-       texto_duelo += 1 
-       total_texto += 1 
+       texto_duelo += 1
+       total_texto += 1
        int_texto = int_texto + parseFloat(index[i].INTERACCIONES)
        comp_texto = comp_texto + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("video")){
-       video_duelo += 1 
-       total_video += 1 
+       video_duelo += 1
+       total_video += 1
        int_video = int_video + parseFloat(index[i].INTERACCIONES)
        comp_video = comp_video + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("foto")){
-       fotos_duelo += 1 
-       total_fotos += 1 
+       fotos_duelo += 1
+       total_fotos += 1
        int_fotos = int_fotos + parseFloat(index[i].INTERACCIONES)
        comp_fotos = comp_fotos + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("meme")){
-       memes_duelo += 1 
-       total_memes += 1 
+       memes_duelo += 1
+       total_memes += 1
        int_memes = int_memes + parseFloat(index[i].INTERACCIONES)
        comp_memes = comp_memes + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("fotomontaje")){
-       fotomontaje_duelo += 1 
-       total_fotomontaje += 1 
+       fotomontaje_duelo += 1
+       total_fotomontaje += 1
        int_fotomontaje = int_fotomontaje + parseFloat(index[i].INTERACCIONES)
        comp_fotomontaje = comp_fotomontaje + parseFloat(index[i].COMPARTIDAS)
     }
- 
+
        }
-      
+
        if (inte.includes('gesto')) {
     gesto_vacio += 1;
     int_gesto_vacio = int_gesto_vacio + parseFloat(index[i].INTERACCIONES)
     comp_gesto_vacio = comp_gesto_vacio + parseFloat(index[i].COMPARTIDAS)
-    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)  
+    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)
     total_compartidos = total_compartidos + parseFloat(index[i].COMPARTIDAS)
-           
+
     if (grupo_pagina.includes("grupo")){
         grupo_gesto_vacio += 1
         total_grupo += 1
@@ -1001,32 +1001,32 @@ function inicio(datos) {
        total_pagina += 1
     }
     if (tipo.includes("texto") || tipo.includes("escrito")){
-       texto_gesto_vacio += 1 
-       total_texto += 1 
+       texto_gesto_vacio += 1
+       total_texto += 1
        int_texto = int_texto + parseFloat(index[i].INTERACCIONES)
        comp_texto = comp_texto + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("video")){
-       video_gesto_vacio += 1 
-       total_video += 1 
+       video_gesto_vacio += 1
+       total_video += 1
        int_video = int_video + parseFloat(index[i].INTERACCIONES)
        comp_video = comp_video + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("foto")){
-       fotos_gesto_vacio += 1 
-       total_fotos += 1 
+       fotos_gesto_vacio += 1
+       total_fotos += 1
        int_fotos = int_fotos + parseFloat(index[i].INTERACCIONES)
        comp_fotos = comp_fotos + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("meme")){
-       memes_gesto_vacio += 1 
-       total_memes += 1 
+       memes_gesto_vacio += 1
+       total_memes += 1
        int_memes = int_memes + parseFloat(index[i].INTERACCIONES)
        comp_memes = comp_memes + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("fotomontaje")){
-       fotomontaje_gesto_vacio += 1 
-       total_fotomontaje += 1 
+       fotomontaje_gesto_vacio += 1
+       total_fotomontaje += 1
        int_fotomontaje = int_fotomontaje + parseFloat(index[i].INTERACCIONES)
        comp_fotomontaje = comp_fotomontaje + parseFloat(index[i].COMPARTIDAS)
     }
@@ -1035,10 +1035,10 @@ function inicio(datos) {
     espiritualidad += 1;
     int_espiritualidad = int_gesto_vacio + parseFloat(index[i].INTERACCIONES)
     comp_espiritualidad = comp_espiritualidad + parseFloat(index[i].COMPARTIDAS)
-    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)  
+    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)
     total_compartidos = total_compartidos + parseFloat(index[i].COMPARTIDAS)
-           
-           
+
+
     if (grupo_pagina.includes("grupo")){
         grupo_espiritualidad += 1
         total_grupo += 1
@@ -1048,32 +1048,32 @@ function inicio(datos) {
         total_pagina += 1
     }
     if (tipo.includes("texto") || tipo.includes("escrito")){
-       texto_espiritualidad += 1 
-       total_texto += 1 
+       texto_espiritualidad += 1
+       total_texto += 1
        int_texto = int_texto + parseFloat(index[i].INTERACCIONES)
        comp_texto = comp_texto + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("video")){
-       video_espiritualidad += 1 
-       total_video += 1 
+       video_espiritualidad += 1
+       total_video += 1
        int_video = int_video + parseFloat(index[i].INTERACCIONES)
        comp_video = comp_video + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("foto")){
-       fotos_espiritualidad += 1 
-       total_fotos += 1 
+       fotos_espiritualidad += 1
+       total_fotos += 1
        int_fotos = int_fotos + parseFloat(index[i].INTERACCIONES)
        comp_fotos = comp_fotos + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("meme")){
-       memes_espiritualidad += 1 
-       total_memes += 1 
+       memes_espiritualidad += 1
+       total_memes += 1
        int_memes = int_memes + parseFloat(index[i].INTERACCIONES)
        comp_memes = comp_memes + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("fotomontaje")){
-       fotomontaje_espiritualidad += 1 
-       total_fotomontaje += 1 
+       fotomontaje_espiritualidad += 1
+       total_fotomontaje += 1
        int_fotomontaje = int_fotomontaje + parseFloat(index[i].INTERACCIONES)
        comp_fotomontaje = comp_fotomontaje + parseFloat(index[i].COMPARTIDAS)
     }
@@ -1082,9 +1082,9 @@ function inicio(datos) {
     genero += 1;
     int_genero = int_genero + parseFloat(index[i].INTERACCIONES)
     comp_genero = comp_genero + parseFloat(index[i].COMPARTIDAS)
-    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)  
+    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)
     total_compartidos = total_compartidos + parseFloat(index[i].COMPARTIDAS)
-           
+
     if (grupo_pagina.includes("grupo")){
         grupo_genero += 1
         total_grupo += 1
@@ -1094,32 +1094,32 @@ function inicio(datos) {
        total_pagina += 1
     }
     if (tipo.includes("texto") || tipo.includes("escrito")){
-       texto_genero += 1 
-       total_texto += 1 
+       texto_genero += 1
+       total_texto += 1
        int_texto = int_texto + parseFloat(index[i].INTERACCIONES)
        comp_texto = comp_texto + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("video")){
-       video_genero += 1 
-       total_video += 1 
+       video_genero += 1
+       total_video += 1
        int_video = int_video + parseFloat(index[i].INTERACCIONES)
        comp_video = comp_video + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("foto")){
-       fotos_genero += 1 
-       total_fotos += 1 
+       fotos_genero += 1
+       total_fotos += 1
        int_fotos = int_fotos + parseFloat(index[i].INTERACCIONES)
        comp_fotos = comp_fotos + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("meme")){
-       memes_genero+= 1 
-       total_memes += 1 
+       memes_genero+= 1
+       total_memes += 1
        int_memes = int_memes + parseFloat(index[i].INTERACCIONES)
        comp_memes = comp_memes + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("fotomontaje")){
-       fotomontaje_genero += 1 
-       total_fotomontaje += 1 
+       fotomontaje_genero += 1
+       total_fotomontaje += 1
        int_fotomontaje = int_fotomontaje + parseFloat(index[i].INTERACCIONES)
        comp_fotomontaje = comp_fotomontaje + parseFloat(index[i].COMPARTIDAS)
     }
@@ -1128,9 +1128,9 @@ function inicio(datos) {
     incitacion_violencia += 1;
     int_incitacion_violencia = int_incitacion_violencia + parseFloat(index[i].INTERACCIONES)
     comp_incitacion_violencia = comp_incitacion_violencia + parseFloat(index[i].COMPARTIDAS)
-    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)  
-    total_compartidos = total_compartidos + parseFloat(index[i].COMPARTIDAS)       
-           
+    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)
+    total_compartidos = total_compartidos + parseFloat(index[i].COMPARTIDAS)
+
     if (grupo_pagina.includes("grupo")){
         grupo_genero += 1
         total_grupo += 1
@@ -1140,32 +1140,32 @@ function inicio(datos) {
        total_pagina += 1
     }
     if (tipo.includes("texto") || tipo.includes("escrito")){
-       texto_incitacion_violencia += 1 
-       total_texto += 1 
+       texto_incitacion_violencia += 1
+       total_texto += 1
        int_texto = int_texto + parseFloat(index[i].INTERACCIONES)
        comp_texto = comp_texto + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("video")){
-       video_incitacion_violencia += 1 
-       total_video += 1 
+       video_incitacion_violencia += 1
+       total_video += 1
        int_video = int_video + parseFloat(index[i].INTERACCIONES)
        comp_video = comp_video + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("foto")){
-       fotos_incitacion_violencia += 1 
-       total_fotos += 1 
+       fotos_incitacion_violencia += 1
+       total_fotos += 1
        int_fotos = int_fotos + parseFloat(index[i].INTERACCIONES)
        comp_fotos = comp_fotos + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("meme")){
-       memes_incitacion_violencia += 1 
-       total_memes += 1 
+       memes_incitacion_violencia += 1
+       total_memes += 1
        int_memes = int_memes + parseFloat(index[i].INTERACCIONES)
        comp_memes = comp_memes + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("fotomontaje")){
-       fotomontaje_incitacion_violencia += 1 
-       total_fotomontaje += 1 
+       fotomontaje_incitacion_violencia += 1
+       total_fotomontaje += 1
        int_fotomontaje = int_fotomontaje + parseFloat(index[i].INTERACCIONES)
        comp_fotomontaje = comp_fotomontaje + parseFloat(index[i].COMPARTIDAS)
     }
@@ -1174,9 +1174,9 @@ function inicio(datos) {
     religiosidad += 1;
     int_religiosidad = int_religiosidad + parseFloat(index[i].INTERACCIONES)
     comp_religiosidad = comp_religiosidad + parseFloat(index[i].COMPARTIDAS)
-    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)  
+    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)
     total_compartidos = total_compartidos + parseFloat(index[i].COMPARTIDAS)
-           
+
     if (grupo_pagina.includes("grupo")){
         grupo_religiosidad += 1
         total_grupo += 1
@@ -1186,32 +1186,32 @@ function inicio(datos) {
        total_pagina += 1
     }
     if (tipo.includes("texto") || tipo.includes("escrito")){
-       texto_religiosidad += 1 
-       total_texto += 1 
+       texto_religiosidad += 1
+       total_texto += 1
        int_texto = int_texto + parseFloat(index[i].INTERACCIONES)
        comp_texto = comp_texto + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("video")){
-       video_religiosidad += 1 
-       total_video += 1 
+       video_religiosidad += 1
+       total_video += 1
        int_video = int_video + parseFloat(index[i].INTERACCIONES)
        comp_video = comp_video + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("foto")){
-       fotos_religiosidad += 1 
-       total_fotos += 1 
+       fotos_religiosidad += 1
+       total_fotos += 1
        int_fotos = int_fotos + parseFloat(index[i].INTERACCIONES)
        comp_fotos = comp_fotos + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("meme")){
-       memes_religiosidad += 1 
-       total_memes += 1 
+       memes_religiosidad += 1
+       total_memes += 1
        int_memes = int_memes + parseFloat(index[i].INTERACCIONES)
        comp_memes = comp_memes + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("fotomontaje")){
-       fotomontaje_religiosidad += 1 
-       total_fotomontaje += 1 
+       fotomontaje_religiosidad += 1
+       total_fotomontaje += 1
        int_fotomontaje = int_fotomontaje + parseFloat(index[i].INTERACCIONES)
        comp_fotomontaje = comp_fotomontaje + parseFloat(index[i].COMPARTIDAS)
     }
@@ -1220,9 +1220,9 @@ function inicio(datos) {
     pregunta += 1;
     int_pregunta = int_pregunta + parseFloat(index[i].INTERACCIONES)
     comp_pregunta = comp_pregunta + parseFloat(index[i].COMPARTIDAS)
-    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)  
+    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)
     total_compartidos = total_compartidos + parseFloat(index[i].COMPARTIDAS)
-           
+
     if (grupo_pagina.includes("grupo")){
         grupo_pregunta += 1
         total_grupo += 1
@@ -1232,32 +1232,32 @@ function inicio(datos) {
        total_pagina += 1
     }
     if (tipo.includes("texto") || tipo.includes("escrito")){
-       texto_pregunta += 1 
-       total_texto += 1 
+       texto_pregunta += 1
+       total_texto += 1
        int_texto = int_texto + parseFloat(index[i].INTERACCIONES)
        comp_texto = comp_texto + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("video")){
-       video_pregunta += 1 
-       total_video += 1 
+       video_pregunta += 1
+       total_video += 1
        int_video = int_video + parseFloat(index[i].INTERACCIONES)
        comp_video = comp_video + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("foto")){
-       fotos_pregunta += 1 
-       total_fotos += 1 
+       fotos_pregunta += 1
+       total_fotos += 1
        int_fotos = int_fotos + parseFloat(index[i].INTERACCIONES)
        comp_fotos = comp_fotos + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("meme")){
-       memes_pregunta += 1 
-       total_memes += 1 
+       memes_pregunta += 1
+       total_memes += 1
        int_memes = int_memes + parseFloat(index[i].INTERACCIONES)
        comp_memes = comp_memes + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("fotomontaje")){
-       fotomontaje_preguntad += 1 
-       total_fotomontaje += 1 
+       fotomontaje_preguntad += 1
+       total_fotomontaje += 1
        int_fotomontaje = int_fotomontaje + parseFloat(index[i].INTERACCIONES)
        comp_fotomontaje = comp_fotomontaje + parseFloat(index[i].COMPARTIDAS)
     }
@@ -1266,9 +1266,9 @@ function inicio(datos) {
     otros += 1;
     int_otros = int_otros + parseFloat(index[i].INTERACCIONES)
     comp_otros = comp_otros + parseFloat(index[i].COMPARTIDAS)
-    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)  
+    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)
     total_compartidos = total_compartidos + parseFloat(index[i].COMPARTIDAS)
-           
+
     if (grupo_pagina.includes("grupo")){
         grupo_otros += 1
         total_grupo += 1
@@ -1278,44 +1278,44 @@ function inicio(datos) {
        total_pagina += 1
     }
     if (tipo.includes("texto") || tipo.includes("escrito")){
-       texto_otros += 1 
-       total_texto += 1 
+       texto_otros += 1
+       total_texto += 1
        int_texto = int_texto + parseFloat(index[i].INTERACCIONES)
        comp_texto = comp_texto + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("video")){
-       video_otros += 1 
-       total_video += 1 
+       video_otros += 1
+       total_video += 1
        int_video = int_video + parseFloat(index[i].INTERACCIONES)
        comp_video = comp_video + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("foto")){
-       fotos_otros += 1 
-       total_fotos += 1 
+       fotos_otros += 1
+       total_fotos += 1
        int_fotos = int_fotos + parseFloat(index[i].INTERACCIONES)
        comp_fotos = comp_fotos + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("meme")){
-       memes_otros += 1 
-       total_memes += 1 
+       memes_otros += 1
+       total_memes += 1
        int_memes = int_memes + parseFloat(index[i].INTERACCIONES)
        comp_memes = comp_memes + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("fotomontaje")){
-       fotomontaje_otros += 1 
-       total_fotomontaje += 1 
+       fotomontaje_otros += 1
+       total_fotomontaje += 1
        int_fotomontaje = int_fotomontaje + parseFloat(index[i].INTERACCIONES)
        comp_fotomontaje = comp_fotomontaje + parseFloat(index[i].COMPARTIDAS)
     }
-        
+
       }
        if (inte.includes('mujer')) {
     mujer += 1;
     int_mujer = int_mujer + parseFloat(index[i].INTERACCIONES)
     comp_mujer = comp_mujer + parseFloat(index[i].COMPARTIDAS)
-    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)  
+    total_interacciones = total_interacciones + parseFloat(index[i].INTERACCIONES)
     total_compartidos = total_compartidos + parseFloat(index[i].COMPARTIDAS)
-           
+
     if (grupo_pagina.includes("grupo")){
         grupo_mujer += 1
         total_grupo += 1
@@ -1325,46 +1325,46 @@ function inicio(datos) {
        total_pagina += 1
     }
     if (tipo.includes("texto") || tipo.includes("escrito")){
-       texto_mujer += 1 
-       total_texto += 1 
+       texto_mujer += 1
+       total_texto += 1
        int_texto = int_texto + parseFloat(index[i].INTERACCIONES)
        comp_texto = comp_texto + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("video")){
-       video_mujer += 1 
-       total_video += 1 
+       video_mujer += 1
+       total_video += 1
        int_video = int_video + parseFloat(index[i].INTERACCIONES)
        comp_video = comp_video + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("foto")){
-       fotos_mujer += 1 
-       total_fotos += 1 
+       fotos_mujer += 1
+       total_fotos += 1
        int_fotos = int_fotos + parseFloat(index[i].INTERACCIONES)
        comp_fotos = comp_fotos + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("meme")){
-       memes_mujer += 1 
-       total_memes += 1 
+       memes_mujer += 1
+       total_memes += 1
        int_memes = int_memes + parseFloat(index[i].INTERACCIONES)
        comp_memes = comp_memes + parseFloat(index[i].COMPARTIDAS)
     }
     if (tipo.includes("fotomontaje")){
-       fotomontaje_mujer += 1 
-       total_fotomontaje += 1 
+       fotomontaje_mujer += 1
+       total_fotomontaje += 1
        int_fotomontaje = int_fotomontaje + parseFloat(index[i].INTERACCIONES)
        comp_fotomontaje = comp_fotomontaje + parseFloat(index[i].COMPARTIDAS)
     }
-      } 
-  } 
+      }
+  }
         console.log(int_fotos)
-   
+
 }
 
 
 function ChangeColor(){
 let hexcode = "";
 for (var i = 0 ; i < 6 ; i++){
-let random_index = Math.floor(Math.random() * hex_numbers.length); 
+let random_index = Math.floor(Math.random() * hex_numbers.length);
 hexcode += hex_numbers[random_index];
 };
 color = "#" + hexcode;
@@ -1393,6 +1393,3 @@ ctx.stroke();
 };
 window.onresize = actualizar;
 actualizar();
-
-
-// teste
