@@ -1,4 +1,4 @@
-/*@font-face {
+@font-face {
   font-family: 'MostWazted';
   src: url('MostWazted.svg#MostWazted') format('svg'),
        url('MostWazted.ttf') format('truetype'),
@@ -14,20 +14,5 @@
        url('Mostwasted.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
-}*/
-html {
-  box-sizing: border-box;
-  height: 100%;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-}

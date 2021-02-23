@@ -385,14 +385,13 @@ let set = new Set()
 
 // lienzo
 
-const c = document.getElementById('lienzo');
-const botón = document.getElementById("teste");
+/*const c = document.getElementById('lienzo');
 const ctx = c.getContext('2d');
 const raton = { x: 0, y: 0, anteriorX: 0, anteriorY: 0 };
 const hex_numbers = ["1","2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"]
 let hexcode = "";
 let color = "white";
-let aceleracion = 0;
+let aceleracion = 0;*/
 
 
 Papa.parse(csv, {
@@ -1356,15 +1355,24 @@ function inicio(datos) {
     }
       }
   }
-        console.log(int_fotos)
+    console.log(colombia_activismo)
 
 }
 
+var img = document.getElementById("brick");
+const c = document.getElementById('lienzo');
+const botón = document.getElementById("teste");
+const ctx = c.getContext('2d');
+const raton = { x: 0, y: 0, anteriorX: 0, anteriorY: 0 };
+const hex_numbers = ["1","2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"]
+let hexcode = "";
+let color = "white";
+let aceleracion = 0;
 
 function ChangeColor(){
 let hexcode = "";
 for (var i = 0 ; i < 6 ; i++){
-let random_index = Math.floor(Math.random() * hex_numbers.length);
+let random_index = Math.floor(Math.random() * hex_numbers.length); 
 hexcode += hex_numbers[random_index];
 };
 color = "#" + hexcode;
@@ -1377,19 +1385,21 @@ c.onclick = ChangeColor();
 function actualizar() {
   c.width = window.innerWidth;
   c.height = window.innerHeight;
-  ctx.fillStyle = color;
-  ctx.fillRect(0, 0, c.width, c.height);
-
+  /*ctx.fillStyle = color;
+  ctx.fillRect(0, 0, c.width, c.height);*/
+  ctx.drawImage(img, 0, 0, c.width, c.height);
+ctx.font = "30px Mostwasted";
+ctx.fillText("Hello World", 10, 50);
 };
 
 
 
-c.onmousemove = (evento) => {
+/*c.onmousemove = (evento) => {
 raton.x = evento.clientX;
 raton.y = evento.clientY;
 ctx.beginPath();
 ctx.arc(raton.x, 50, raton.y, 0, 2 * Math.PI);
 ctx.stroke();
-};
+};*/
 window.onresize = actualizar;
 actualizar();

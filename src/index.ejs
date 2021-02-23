@@ -34,24 +34,8 @@
     </header>
 
     <main>
-      <% htmlWebpackPlugin.options.entradas.forEach((entrada) => { %>
-      <div class="entrada">
-        <a class="enlace" href="./<%= entrada.usuario %>/<%= entrada.ejercicio %>"></a>
+      
 
-        <iframe
-          src="./<%= entrada.usuario %>/<%= entrada.ejercicio %>"
-          width="1200"
-          height="640"
-          frameborder="0"
-        ></iframe>
-
-        <div class="info">
-          <a href="https://github.com/<%= entrada.usuario %>" target="_blank">@<%= entrada.usuario %></a>
-          <span class="ejercicio"> | Ejercicio: <%= entrada.ejercicio %></span>
-        </div>
-      </div>
-
-      <% }) %>
     </main>
 
     <footer>
