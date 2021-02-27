@@ -7,13 +7,15 @@ export default class Ojos {
     this.ctx = ctx;
     this.x = 0;
     this.y = 0;
+    this.radio = 0;
   }
 
   pintar(x, y, color) {
     const ctx = this.ctx;
 
     const margenY = 10;
-    const radio = Math.abs(y / 2.2);
+    const radio = Math.abs(y / 3.5);
+    this.radio = radio;
     const margenX = radio;
     const radioPupIz = random(radio / 3, radio / 2);
     const radioPupDe = radioPupIz;
@@ -68,5 +70,7 @@ export default class Ojos {
       ctx.lineTo(ojoDeX + radio, ojoDeY - radio * 1.1);
       ctx.stroke();
     }
+
+    return this.radio;
   }
 }
