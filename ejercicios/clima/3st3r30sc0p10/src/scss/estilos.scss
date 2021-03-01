@@ -1,0 +1,129 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: 400;
+  font-size: 1.3em;
+  color: #fff;
+  text-shadow: 0.1em 0.1em 0 rgba(0, 0, 0, 0.3);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  margin: 0 auto;
+  font-size: 2.2em;
+  text-align: center;
+  color: #fff;
+  font-size: 5em;
+}
+
+#contenido {
+  width: 100vw;
+  height: 100vh;
+}
+#izquierda {
+  float: left;
+  height: 100vh;
+  width: 20%;
+}
+#centro {
+  float: left;
+  height: 100%;
+  width: 60%;
+}
+#derecha {
+  float: left;
+  height: 100vh;
+  width: 20%;
+}
+#mainAnimation {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.mainWeather {
+  text-align: center;
+  font-size: 3em;
+}
+#canvasIcon {
+  width: 100%;
+  height: 100%;
+}
+
+#informacion {
+  text-align: center;
+}
+
+.icono img {
+  width: 150px;
+  height: 150px;
+}
+
+body.clouds {
+  background-image: linear-gradient(to right top, #485563, #3c4957, #313c49, #2d3640, #29323c);
+}
+body.clear {
+  background-image: linear-gradient(to right top, #ffb347, #fdad3c, #feaa33, #fdcd3e, #ffcc33);
+}
+body.snow {
+  background-image: linear-gradient(to right top, #abbaab, #c4d4c4, #dae9da, #e8f1e8, #ffffff);
+}
+body.rain {
+  background-image: linear-gradient(to right top, #666600, #7c7c25, #8d8d3f, #8f8f54, #999966);
+}
+body.drizzle {
+  background-image: linear-gradient(to right top, #dad299, #b2ce81, #81ce9c, #81ceaf, #b0dab9);
+}
+body.thunderstorm {
+  background-image: linear-gradient(to right top, #000000, #6e170e, #9c2b1e, #c03c2d, #e74c3c);
+}
+
+.cloudsImage {
+  background-image: url('https://allenthewriterblog.files.wordpress.com/2020/04/dark-storm-clouds.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.clearImage {
+  background-image: url('http://weather.umd.edu/wordpress/wp-content/uploads/2016/06/sunshine.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.snowImage {
+  background-image: url('https://www.weather.gov/images/ict/wxstory/2016/easterSnow/IMG_0306.JPG');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.rainImage {
+  background-image: url('http://www.indianruminations.com/wp-content/uploads/2012/01/drops-after-rain.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.drizzleImage {
+  background-image: url('https://i2-prod.coventrytelegraph.net/incoming/article9892038.ece/ALTERNATES/s810/Heavy-rain-falling.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.thunderstormImage {
+  background-image: url('https://globalnews.ca/news/7157394/thunderstorm-watch-heat-warning-london-july-2020/');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
