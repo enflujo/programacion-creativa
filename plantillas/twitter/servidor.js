@@ -2,16 +2,19 @@ const { createReadStream } = require('fs');
 const Koa = require('koa');
 const Router = require('@koa/router');
 const Twitter = require('twitter');
+const dotEnv = require('dotenv');
+
+dotEnv.config();
 
 const app = new Koa();
 const router = new Router();
 app.use(require('koa-static')('./www'));
 
 const cliente = new Twitter({
-  consumer_key: 'AYxGY5o2s7IO3H2Ged7zGofcB',
-  consumer_secret: 'VmbNrejndhD5bn5Z0Raehy2d1wdJZr0hO3w9A7gRLoWGq2xz3n',
-  access_token_key: '2439782282-wdj7emp7QglgeyvdhLhm22dPSn1lV9Bf4ht1jRA',
-  access_token_secret: 'K1TceEPrgihcdzU5ESh6WXoJ0K468qTDxpzMzuzIwqW3Z',
+  consumer_key: process.env.COSUMER_KEY,
+  consumer_secret: process.env.COSUMER_SECRET,
+  access_token_key: process.env.TOKEN,
+  access_token_secret: process.env.TOKEN_SECRET,
 });
 
 router.get('/', async (ctx) => {

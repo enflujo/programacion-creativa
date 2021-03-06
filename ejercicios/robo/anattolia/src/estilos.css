@@ -1,0 +1,29 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+#video {
+  display: none;
+}
+
+#btnNuevoVid {
+  background-color: rgb(36, 35, 35);
+  color: azure;
+  cursor: pointer;
+  margin-top: 2vh;
+  margin-left: 2vh;
+}

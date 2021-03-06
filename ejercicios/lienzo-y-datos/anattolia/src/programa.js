@@ -12,7 +12,7 @@ c.height = window.innerHeight;
 function actualizar() {
   c.width = window.innerWidth;
   c.height = window.innerHeight;
-  ctx.fillStyle = '#0000FF';
+  ctx.fillStyle = '#000FFF';
   ctx.fillRect(0, 0, c.width, c.height);
 }
 
@@ -64,10 +64,12 @@ function animacion(){
   raton.anteriorX = raton.x;
   raton.anteriorY = raton.y;
 
-  ctx.lineTo(raton.x - aceleracion, raton.anteriorY+ Math.random(0,50));
-  ctx.strokeStyle = definirColor(aceleracion,raton.x);//'rgba(255,153,153,0.5)';
-  ctx.lineWidth = 1;
-  ctx.stroke();
+  if  (raton.x > 100){
+    ctx.lineTo(raton.x - aceleracion, raton.anteriorY+ Math.random(0,50));
+    ctx.strokeStyle = definirColor(aceleracion,raton.x);//'rgba(255,153,153,0.5)';
+    ctx.lineWidth = 1;
+    ctx.stroke();
+  }
   
   // Vuelve a iniciar el loop
   requestAnimationFrame(animacion);

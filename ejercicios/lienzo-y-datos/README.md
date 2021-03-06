@@ -20,17 +20,13 @@ Este ejercicio lo van a hacer por fases, la primera la describo acá y con cada 
 ```js
 const canvas = document.getElementById('lienzo');
 const ctx = canvas.getContext('2d');
-
 function actualizar() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 }
-
 canvas.onmousemove = (evento) => {
   // extraer del evento las coordenadas y pintar algo en el canvas.
 };
-
 window.onresize = actualizar;
-
 actualizar();
 ```

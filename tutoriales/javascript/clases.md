@@ -134,7 +134,7 @@ class Personaje {
     // el personaje salta moviendose en -y, y dependiendo de su volecidad (incremento en x)
     // decimos que su salto es ese incremento * 2 en el eje y.
     // Estamos modularizando, creando plantillas y por eso es bueno pensarlas como tal.
-    this.y -= incremento * 2;
+    this.y -= this.incremento * 2;
   }
 }
 
