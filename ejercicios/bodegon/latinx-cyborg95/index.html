@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>bodegon#20</title>
+    <style>
+      html {
+        height: 100%;
+        width: 100%;
+      }
+
+      body {
+        height: 100%;
+        width: 100%;
+        margin: 0px;
+        background-color: #7f815b;
+      }
+
+      * {
+        padding: 0%;
+        margin: 0%;
+      }
+      /*#fondo {
+
+              background-color: #95a067ea;
+              width: 100%;
+              height: 100%;
+              position: relative;
+              display: block;
+
+
+              */
+
+      #balde {
+        width: 250px;
+        height: 100px;
+        border-right: 60px solid transparent;
+        border-left: 60px solid transparent;
+        border-top: 100px solid #f34013;
+        display: block;
+        z-index: 4;
+        margin-bottom: -100px;
+      }
+
+      #mesa {
+        background-color: #484943ea;
+        width: 100%;
+        height: 38%;
+        display: block;
+        position: absolute;
+        bottom: 0%;
+        z-index: 2;
+      }
+
+      .encuadre-tapabocas {
+        width: 132px;
+        height: 155px;
+        z-index: 2;
+        border: solid 1px rgba(255, 255, 255, 0);
+        bottom: 63%;
+        left: 20%;
+      }
+
+      #tapabocas {
+        transform: matrix(1, 0, 0, 5, 0, 0);
+        width: 75px;
+        height: 90px;
+        border: solid 1px #000;
+        border-color: #000 transparent transparent transparent;
+        top: 118%;
+        position: absolute;
+        border-radius: 72%/100px 94px 0 0;
+      }
+
+      #tapabocas-c {
+        background-color: #3498dbf2;
+        border: bevel;
+        border-radius: 89% 95% 64% 50%;
+        width: 75px;
+        height: 122px;
+        top: 14%;
+        z-index: 2;
+        position: absolute;
+      }
+
+      #tapabocas2 {
+        transform: rotate(175deg);
+        width: 75px;
+        height: 90px;
+        border: solid 2px #000;
+        border-color: #000 transparent transparent transparent;
+        top: 38%;
+        position: absolute;
+        border-radius: 72%/100px 94px 0 0;
+        left: 45%;
+      }
+
+      #tapabocas3 {
+        width: 4px;
+    height: 3px;
+    background: rgb(197 167 154);
+    border: solid 1px black;
+    top: 2%;
+    left: 77%;
+    position: absolute;
+    border-radius: 50%;
+
+      }
+
+      .encuadre-alcohol {
+        bottom: 31%;
+        left: 38%;
+        width: 189px;
+        height: 334px;
+        z-index: 2;
+      }
+
+      #curva {
+        width: 50px;
+        height: 40px;
+        border: solid 3px #000;
+        border-color: #fffdfd transparent transparent transparent;
+        border-radius: 246%/100px 100px 0 0;
+        transform: rotate(43deg);
+        top: 17%;
+        left: 42%;
+        position: absolute;
+      }
+      #alcoholns2 {
+        width: 42px;
+        height: 71px;
+        left: 30%;
+        bottom: 55%;
+        position: absolute;
+        background: #7f815b;
+        border-right: 3px solid white;
+        z-index: 4;
+        transform: rotate(35deg);
+      }
+
+      #alcoholp {
+        width: 10px;
+        height: 15px;
+        border-left: 3px solid white;
+        position: absolute;
+        left: 103px;
+        top: 12%;
+        z-index: 4;
+      }
+
+      #alcoholc {
+        width: 99px;
+        height: 144px;
+        background-color: #00808080;
+        position: absolute;
+        left: 80px;
+        top: 47%;
+        z-index: 4;
+      }
+
+      #alcoholrec {
+        width: 39px;
+        height: 18px;
+        background: rgba(0, 0, 0, 0);
+        border-left: 3px solid white;
+        border-right: 3px solid white;
+        border-top: 3px solid white;
+        position: absolute;
+        left: 69%;
+        bottom: 70%;
+      }
+      #alcohol {
+        width: 100px;
+        height: 200px;
+        background-color: rgba(117, 175, 241, 0);
+        border-left: 3px solid white;
+        border-right: 3px solid white;
+        border-bottom: 3px solid white;
+        border-top: 3px solid white;
+        position: absolute;
+        bottom: 9%;
+        left: 40%;
+        z-index: 3;
+      }
+
+      #alcoholl {
+        width: 47px;
+        height: 100px;
+        border-left: 3px solid white;
+        position: absolute;
+        transform: rotate(90deg);
+        left: 128px;
+        top: 4%;
+        z-index: 4;
+      }
+
+      #alcoholl1 {
+        width: 10px;
+        height: 16px;
+        border-left: 3px solid white;
+        position: absolute;
+        left: 106%;
+        top: 12%;
+        z-index: 4;
+      }
+
+      #alcoholcurve {
+        width: 50px;
+        height: 40px;
+        border: solid 3px #000;
+        border-color: #fffdfd transparent transparent transparent;
+        border-radius: 246%/100px 100px 0 0;
+        transform: rotate(-39deg);
+        top: 17%;
+        left: 88%;
+        position: absolute;
+      }
+      #esponja {
+        border-radius: 25px;
+        background: #f5e50f;
+        padding: 20px;
+        width: 57px;
+        height: 13px;
+        z-index: 5;
+        position: absolute;
+        margin-left: -20%;
+      }
+
+      #esponja2 {
+        border-radius: 25px;
+        background: #021d06;
+        padding: 20px;
+        width: 60px;
+        height: 8px;
+        z-index: 6;
+        position: absolute;
+        margin-left: -20%;
+        margin-bottom: -3%;
+      }
+
+      #jabon {
+        border-radius: 10%/30%;
+        z-index: 6;
+        background: #2de708;
+        position: absolute;
+        width: 80px;
+        height: 18px;
+        margin-bottom: -18%;
+      }
+
+      #jabonliquido {
+        width: 80px;
+        height: 200px;
+        z-index: 3;
+
+        margin-left: -55px;
+        position: relative;
+      }
+
+      .jb {
+        position: absolute;
+        width: 10px;
+
+        height: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .jb-1 {
+        top: 12px;
+        left: 19px;
+        font-size: 8px;
+      }
+
+      .jb-2 {
+        top: 20px;
+        left: 15px;
+        font-size: 8px;
+      }
+
+      .jb-3 {
+        top: 30px;
+        left: 9px;
+        font-size: 8px;
+      }
+
+      .jb-4 {
+        top: 40px;
+        left: 6px;
+        font-size: 8px;
+      }
+      .jb-5 {
+        top: 50px;
+        left: 5px;
+        font-size: 8px;
+      }
+
+      .jb-6 {
+        top: 60px;
+        left: 5px;
+        font-size: 8px;
+      }
+      .jb-7 {
+        top: 70px;
+        left: 5px;
+        font-size: 8px;
+      }
+      .jb-8 {
+        top: 80px;
+        left: 5px;
+        font-size: 8px;
+      }
+
+      .jb-9 {
+        top: 90px;
+        left: 5px;
+        font-size: 8px;
+      }
+
+      .jb-10 {
+        top: 100px;
+        left: 5px;
+        font-size: 8px;
+      }
+
+      .jb-11 {
+        top: 110px;
+        left: 5px;
+        font-size: 8px;
+      }
+
+      .jb-12 {
+        top: 120px;
+        left: 5px;
+        font-size: 8px;
+      }
+
+      .jb-13 {
+        top: 130px;
+        left: 5px;
+        font-size: 8px;
+      }
+
+      .jb-14 {
+        top: 140px;
+        left: 5px;
+        font-size: 8px;
+      }
+
+      .jb-15 {
+        top: 150px;
+        left: 5px;
+        font-size: 8px;
+      }
+
+      .jb-16 {
+        top: 160px;
+        left: 5px;
+        font-size: 8px;
+      }
+
+      .jb-17 {
+        top: 170px;
+        left: 5px;
+        font-size: 8px;
+      }
+      .jb-18 {
+        top: 180px;
+        left: 5px;
+        font-size: 8px;
+      }
+      .jb-19 {
+        top: 190px;
+        left: 5px;
+        font-size: 8px;
+      }
+      .jb-19 {
+        top: 191px;
+        left: 5px;
+        font-size: 8px;
+      }
+      .jb-20 {
+        top: 191px;
+        left: 70px;
+        font-size: 8px;
+      }
+
+      .jb-21 {
+        top: 180px;
+        left: 70px;
+        font-size: 8px;
+      }
+      .jb-22 {
+        top: 170px;
+        left: 70px;
+        font-size: 8px;
+      }
+
+      .jb-23 {
+        top: 160px;
+        left: 70px;
+        font-size: 8px;
+      }
+      .jb-24 {
+        top: 150px;
+        left: 70px;
+        font-size: 8px;
+      }
+      .jb-25 {
+        top: 140px;
+        left: 70px;
+        font-size: 8px;
+      }
+      .jb-26 {
+        top: 130px;
+        left: 70px;
+        font-size: 8px;
+      }
+      .jb-27 {
+        top: 120px;
+        left: 70px;
+        font-size: 8px;
+      }
+      .jb-28 {
+        top: 110px;
+        left: 70px;
+        font-size: 8px;
+      }
+      .jb-29 {
+        top: 100px;
+        left: 70px;
+        font-size: 8px;
+      }
+      .jb-30 {
+        top: 90px;
+        left: 70px;
+        font-size: 8px;
+      }
+      .jb-31 {
+        top: 80px;
+        left: 70px;
+        font-size: 8px;
+      }
+      .jb-32 {
+        top: 70px;
+        left: 70px;
+        font-size: 8px;
+      }
+      .jb-33 {
+        top: 60px;
+        left: 70px;
+        font-size: 8px;
+      }
+      .jb-34 {
+        top: 50px;
+        left: 70px;
+        font-size: 8px;
+      }
+      .jb-35 {
+        top: 40px;
+        left: 67px;
+        font-size: 8px;
+      }
+      .jb-36 {
+        top: 30px;
+        left: 65px;
+        font-size: 8px;
+      }
+      .jb-37 {
+        top: 20px;
+        left: 60px;
+        font-size: 8px;
+      }
+      .jb-38 {
+        top: 12px;
+        left: 55px;
+        font-size: 8px;
+      }
+      .jb-39 {
+        top: 3px;
+        left: 51px;
+        font-size: 8px;
+      }
+      .jb-40 {
+        top: 3px;
+        left: 24px;
+        font-size: 8px;
+      }
+
+      .jb-41 {
+        top: -5px;
+        left: 24px;
+        font-size: 8px;
+      }
+      .jb-42 {
+        top: -5px;
+        left: 50px;
+        font-size: 8px;
+      }
+      .jb-43 {
+        top: -9px;
+        left: 28px;
+        font-size: 8px;
+      }
+
+      .jb-44 {
+        top: -9px;
+        left: 46px;
+        font-size: 8px;
+      }
+      .jb-45 {
+        top: -9px;
+        left: 34px;
+        font-size: 8px;
+      }
+      .jb-46 {
+        top: -9px;
+        left: 40px;
+        font-size: 8px;
+      }
+      .jb-47 {
+        top: -16px;
+        left: 37px;
+        font-size: 8px;
+      }
+      .jb-48 {
+        top: -16px;
+        left: 41px;
+        font-size: 8px;
+      }
+      .jb-49 {
+        top: -16px;
+        left: 33px;
+        font-size: 8px;
+      }
+      .jb-50 {
+        top: -21px;
+        left: 37px;
+        font-size: 8px;
+      }
+      .jb-51 {
+        top: -27px;
+        left: 37px;
+        font-size: 8px;
+      }
+      .jb-52 {
+        top: -34px;
+        left: 37px;
+        font-size: 8px;
+      }
+      .jb-53 {
+        top: -40px;
+        left: 37px;
+        font-size: 8px;
+      }
+      .jb-54 {
+        top: -45px;
+        left: 32px;
+        font-size: 8px;
+      }
+      .jb-55 {
+        top: -45px;
+        left: -50px;
+        font-size: 8px;
+        width: 200px !important;
+        cursor: grab;
+      }
+
+      .jb-55:hover {
+        top: -40px;
+      }
+      .jb-56 {
+        top: -45px;
+        left: 37px;
+        font-size: 8px;
+      }
+
+      .jb-57 {
+        top: -45px;
+        left: 42px;
+        font-size: 8px;
+      }
+      .jb-58 {
+        top: -45px;
+        left: 48px;
+        font-size: 8px;
+      }
+      .jb-59 {
+        top: -45px;
+        left: 53px;
+        font-size: 8px;
+      }
+      .jb-60 {
+        top: -45px;
+        left: 59px;
+        font-size: 8px;
+      }
+      .grupo {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .encuadre-jabon {
+        bottom: 200px;
+        left: 45%;
+        width: 370px;
+        height: 300px;
+      }
+
+      .encuadre-esponja {
+        bottom: 20%;
+        left: 25%;
+        width: 285px;
+        height: 80px;
+        z-index: 2;
+        /*border: black 1px solid;*/
+      }
+
+      #trapo {
+        width: 127px;
+        height: 130px;
+        z-index: 4;
+        left: 51%;
+        top: 52%;
+        border: white 1 px solid;
+        position: absolute;
+        background-color: #cadffff0;
+        border-left: 2px solid #cadfff;
+        border-right: 2px solid #cadfff;
+        border-bottom: 3px solid #cadfff;
+        border-top: 5px solid #cadfff;
+        border-radius: 9px;
+      }
+      #trapo2 {
+        width: 129px;
+        height: 149px;
+        z-index: 4;
+        left: 51%;
+        top: 52%;
+        border: white 1 px solid;
+        position: absolute;
+        background-color: #cadfffc9;
+        border-left: 2px solid #cadfff;
+        border-right: 2px solid #cadfff;
+        border-bottom: 3px solid #cadfff;
+        border-top: 5px solid #cadfff;
+        border-radius: 9px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href= " https://meet.google.com/jia-txra-kxq" >
+    
+   <div class="grupo encuadre-jabon">
+      <div id="jabonliquido">
+        <span class="jb-1 jb">J</span>
+        <span class="jb-2 jb">A</span>
+        <span class="jb-3 jb">B</span>
+        <span class="jb-4 jb">O</span>
+        <span class="jb-5 jb">N</span>
+        <span class="jb-6 jb">J</span>
+        <span class="jb-7 jb">A</span>
+        <span class="jb-8 jb">B</span>
+        <span class="jb-9 jb">O</span>
+        <span class="jb-10 jb">N</span>
+        <span class="jb-11 jb">J</span>
+        <span class="jb-12 jb">A</span>
+        <span class="jb-13 jb">B</span>
+        <span class="jb-14 jb">O</span>
+        <span class="jb-15 jb">N</span>
+        <span class="jb-16 jb">J</span>
+        <span class="jb-17 jb">A</span>
+        <span class="jb-18 jb">B</span>
+        <span class="jb-19 jb">O</span>
+        <span class="jb-20 jb">N</span>
+        <span class="jb-21 jb">J</span>
+        <span class="jb-22 jb">A</span>
+        <span class="jb-23 jb">B</span>
+        <span class="jb-24 jb">O</span>
+        <span class="jb-25 jb">N</span>
+        <span class="jb-26 jb">J</span>
+        <span class="jb-27 jb">A</span>
+        <span class="jb-28 jb">B</span>
+        <span class="jb-29 jb">O</span>
+        <span class="jb-30 jb">N</span>
+        <span class="jb-31 jb">J</span>
+        <span class="jb-32 jb">A</span>
+        <span class="jb-33 jb">B</span>
+        <span class="jb-34 jb">O</span>
+        <span class="jb-35 jb">N</span>
+        <span class="jb-36 jb">J</span>
+        <span class="jb-37 jb">A</span>
+        <span class="jb-38 jb">B</span>
+        <span class="jb-39 jb">O</span>
+        <span class="jb-40 jb">N</span>
+        <span class="jb-41 jb">J</span>
+        <span class="jb-42 jb">A</span>
+        <span class="jb-43 jb">B</span>
+        <span class="jb-44 jb">O</span>
+        <span class="jb-45 jb">N</span>
+        <span class="jb-46 jb">J</span>
+        <span class="jb-47 jb">A</span>
+        <span class="jb-48 jb">B</span>
+        <span class="jb-49 jb">O</span>
+        <span class="jb-50 jb">N</span>
+        <span class="jb-51 jb">J</span>
+        <span class="jb-52 jb">A</span>
+        <span class="jb-53 jb">B</span>
+        <!-- <span class="jb-54 jb">O</span>-->
+        <span class="jb-55 jb">N JABON</span>
+        <!--
+<span class="jb-56 jb">J</span>
+        <span class="jb-57 jb">A</span>
+        <span class="jb-58 jb">B</span>
+        <span class="jb-59 jb">O</span>
+        <span class="jb-60 jb">N</span>-->
+      </a>
+      </div>
+      <div id="balde"></div>
+    </div>
+    <div id="mesa"></div>
+    <div id="trapo"></div>
+    <div id="trapo2"></div>
+    <a
+      href="https://www.google.com/search?q=contacto&rlz=1C5CHFA_enCO853CO855&sxsrf=ALeKk00R6xxaNkeTWNecTGj2uSCpQcdUTw:1613523092767&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjGzp_22e_uAhVBmlkKHTXxBl0Q_AUoAXoECAkQAw&biw=1546&bih=975"
+    >
+      <div class="grupo encuadre-alcohol">
+        <div id="alcohol"></div>
+        <div id="alcoholrec"></div>
+        <div id="alcoholp"></div>
+        <div id="alcoholc"></div>
+        <div id="alcoholns2"></div>
+        <div id="curva"></div>
+        <div id="alcoholl"></div>
+        <div id="alcoholl1"></div>
+        <div id="alcoholcurve"></div>
+      </div>
+    </a>
+
+    <a
+      href="https://www.google.com/search?q=manos&tbm=isch&ved=2ahUKEwjY0OTVxe_uAhW5azABHZhWCeEQ2-cCegQIABAA&oq=manos&gs_lcp=CgNpbWcQAzIECAAQQzIECAAQQzIHCAAQsQMQQzIECAAQQzIHCAAQsQMQQzIFCAAQsQMyCAgAELEDEIMBMggIABCxAxCDATIICAAQsQMQgwEyCAgAELEDEIMBOgQIIxAnOgIIADoHCCMQ6gIQJzoGCAAQChAYUKCYA1jPuwNgr70DaAVwAHgBgAGVAYgB6BKSAQQxLjIwmAEAoAEBqgELZ3dzLXdpei1pbWewAQrAAQE&sclient=img&ei=V1MsYJjJO7nXwbkPmK2liA4&bih=975&biw=1546&rlz=1C5CHFA_enCO853CO855#imgrc=mGmpiLbV4v9kyM"
+    >
+      <div class="grupo encuadre-esponja">
+        <div id="esponja"></div>
+        <div id="esponja2"></div>
+        <div id="jabon"></div>
+      </div>
+    </a>
+   <a href="https://youtu.be/KeaUOdvo0BA">
+    <div class="grupo encuadre-tapabocas">
+      <div id="tapabocas"></div>
+      <div id="tapabocas-c"></div>
+      <div id="tapabocas2"></div>
+      <div id="tapabocas3"></div>
+    </a>
+    </div>
+  </body>
+</html>

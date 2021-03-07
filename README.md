@@ -51,7 +51,7 @@ Ir a [Glosario](Glosario.md)
 - ..:: Antonia Bustamante ::..
 - ..:: Jeanniffer Pimentel ::..
 - ..:: Hugo Idárraga ::..
-- ..:: Lina Orejuela ::../LaTiNx - CyBorG95!
+- ..:: Lina Orejuela ::..
 - ..:: Julián García ::..
 - ..:: João Gabriel Almeida ::..
 - ..:: Fabio o Ferio o F Bonfanti Ruggiero ::..
