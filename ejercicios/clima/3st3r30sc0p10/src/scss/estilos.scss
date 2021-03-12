@@ -78,52 +78,118 @@ h1 {
 }
 
 body.clouds {
-  background-image: linear-gradient(to right top, #485563, #3c4957, #313c49, #2d3640, #29323c);
+  background-image: linear-gradient(to right top, #797979, #a1a1a1, #c2bbbb, #e0dcdc, #fcfdfd);
 }
 body.clear {
-  background-image: linear-gradient(to right top, #ffb347, #fdad3c, #feaa33, #fdcd3e, #ffcc33);
+  background-image: linear-gradient(to right top, #529bfe, #72acfd, #8bb9fa, #b5d2fa, #ddeafc);
 }
 body.snow {
-  background-image: linear-gradient(to right top, #abbaab, #c4d4c4, #dae9da, #e8f1e8, #ffffff);
+  background-image: linear-gradient(to right top, #f6f6f6, #cac9c9, #a1a0a0, #797878, #5e5d5d);
 }
 body.rain {
-  background-image: linear-gradient(to right top, #666600, #7c7c25, #8d8d3f, #8f8f54, #999966);
+  background-image: linear-gradient(to right top, #a19d7f, #bbb589, #d1c98e, #e9de90, #fdef84);
 }
 body.drizzle {
-  background-image: linear-gradient(to right top, #dad299, #b2ce81, #81ce9c, #81ceaf, #b0dab9);
+  background-image: linear-gradient(to right top, #009a71, #02ad80, #02be8c, rgb(2, 185, 136), #01f8b6);
 }
 body.thunderstorm {
-  background-image: linear-gradient(to right top, #000000, #6e170e, #9c2b1e, #c03c2d, #e74c3c);
+  background-image: linear-gradient(to right top, #486a87, #344d63, #233544, #16212b, #0b151f);
 }
 
 .cloudsImage {
-  background-image: url('https://allenthewriterblog.files.wordpress.com/2020/04/dark-storm-clouds.png');
+  background-image: url('https://media.giphy.com/media/5HK4TiiBeLSZq/giphy.gif');
   background-repeat: no-repeat;
   background-size: cover;
+  height: 500px;
 }
 
 .clearImage {
-  background-image: url('http://weather.umd.edu/wordpress/wp-content/uploads/2016/06/sunshine.jpg');
+  background-image: url('https://media.giphy.com/media/jk9L41aToGZQA/giphy.gif');
   background-repeat: no-repeat;
   background-size: cover;
+  height: 500px;
 }
 .snowImage {
-  background-image: url('https://www.weather.gov/images/ict/wxstory/2016/easterSnow/IMG_0306.JPG');
+  background-image: url('https://media.giphy.com/media/FoVi0LDjy1XS8/giphy.gif');
   background-repeat: no-repeat;
   background-size: cover;
+  height: 500px;
 }
 .rainImage {
-  background-image: url('http://www.indianruminations.com/wp-content/uploads/2012/01/drops-after-rain.jpg');
+  background-image: url('https://media.giphy.com/media/l0MYAfxbg3fhqn1Ru/giphy.gif');
   background-repeat: no-repeat;
   background-size: cover;
+  height: 500px;
 }
 .drizzleImage {
-  background-image: url('https://i2-prod.coventrytelegraph.net/incoming/article9892038.ece/ALTERNATES/s810/Heavy-rain-falling.jpg');
+  background-image: url('https://media.giphy.com/media/3ohzdJlyD2InWwbJle/giphy.gif');
   background-repeat: no-repeat;
   background-size: cover;
+  height: 500px;
 }
 .thunderstormImage {
-  background-image: url('https://globalnews.ca/news/7157394/thunderstorm-watch-heat-warning-london-july-2020/');
+  background-image: url('https://media.giphy.com/media/xUA7aZ3I64er2MTyMg/giphy.gif');
   background-repeat: no-repeat;
   background-size: cover;
+  height: 500px;
+}
+.humedad_alta {
+  background-image: url('https://media.giphy.com/media/cTImMJkAHmwmI/giphy.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+.humedad_medio_alta {
+  background-image: url('https://media.giphy.com/media/VFGsAwzMapb8L9quZD/giphy.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+.humedad_medio_baja {
+  background-image: url('https://media.giphy.com/media/l2Sq251KHzZmtTGpO/giphy.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+.humedad_baja {
+  background-image: url('https://media.giphy.com/media/1gWmDBKqgVYe0kCP7e/giphy.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+.fells_like_calor {
+  background-image: url('https://media.giphy.com/media/8Py8gIK84esy7jkXKO/giphy.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+.fells_like_bien {
+  background-image: url('https://media.giphy.com/media/2wYrl643pgOmvK94n3/giphy.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+.fells_like_frio {
+  background-image: url('https://media.giphy.com/media/uR6JMOFCtLmXkcKOkG/giphy.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+.pressure_alta {
+  background-image: url('https://media.giphy.com/media/xTiN0mHxxNG5Sh3f1e/giphy.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+.pressure_normal {
+  background-image: url('https://media.giphy.com/media/TtyBk1ApfRPzi/giphy.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+.pressure_baja {
+  background-image: url('https://media.giphy.com/media/82ujIivE8LPYLB2DHQ/giphy.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
 }
