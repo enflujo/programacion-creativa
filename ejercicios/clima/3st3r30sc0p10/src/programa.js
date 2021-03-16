@@ -1,5 +1,4 @@
 import './scss/estilos.scss';
-// import pg2 from './pg2';
 
 window.addEventListener('load', () => {
   
@@ -13,21 +12,6 @@ const icono = document.querySelector('.icono');
   const valorFeels_like = document.querySelector('.valorFeels_like')
   const valorPresion = document.querySelector('.valorPresion')
   const canvasIcon2 = document.querySelector('.canvasIcon2')
-
-// class Nube {
-//   constructor(temp, feels_like, humidity, pressure, temp_max, temp_min) {
-//     this.temp = temp;
-//     this.feels_like = feels_like;
-//     this.humidity = humidity;
-//     this.pressure = pressure;
-//     this.temp_max = temp_max;
-//     this.temp_min = temp_min;
-//   }
-//   pintar(temp) {
-//     ctx3.fillStyle = 'rgb(3, 196, 252)';
-//     ctx3.fill();
-//   }
-// }
 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(position => {
