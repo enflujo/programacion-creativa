@@ -51,7 +51,7 @@ const icono = document.querySelector('.icono');
             valorHumedad.className = 'humedad_alta'
           }
           else if (humidity >= 50 && humidity < 75) {
-            valorHumedad.className = 'humedad_media_alta'
+            valorHumedad.className = 'humedad_medio_alta'
           }
           else if (humidity >= 25 && humidity < 50) {
             valorHumedad.className = 'humedad_medio_baja'
