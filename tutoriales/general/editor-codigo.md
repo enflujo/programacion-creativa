@@ -8,13 +8,10 @@ VSCode ([Visual Studio Code](https://code.visualstudio.com/)) es el que usamos a
 
 1. **Prettier:** Asegura que el formato de nuestro código respete el estilo del repositorio para facilitar la lectura y mantener el orden.
    _Instalación: hacer click en el ícono de Extensiones en la barra lateral izquierda de Visual Studio Code (3 cuadraditos + 1), buscar “prettier” y hacer click en "Install" al lado de la extensión Prettier: Code format..._
-2. **CodeStream:** Instalarlo igual que Prettier. Una vez instalado, deben comunicarse con el administrador del repositorio para que los incluya en el equipo de trabajo. Esta extensión les permitirá leer y responder comentarios sobre los códigos.
 
 ## Configuración
 
-Ir al ícono de engranaje en la esquina inferior izquierda y hacer click en "Settings":
-
-Usando el buscador que aparece allí, buscar lo que aparece entre comillas a continuación y asignar los siguientes valores:
+Ir al ícono de engranaje ("Manage") en la esquina inferior izquierda y hacer click en "Settings". Usando el buscador allí, buscar lo que aparece entre comillas a continuación y asignar los siguientes valores:
 
 "editor.formatOnSave": chuleado  
 "editor.tabSize": 2  
