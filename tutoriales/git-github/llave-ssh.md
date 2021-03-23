@@ -1,12 +1,11 @@
 ## Llave SSH
 SSH (siglas para Secure Shell) es un protocolo de seguridad que vincula nuestra computadora con un repositorio específico sin necesidad de ingresar nuestros datos de inicio de sesión en cada push.
-El protocolo se activa con tres pasos:
+El protocolo se activa con cuatro pasos:
 1. Generar una llave
 2. Agregar llave al ssh-agent
 3. Vincular llave a la cuenta de Github
+4. Reemplazar el origen de HTTPS a SSH
 
-EXTRA:
-- Reemplazamos el origen de HTTPS a SSH
 ---
 
 ### Crear una llave SSH
@@ -58,3 +57,8 @@ Ejecutar el comando `git remote set-url origin` junto al enlance, en mi caso:
 $ git remote set-url origin git@github.com:jeanniffer/programacion-creativa.git
 ```
 En este punto, hacer un push para asegurarse de que todo esté funcionando correctamente.
+
+## NOTAS: 
+- Es importante hacer el proceso completo para no tener problemas de autenticación.
+- En caso de ser un repositorio al que se tiene acceso como colaborador, pero no a la configuración, el administrador puede agregar las claves de cada miembro. 
+- Un mismo repositorio puede tener varias llaves (por ejemplo, varias computadoras con acceso)
