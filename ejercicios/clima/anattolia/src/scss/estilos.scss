@@ -1,0 +1,27 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+#lienzo {
+  background-color: rgb(22, 22, 22);
+}
+
+#creditos {
+  color: rgb(102, 102, 102);
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 10vh;
+}
