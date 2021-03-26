@@ -10,6 +10,7 @@ import pocas from './assets/lm_few.jpeg';
 import nieve from './assets/mh_nieve.jpg';
 import trueno from './assets/mh_trueno.jpeg';
 import haze from './assets/mh_haze.jpeg';
+import sleet from './assets/miguelar_sleet.jpeg';
 
 const lienzo = document.getElementById('lienzo');
 const ctx = lienzo.getContext('2d');
@@ -90,7 +91,7 @@ function dibujar() {
         creditos: '"Aeropuerto El Dorado y sus alrededores", Manuel H',
         fondo: 'rgba(10,10,10)',
       });
-    } else if (clima.includes('broken clouds')) {
+    } else if (clima.includes('broken clouds') || clima.includes('smoke')) {
       pintar({
         img: rotas,
         fuente: [30, 1.5, 29, 250, 250, 250],
@@ -130,7 +131,7 @@ function dibujar() {
         creditos: 'Foto: Leo Matiz',
         fondo: 'rgba(0, 0, 0)',
       });
-    } else if (clima.includes('rain')) {
+    } else if (clima.includes('rain') || clima.includes('drizzle')) {
       pintar({
         img: lluvia,
         fuente: [30, 2.3, 25, 25, 25, 25],
@@ -150,7 +151,7 @@ function dibujar() {
         creditos: '"Evanescente 5", Olga Lucía Hurtado',
         fondo: 'rgba(10, 13, 18)',
       });
-    } else if (clima.includes('fog')) {
+    } else if (clima.includes('fog') || clima.includes('tornado')) {
       pintar({
         img: niebla,
         fuente: [30, 1.7, 28, 255, 255, 255],
@@ -160,7 +161,7 @@ function dibujar() {
         creditos: '"Fanny (Serie Faenza)", Miguel Angel Rojas',
         fondo: 'rgba(230, 230, 230)',
       });
-    } else if (clima.includes('snow')) {
+    } else if (clima.includes('snow') || clima.includes('sand')) {
       pintar({
         img: nieve,
         fuente: [30, 1.7, 28, 15, 15, 15],
@@ -170,7 +171,7 @@ function dibujar() {
         creditos: 'Foto: Manuel H',
         fondo: 'rgba(20, 20, 20)',
       });
-    } else if (clima.includes('thundersorm')) {
+    } else if (clima.includes('thundersorm') || clima.includes('ash')) {
       pintar({
         img: trueno,
         fuente: [30, 1.5, 28, 255, 255, 255],
@@ -188,6 +189,16 @@ function dibujar() {
         p2: '',
         color: [25, 25, 25],
         creditos: 'Foto: Manuel H',
+        fondo: 'rgba(250, 250, 250)',
+      });
+    } else if (clima.includes('sleet') || clima.includes('squalls')) {
+      pintar({
+        img: sleet,
+        fuente: [30, 1.8, 30, 15, 15, 15],
+        p1: 'borrar lo poco hecho, empezar de la nada',
+        p2: '',
+        color: [25, 25, 25],
+        creditos: '"Titanic (Serie Faenza)", Miguel Ángel Rojas',
         fondo: 'rgba(250, 250, 250)',
       });
     } else {
