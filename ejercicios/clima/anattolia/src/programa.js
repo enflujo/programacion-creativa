@@ -201,11 +201,11 @@ function dibujar() {
 
 //Cambiar los colores de la imagen al hacer click
 function click() {
-  var estadoImg = 1;
+  let estadoImg = 1;
   lienzo.onclick = () => {
     if (pixeles.length) {
       if (estadoImg === 1) {
-        for (var i = 0; i < pixeles.length; i += 4) {
+        for (let i = 0; i < pixeles.length; i += 4) {
           pixeles[i + 1] = pixeles[200];
           pixeles[i + 2] = pixeles[i + 3];
           document.body.style.backgroundColor = 'rgba(0, 0, 0)';
