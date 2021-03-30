@@ -14,7 +14,7 @@ export default class Ojos {
     const ctx = this.ctx;
 
     const margenY = 10;
-    const radio = Math.abs(y / 3.5);
+    const radio = Math.abs(y / 3.8);
     this.radio = radio;
     const margenX = radio;
     const radioPupIz = random(radio / 3, radio / 2);

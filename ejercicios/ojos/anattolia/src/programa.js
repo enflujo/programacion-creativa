@@ -36,16 +36,7 @@ contenedor.onmousemove = (e) => {
   let g = mapearColor(xMouse - dimensiones.right);
 
   for (let i = 0; i < cantidadOjos + 1; i++) {
-    if (
-      xMouse - ojos.radio * 2 > dimensiones.left &&
-      xMouse + ojos.radio * 2 + ojos.radio / 2 < dimensiones.right &&
-      yMouse - ojos.radio * 2 - 10 > dimensiones.top &&
-      yMouse - ojos.radio * 2 - ojos.radio / 2 < dimensiones.bottom
-    ) {
-      let color = 'rgba(' + r + ',' + g + ',' + '55)';
-      ojos.pintar(_x - i * 20, _y + Math.pow(i, 4), color);
-      //console.log(ojos.radio);
-    } else if (xMouse - ojos.radio * 2 < dimensiones.left) {
+    if (xMouse - ojos.radio * 2 < dimensiones.left) {
       ctx.fillStyle = 'rgba(' + r + ',' + g + ',' + '55)';
       ctx.textAlign = 'center';
       ctx.font = '1500% Helvetica';
@@ -56,11 +47,14 @@ contenedor.onmousemove = (e) => {
       ctx.textAlign = 'center';
       ctx.font = '1500% Helvetica';
       ctx.fillText(':x', ancho / 2, alto / 1.5);
-    } else if (yMouse + ojos.radio * 2 + ojos.radio / 2 > dimensiones.bottom) {
+    } else if (yMouse + ojos.radio * 0.9 > dimensiones.bottom) {
       ctx.fillStyle = 'rgba(' + r + ',' + g + ',' + '55)';
       ctx.textAlign = 'center';
       ctx.font = '1500% Helvetica';
-      ctx.fillText(':x', ancho / 2, alto / 1.5);
+      ctx.fillText(':o', ancho / 2, alto / 1.5);
+    } else {
+      let color = 'rgba(' + r + ',' + g + ',' + '55)';
+      ojos.pintar(_x - i * 20, _y + Math.pow(i, 4), color);
     }
     /** no entiendo por qué a veces si el mouse sale del cuadro por el borde 
      inferior, luego no se vuelven a pintar los ojos **/
