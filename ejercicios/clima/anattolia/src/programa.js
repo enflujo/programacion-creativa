@@ -207,6 +207,7 @@ function dibujar() {
     datosImagen = ctx.getImageData(0, 0, window.innerWidth, window.innerHeight);
     // Sacar los pixeles que es un Array y cada color tiene 4 valores [r, g, b, a, r, g, b, a, ....];
     pixeles = datosImagen.data;
+    click();
   }
 }
 
@@ -234,5 +235,5 @@ function click() {
 
 window.onresize = actualizar;
 dibujar();
-click();
+
 actualizar();
