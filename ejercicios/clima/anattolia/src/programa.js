@@ -60,6 +60,9 @@ function pintar(datos) {
     imprimirTxt(datos.fuente, datos.p1, datos.p2);
     creditos.innerHTML = datos.creditos;
     document.body.style.backgroundColor = datos.fondo;
+    datosImagen = ctx.getImageData(0, 0, window.innerWidth, window.innerHeight);
+    pixeles = datosImagen.data;
+    click();
   };
 }
 
@@ -204,10 +207,6 @@ function dibujar() {
     } else {
       ctx.fillText(clima, 100, 200);
     }
-    datosImagen = ctx.getImageData(0, 0, window.innerWidth, window.innerHeight);
-    // Sacar los pixeles que es un Array y cada color tiene 4 valores [r, g, b, a, r, g, b, a, ....];
-    pixeles = datosImagen.data;
-    click();
   }
 }
 
@@ -223,7 +222,7 @@ function click() {
           document.body.style.backgroundColor = 'rgba(0, 0, 0)';
         }
         estadoImg = 0;
-      } else if (img === 0) {
+      } else if (estadoImg === 0) {
         dibujar();
         estadoImg = 1;
       }
