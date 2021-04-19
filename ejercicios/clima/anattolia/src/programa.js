@@ -14,28 +14,33 @@ import sleet from './assets/miguelar_sleet.jpeg';
 
 const lienzo = document.getElementById('lienzo');
 const ctx = lienzo.getContext('2d');
+
+const lienzo2 = document.createElement('canvas');
+const ctx2 = lienzo2.getContext('2d');
+
 //API Key de Open Weather
 const apiKey = 'b1c43b2e69342ccea61cc5aea15c82c8';
 const img = new Image();
 
 let datosImagen;
+let datosImagen2;
 let pixeles = [];
 let clima;
 let lat;
 let lon;
 let creditos = document.getElementById('creditos');
+let imgTransformada = false;
+let estadoImg = 1;
 
 function actualizar() {
-  lienzo.width = window.innerWidth;
-  lienzo.height = window.innerHeight;
+  lienzo.width = lienzo2.width = window.innerWidth;
+  lienzo.height = lienzo2.height = window.innerHeight;
+
   ctx.fillStyle = 'rgba(255, 255, 255)';
   dibujar();
 }
 
-function imprimirImg() {
-  ctx.drawImage(img, 0, 0, lienzo.width, lienzo.height);
-}
-
+/* Imprimir las coordenadas en la pantalla */
 function imprimirCoor([r, g, b]) {
   ctx.fillStyle = `rgba(${r}, ${g}, ${b}, 0.9)`;
   ctx.font = `${lienzo.width / 75}px Monospace`;
@@ -43,6 +48,7 @@ function imprimirCoor([r, g, b]) {
   //console.log(r, g, b);
 }
 
+/* Imprimir el texto en la pantalla */
 function imprimirTxt([posX, posY, tFuente, r, g, b], p1 = '', p2 = '') {
   const posH = lienzo.width / posX;
   const posV = lienzo.height / posY;
@@ -52,20 +58,23 @@ function imprimirTxt([posX, posY, tFuente, r, g, b], p1 = '', p2 = '') {
   ctx.fillText(p2, posH, posV + ctx.font[0] * 7);
 }
 
+/* Pintar la imagen en la pantalla */
 function pintar(datos) {
   img.src = datos.img;
   img.onload = () => {
-    imprimirImg();
+    ctx.drawImage(img, 0, 0, lienzo.width, lienzo.height);
     imprimirCoor(datos.color);
     imprimirTxt(datos.fuente, datos.p1, datos.p2);
     creditos.innerHTML = datos.creditos;
     document.body.style.backgroundColor = datos.fondo;
     datosImagen = ctx.getImageData(0, 0, window.innerWidth, window.innerHeight);
+    ctx2.putImageData(datosImagen, 0, 0);
+
     pixeles = datosImagen.data;
-    click();
   };
 }
 
+/* Elegir la imagen que se mostrará según el clima en las coordenadas del usuario */
 function dibujar() {
   //Obtener las coordenadas del usuario
   navigator.geolocation.getCurrentPosition((position) => {
@@ -75,7 +84,7 @@ function dibujar() {
     obtenerClima(lat, lon);
   });
 
-  async function obtenerClima(lat, lon) {
+  async function obtenerClima() {
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
     //const url = `https://api.openweathermap.org/data/2.5/weather?lat=4&lon=73&appid=${apiKey}`;
 
@@ -210,29 +219,36 @@ function dibujar() {
   }
 }
 
-//Cambiar los colores de la imagen al hacer click
-function click() {
-  let estadoImg = 1;
-  lienzo.onclick = () => {
-    if (pixeles.length) {
-      if (estadoImg === 1) {
+/* Cambiar los colores de la imagen al hacer click */
+lienzo.onclick = () => {
+  datosImagen2 = ctx2.getImageData(0, 0, window.innerWidth, window.innerHeight);
+
+  /* Comprueba si hay datos en pixeles[] */
+  if (pixeles.length) {
+    /* Comprueba si la imagen mostrada es la original */
+    if (estadoImg === 1) {
+      document.body.style.backgroundColor = 'rgba(0, 0, 0)';
+      /* Comprueba si los datos de pixeles[] no se han transformado. 
+      Esto es útil para hacer las operaciones sobre cada pixel una sola vez y 
+      ahorrar recursos. */
+      if (!imgTransformada) {
         for (let i = 0; i < pixeles.length; i += 4) {
           pixeles[i + 1] = pixeles[200];
           pixeles[i + 2] = pixeles[i + 3];
-          document.body.style.backgroundColor = 'rgba(0, 0, 0)';
         }
-        estadoImg = 0;
-      } else if (estadoImg === 0) {
-        dibujar();
-        estadoImg = 1;
       }
+      /* Pinta la imagen con los pixeles transformados */
+      ctx.putImageData(datosImagen, 0, 0);
+      estadoImg = 0;
+    } else if (estadoImg === 0) {
+      /* Pinta la imagen original, guardada en datosImagen2 */
+      ctx.putImageData(datosImagen2, 0, 0);
+      estadoImg = 1;
     }
-    //Poner de nuevo los datos en pantalla
-    ctx.putImageData(datosImagen, 0, 0);
-  };
-}
+  }
+};
 
 window.onresize = actualizar;
-dibujar();
 
+dibujar();
 actualizar();
