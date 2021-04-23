@@ -32,6 +32,11 @@ let creditos = document.getElementById('creditos');
 let imgTransformada = false;
 let estadoImg = 1;
 
+let p1 = '';
+let p2 = '';
+let fuente = [];
+let colorTxt = [];
+
 function actualizar() {
   lienzo.width = lienzo2.width = window.innerWidth;
   lienzo.height = lienzo2.height = window.innerHeight;
@@ -71,6 +76,10 @@ function pintar(datos) {
     ctx2.putImageData(datosImagen, 0, 0);
 
     pixeles = datosImagen.data;
+    p1 = datos.p1;
+    p2 = datos.p2;
+    fuente = datos.fuente;
+    colorTxt = datos.color;
   };
 }
 
@@ -81,7 +90,7 @@ function dibujar() {
     lat = position.coords.latitude;
     lon = position.coords.longitude;
     //con las coordenadas, obtener el clima
-    obtenerClima(lat, lon);
+    obtenerClima();
   });
 
   async function obtenerClima() {
@@ -221,7 +230,7 @@ function dibujar() {
 
 /* Cambiar los colores de la imagen al hacer click */
 lienzo.onclick = () => {
-  datosImagen2 = ctx2.getImageData(0, 0, window.innerWidth, window.innerHeight);
+  //datosImagen2 = ctx2.getImageData(0, 0, window.innerWidth, window.innerHeight);
 
   /* Comprueba si hay datos en pixeles[] */
   if (pixeles.length) {
@@ -236,13 +245,16 @@ lienzo.onclick = () => {
           pixeles[i + 1] = pixeles[200];
           pixeles[i + 2] = pixeles[i + 3];
         }
+        imgTransformada = true;
       }
-      /* Pinta la imagen con los pixeles transformados */
+      /* Pinta la imagen transformada */
       ctx.putImageData(datosImagen, 0, 0);
       estadoImg = 0;
     } else if (estadoImg === 0) {
-      /* Pinta la imagen original, guardada en datosImagen2 */
-      ctx.putImageData(datosImagen2, 0, 0);
+      /* Pinta la imagen original y vuelve a imprimir los textos */
+      ctx.drawImage(img, 0, 0, lienzo.width, lienzo.height);
+      imprimirCoor(colorTxt);
+      imprimirTxt(fuente, p1, p2);
       estadoImg = 1;
     }
   }
