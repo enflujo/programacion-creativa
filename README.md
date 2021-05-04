@@ -57,3 +57,5 @@ Ir a [Glosario](Glosario.md)
 - ..:: Fabio o Ferio o F Bonfanti Ruggiero ::..
 - ..:: Alejo Forero ::..
 - ..:: Andrea Muñoz Álvarez ::..
+- ..:: Julian Perez ::..
+

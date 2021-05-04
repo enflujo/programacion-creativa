@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visualizador de sonidos</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+    <div id="container">
+      <div id="div1">
+        <div id="audiocontainer">
+          <h1 id="H1audiocontainer">Audio Analyzer</h1>
+          <audio id="audio1", controls></audio>
+        </div>
+        <div id="fileuploadCont">
+          <p id="PfileuploadCont">Añade una pista (.mp3 ó .wav): </p>
+          <input type="file" id="fileupload" accept="audio/*" />
+        </div>
+      </div>
+      <div id="div2"><canvas id="canvas1"></canvas></div>
+    </div>
+  </body>
+</html>

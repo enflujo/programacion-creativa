@@ -94,6 +94,9 @@ git checkout <nombre-de-branch>
 
 # Para ver en qué rama estás
 git branch
+
+# En algunos casos necesitaremos hacer una rama desde una versión anterior del repositorio. Por ejemplo, al estar trabajando un ejercicio complejo, y tener apuntes de un tutorial. Para subir el tutorial y no el ejercicio, buscar el hash del último commit y agregar al comando de crear rama
+git checkout -b <nombre-de-nueva-rama> <hash-del-commit>
 ```
 Otra forma de crear una nueva rama es abrir la carpeta del proyecto en VSCode (File - Open...). En la esquina inferior izquierda debe aparecer el símbolo de las ramas (parecido al de 'fork' en GitHub) y el nombre de la rama en la que están actualmente (probablemente 'main'). Al hacer click ahí pueden crear una nueva rama. Automáticamente cambiarán a ella. 
 
