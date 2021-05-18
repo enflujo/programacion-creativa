@@ -3,10 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
-  min-height: 100vh;
-  overflow-x: hidden;
-  background: black;
+body {
+  font-family: "Archivo Black", sans-serif;
+  background: #000000;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 .search {
   position: fixed;
@@ -44,15 +46,6 @@ input {
   cursor: pointer;
   text-align: center;
 }
-.metbutton {
-  padding: 0.5rem 0.3rem;
-  margin-left: 10px;
-  background: cornflowerblue;
-  color: white;
-  font-size: 1.2rem;
-  cursor: pointer;
-  text-align: center;
-}
 .next{
   position: fixed;
   top: 90%;
@@ -63,6 +56,40 @@ input {
   text-align: center;
   cursor: pointer;
   color: aliceblue;
+}
+.save{
+  position: fixed;
+  top: 80%;
+  right: 0%;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid whitesmoke;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+  color: aliceblue;
+}
+.botonInicio{
+  position: fixed;
+  top: 50%;
+  left:45%;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid rgb(253, 252, 252);
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  color: rgb(253, 252, 252);
+  font-weight: bold;
+}
+.introToBuscar1 {
+  position: fixed;
+  top: 50%;
+  left:45%;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid rgb(253, 252, 252);
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  color: rgb(253, 252, 252);
 }
 .gallery{
   width: 90%;
@@ -78,7 +105,6 @@ input {
   position: relative;
 }
 img {
-  margin-left: 5px;
   height: 300px;
   width: 200px;
   object-fit: cover;
@@ -87,8 +113,15 @@ img {
 }
 p {
   position: relative;
-  margin-left: 10px;
+  margin-left: 5px;
   margin-top: 5px;
+  bottom: 5px;
+  color: azure;
+}
+p.first {
+  position: relative;
+  margin-left: 5px;
+  margin-top: 15px;
   bottom: 5px;
   color: azure;
 }
@@ -100,4 +133,182 @@ a {
   color: azure;
   margin-left: 10px;
   font-weight: bold;
+}
+
+
+
+
+//Checkboxes
+input[type="checkbox"][id^="${checkboxID}"] {
+  display: none;
+}
+
+label {
+  border: 1px solid #fff;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  height: 300px;
+  width: 200px;
+}
+
+label:before {
+  background-color: white;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 1px solid grey;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+}
+
+label img {
+  height: 300px;
+  width: 200px;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+}
+
+:checked + label {
+  border-color: #ddd;
+}
+
+:checked + label:before {
+  content: "✓";
+  background-color: grey;
+  transform: scale(1);
+}
+
+:checked + label img {
+  transform: scale(0.9);
+  /* box-shadow: 0 0 5px #333; */
+  z-index: -1;
+}
+
+#inicio {
+  text-align: center;
+  color: aliceblue;
+}
+.hidden {
+  display: none;
+}
+
+
+///// Texto animado inicio
+.words {
+  color: #020202;
+  font-size: 0;
+  line-height: 1.5;
+}
+
+.words span {
+  font-size: 10rem;
+  display: inline-block;
+  animation: move 5s ease-in-out infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(-30%, 0);
+  }
+  50% {
+    text-shadow: 0 25px 50px rgba(252, 250, 250, 0.75);
+  }
+  100% {
+    transform: translate(30%, 0);
+  }
+}
+
+.words span:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.words span:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+.words span:nth-child(4) {
+  animation-delay: 1.2s;
+}
+
+.words span:nth-child(5) {
+  animation-delay: 1.6s;
+}
+
+.words span:nth-child(6) {
+  animation-delay: 2.0s;
+}
+
+.words span:nth-child(7) {
+  animation-delay: 2.4s;
+}
+.words span:nth-child(8) {
+  animation-delay: 2.8s;
+}
+.words span:nth-child(9) {
+  animation-delay: 3.2s;
+}
+.words span:nth-child(10) {
+  animation-delay: 3.6s;
+}
+.words span:nth-child(11) {
+  animation-delay: 4s;
+}
+.words span:nth-child(12) {
+  animation-delay: 4.3s;
+}
+.words span:nth-child(13) {
+  animation-delay: 4.6s;
+}
+.words span:nth-child(14) {
+  animation-delay: 5s;
+}
+
+/// Animated Text
+
+
+.animatedText {
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  color: black;
+  animation: fadeIn 5s ease-in-out infinite;
+  -webkit-animation: fadeIn linear 7s;
+  -moz-animation: fadeIn linear 7s;
+  -o-animation: fadeIn linear 7s;
+  -ms-animation: fadeIn linear 7s;
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0%,100% { opacity: 0 }
+  50% { opacity: 1 }
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
 }
