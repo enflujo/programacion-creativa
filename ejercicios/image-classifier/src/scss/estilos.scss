@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Red+Hat+Display:900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 html {
   box-sizing: border-box;
   height: 100%;
@@ -15,6 +18,104 @@ body {
   padding: 0;
 }
 #webcam {
-  width: 100vw;
+  width: 70vw;
   height: 100vh;
 }
+
+.hidden {
+  display: none;
+}
+
+//// Titulo introduccion
+
+
+#intro {
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #ffd200;
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.titulo-intro-efectos {
+  font-size: 12vw;
+  line-height: 13vw;
+  margin: 0;
+  font-family: 'Anton', sans-serif;
+  font-weight: 900;
+  background: url(https://paperswithcode.com/media/datasets/ImageNet-0000000008-f2e87edd_Y0fT5zg.jpg);
+  background-size: 50%;
+  background-position: 50% 50%;
+  -webkit-background-clip: text;
+  color: rgba(0,0,0,0.08);
+  animation: zoomout 10s ease 500ms forwards;
+  position: relative;
+  text-align: center;
+  padding-top: 400px;
+}
+
+@keyframes zoomout {
+  from {
+    background-size: 60%;
+  }
+  to {
+    background-size: 20%;
+  }
+}
+
+
+#presentacion {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Anton', sans-serif;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #ffd200;
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+.textoPresentacion {
+  font-size: 7vw;
+  line-height: 8vw;
+  margin: 0;
+  font-family: 'Anton', sans-serif;
+  font-weight: 900;
+  background: url(https://static8.depositphotos.com/1005348/834/i/950/depositphotos_8343356-stock-photo-grid-texture.jpg);
+  background-size: 50%;
+  background-position: 50% 50%;
+  -webkit-background-clip: text;
+  color: rgba(0,0,0,0.08);
+  animation: zoomout 10s ease 500ms forwards;
+  position: relative;
+  text-align: center;
+  padding-top: 200px;
+}
+
+/* Pattern styles */
+#modelo {
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffd200;
+}
+
+.left-half {
+  background-color: #ff9e2c;
+  float: left;
+  width: 70%;
+}
+
+.right-half {
+  float: left;
+  width: 70%;
+}
+
