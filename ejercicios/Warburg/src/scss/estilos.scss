@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Amatic+SC:wght@700&family=Archivo:wght@300&family=Dosis:wght@300&family=KoHo:ital,wght@1,300&family=Orbitron&family=Roboto+Slab:wght@200;500&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: "Archivo Black", sans-serif;
   background: #000000;
   height: 100vh;
   justify-content: center;
@@ -19,7 +23,7 @@ body {
   min-height: 10vh;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgb(73, 73, 73);
   z-index: 1;
   background: black;
 }
@@ -31,65 +35,191 @@ input {
 .searchbutton {
   padding: 0.5rem 0.3rem;
   margin-left: 10px;
-  background: cornflowerblue;
-  color: white;
-  font-size: 1.2rem;
+  font-size: 0.7vw;
   cursor: pointer;
   text-align: center;
+  border: 2px solid rgb(255, 255, 255);
+  color: aliceblue;
+  font-family: 'Noto Sans', sans-serif;
 }
 .cleanbutton {
   padding: 0.5rem 0.3rem;
   margin-left: 10px;
-  background: cornflowerblue;
-  color: white;
-  font-size: 1.2rem;
+  font-size: 0.7vw;
   cursor: pointer;
   text-align: center;
+  border: 2px solid rgb(255, 255, 255);
+  color: aliceblue;
+  font-family: 'Noto Sans', sans-serif;
 }
-.next{
+.next {
+  position: fixed;
+  top: 95%;
+  right: 0%;
+  padding: 0.5rem 0.5rem;
+  border: 2px solid rgb(255, 255, 255);
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+  color: aliceblue;
+  font-family: 'Noto Sans', sans-serif;
+}
+.next2{
+  position: fixed;
+  top: 95%;
+  right: 0%;
+  padding: 0.5rem 0.5rem;
+  border: 2px solid rgb(255, 255, 255);
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+  color: aliceblue;
+  font-family: 'Noto Sans', sans-serif;
+}
+.next3{
+  position: fixed;
+  top: 95%;
+  right: 0%;
+  padding: 0.5rem 0.5rem;
+  border: 2px solid rgb(255, 255, 255);
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+  color: aliceblue;
+  font-family: 'Noto Sans', sans-serif;
+}
+.miniaturas {
+  position: fixed;
+  top: 30%;
+  right: 0%;
+  padding: 0.5rem 0.5rem;
+  border: 2px solid rgb(255, 255, 255);
+  width: 15vw;
+  color: aliceblue;
+}
+.miniaturas2 {
+  position: fixed;
+  top: 30%;
+  right: 0%;
+  padding: 0.5rem 0.5rem;
+  border: 2px solid rgb(255, 255, 255);
+  width: 15vw;
+  color: aliceblue;
+}
+.miniaturas3 {
+  position: fixed;
+  top: 30%;
+  right: 0%;
+  padding: 0.5rem 0.5rem;
+  border: 2px solid rgb(255, 255, 255);
+  width: 15vw;
+  color: aliceblue;
+}
+.miniaturas4 {
+  width: 100vw;
+}
+.miniaturasImg img {
+  float: left;
+  margin: 10px;
+  width: 100px;
+  height: auto;
+}
+.save{
   position: fixed;
   top: 90%;
   right: 0%;
   padding: 0.5rem 0.5rem;
-  border: 1px solid whitesmoke;
+  border: 2px solid rgb(255, 255, 255);
   width: 100px;
   text-align: center;
   cursor: pointer;
   color: aliceblue;
+  font-family: 'Noto Sans', sans-serif;
 }
-.save{
+.save2{
   position: fixed;
-  top: 80%;
+  top: 85%;
   right: 0%;
   padding: 0.5rem 0.5rem;
-  border: 1px solid whitesmoke;
+  border: 2px solid rgb(255, 255, 255);
   width: 100px;
   text-align: center;
   cursor: pointer;
   color: aliceblue;
+  font-family: 'Noto Sans', sans-serif;
+}
+.save3{
+  position: fixed;
+  top: 85%;
+  right: 0%;
+  padding: 0.5rem 0.5rem;
+  border: 2px solid rgb(255, 255, 255);
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+  color: aliceblue;
+  font-family: 'Noto Sans', sans-serif;
 }
 .botonInicio{
   position: fixed;
   top: 50%;
   left:45%;
   padding: 0.5rem 0.5rem;
-  border: 1px solid rgb(253, 252, 252);
+  border: 2px solid rgb(255, 255, 255);
   width: 200px;
   text-align: center;
   cursor: pointer;
-  color: rgb(253, 252, 252);
   font-weight: bold;
+  color: aliceblue;
+  font-family: 'Noto Sans', sans-serif;
 }
 .introToBuscar1 {
   position: fixed;
   top: 50%;
   left:45%;
   padding: 0.5rem 0.5rem;
-  border: 1px solid rgb(253, 252, 252);
+  border: 2px solid rgb(255, 255, 255);
   width: 200px;
   text-align: center;
   cursor: pointer;
-  color: rgb(253, 252, 252);
+  color: aliceblue;
+  font-family: 'Noto Sans', sans-serif;
+}
+.introParte2ToBuscar2 {
+  position: fixed;
+  top: 50%;
+  left:45%;
+  padding: 0.5rem 0.5rem;
+  border: 2px solid rgb(253, 251, 251);
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  color: aliceblue;
+  font-family: 'Noto Sans', sans-serif;
+}
+.introParte3ToBuscar3 {
+  position: fixed;
+  top: 50%;
+  left:45%;
+  padding: 0.5rem 0.5rem;
+  border: 2px solid rgb(253, 251, 251);
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  color: aliceblue;
+  font-family: 'Noto Sans', sans-serif;
+}
+.introParte4ToFinal {
+  position: fixed;
+  top: 50%;
+  left:45%;
+  padding: 0.5rem 0.5rem;
+  border: 2px solid rgb(253, 251, 251);
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  color: aliceblue;
+  font-family: 'Noto Sans', sans-serif;
 }
 .gallery{
   width: 90%;
@@ -100,6 +230,29 @@ input {
   row-gap: 10px;
   column-gap: 10px;
   justify-content: center;
+  font-family: 'Noto Sans', sans-serif;
+}
+.gallery2{
+  width: 90%;
+  margin: 12vh 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  row-gap: 10px;
+  column-gap: 10px;
+  justify-content: center;
+  font-family: 'Noto Sans', sans-serif;
+}
+.gallery3{
+  width: 90%;
+  margin: 12vh 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  row-gap: 10px;
+  column-gap: 10px;
+  justify-content: center;
+  font-family: 'Noto Sans', sans-serif;
 }
 .gallery div {
   position: relative;
@@ -116,23 +269,22 @@ p {
   margin-left: 5px;
   margin-top: 5px;
   bottom: 5px;
-  color: azure;
+  color: aliceblue;
 }
 p.first {
   position: relative;
   margin-left: 5px;
   margin-top: 15px;
   bottom: 5px;
-  color: azure;
+  color: aliceblue;
 }
 a {
   position: absolute;
   top: 0;
   left: 0;
   text-decoration: underline;
-  color: azure;
+  color: aliceblue;
   margin-left: 10px;
-  font-weight: bold;
 }
 
 
@@ -154,7 +306,7 @@ label {
 
 label:before {
   background-color: white;
-  color: white;
+  color: aliceblue;
   content: " ";
   display: block;
   border-radius: 50%;
@@ -178,7 +330,7 @@ label img {
 }
 
 :checked + label {
-  border-color: #ddd;
+  color: aliceblue;
 }
 
 :checked + label:before {
@@ -194,8 +346,11 @@ label img {
 }
 
 #inicio {
+  height: 100vh;
   text-align: center;
   color: aliceblue;
+  font-family: 'Archivo Black', sans-serif;
+  background-image: url('https://i1.wp.com/www.fg-a.com/wallpapers/2020-black-crystalline-peaks-image.jpg');
 }
 .hidden {
   display: none;
@@ -272,43 +427,114 @@ label img {
   animation-delay: 5s;
 }
 
-/// Animated Text
-
-
-.animatedText {
-  display: inline-block;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 30px;
-  color: black;
-  animation: fadeIn 5s ease-in-out infinite;
-  -webkit-animation: fadeIn linear 7s;
-  -moz-animation: fadeIn linear 7s;
-  -o-animation: fadeIn linear 7s;
-  -ms-animation: fadeIn linear 7s;
-  opacity: 1;
+// .introText {
+//   width: 80%;
+//   height: 40%;
+//   /*IMPORTANTE*/
+//   display:grid;
+//   justify-content: center;
+//   align-items: center;
+// }
+#intro {
+  height: 100vh;
+ background-image: url('https://i.ytimg.com/vi/IclwFVoYRK0/maxresdefault.jpg');
+ background-repeat: no-repeat; 
+  background-size: cover;
+}
+#introParte2 {
+  height: 100vh;
+ background-image: url('https://cdn.wallpapersafari.com/8/10/XesyDn.jpg');
+ background-repeat: no-repeat; 
+  background-size: cover;
+}
+#introParte3 {
+  height: 100vh;
+ background-image: url('https://images.freeimages.com/images/large-previews/f8b/thick-smoke-on-black-background-1633270.jpg');
+ background-repeat: no-repeat; 
+  background-size: cover;
+}
+#introParte4 {
+  height: 100vh;
+ background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWeDaU0LNPj4n4-lBRLPZc_KdR3vZXPzGS4w&usqp=CAU');
+ background-repeat: no-repeat; 
+  background-size: cover;
+}
+#galeriaFinal {
+  height: 100vh;
+ background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWeDaU0LNPj4n4-lBRLPZc_KdR3vZXPzGS4w&usqp=CAU');
+ background-repeat: no-repeat; 
+  background-size: cover;
+}
+#palabrasFinales {
+  background-image: url('https://image.winudf.com/v2/image/Y29tLlBSSVNTSS5XYWxscGFwZXIuQmxhY2suQmxhY2tCYWNrZ3JvdW5kV2FsbHBhcGVySERfc2NyZWVuXzJfMTUyOTQ1MzU1N18wMjI/screen-2.jpg?fakeurl=1&type=.jpg');
+  background-repeat: no-repeat; 
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+}
+p.introCita {
+  padding-top: 30px;
+  font-size: 2.8vw;
+  color: aliceblue;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50vw;
+  font-family: 'Staatliches', cursive;
+}
+p.introCita2 {
+  font-size: 2vw;
+  color: aliceblue;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50vw;
+  font-family: 'Staatliches', cursive;
+}
+p.textoIntro {
+  font-size: 1.8vw;
+  padding-top: 40px;
+  color: aliceblue;
+  margin-left: auto;
+  margin-right: 20px;
+  width: 20em;
+  text-align: right;
+  font-family: 'Dosis', sans-serif;
 }
 
-@keyframes fadeIn {
-  0%,100% { opacity: 0 }
-  50% { opacity: 1 }
+
+//Hover buttons effect
+.hoverEffects::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
 }
 
-@-moz-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+.hoverEffects:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.hoverEffects:hover {
+  color: #000000;
+}
+.hoverEffects::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: #ddd;
+  z-index: -1;
+  transition: transform .3s ease;
 }
 
-@-webkit-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+/////imagenes finales
+
+.imagenesFinales img {
+  float: left;
+  height: 100vh;
+  width: 10vw;
 }
 
-@-o-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-
-@-ms-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+.contadorNum {
+  float: right;
+  color: coral;
+  font-size: 20vw;
 }
