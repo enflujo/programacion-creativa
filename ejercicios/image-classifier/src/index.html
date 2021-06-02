@@ -6,7 +6,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
     <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
     <script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
-    <title>Webpack</title>
+    <title>Clasificación_0.1</title>
   </head>
   <body>
     <section id="intro" class="">
@@ -14,18 +14,61 @@
         <h1 class="titulo-intro-efectos">#Clasificación_0.1</h1>
       </div>
     </section>
+
+
     <section id="presentacion" class="hidden">
-      <p class="textoPresentacion">Toda clasificación es una segmentación de la realidad, y esto es un ejercicio de poder. ¿qué tipo de poder se manifiesta al nombrar el mundo?</p>
+        <div id="titulo">
+          <h1 class="titulo-intro-efectos2">#Clasificación_0.1</h1>
+        </div>
+        <div id="introp">
+          <h2>¿Qué es categorizar?</h2>
+
+          <p>Cuando vemos, categorizamos. Categorizar es una forma de organizar el mundo, asignándole a cada una de sus partes un nombre.  Cada uno de estos nombres contiene una carga semántica que advierte hacia dónde se inclinan nuestras posturas morales, políticas y estéticas, tanto individual como socialmente. Siendo la clasificación una de las tareas originales de las redes neuronales artificiales ¿qué vínculos pueden establecerse entre la mirada humana y la visión algorítmica? ¿Con qué datos aprende a ver el mundo un modelo de inteligencia artificial? ¿Qué nombres son asignados a esos patrones estadísticos? ¿Cuál es la visión del mundo que se esconde detrás de estos resultados?</p>
+            
+          <p>Aquí tienes la oportunidad de enseñarle a la máquina a ver el mundo a través de tus ojos (incluyendo tus saberes, prejuicios, tendencias, posiciones), entrenándola para que pueda identificar los objetos según las categorías propuestas. Eres libre de escoger los objetos que mejor representen el contenido semántico de estas categorías.</p>
+        </div>
+        <div id="tresPartes">
+          <div class="izq">
+            <h3>Pobre</h3>
+
+            <p>La pobreza puede ser definida de muy diversas formas y es aplicada de manera muy distinta según el objeto así juzgado y el contexto desde donde se enuncie. Un objeto que represente lo pobre posee entonces unas características que no residen tanto en la materialidad del objeto sino en la mente de quien de esta manera lo considera. ¿Qué relación hay entre estos contenidos mentales y los patrones estadísticos con los que la máquina identifica todo objeto pobre? ¿Es posible que, bien entrenada, la máquina pueda identificar ese patrón y aprenda así a categorizar correctamente todo objeto pobre? ¿Pero acaso la pobreza no estaba en la mente de quien juzga y no en el objeto mismo?</p>
+          </div>
+          <div class="centro">
+            <h3>Indio</h3>
+
+            <p>Lo indio puede ser al mismo tiempo una reivindicación y una incriminación. La colonialidad como proyecto que nace con América requirió de la clasificación racial para imponer su orden y poder. Hoy en día, esta palabra sigue ejerciendo un efecto similar cuando una persona es así clasificada, ya sea por sus rasgos físicos o por algún tipo de comportamiento. Sin embargo hay otras posiciones que alteran la carga simbólica de esta categoría, reivindicando lo indio como promesa y no como impedimento. ¿Cuál es la carga simbólica que la máquina aprenderá a distinguir en la materialidad de los datos clasificados?</p>
+          </div>
+          <div class="der">
+            <h3>Feo</h3>
+
+            <p>Lo feo es tan relativo y artificial que es difícil hoy encontrar una defensa sobre su definición unívoca. Con todo, su presencia social y estética es lo suficientemente ambigua y arbitraria como la clasificación de cosas, acciones y personas por parte de los modelos de inteligencia artificial. La cultura general enseña a despreciar lo feo, allí en donde otras personas, como Nietzsche, han descubierto el espíritu del dios de los bosques. Así como lo pobre o lo indio, lo feo entraña las señales que indican una visión del mundo.</p>
+          </div>
+
+      </div>
     </section>
+
+
     <section id="modelo" class="hidden">
       <div class="left-half">
         <video id="webcam"></video>
       </div>
       <div class="right-half">
-        <button id="class-a">Add A</button>
-        <button id="class-b">Add B</button>
-        <button id="class-c">Add C</button>
+        
+        <button id="class-a">Pobre</button>
+        <button id="class-b">Indio</button>
+        <button id="class-c">Feo</button>
+        <div id="canvases">
+          <div id="console">jhasdkhakjsdhkajsd</div>
+          <canvas id="canvas1"></canvas>
+          <canvas id="canvas2"></canvas>
+          <canvas id="canvas3"></canvas>
+        </div>
       </div>
+    </section>
+    <section id="final" class= "hidden">
+      <p>
+        La pregunta que animó todo este ejercicio ya había sido propuesta por George Perec: “¿Cómo pienso cuando quiero clasificar?”. La clasificación objetivista de la visión algorítmica pretende entonces descubrir la raza, el género, la clase, etnia o sexo, de cualquier persona o grupo social, así como la categoría a la que pertenecen todas las cosas perceptibles, a partir de ciertos rasgos corporales visiblemente calculables. Estas categorías, que han sido históricamente útiles para señalar y excluir, supuestamente la visión algorítmica puede ahora categorizar ‘objetiva’ y ‘científicamente’, legitimando así los prejuicios humanos que han conducido a repetidas e históricas injusticias. ¿Cuál es la visión del mundo que allí se reconoce? ¿A qué intereses beneficia unas tecnologías con semejantes sesgos?
+      </p>
     </section>
   </body>
 </html>

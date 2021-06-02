@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Red+Hat+Display:900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap');
 
 html {
   box-sizing: border-box;
@@ -35,12 +36,12 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background-color: #ffd200;
+  background-image: url(http://hugoidarraga.info/imgV/bg-inicio.jpg);
   position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
 }
 
 .titulo-intro-efectos {
@@ -52,12 +53,31 @@ body {
   background: url(https://paperswithcode.com/media/datasets/ImageNet-0000000008-f2e87edd_Y0fT5zg.jpg);
   background-size: 50%;
   background-position: 50% 50%;
+  background-clip: text;
   -webkit-background-clip: text;
   color: rgba(0,0,0,0.08);
   animation: zoomout 10s ease 500ms forwards;
   position: relative;
   text-align: center;
   padding-top: 400px;
+}
+
+.titulo-intro-efectos2 {
+  font-size: 4vw;
+  line-height: 6vw;
+  margin: 0;
+  font-family: 'Anton', sans-serif;
+  font-weight: 900;
+  background: url(https://paperswithcode.com/media/datasets/ImageNet-0000000008-f2e87edd_Y0fT5zg.jpg);
+  background-size: 50%;
+  background-position: 50% 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: rgba(0,0,0,0.08);
+  animation: zoomout 10s ease 500ms forwards;
+  position: relative;
+  text-align: center;
+  padding-top: 30px;
 }
 
 @keyframes zoomout {
@@ -77,12 +97,12 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background-color: #ffd200;
+  background-image: url(http://hugoidarraga.info/imgV/intro-bg.jpg);
   position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
 }
 .textoPresentacion {
   font-size: 7vw;
@@ -93,6 +113,7 @@ body {
   background: url(https://static8.depositphotos.com/1005348/834/i/950/depositphotos_8343356-stock-photo-grid-texture.jpg);
   background-size: 50%;
   background-position: 50% 50%;
+  background-clip: text;
   -webkit-background-clip: text;
   color: rgba(0,0,0,0.08);
   animation: zoomout 10s ease 500ms forwards;
@@ -105,17 +126,224 @@ body {
 #modelo {
   flex-direction: column;
   justify-content: center;
-  background-color: #ffd200;
+  background-color: #fec715;
 }
 
 .left-half {
-  background-color: #ff9e2c;
+  background-color: #fec715;
   float: left;
   width: 70%;
+  background-image: url(http://hugoidarraga.info/imgV/bg-inicio.jpg);
 }
 
 .right-half {
   float: left;
-  width: 70%;
+  width: 30%;
+  background-color: black;
+}
+.right-half p{
+  position: relative;
+  top: 50%;
+  left: 30%;
 }
 
+
+#class-a {
+  position: relative;
+  background-color: #e00e0f;
+  border: none;
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 20px;
+  width: 33%;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  height: 10vh;
+}
+
+#class-a:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+#class-a:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+#class-b {
+  position: relative;
+  background-color: #fe611e;
+  border: none;
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 20px;
+  width: 33%;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  height: 10vh;
+}
+#class-b:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+#class-b:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+#class-c {
+  position: relative;
+  background-color: #fec715;
+  border: none;
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 20px;
+  width: 32%;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  height: 10vh;
+}
+#class-c:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+#class-c:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+#canvas1 {
+  width: 100%;
+  height: 30vh;
+  border: 1px black solid;
+}
+#canvas2 {
+  width: 100%;
+  height: 30vh;
+  border: 1px black solid;
+}
+#canvas3 {
+  width: 100%;
+  height: 30vh;
+  border: 1px black solid;
+}
+
+#console {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: chartreuse;
+  font-size: 2vw;
+  padding: 30px;
+  font-family: 'Anton', sans-serif;
+}
+
+#titulo {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  float: left;
+}
+#introp {
+  margin: 0;
+  padding: 0;
+  width: 94vw;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  text-align: center;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+#introp h2{
+  color: #fec715;
+  background-color: cornsilk;
+  font-size: 2.3vw;
+  opacity:0.7;
+}
+#introp p{
+  color: black;
+  font-size: 1vw;
+  font-family: 'Roboto', sans-serif;
+}
+#tresPartes {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  .izq{
+    float: left;
+    text-align: center;
+    width: 30vw;
+    margin-left: 2vw;
+  }
+  .centro{
+    float: left;
+    text-align: center;
+    width: 30vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+  }
+  .der{
+    float: left;
+    text-align: center;
+    width: 30vw;
+    margin-right: 2vw;
+  }
+}
+#tresPartes h3 {
+  color: #fec715;
+  background-color: cornsilk;
+  font-size: 1.8vw;
+  opacity:0.7;
+}
+#tresPartes p {
+  color: black;
+  font-size: 1vw;
+  font-family: 'Roboto', sans-serif;
+}
