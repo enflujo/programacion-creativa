@@ -122,6 +122,25 @@ body {
   padding-top: 200px;
 }
 
+#final {
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-image: url(http://hugoidarraga.info/imgV/intro-bg.jpg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#final p{
+  color: black;
+  font-size: 2vw;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
 /* Pattern styles */
 #modelo {
   flex-direction: column;
@@ -256,17 +275,16 @@ body {
 #canvas1 {
   width: 100%;
   height: 30vh;
-  border: 1px black solid;
 }
 #canvas2 {
   width: 100%;
   height: 30vh;
-  border: 1px black solid;
+  border-top: 4px dotted whitesmoke;
 }
 #canvas3 {
   width: 100%;
   height: 30vh;
-  border: 1px black solid;
+  border-top: 4px dotted whitesmoke;
 }
 
 #console {
@@ -275,7 +293,8 @@ body {
   left: 0;
   color: chartreuse;
   font-size: 2vw;
-  padding: 30px;
+  margin-top: 100px;
+  margin-left: 100px;
   font-family: 'Anton', sans-serif;
 }
 
@@ -346,4 +365,13 @@ body {
   color: black;
   font-size: 1vw;
   font-family: 'Roboto', sans-serif;
+}
+#finalP {
+  margin-left: 10vw;
+  margin-right: 10vw;
+  padding: 0;
+  width: 80vw;
+  justify-content: center;
+  align-items: center;
+  float: left;
 }

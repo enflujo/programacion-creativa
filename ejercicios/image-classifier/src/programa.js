@@ -8,6 +8,7 @@ const classifier = knnClassifier.create();
 const webcamElement = document.getElementById('webcam');
 const intro = document.getElementById('intro')
 const modelo = document.getElementById('modelo');
+const final = document.getElementById('final');
 const presentacion = document.getElementById('presentacion');
 const canvas1 = document.getElementById('canvas1');
 const ctx1 = canvas1.getContext('2d');
@@ -31,6 +32,10 @@ intro.addEventListener('click', () => {
 presentacion.addEventListener('click', () => {
   presentacion.classList.add('hidden');
   modelo.classList.remove('hidden');
+  setTimeout(function () {
+    modelo.classList.add('hidden');
+    final.classList.remove('hidden');
+  }, 120000);
 });
 
 ///////////////////Clases
@@ -185,7 +190,7 @@ async function app() {
         // Get the most likely class and confidence from the classifier module.
         const result = await classifier.predictClass(activation);
 
-        const classes = ['A', 'B', 'C'];
+        const classes = ['Pobre', 'Indio', 'Feo'];
         console.log(result);
         document.getElementById('console').innerText = `
           Predicción: ${classes[result.label]}\n
@@ -195,21 +200,21 @@ async function app() {
         // Dispose the tensor to release the memory.
         img.dispose();
 
-        if (clicksBotonA >= 20 && classes[result.label] === 'A') {
+        if (clicksBotonA >= 20 && classes[result.label] === 'Pobre') {
           let pararAnimacionCanvas1 = requestAnimationFrame(animacionCanvas1);
           window.cancelAnimationFrame(pararAnimacionCanvas1);
           ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
           ctx1.fillRect(0, 0, canvas1.width, canvas1.height);
           ctx1.fillStyle = 'rgb(255, 200, 80)'
         }
-        if (clicksBotonB >= 20 && classes[result.label] === 'B') {
+        if (clicksBotonB >= 20 && classes[result.label] === 'Indio') {
           let pararAnimacionCanvas2 = requestAnimationFrame(animacionCuadrados);
           window.cancelAnimationFrame(pararAnimacionCanvas2);
           ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
           ctx2.fillRect(0, 0, canvas2.width, canvas2.height);
           ctx2.fillStyle = 'rgb(255, 0, 0)'
         }
-        if (clicksBotonC >= 20 && classes[result.label] === 'C') {
+        if (clicksBotonC >= 20 && classes[result.label] === 'Feo') {
           let pararAnimacionCanvas3 = requestAnimationFrame(animacionTriangulos);
           window.cancelAnimationFrame(pararAnimacionCanvas3);
           ctx3.clearRect(0, 0, canvas3.width, canvas3.height);
@@ -295,7 +300,6 @@ function definirColor() {
     cuadrado1.cambiarColor();
   
     ctx2.lineWidth = 10;
-    ctx2.strokeStyle = 'rgba( 255, 240, 2, 0.2)';
     ctx2.fillStyle = 'rgba(254, 97, 30, 1)';
   
     requestAnimationFrame(animacionCuadrados);
@@ -307,16 +311,16 @@ function definirColor() {
     let xT = 1500 * Math.random();
     let yT = 1500 * Math.random();
     let lT = 1500 * Math.random();
-    ctx3.fillStyle = 'rgba( 142, 227, 2, 0.5)';
+    
     
   
     triangulo.dibujarTriangulos(xT, yT, lT);
-    triangulo1.dibujarTriangulos(xT/2, yT/2, lT/2);
+    ctx3.fillStyle = 'rgba( 142, 227, 2, 0.5)';
+    triangulo1.dibujarTriangulos(xT / 2, yT / 2, lT / 2);
+    
     triangulo.cambiarColor();
     
   
-    ctx3.lineWidth = 10;
-    ctx3.strokeStyle = 'rgba( 255, 240, 2, 0.2)';
     ctx3.fillStyle = 'rgba(254, 199, 21, 1)';
   
     requestAnimationFrame(animacionTriangulos);
