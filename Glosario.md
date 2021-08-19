@@ -81,6 +81,78 @@ El `eventlistener` es un método del DOM que es llamado según la acción que ha
 
 Conjunto de reglas que hacen posible la comunicación entre distintas aplicaciones, por ejemplo entre sistemas operativos, bases de datos, redes sociales y otras plataformas online. Son especialmente útiles porque permiten aprovechar fragmentos de código de un programa en otro, sin necesidad de reinventarlos ni reescribirlos.
 
+### Lógica Vs. Algoritmo
+- Lógica: Conjunto de reglas que determinan las operaciones y relaciones en un sistema (muchas veces numérico). La lógica proposicional es quizás el sistema más comunmente utilizado. En este sistema, un conjunto de predicados se unen por medio de un operador lógico, y en conjunto generan un consecuente. Tanto predicados como consecuentes pueden adoptar un valor de VERDADERO o FALSO, y los operadores definidos son la negación (NOT), Y (AND), O (OR) y la OR Exclusiva (XOR). Cada operador está asociado a una tabla de verdad. La negación afecta un predicado, mientras que Y y O operan entre dos resultados.
+
+Sean A y B predicados que pueden ser VERDADEROS o FALSOS definimos...
+
+Negación
+| A | NOT A |
+|---|-------|
+| V |   F   |
+| F |   V   |
+
+O
+| A | B | A O B |
+|---|---|-------|
+| F | F |   F   |
+| F | V |   V   |
+| V | F |   V   |
+| V | V |   V   |
+
+Y
+| A | B | A Y B |
+|---|---|-------|
+| F | F |   F   |
+| F | V |   F   |
+| V | F |   F   |
+| V | V |   V   |
+
+XOR
+| A | B | A Y B |
+|---|---|-------|
+| F | F |   F   |
+| F | V |   V   |
+| V | F |   V   |
+| V | V |   F   |
+
+Existen otros marcos (o sistemas) lógicos. Como el de la lógica difusa, donde los predicados no existen en uno u otro estado, sino que tienen valores intermedios. La aritmética presenta otro sistema lógico, en el que los predicados son números, y los operadores son operaciones matemáticas. Estos sistemas nos permiten abstraer estados posibles de un sistema y representarlos de una manera directa, y de esta forma podemos formular problemas cada vez más grandes y modelar el comportamiento de un sistema mucho más complejo, como ecuaiones a resolver en un texto de matemáticas del colegio.
+
+En la computación se utiliza un sistema binario, basado en las reglas lógicas antes mencionadas. Estas gobiernan completamente el funcionamiento de un procesador y representamos todo por medio de estas proposiciones, desde los valores lógicos de un booleano, hasta el brillo del canal rojo en la pantalla. Y esta es una buena forma de diferenciar los algoritmos de la lógica. Si la lógica describe las reglas que sigue el sistema, entonces podemos definir por ejemplo la suma como un conjunto de estas operaciones lógicas entre un conjunto definido de bits.
+
+Sean A, y C B tres conjuntos de 2 bits, y 0 y 1 siendo las representaciones respectivas de los valores FALSO y VERDADERO podemos definir la suma entre A+B=C de la siguiente forma:
+
+| A_2 | A_1 | B_2 | B_1 | C_2 | C_1 |
+|---|---|---|---|---|---|
+| 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 1 | 0 | 1 |
+| 0 | 0 | 1 | 0 | 1 | 0 |
+| 0 | 0 | 1 | 1 | 1 | 1 |
+| 0 | 1 | 0 | 0 | 0 | 1 |
+| 0 | 1 | 0 | 1 | 1 | 0 |
+| 0 | 1 | 1 | 0 | 1 | 1 |
+| 0 | 1 | 1 | 1 | 0 | 0 |
+| 1 | 0 | 0 | 0 | 1 | 0 |
+| 1 | 0 | 0 | 1 | 1 | 1 |
+| 1 | 0 | 1 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 1 | 0 | 1 |
+| 1 | 1 | 0 | 0 | 1 | 1 |
+| 1 | 1 | 0 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 0 | 0 | 1 |
+| 1 | 1 | 1 | 1 | 1 | 0 |
+
+- Algoritmo
+Un algoritmo, por su parte, es una secuencia de operaciones lógicas para obtener un resultado determinado. Los algoritmos existen bajo el marco lógico que gobierna el comportamiento de las partes que se operan. Si la lógica es el hilo y la aguja, el algoritmo es el procedimiento que te enseña tu abuela para tejer una bufanda. La algorítmica es entonces lo que enriquece y le da vida a lo que de lo contrario sería sólo una muestra inerte de reglas (sin quitarle a éstas su propia belleza). Hay algoritmos que se funcionan secuencialmente, es decir, una secuencia definida de pasos, que sabemos siempre qué nos va a significar resolver. Mientras que otros algoritmos son recursivos, y se llaman a si mismos una y otra vez y no es siempre posible saber que terminaran de calcularse en un tiempo finito. Un algoritmo sencillo podría ser el encontrar el factorial de un número determinado:
+
+Si factorial(x) = x*(x-1)*(x-2)*(x-3)*...*3*2*1
+Podríamos establecer el algoritmo recursivo para encontrar el factorial de x como:
+
+	factorial(x)
+		if x==2: return 2
+		else: return x*factorial(x-1)
+
+
+
 ### Live coding (Código en vivo)
 
 Definición tomada de [Proyecto-IDIS]:
