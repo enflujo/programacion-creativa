@@ -17,7 +17,7 @@ Una serie de términos que nos sirven para tener un lenguaje común y aprender a
 |[Interfaz de Programación de Aplicaciones (API)](#interfaz-de-programación-de-aplicaciones-api)|Application Programming Interface API|
 |JavaScript Compilado (ES6 o TypeScript -> JS)|Compiled JavaScript|
 |JavaScript Nativo|Vanilla JavaScript|
-|[Logica Vs. Algoritmo](#logica-vs.-algoritmo)|Logic vs. Algorithms|
+|[Logica Vs. Algoritmo](#logica-vs-algoritmo)|Logic vs. Algorithms|
 |Manipulación del MOD|DOM Manipulation|
 |Manipulación de pixeles|Pixel Manipulation|
 |Matrices, Matriz|Matrices, Matrix|
