@@ -19,7 +19,7 @@ Una serie de términos que nos sirven para tener un lenguaje común y aprender a
 |JavaScript Nativo|Vanilla JavaScript|
 |Lógica vs. Algoritmo|Logic vs. Algorithms|
 Lógica Vs. Algoritmo
-[Lógica Vs. Algoritmo](#logica-vs-algoritmo)
+[Lógica Vs. Algoritmo](#lógica-vs.-algoritmo)
 |Manipulación del MOD|DOM Manipulation|
 |Manipulación de pixeles|Pixel Manipulation|
 |Matrices, Matriz|Matrices, Matrix|
