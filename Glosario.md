@@ -17,9 +17,7 @@ Una serie de términos que nos sirven para tener un lenguaje común y aprender a
 |[Interfaz de Programación de Aplicaciones (API)](#interfaz-de-programación-de-aplicaciones-api)|Application Programming Interface API|
 |JavaScript Compilado (ES6 o TypeScript -> JS)|Compiled JavaScript|
 |JavaScript Nativo|Vanilla JavaScript|
-|Lógica vs. Algoritmo|Logic vs. Algorithms|
-Lógica Vs. Algoritmo
-[Lógica Vs. Algoritmo](#lógica-vs.-algoritmo)
+|[Logica Vs. Algoritmo](#logica-vs.-algoritmo)|Logic vs. Algorithms|
 |Manipulación del MOD|DOM Manipulation|
 |Manipulación de pixeles|Pixel Manipulation|
 |Matrices, Matriz|Matrices, Matrix|
@@ -83,7 +81,7 @@ El `eventlistener` es un método del DOM que es llamado según la acción que ha
 
 Conjunto de reglas que hacen posible la comunicación entre distintas aplicaciones, por ejemplo entre sistemas operativos, bases de datos, redes sociales y otras plataformas online. Son especialmente útiles porque permiten aprovechar fragmentos de código de un programa en otro, sin necesidad de reinventarlos ni reescribirlos.
 
-### Lógica Vs. Algoritmo
+### Logica vs Algoritmo
 - Lógica: Conjunto de reglas que determinan las operaciones y relaciones en un sistema (muchas veces numérico). La lógica proposicional es quizás el sistema más comunmente utilizado. En este sistema, un conjunto de predicados se unen por medio de un operador lógico, y en conjunto generan un consecuente. Tanto predicados como consecuentes pueden adoptar un valor de VERDADERO o FALSO, y los operadores definidos son la negación (NOT), Y (AND), O (OR) y la OR Exclusiva (XOR). Cada operador está asociado a una tabla de verdad. La negación afecta un predicado, mientras que Y y O operan entre dos resultados.
 
 Sean A y B predicados que pueden ser VERDADEROS o FALSOS definimos...
