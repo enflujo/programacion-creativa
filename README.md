@@ -59,3 +59,4 @@ Ir a [Glosario](Glosario.md)
 - ..:: Andrea Muñoz Álvarez ::..
 - ..:: Julian Perez ::..
 - ..:: Elisa Ramona Suarez ::..
+- ..:: Daniel Hoyos Quiñones ::..
