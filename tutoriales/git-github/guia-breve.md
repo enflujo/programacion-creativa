@@ -79,7 +79,7 @@ git clone url-repositorio-github
 ```
 Esto creará una copia local del repositorio en su computador, conectada con su fork del repositorio en GitHub.
 
-Antes de continuar, deberían descargar [Visual Studio Code](https://code.visualstudio.com/) y configurarlo siguiendo esta [guía]('/tutoriales(vscode.md').
+Antes de continuar, deberían descargar [Visual Studio Code](https://code.visualstudio.com/) y configurarlo siguiendo esta [Guía](../general/editor-codigo.md).
 
 ## Branch / rama
 
