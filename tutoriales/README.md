@@ -1,8 +1,8 @@
-# Tutoriales
+# Tutoriales  <img src="https://emojis.slackmojis.com/emojis/images/1643514558/5570/confused_dog.gif?1643514558" width="30"/>
 
 Una serie de tutoriales (sin orden específico) para programación creativa. Cada una de las carpetas tiene como nombre la categoría general donde se ubica el tema del tutorial. Para tener una guía de estudio, a continuación tenemos una lista de temas importantes y algunos recursos externos para complementar los tutoriales.
 
-## Guía de estudio
+## Guía de estudio ✏️
 
 Cada programador creativo tiende a desarrollar intereses específicos sobre algunas de estas áreas dependiendo de sus preguntas e intenciones creativas. Esto quiere decir que no deben volverse expertos en cada uno de estos temas, pero si es importante reconocerlos y en algún momento tocarlos para cuando se vuelvan necesarios en sus proyectos.
 
