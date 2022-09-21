@@ -1,14 +1,16 @@
-# Taller local para desarrolladores
+# Taller local para desarrolladores <img  src="https://emojis.slackmojis.com/emojis/images/1643514599/6027/meow_wow.png?1643514599" width="30"/>
 
 El taller debe ser cómodo, propio, a nuestra medida.
 
-Configurar el computador donde trabajamos parece inicialmente un proceso técnico frio, lo vamos a asumir diferente, hagamos de este espacio de trabajo algo que nos genere gusto de pasar tiempo creando cosas allí.
+Configurar el computador donde trabajamos parece inicialmente un proceso técnico frío. lo vamos a asumir diferente, hagamos de este espacio de trabajo algo que nos genere gusto de pasar tiempo creando cosas allí.
 
 Al ser un espacio personal, puede ser diferente para cada uno, les voy a mostrar el mío.
 
 ## El espacio
 
-Mi taller principal es una carpeta del computador que se llama "dev". Me gusta tenerla inmediatamente accesible desde el terminal, entonces esta en `~/dev` (`~` significa la primera carpeta del computador, en un Windows sería por ejemplo `C:`, o `D:` si es otro disco donde tengo más espacio, etc.).
+Mi taller principal es una carpeta del computador que se llama "dev" (por _development_, pero acortado no tener que escribir mucho cada vez que entro)pero puede llamarse como quieran "desarrollo", "perro", "gato", "Javiera". Idealmente algo que sea práctico y no se confunda con eso. 
+
+Me gusta tenerla inmediatamente accesible desde el terminal, entonces esta en `~/dev` (`~` significa la primera carpeta del computador, en un Windows sería por ejemplo `C:`, o `D:` si es otro disco donde tengo más espacio, etc.).
 
 Así cuando abro el terminal, sólo tengo que escribir `cd dev/` y ya estoy en el taller :boom:
 
