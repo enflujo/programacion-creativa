@@ -78,12 +78,14 @@ Existen varios empaquetadores, entre ellos Webpack, Parcel, Fusebox, Rollup, etc
 
 El `eventlistener` es un método del DOM que es llamado según la acción que haya sido configurada para ello. El `eventlistener` permite por ejemplo que, al hacer clic a un botón, se abra un cuadro de diálogo. Es literalmente un método que está a la escucha de que ocurra algún evento para el cual está programado escuchar. Con `addEventListener` podemos registrar un evento que ocurre no sólo en el HTML sino en todo el DOM, así como agregar más de un _listener_ a un solo evento, es decir, que un mismo evento active varias funciones por ejemplo.
 
-### Intérprete de comandos 
-<img  src="https://emojis.slackmojis.com/emojis/images/1643509721/49759/matrix-parrot.gif?1643509721" width="16"/>  
-En informática el _shell_ o intérprete de órdenes o intérprete de comandos es el programa informático que provee una interfaz de usuario para acceder a los servicios del sistema operativo. 
+### Intérprete de comandos (Shell)
+ 
+El _shell_, o intérprete de comandos, es el programa que nos provee una interfaz para, a partir de comandos de texto, acceder a los servicios y aplicaciones del sistema operativo (abrir programas, crear carpetas, ejecutar acciones, dar instrucciones, etc). 
 
-Para programación, usualmente accedemos a un intérprete de líneas de comando en texto ([CLI, Command-Line Interface, interfaz de línea de comandos](https://es.wikipedia.org/wiki/Interfaz_de_l%C3%ADnea_de_comandos)) como [cmd](https://es.wikipedia.org/wiki/S%C3%ADmbolo_del_sistema_de_Windows) o [PowerShell](https://es.wikipedia.org/wiki/PowerShell) (para sistemas operativos basados en WindowsNT) y [Zsh](https://es.wikipedia.org/wiki/Zsh) o [Bash](https://es.wikipedia.org/wiki/Bash) (para sistemas operativos basados en [Unix](https://es.wikipedia.org/wiki/Unix)).
+Existen diferentes intérpretes y cada programa usa comandos diferentes dependiendo del sistema operativo. Para sistemas operativos de Windows se
+usan [cmd (Command Prompt)](https://es.wikipedia.org/wiki/S%C3%ADmbolo_del_sistema_de_Windows) o [PowerShell](https://es.wikipedia.org/wiki/PowerShell). Para sistemas operativos Linux y macOS (basados en [Unix](https://es.wikipedia.org/wiki/Unix)), se usan [Bash](https://es.wikipedia.org/wiki/Bash) o [Zsh](https://es.wikipedia.org/wiki/Zsh)(que es una versión más enchulable de la interfaz Bash para que se vea bonita con colores y otro tipo de configuraciones).
 
+Como en 𝕰𝖓𝕱𝖑𝖚𝖏𝖔 trabajamos en diferentes sistemas operativos paralelamente (macOS, Linux, Windows) y no es muy común usar los comandos de Windows en servidores, optamos por usar el lenguaje de los comandos de Unix para unificar los comandos que usamos entre nosotrxs con nuestros computadores. Para trabajar en Windows con los comandos propios de macOS o Linux, [recomendamos usar](https://github.com/enflujo/programacion-creativa/blob/main/tutoriales/general/herramientas-desarrollo.md) un emulador de comandos de Unix que los traduce por nosotrxs; su nombre es [cmder](https://cmder.app/).
 
 ### Interfaz de Programación de Aplicaciones API
 
