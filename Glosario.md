@@ -1,4 +1,4 @@
-## Glosario: Términos / Conceptos
+## Glosario: Términos / Conceptos <img src="https://emojis.slackmojis.com/emojis/images/1643516767/28156/spellbook.gif?1643516767" width="30"/>
 
 Una serie de términos que nos sirven para tener un lenguaje común y aprender a buscar soluciones a problemas específicos.
 
@@ -15,6 +15,7 @@ Una serie de términos que nos sirven para tener un lenguaje común y aprender a
 |[Eventos Sensibles](#eventos-sensibles-eventlisteners)|Eventlisteners|
 |Frontal - *backend* / servidor (JS, NodeJS) |Frontend - Backend|
 |[Interfaz de Programación de Aplicaciones (API)](#interfaz-de-programación-de-aplicaciones-api)|Application Programming Interface API|
+|[Intérprete de comandos](#intérprete-de-comandos)|Shell|
 |JavaScript Compilado (ES6 o TypeScript -> JS)|Compiled JavaScript|
 |JavaScript Nativo|Vanilla JavaScript|
 |[Logica Vs. Algoritmo](#logica-vs-algoritmo)|Logic vs. Algorithms|
@@ -77,11 +78,19 @@ Existen varios empaquetadores, entre ellos Webpack, Parcel, Fusebox, Rollup, etc
 
 El `eventlistener` es un método del DOM que es llamado según la acción que haya sido configurada para ello. El `eventlistener` permite por ejemplo que, al hacer clic a un botón, se abra un cuadro de diálogo. Es literalmente un método que está a la escucha de que ocurra algún evento para el cual está programado escuchar. Con `addEventListener` podemos registrar un evento que ocurre no sólo en el HTML sino en todo el DOM, así como agregar más de un _listener_ a un solo evento, es decir, que un mismo evento active varias funciones por ejemplo.
 
+### Intérprete de comandos 
+<img  src="https://emojis.slackmojis.com/emojis/images/1643509721/49759/matrix-parrot.gif?1643509721" width="16"/>  
+En informática el _shell_ o intérprete de órdenes o intérprete de comandos es el programa informático que provee una interfaz de usuario para acceder a los servicios del sistema operativo. 
+
+Para programación, usualmente accedemos a un intérprete de líneas de comando en texto ([CLI, Command-Line Interface, interfaz de línea de comandos](https://es.wikipedia.org/wiki/Interfaz_de_l%C3%ADnea_de_comandos)) como [cmd](https://es.wikipedia.org/wiki/S%C3%ADmbolo_del_sistema_de_Windows) o [PowerShell](https://es.wikipedia.org/wiki/PowerShell) (para sistemas operativos basados en WindowsNT) y [Zsh](https://es.wikipedia.org/wiki/Zsh) o [Bash](https://es.wikipedia.org/wiki/Bash) (para sistemas operativos basados en [Unix](https://es.wikipedia.org/wiki/Unix)).
+
+
 ### Interfaz de Programación de Aplicaciones API
 
 Conjunto de reglas que hacen posible la comunicación entre distintas aplicaciones, por ejemplo entre sistemas operativos, bases de datos, redes sociales y otras plataformas online. Son especialmente útiles porque permiten aprovechar fragmentos de código de un programa en otro, sin necesidad de reinventarlos ni reescribirlos.
 
 ### Logica vs Algoritmo
+
 - Lógica: Conjunto de reglas que determinan las operaciones y relaciones en un sistema (muchas veces numérico). La lógica proposicional es quizás el sistema más comunmente utilizado. En este sistema, un conjunto de predicados se unen por medio de un operador lógico, y en conjunto generan un consecuente. Tanto predicados como consecuentes pueden adoptar un valor de VERDADERO o FALSO, y los operadores definidos son la negación (NOT), Y (AND), O (OR) y la OR Exclusiva (XOR). Cada operador está asociado a una tabla de verdad. La negación afecta un predicado, mientras que Y y O operan entre dos resultados.
 
 Sean A y B predicados que pueden ser VERDADEROS o FALSOS definimos...
