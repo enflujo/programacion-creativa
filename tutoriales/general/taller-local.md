@@ -8,7 +8,7 @@ Al ser un espacio personal, puede ser diferente para cada uno, les voy a mostrar
 
 ## El espacio
 
-Mi taller principal es una carpeta del computador que se llama "dev" (por _development_, pero acortado no tener que escribir mucho cada vez que entro)pero puede llamarse como quieran "desarrollo", "perro", "gato", "Javiera". Idealmente algo que sea práctico y no se confunda con eso. 
+Mi taller principal es una carpeta del computador que se llama "dev" (por _development_, pero acortado para no tener que escribir mucho cada vez que entro)pero puede llamarse como quieran "desarrollo", "perro", "gato", "Javiera". Idealmente algo que sea práctico y no se confunda con eso. 
 
 Me gusta tenerla inmediatamente accesible desde el terminal, entonces esta en `~/dev` (`~` significa la primera carpeta del computador, en un Windows sería por ejemplo `C:`, o `D:` si es otro disco donde tengo más espacio, etc.).
 
