@@ -78,7 +78,8 @@ Existen varios empaquetadores, entre ellos Webpack, Parcel, Fusebox, Rollup, etc
 
 El `eventlistener` es un método del DOM que es llamado según la acción que haya sido configurada para ello. El `eventlistener` permite por ejemplo que, al hacer clic a un botón, se abra un cuadro de diálogo. Es literalmente un método que está a la escucha de que ocurra algún evento para el cual está programado escuchar. Con `addEventListener` podemos registrar un evento que ocurre no sólo en el HTML sino en todo el DOM, así como agregar más de un _listener_ a un solo evento, es decir, que un mismo evento active varias funciones por ejemplo.
 
-### Intérprete de comandos (Shell)
+### Intérprete de comandos 
+(Shell o la concha de la terminal) 🐚
  
 El _shell_, o intérprete de comandos, es el programa que nos provee una interfaz para, a partir de comandos de texto, acceder a los servicios y aplicaciones del sistema operativo (abrir programas, crear carpetas, ejecutar acciones, dar instrucciones, etc). 
 
