@@ -1,20 +1,30 @@
-# Herramientas de desarrollo
+# Herramientas de desarrollo <img  src="https://emojis.slackmojis.com/emojis/images/1660663279/60857/tim-the-tool-man-taylor.png?1660663279" width="30"/>
 
 Esta es una lista básica de herramientas para tener un taller local de desarrollo. Sobre esta base pueden instalar otras herramientas y extensiones según el gusto de cada uno.
+
+## Emulador de consola
+
+###  <img  src="https://emojis.slackmojis.com/emojis/images/1643514177/1419/windows.gif?1643514177" width="16"/> Windows
+
+Windows trae por defecto dos programas que nos permiten darle comandos a la terminal: [Símbolo del sistema de Windows](https://es.wikipedia.org/wiki/S%C3%ADmbolo_del_sistema_de_Windows) (cmd.exe o Command Prompt) y [PowerShell](https://es.wikipedia.org/wiki/PowerShell). Aquí no usamos ninguno de los dos porque son feos.
+
+Además, para poder usar los mismos comandos entre sistemas Linux, macOS y Windows y así entendernos en lenguajes similares en los tutoriales, entre nosotrxs y con nuestros computadores, recomendamos instalar un emulador de terminal que reconoce comandos para sistemas operativos basados en Unix (como macOS y Linux) y los traduce al sistema operativo de Windows por nosotrxs. 
+
+Recomendamos descargar y usar [cmder](https://cmder.app/).
 
 ## Gestor de aplicaciones
 
 Con estos instalamos aplicaciones de manera global en el computador.
 
-### Windows
+###  <img  src="https://emojis.slackmojis.com/emojis/images/1643514177/1419/windows.gif?1643514177" width="16"/> Windows
 
 Instalar [Chocolatey](https://chocolatey.org/install). Comando para ejecutarlo `choco`.
 
-### Mac
+### <img  src="https://emojis.slackmojis.com/emojis/images/1643514416/3931/macos.gif?1643514416" width="16"/> Mac
 
 Instalar [Homebrew](https://brew.sh/). Comando para ejecutarlo es `brew`.
 
-### Linux
+###  <img  src="https://emojis.slackmojis.com/emojis/images/1643514745/7530/hackerman.jpg?1643514745" width="16"/> Linux
 
 Ya viene con APT _(Advanced Package Tool)_. Comando para ejecutarlo es: `apt-get`.
 
