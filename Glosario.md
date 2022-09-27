@@ -1,4 +1,4 @@
-## Glosario: Términos / Conceptos
+## Glosario: Términos / Conceptos <img src="https://emojis.slackmojis.com/emojis/images/1643516767/28156/spellbook.gif?1643516767" width="30"/>
 
 Una serie de términos que nos sirven para tener un lenguaje común y aprender a buscar soluciones a problemas específicos.
 
@@ -15,6 +15,7 @@ Una serie de términos que nos sirven para tener un lenguaje común y aprender a
 |[Eventos Sensibles](#eventos-sensibles-eventlisteners)|Eventlisteners|
 |Frontal - *backend* / servidor (JS, NodeJS) |Frontend - Backend|
 |[Interfaz de Programación de Aplicaciones (API)](#interfaz-de-programación-de-aplicaciones-api)|Application Programming Interface API|
+|[Intérprete de comandos](#intérprete-de-comandos)|Shell|
 |JavaScript Compilado (ES6 o TypeScript -> JS)|Compiled JavaScript|
 |JavaScript Nativo|Vanilla JavaScript|
 |[Logica Vs. Algoritmo](#logica-vs-algoritmo)|Logic vs. Algorithms|
@@ -77,11 +78,22 @@ Existen varios empaquetadores, entre ellos Webpack, Parcel, Fusebox, Rollup, etc
 
 El `eventlistener` es un método del DOM que es llamado según la acción que haya sido configurada para ello. El `eventlistener` permite por ejemplo que, al hacer clic a un botón, se abra un cuadro de diálogo. Es literalmente un método que está a la escucha de que ocurra algún evento para el cual está programado escuchar. Con `addEventListener` podemos registrar un evento que ocurre no sólo en el HTML sino en todo el DOM, así como agregar más de un _listener_ a un solo evento, es decir, que un mismo evento active varias funciones por ejemplo.
 
+### Intérprete de comandos 
+(Shell o la concha de la terminal) 🐚
+ 
+El _shell_, o intérprete de comandos, es el programa que nos provee una interfaz para, a partir de comandos de texto, acceder a los servicios y aplicaciones del sistema operativo (abrir programas, crear carpetas, ejecutar acciones, dar instrucciones, etc). 
+
+Existen diferentes intérpretes y cada programa usa comandos diferentes dependiendo del sistema operativo. Para sistemas operativos de Windows se
+usan [cmd (Command Prompt)](https://es.wikipedia.org/wiki/S%C3%ADmbolo_del_sistema_de_Windows) o [PowerShell](https://es.wikipedia.org/wiki/PowerShell). Para sistemas operativos Linux y macOS (basados en [Unix](https://es.wikipedia.org/wiki/Unix)), se usan [Bash](https://es.wikipedia.org/wiki/Bash) o [Zsh](https://es.wikipedia.org/wiki/Zsh)(que es una versión más enchulable de la interfaz Bash para que se vea bonita con colores y otro tipo de configuraciones).
+
+Como en 𝕰𝖓𝕱𝖑𝖚𝖏𝖔 trabajamos en diferentes sistemas operativos paralelamente (macOS, Linux, Windows) y no es muy común usar los comandos de Windows en servidores, optamos por usar el lenguaje de los comandos de Unix para unificar los comandos que usamos entre nosotrxs con nuestros computadores. Para trabajar en Windows con los comandos propios de macOS o Linux, [recomendamos usar](https://github.com/enflujo/programacion-creativa/blob/main/tutoriales/general/herramientas-desarrollo.md) un emulador de comandos de Unix que los traduce por nosotrxs; su nombre es [cmder](https://cmder.app/).
+
 ### Interfaz de Programación de Aplicaciones API
 
 Conjunto de reglas que hacen posible la comunicación entre distintas aplicaciones, por ejemplo entre sistemas operativos, bases de datos, redes sociales y otras plataformas online. Son especialmente útiles porque permiten aprovechar fragmentos de código de un programa en otro, sin necesidad de reinventarlos ni reescribirlos.
 
 ### Logica vs Algoritmo
+
 - Lógica: Conjunto de reglas que determinan las operaciones y relaciones en un sistema (muchas veces numérico). La lógica proposicional es quizás el sistema más comunmente utilizado. En este sistema, un conjunto de predicados se unen por medio de un operador lógico, y en conjunto generan un consecuente. Tanto predicados como consecuentes pueden adoptar un valor de VERDADERO o FALSO, y los operadores definidos son la negación (NOT), Y (AND), O (OR) y la OR Exclusiva (XOR). Cada operador está asociado a una tabla de verdad. La negación afecta un predicado, mientras que Y y O operan entre dos resultados.
 
 Sean A y B predicados que pueden ser VERDADEROS o FALSOS definimos...
