@@ -73,7 +73,6 @@ Recomiendo [VSCode](https://code.visualstudio.com/)
 - Github Markdown Preview + sus Extensions Packs.
 - Android iOS Emulator
 - Color Picker
-- CodeStream
 
 ## Sobre Git y Github
 
