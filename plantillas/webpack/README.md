@@ -1,6 +1,6 @@
 # Webpack
 
-Un compilador robusto con muchas opciones para configurarlo. Si queremos tener control total de la compilación, es la mejor opción.
+Un compilador robusto con muchas opciones para configurarlo. Históricamente ha sido una de las herramientas más robustas ya que toca configurar cáda cosa que queremos hacer. Esto la vuelve versátil pero al tiempo puede ser tediosa de actualizar o reconfigurar para diferentes proyectos.
 
 Si quieren aprender sobre compiladores, es bueno aprender Webpack para saber lo que hacen los otros internamente.
 
@@ -10,7 +10,7 @@ Si quieren aprender sobre compiladores, es bueno aprender Webpack para saber lo 
 - :x: La libertad de configuración implica una alta curva de aprendizaje.
 - :x: Puede ser confuso ya que hay tantas formas de configurarlo.
 
-Configurarlo desde cero y que funcione bien toma tiempo, si queremos abstraer ese proceso y comenzar rápido un proyecto puede ser mejor utilizar uno preconfigurado como Parcel, Rollup, Snowpack, etc. (:zap: O usar esta plantilla y modificarla si es necesario :zap:)
+Configurarlo desde cero y que funcione bien toma tiempo, si queremos abstraer ese proceso y comenzar rápido un proyecto puede ser mejor utilizar uno preconfigurado como Vite, Parcel, Rollup, Snowpack, etc. (:zap: O usar esta plantilla y modificarla si es necesario :zap:)
 
 ## Lo que esta configurado en esta plantilla
 

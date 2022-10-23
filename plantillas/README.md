@@ -1,6 +1,8 @@
 # Plantillas para desarrollar aplicaciones localmente
 
-Una serie de ejemplos para iniciar una aplicación. Prueben cada una, investiguen cómo funcionan, sepan que existen y aprendan a diferenciarlas, miren a ver cual les gusta más para iniciar sus experimentos. En la vida real como programadores uno salta de una a otra dependiendo de lo que necesita.
+Una serie de ejemplos para iniciar una aplicación. Prueben cada una, investiguen cómo funcionan, sepan que existen y aprendan a diferenciarlas, miren a ver cuál les gusta más para iniciar sus experimentos. En la vida real como programadores uno salta de una a otra dependiendo de lo que necesita.
+
+La que les recomiendo por su facilidad de usar, velocidad para [transpilar](../Glosario.md#compilador--transpilador-babel) es [Vite](../plantillas/vite/)
 
 ## Algunos conceptos a tener en cuenta
 
