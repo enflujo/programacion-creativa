@@ -1,13 +1,15 @@
-const path = require('path');
+import { resolve, join, basename } from 'path';
+import { fileURLToPath } from 'url';
+import Koa from 'koa';
+import Router from '@koa/router';
+import render from 'koa-ejs';
 
-const Koa = require('koa');
-const Router = require('@koa/router');
-const render = require('koa-ejs');
-const extraerEjercicios = require('./componentes/ejercicios');
-const spawn = require('cross-spawn');
-const fsExtra = require('fs-extra');
-const baseDeDatos = require('./componentes/baseDeDatos');
+import { extraerEjercicios } from './componentes/ejercicios.js';
+import fsExtra from 'fs-extra';
+import baseDeDatos from './componentes/baseDeDatos.js';
+import { spawn } from 'child_process';
 
+const __dirname = fileURLToPath(new URL('.', import.meta.url));
 /*
 Todo:
 - usar websockets para actualizar vista de procesos.
@@ -23,7 +25,7 @@ function crearId(script, ruta) {
 }
 
 render(app, {
-  root: path.join(__dirname, 'paginas'),
+  root: join(__dirname, 'paginas'),
   layout: 'inicio',
   viewExt: 'html',
   cache: false,
@@ -32,7 +34,7 @@ render(app, {
 
 router.get('/', async (ctx) => {
   bd = await baseDeDatos();
-  const ejercicios = extraerEjercicios(path.resolve(__dirname, '../ejercicios'), bd);
+  const ejercicios = extraerEjercicios(resolve(__dirname, '../ejercicios'), bd);
   return await ctx.render('inicio', { ejercicios: ejercicios.rutas, errores: ejercicios.errores });
 });
 
@@ -54,7 +56,6 @@ router.get('/correr-script', (ctx) => {
     console.log(`child process exited with code ${code}`);
   });
 
-  console.log(script, ruta);
   ctx.body = { test: 'hola' };
 });
 
@@ -79,7 +80,7 @@ router.get('/exportar', (ctx) => {
     fsExtra.copySync(ruta, `docs/${usuario}/${ejercicio}`, {
       overwrite: true,
       preserveTimestamps: true,
-      filter: (archivo) => !excluir.includes(path.basename(archivo)),
+      filter: (archivo) => !excluir.includes(basename(archivo)),
     });
     console.log(`Ejercicio docs/${usuario}/${ejercicio} exportado!`);
     entrada.exportada = true;

@@ -6,9 +6,10 @@
     <title>Programación Creativa</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
       crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <style>
       html {
@@ -29,9 +30,15 @@
         padding: 0;
       }
 
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+          'Helvetica Neue', sans-serif;
+      }
+
       .fa,
       .fas,
-      .fab {
+      .fab,
+      .fa-brands {
         color: rgb(165, 165, 165);
       }
 
@@ -82,6 +89,7 @@
         color: #dfc673;
         cursor: pointer;
       }
+
       .switch {
         display: inline-block;
         position: relative;
@@ -93,6 +101,7 @@
         vertical-align: middle;
         cursor: pointer;
       }
+
       .switch::before {
         content: '';
         position: absolute;
@@ -118,6 +127,10 @@
       input:checked + .switch:active::before {
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28), 0 0 0 20px rgba(0, 150, 136, 0.2);
       }
+
+      .boton {
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
@@ -134,11 +147,18 @@
             this)"/>
             <label class="switch" for="entrada-<%= i %>-<%= j %>"></label>
 
-            <span class="fab fa-github-alt">
-              <a href="https://github.com/<%= entrada.usuario %>" target="_blank"><%= entrada.usuario %></a>
-            </span>
+            <span class="fab fa-github-alt"></span>
+            <a href="https://github.com/<%= entrada.usuario %>" target="_blank"><%= entrada.usuario %></a>
+
             <span class="tipo">Tipo: </span>
-            <span class="fas <%=entrada.info.tipo %>"></span>
+            <span class="<%=entrada.info.tipo %>"></span>
+
+            <span class="paquetes">Paquetes: </span>
+            <i
+              class="boton script fas <%=entrada.info.paquetes ? 'fa-check' : 'fas fa-power-off' %>"
+              onclick="correrScript('install', '<%= entrada.ruta %>', this)"
+            ></i>
+
             <span class="compilado">Compilado: </span>
             <span class="fas <%=entrada.info.compilado ? 'fa-check' : 'fa-times' %>"></span>
             <!-- Scripts -->

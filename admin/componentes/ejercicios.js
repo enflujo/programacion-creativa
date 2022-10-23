@@ -1,13 +1,21 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 const errores = [];
 let bd;
 
+function revisarPaquetes(ruta, respuesta) {
+  const paquetesInstalados = fs.existsSync(path.resolve(ruta, 'node_modules'));
+
+  if (paquetesInstalados) {
+    respuesta.paquetes = true;
+  }
+}
+
 function revisarCompilacion(ruta, respuesta) {
   const rutaArchivos = path.resolve(ruta, 'www');
-  const info = fs.lstatSync(rutaArchivos);
+  const existeCarpeta = fs.existsSync(rutaArchivos);
 
-  if (info.isDirectory()) {
+  if (existeCarpeta) {
     const archivos = fs.readdirSync(rutaArchivos);
 
     if (archivos.includes('index.html')) {
@@ -23,7 +31,7 @@ function revisarCompilacion(ruta, respuesta) {
 function extraerInfo(ruta) {
   const archivos = fs.readdirSync(ruta);
   const respuesta = {
-    tipo: 'fa-folder',
+    tipo: 'fas fa-folder',
   };
 
   if (archivos.includes('package.json')) {
@@ -31,11 +39,14 @@ function extraerInfo(ruta) {
 
     if (datos['scripts']) {
       respuesta.scripts = datos.scripts;
-      if (datos.scripts['build']) {
+
+      if (datos.scripts) {
         // Es proyecto con compilador
-        respuesta.tipo = 'fa-yarn';
+        respuesta.tipo = 'fa-brands fa-yarn';
         respuesta.script = datos.scripts.build;
+        respuesta.paquetes = false;
         respuesta.compilado = false;
+        revisarPaquetes(ruta, respuesta);
         revisarCompilacion(ruta, respuesta);
       } else if (archivos.includes('www')) {
         revisarCompilacion(ruta, respuesta);
@@ -92,7 +103,7 @@ function extraerEntradas(ruta, nombreEjercicio) {
   return entradas;
 }
 
-function extraerEjercicios(rutaInicial, baseDeDatos) {
+export function extraerEjercicios(rutaInicial, baseDeDatos) {
   bd = baseDeDatos;
   const nombres = fs.readdirSync(rutaInicial);
   const rutas = [];
@@ -109,5 +120,3 @@ function extraerEjercicios(rutaInicial, baseDeDatos) {
 
   return { rutas: rutas, errores: errores };
 }
-
-module.exports = extraerEjercicios;

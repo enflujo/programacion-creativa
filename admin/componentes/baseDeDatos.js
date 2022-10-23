@@ -1,6 +1,6 @@
-const Loki = require('lokijs');
+import Loki from 'lokijs';
 
-module.exports = () => {
+export default () => {
   return new Promise((res, rech) => {
     const bd = new Loki('admin/datos.db', {
       autoload: true,

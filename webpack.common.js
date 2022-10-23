@@ -1,6 +1,9 @@
-const fs = require('fs');
-const path = require('path');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
+import fs from 'fs';
+import path from 'path';
+import HtmlWebPackPlugin from 'html-webpack-plugin';
+import { fileURLToPath } from 'url';
+
+const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
 const bd = fs.readFileSync('./admin/datos.db', 'utf-8');
 let entradas = [];
@@ -10,7 +13,7 @@ if (bd) {
   entradas = entradas.sort((a, b) => (a.fecha < b.fecha ? 1 : -1)).filter((entrada) => entrada.exportada);
 }
 
-module.exports = {
+export default {
   entry: './src/programa.js',
   output: {
     path: path.resolve(__dirname, `./docs`),
