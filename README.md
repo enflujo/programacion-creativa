@@ -60,3 +60,4 @@ Ir a [Glosario](Glosario.md)
 - ..:: Julian Perez ::..
 - ..:: Elisa Ramona Suarez ::..
 - ..:: Daniel Hoyos Quiñones ::..
+- ..:: Paula Alejandra Salazar 💩::..
