@@ -62,4 +62,3 @@ Ir a [Glosario](Glosario.md)
 - ..:: Daniel Hoyos Quiñones ::..
 - ...Paula Alejandra Salazar ...
 - Oriana Vásquez
-|
