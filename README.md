@@ -61,3 +61,5 @@ Ir a [Glosario](Glosario.md)
 - ..:: Elisa Ramona Suarez ::..
 - ..:: Daniel Hoyos Quiñones ::..
 - ...Paula Alejandra Salazar ...
+- Oriana Vásquez
+|
