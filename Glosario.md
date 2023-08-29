@@ -1,4 +1,4 @@
-## Glosario: Términos / Conceptos
+## Glosario: Términos / Conceptos <img src="https://emojis.slackmojis.com/emojis/images/1643516767/28156/spellbook.gif?1643516767" width="30"/>
 
 Una serie de términos que nos sirven para tener un lenguaje común y aprender a buscar soluciones a problemas específicos.
 
