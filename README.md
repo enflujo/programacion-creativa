@@ -29,16 +29,16 @@ Configurar su computador instalando las herramientas necesarias. Ver [Herramient
 
 ## Ejercicio 2: Entrar al taller
 
-El trabajo lo vamos a realizar en este repositorio de Github. Pare eso debemos aprender un poco del trabajo con "Git".
+El trabajo lo vamos a realizar en este repositorio de GitHub. Pare eso debemos aprender un poco del trabajo con "Git".
 
 Continuando con la lógica anterior, deben buscar en Internet cómo hacer lo siguiente:
 
-1. Definir su nombre de usuario y correo electrónico en git (Pista: `git config --global...`)
-2. Crear una copia de este repositorio en su propia cuenta de Github. (fork)
-3. Crear una nueva rama que se llame: `hola-soy-juancg` reemplazando `juancg` por su nombre. (branches)
+1. Definir su nombre de usuario y correo electrónico en Git (Pista: `git config --global...`)
+2. Crear una copia de este repositorio en su propia cuenta de GitHub. (`fork`)
+3. Crear una nueva rama que se llame: `hola-soy-juancg` reemplazando `juancg` por su nombre. (_branches_)
 4. Escribir su nombre en la lista de miembros en este documento.
-5. Publicar ese cambio en su copia del repositorio. (Stage, Add, Push)
-6. Enviar los cambios a este repositorio para ser revisado. (Pull request)
+5. Publicar ese cambio en su copia del repositorio. (`stage`, `add`, `push`)
+6. Enviar los cambios a este repositorio para ser revisado. (_Pull request_)
 7. Eliminar la rama que crearon para este ejercicio.
 
 ## Ejercicio 3

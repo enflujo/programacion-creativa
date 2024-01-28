@@ -55,8 +55,6 @@ router.get('/correr-script', (ctx) => {
   procesos[id].on('close', (code) => {
     console.log(`child process exited with code ${code}`);
   });
-
-  ctx.body = { test: 'hola' };
 });
 
 router.get('/cerrar-script', (ctx) => {
@@ -96,4 +94,4 @@ router.get('/exportar', (ctx) => {
 
 app.use(router.routes()).use(router.allowedMethods());
 
-app.listen(3000, () => console.log('running on port 3000'));
+app.listen(3000, () => console.log('corriendo en:', 'http://localhost:3000'));
