@@ -2,7 +2,9 @@
 
 Esta es una lista básica de herramientas para tener un taller local de desarrollo. Sobre esta base pueden instalar otras herramientas y extensiones según el gusto de cada uno.
 
-## Emulador de consola
+## Terminal (emulador de consola) <img  src="https://emojis.slackmojis.com/emojis/images/1646429960/55230/party-terminal.gif?1646429960" width="30"/>
+
+
 
 ###  <img  src="https://emojis.slackmojis.com/emojis/images/1643514177/1419/windows.gif?1643514177" width="16"/> Windows
 
