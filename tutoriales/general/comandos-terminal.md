@@ -1,4 +1,4 @@
-![Ubuntu Linux](docs/ubuntu-linux.jpg)
+![Ubuntu Linux](../../docs/ubuntu-linux.jpg)
 
 ## Comandos Básicos de la Terminal
 Comando para saber en que directorio estamos ubicados. (Nota: Puedes pensar en los directorios como tus carpetas).
