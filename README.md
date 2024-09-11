@@ -25,7 +25,8 @@ Los ejercicios quedan publicados en: https://enflujo.github.io/programacion-crea
 
 ## Ejercicio 1: Instalar herramientas
 
-Configurar su computador instalando las herramientas necesarias. Ver [Herramientas de desarrollo](/tutoriales/general/herramientas-desarrollo.md)
+- Configurar su computador instalando las herramientas necesarias. Ver [Herramientas de desarrollo](/tutoriales/general/herramientas-desarrollo.md)
+- Introducción a los comandos en la Terminal (Ubuntu). Ver sección [Introducción a los comandos de la terminal](/tutoriales/general/comandos-terminal.md)
 
 ## Ejercicio 2: Entrar al taller
 
