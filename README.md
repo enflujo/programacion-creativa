@@ -26,7 +26,8 @@ Los ejercicios quedan publicados en: https://enflujo.github.io/programacion-crea
 ## Ejercicio 1: Instalar herramientas
 
 - Configurar su computador instalando las herramientas necesarias. Ver [Herramientas de desarrollo](/tutoriales/general/herramientas-desarrollo.md)
-- Introducción a los comandos en la Terminal (Ubuntu). Ver sección [Introducción a los comandos de la terminal](/tutoriales/general/comandos-terminal.md)
+- Introducción a los comandos en la Terminal (UNIX). Ver sección [Introducción a los comandos de la terminal para Linux/Mac SO](/tutoriales/general/comandos-terminal.md)
+- Instalación de Node (node.js). Ver [¿Qué es Node y por qué instalarlo?](/tutoriales/general/instalar-node.md)
 
 ## Ejercicio 2: Entrar al taller
 
