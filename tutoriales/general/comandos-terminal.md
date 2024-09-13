@@ -41,11 +41,17 @@ reset
 ```bash
 code .
 ```
-Si deseas **borrar** archivos y directorios de forma completa (:warning:Nota: Todo lo que se elimine con ese comando no se puede recuperar, úsalo con sabiduría :warning:)
+Si deseas **borrar** archivos y directorios de forma completa o archivos que requieren permisos especiales.(El comando `sudo` se usa para obtener permisos de superusuario).
+
+(:warning:*Nota: Todo lo que se elimine con ese comando no se puede recuperar, úsalo con sabiduría*)
 ```bash
-rm archivoejemplo.txt
+sudo rm archivoejemplo.txt
 ```
-Para eliminar tanto el directorio como todas sus subcarpetas y archivos:
+Si estás eliminando archivos o directorios que pertenecen a <u>tu usuario</u> y tienes los permisos adecuados, no necesitas usar sudo. Por ejemplo, si deseas eliminar un archivo en tu directorio personal, puedes simplemente usar:
 ```bash
-rm -r /carpetaEjemplo
+rm miarchivo.txt
+```
+Como un "extra", si quieres eliminar tanto el directorio como todas sus subcarpetas y archivos puedes usar el siguiente comando:
+```bash
+sudo rm -r /carpetaEjemplo
 ```
