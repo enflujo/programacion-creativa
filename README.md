@@ -37,7 +37,7 @@ Continuando con la lógica anterior, deben buscar en Internet cómo hacer lo sig
 2. Crear una copia de este repositorio en su propia cuenta de GitHub. (`fork`)
 3. Crear una nueva rama que se llame: `hola-soy-juancg` reemplazando `juancg` por su nombre. (_branches_)
 4. Escribir su nombre en la lista de miembros en este documento.
-5. Publicar ese cambio en su copia del repositorio. (`stage`, `add`, `push`)
+5. Publicar ese cambio en su copia del repositorio. (`add`, `commit`, `push`)
 6. Enviar los cambios a este repositorio para ser revisado. (_Pull request_)
 7. Eliminar la rama que crearon para este ejercicio.
 
