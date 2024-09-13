@@ -41,7 +41,7 @@ reset
 ```bash
 code .
 ```
-Si deseas **borrar** archivos y directorios de forma completa o archivos que requieren permisos especiales.(El comando `sudo` se usa para obtener permisos de superusuario).
+Si deseas **borrar** archivos y directorios de forma completa o archivos que requieren permisos especiales.(El comando `sudo` se usa para ejecutar el comando como administrador).
 
 (:warning:*Nota: Todo lo que se elimine con ese comando no se puede recuperar, úsalo con sabiduría*)
 ```bash
