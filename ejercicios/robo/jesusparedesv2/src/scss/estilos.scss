@@ -1,0 +1,54 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;  /* Evita que aparezcan barras de desplazamiento */
+}
+
+::selection {
+  background-color: #30cac073;
+  color: #130808;
+}
+
+//Estilos de la interfaz que contiene los botones
+
+#interfaz {
+  background: transparent;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  button {
+    border: none;
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 16px 16px;
+
+    &#paleta-A:hover{
+      background: blue;
+    }
+
+    &#paleta-B:hover{
+      background: blueviolet;
+    }
+
+  }
+}
+
+canvas {
+  display: inline-block;
+  vertical-align: top;
+}
+
