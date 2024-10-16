@@ -137,17 +137,19 @@
     <ul>
       <% ejercicios.forEach((ejercicio, i) => { %>
       <li>
-        <span class="ejercicio-nombre"><%= ejercicio.nombre %></span>
+        <h2 class="ejercicio-nombre"><%= ejercicio.nombre %></h2>
+
         <% if (ejercicio.entradas.length) { %>
         <ul>
           <% ejercicio.entradas.forEach((entrada, j) => { %>
           <li class="entrada">
             <input type="checkbox" hidden id="entrada-<%= i %>-<%= j %>" <%= entrada.exportada ? 'checked' : '' %>
-            onchange="exportar('<%= entrada.info.rutaArchivos %>', '<%= entrada.usuario %>', '<%= ejercicio.nombre %>',
-            this)"/>
+            onchange="exportar('<%= entrada.usuario %>', '<%= ejercicio.nombre %>', '<%= i %>', '<%= j %>', this)" />
+
             <label class="switch" for="entrada-<%= i %>-<%= j %>"></label>
 
             <span class="fab fa-github-alt"></span>
+
             <a href="https://github.com/<%= entrada.usuario %>" target="_blank"><%= entrada.usuario %></a>
 
             <span class="tipo">Tipo: </span>
@@ -156,14 +158,15 @@
             <span class="paquetes">Paquetes: </span>
             <i
               class="boton script fas <%=entrada.info.paquetes ? 'fa-check' : 'fas fa-power-off' %>"
-              onclick="correrScript('install', '<%= entrada.ruta %>', this)"
+              onclick="correrScript('install', '<%= i %>', '<%= j %>', this)"
             ></i>
 
             <span class="compilado">Compilado: </span>
             <span class="fas <%=entrada.info.compilado ? 'fa-check' : 'fa-times' %>"></span>
+
             <!-- Scripts -->
             <% if (entrada.info.scripts) { %> <% for (let script in entrada.info.scripts) { %>
-            <span class="script fas fa-power-off" onclick="correrScript('<%= script %>', '<%= entrada.ruta %>', this)"
+            <span class="script fas fa-power-off" onclick="correrScript('<%= script %>', '<%= i %>', '<%= j %>', this)"
               ><%= script %></span
             >
             <% } %> <% } %>
@@ -184,27 +187,30 @@
         console.error(listaErrores);
       }
 
-      function correrScript(script, ruta, ele) {
+      function correrScript(script, iEjercicio, iEntrada, ele) {
         ele.classList.toggle('prendido');
 
         if (ele.classList.contains('prendido')) {
-          fetch(`/correr-script?script=${script}&ruta=${ruta}`);
+          fetch(`/correr-script?script=${script}&ejercicio=${+iEjercicio}&entrada=${+iEntrada}`);
         } else {
-          fetch(`/cerrar-script?script=${script}&ruta=${ruta}`);
+          fetch(`/cerrar-script?script=${script}&ejercicio=${+iEjercicio}&entrada=${+iEntrada}`);
         }
       }
 
       function cerrarScript(script, ruta) {
-        console.log(script, ruta);
         fetch(`/cerrar-script?script=${script}&ruta=${ruta}`).then((res) => {
           console.log(res.body);
         });
       }
 
-      function exportar(ruta, usuario, ejercicio, ele) {
+      function exportar(usuario, ejercicio, iEjercicio, iEntrada, ele) {
         console.log(ele.checked);
         //console.log(usuario, ejercicio, ruta);
-        fetch(`/exportar?ruta=${ruta}&usuario=${usuario}&ejercicio=${ejercicio}&exportar=${ele.checked}`);
+        fetch(
+          `/exportar?usuario=${usuario}&nombreEjercicio=${ejercicio}&ejercicio=${+iEjercicio}&entrada=${+iEntrada}&exportar=${
+            ele.checked
+          }`
+        );
       }
     </script>
   </body>

@@ -1,0 +1,7 @@
+{
+  "watch": ["admin"],
+  "ext": "ts",
+  "execMap": {
+    "ts": "node --no-warnings=ExperimentalWarning --loader ts-node/esm"
+  }
+}

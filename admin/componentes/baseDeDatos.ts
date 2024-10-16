@@ -1,7 +1,7 @@
-import Loki from 'lokijs';
+import Loki, { type Collection } from 'lokijs';
 
-export default () => {
-  return new Promise((res, rech) => {
+export default (): Promise<Collection> => {
+  return new Promise((res) => {
     const bd = new Loki('admin/datos.db', {
       autoload: true,
       autoloadCallback: iniciarBd,

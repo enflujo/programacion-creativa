@@ -1,5 +1,6 @@
 {
   "name": "programacion-creativa",
+  "packageManager": "yarn@4.5.0",
   "version": "0.0.1",
   "main": "index.js",
   "repository": "https://github.com/enflujo/programacion-creativa.git",
@@ -7,7 +8,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "admin": "nodemon ./admin",
+    "admin": "nodemon admin/servidor.ts",
     "build": "webpack --config webpack.prod.js",
     "start": "webpack serve --config webpack.dev.js"
   },
@@ -17,24 +18,27 @@
     "@babel/plugin-transform-runtime": "^7.19.6",
     "@babel/preset-env": "^7.19.4",
     "@fortawesome/fontawesome-free": "^6.2.0",
-    "@koa/router": "^12.0.0",
+    "@types/ejs": "^3.1.5",
+    "@types/fs-extra": "^11.0.4",
+    "@types/lokijs": "^1.5.14",
+    "@types/node": "^22.7.5",
     "autoprefixer": "^10.4.12",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
     "fs-extra": "^10.1.0",
     "html-webpack-plugin": "^5.5.0",
-    "koa": "^2.13.4",
-    "koa-ejs": "^4.3.0",
     "lokijs": "^1.5.12",
     "mini-css-extract-plugin": "^2.6.1",
-    "nodemon": "^2.0.20",
+    "nodemon": "^3.1.7",
     "postcss": "^8.4.18",
     "postcss-loader": "^7.0.1",
     "postcss-preset-env": "^7.8.2",
     "prettier": "^2.7.1",
-    "sass": "^1.55.0",
+    "sass": "^1.79.5",
     "sass-loader": "^13.1.0",
     "style-loader": "^3.3.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.11.1",
@@ -58,5 +62,10 @@
       "admin/datos.db",
       "docs/"
     ]
+  },
+  "dependencies": {
+    "@fastify/view": "^10.0.1",
+    "ejs": "^3.1.10",
+    "fastify": "^5.0.0"
   }
 }

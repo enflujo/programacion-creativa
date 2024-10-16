@@ -1,22 +1,24 @@
-import fs from 'fs';
-import path from 'path';
-const errores = [];
-let bd;
+import type { DatosEjercicio, Ejercicio, Entrada } from '@/tipos';
+import { existsSync, lstatSync, readdirSync, readFileSync } from 'fs';
+import type { Collection } from 'lokijs';
+import path, { join, normalize, resolve } from 'path';
+const errores: string[] = [];
+let bd: Collection;
 
-function revisarPaquetes(ruta, respuesta) {
-  const paquetesInstalados = fs.existsSync(path.resolve(ruta, 'node_modules'));
+function revisarPaquetes(ruta: string, respuesta: DatosEjercicio) {
+  const paquetesInstalados = existsSync(path.resolve(ruta, 'node_modules'));
 
   if (paquetesInstalados) {
     respuesta.paquetes = true;
   }
 }
 
-function revisarCompilacion(ruta, respuesta) {
-  const rutaArchivos = path.resolve(ruta, 'www');
-  const existeCarpeta = fs.existsSync(rutaArchivos);
-
+function revisarCompilacion(ruta: string, respuesta: DatosEjercicio) {
+  const rutaArchivos = resolve(ruta, 'www');
+  const existeCarpeta = existsSync(rutaArchivos);
+  console.log(rutaArchivos, existeCarpeta);
   if (existeCarpeta) {
-    const archivos = fs.readdirSync(rutaArchivos);
+    const archivos = readdirSync(rutaArchivos);
 
     if (archivos.includes('index.html')) {
       // Usa package.json pero no necesita compilación
@@ -28,14 +30,13 @@ function revisarCompilacion(ruta, respuesta) {
   }
 }
 
-function extraerInfo(ruta) {
-  const archivos = fs.readdirSync(ruta);
-  const respuesta = {
-    tipo: 'fas fa-folder',
-  };
+function extraerInfo(ruta: string) {
+  const archivos = readdirSync(ruta);
+  const respuesta: DatosEjercicio = { tipo: 'fas fa-folder' };
 
   if (archivos.includes('package.json')) {
-    const datos = JSON.parse(fs.readFileSync(path.resolve(ruta, 'package.json')));
+    const paquetes = readFileSync(resolve(ruta, 'package.json'), 'utf-8');
+    const datos = JSON.parse(paquetes);
 
     if (datos['scripts']) {
       respuesta.scripts = datos.scripts;
@@ -43,7 +44,6 @@ function extraerInfo(ruta) {
       if (datos.scripts) {
         // Es proyecto con compilador
         respuesta.tipo = 'fa-brands fa-yarn';
-        respuesta.script = datos.scripts.build;
         respuesta.paquetes = false;
         respuesta.compilado = false;
         revisarPaquetes(ruta, respuesta);
@@ -53,7 +53,6 @@ function extraerInfo(ruta) {
       } else {
         errores.push(`No hay carpeta wwww en ${ruta}`);
       }
-    } else {
     }
   } else {
     revisarCompilacion(ruta, respuesta);
@@ -62,20 +61,21 @@ function extraerInfo(ruta) {
   return respuesta;
 }
 
-function extraerEntradas(ruta, nombreEjercicio) {
-  const usuarios = fs.readdirSync(ruta);
-  const entradas = [];
+function extraerEntradas(ruta: string, nombreEjercicio: string) {
+  const usuarios = readdirSync(ruta);
+  const entradas: Entrada[] = [];
 
   usuarios.forEach((usuario) => {
-    const rutaEntrada = path.resolve(ruta, usuario);
-    const infoEntrada = fs.lstatSync(rutaEntrada);
+    const rutaEntrada = normalize(join(ruta, usuario));
+    const info = lstatSync(rutaEntrada);
 
-    if (infoEntrada.isDirectory()) {
+    if (info.isDirectory()) {
       entradas.push({
         usuario: usuario,
         ruta: rutaEntrada,
         info: extraerInfo(rutaEntrada),
-        fecha: infoEntrada.birthtime,
+        fecha: info.birthtime,
+        exportada: false,
       });
     }
   });
@@ -83,7 +83,7 @@ function extraerEntradas(ruta, nombreEjercicio) {
   if (entradas.length) {
     entradas.forEach((entrada) => {
       const id = `${entrada.usuario}-${nombreEjercicio}`;
-      const existe = bd.findOne({ id: id });
+      const existe = bd.findOne({ id });
 
       if (!existe) {
         console.log('Nueva entrada:', id);
@@ -103,20 +103,21 @@ function extraerEntradas(ruta, nombreEjercicio) {
   return entradas;
 }
 
-export function extraerEjercicios(rutaInicial, baseDeDatos) {
+export function extraerEjercicios(rutaInicial: string, baseDeDatos: Collection) {
   bd = baseDeDatos;
-  const nombres = fs.readdirSync(rutaInicial);
-  const rutas = [];
+  const nombres = readdirSync(rutaInicial);
+  const rutas: Ejercicio[] = [];
 
   nombres.forEach((nombreEjercicio) => {
     const ruta = path.resolve(rutaInicial, nombreEjercicio);
-    const info = fs.lstatSync(ruta);
+    const info = lstatSync(ruta);
 
     if (info.isDirectory()) {
       const entradas = extraerEntradas(ruta, nombreEjercicio);
+
       rutas.push({ nombre: nombreEjercicio, ruta: ruta, entradas: entradas });
     }
   });
 
-  return { rutas: rutas, errores: errores };
+  return { rutas, errores };
 }
