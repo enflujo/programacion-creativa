@@ -13,19 +13,31 @@ function revisarPaquetes(ruta: string, respuesta: DatosEjercicio) {
   }
 }
 
-function revisarCompilacion(ruta: string, respuesta: DatosEjercicio) {
-  const rutaArchivos = resolve(ruta, 'www');
-  const existeCarpeta = existsSync(rutaArchivos);
-  console.log(rutaArchivos, existeCarpeta);
-  if (existeCarpeta) {
-    const archivos = readdirSync(rutaArchivos);
+function registrarCompilacion(rutaArchivos: string, respuesta: DatosEjercicio) {
+  const archivos = readdirSync(rutaArchivos);
 
-    if (archivos.includes('index.html')) {
-      // Usa package.json pero no necesita compilación
-      respuesta.compilado = true;
-      respuesta.rutaArchivos = rutaArchivos;
-    } else {
-      errores.push(`No hay archivo index.html en ${rutaArchivos}`);
+  if (archivos.includes('index.html')) {
+    // Usa package.json pero no necesita compilación
+    respuesta.compilado = true;
+    respuesta.rutaArchivos = rutaArchivos;
+  } else {
+    errores.push(`No hay archivo index.html en ${rutaArchivos}`);
+  }
+}
+
+function revisarCompilacion(ruta: string, respuesta: DatosEjercicio) {
+  const rutaArchivosWWW = resolve(ruta, 'www');
+  const existeCarpetaWWW = existsSync(rutaArchivosWWW);
+
+  if (existeCarpetaWWW) {
+    registrarCompilacion(rutaArchivosWWW, respuesta);
+  }
+  {
+    const rutaArchivosPublico = resolve(ruta, 'publico');
+    const existeCarpetaPublico = existsSync(rutaArchivosPublico);
+
+    if (existeCarpetaPublico) {
+      registrarCompilacion(rutaArchivosPublico, respuesta);
     }
   }
 }

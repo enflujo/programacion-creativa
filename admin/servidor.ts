@@ -102,7 +102,6 @@ servidor.get<ParametrosExportar>('/exportar', (request, reply) => {
   const entradaBd = bd.findOne({ id: `${usuario}-${nombreEjercicio}` });
 
   if (exportar === 'true') {
-    console.log('intentando exportar', datos);
     if (datos.info.rutaArchivos) {
       console.log(`Exportando ejercicio ${nombreEjercicio} de ${usuario}...`);
 
