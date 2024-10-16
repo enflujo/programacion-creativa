@@ -1,6 +1,6 @@
-![Logo Programación Creativa @jeanniffer](./docs/pc-social.png)
-
 # Programación Creativa con JavaScript
+
+![Logo Programación Creativa @jeanniffer](./docs/pc-social.png)
 
 Este espacio lo vamos a utilizar como introducción a la programación creativa.
 
@@ -21,7 +21,7 @@ Los ejercicios quedan publicados en: https://enflujo.github.io/programacion-crea
 - [Glosario](/Glosario.md)
 - [Plantillas](/plantillas)
 - [Ejercicios](/ejercicios)
-- [Tutoriales]('/tutoriales')
+- [Tutoriales](/tutoriales)
 
 ## Ejercicio 1: Instalar herramientas
 
