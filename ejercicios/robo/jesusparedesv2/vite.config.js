@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  // base: '/',
+  base: '/programacion-creativa/jesusparedesv2/robo/',
   server: {
     port: 3000,
   },
