@@ -125,9 +125,9 @@ servidor.get<ParametrosExportar>('/exportar', (request, reply) => {
   reply.send({ entradaBd });
 });
 
-servidor.listen({ port: puerto }, function (err, address) {
+servidor.listen({ port: puerto }, function (err: any) {
   if (err) {
-    servidor.log.error(err);
+    console.error(err);
     process.exit(1);
   }
 
