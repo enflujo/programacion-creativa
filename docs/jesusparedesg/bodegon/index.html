@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bodegon G-sus</title>
+
+    <style>
+
+    :root{
+        --gradienteAtardecer: linear-gradient(
+            140deg,
+            red,
+            yellow
+        );
+
+        --gradienteAnochecer: linear-gradient(
+            #03001e,
+            #7303c0,
+            #ec38bc,
+            #fdeff9
+        );
+    }
+    html{
+        height:100%;
+        width: 100%;
+    }
+    body {
+        height: 100vh;
+        width: 100%;
+        margin: 0px; 
+    }
+
+    /*FONDO*/
+    #canvas{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        background-image: var(--gradienteAnochecer);
+    }
+
+    #cieloDia{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-image: var(--gradienteAtardecer);
+        animation: puestaSol 7s infinite;
+    }
+    @keyframes puestaSol{
+        0%{opacity: 1;}
+        100%{opacity: 0;}
+    }
+
+    #cieloNoche{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-image: var(--gradienteAnochecer);
+        animation: anochece 7s infinite;
+    }
+    @keyframes anochece{
+        0%{opacity: 0;}
+        100%{opacity: 1;}
+    }
+
+    /*Agua*/
+    
+    .cuerpo{
+        background: #36a3ec;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+        width: 100%;
+        height: 30vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10%;
+        overflow: hidden;
+        z-index: 98;
+    }
+
+    .cuerpo div{
+        background: rgb(189, 231, 255);
+        width: 0px;
+        height: 4px;
+        transition: 0.2s;
+        animation: none;
+    }
+
+    @keyframes olasAltas {
+        0%   {width: 0px;}
+        25%  {width: 5px;}
+        50%  {width: 40px;}
+        75% {width: 5px;}
+        100% {width: 0px;}
+    }
+
+    @keyframes olasBajas {
+        0%   {width: 40px;}
+        25%  {width: 5px;}
+        50%  {width: 0px;}
+        75% {width: 5px;}
+        100% {width: 40px;}
+    }
+
+    .cuerpo div:nth-child(odd){
+        position: relative;
+        top: 30%;
+        animation-name: olasAltas;
+        animation-duration: 1.2s;
+        animation-iteration-count: infinite;
+    }
+
+    .cuerpo div:nth-child(even){
+        animation-name: olasBajas;
+        animation-duration: 1.2s;
+        animation-iteration-count: infinite;
+    }
+
+    /*
+
+    .cuerpo div:nth-child(1) {
+        animation-name: esquinas;
+        animation-duration: 1.2s;
+        animation-iteration-count: infinite;
+    }
+    .cuerpo div:nth-child(2) {
+        animation-name: esquinas;
+        animation-duration: 1.2s;
+        animation-iteration-count: infinite;
+    }
+    .cuerpo div:nth-child(3) {
+        animation-name: esquinas;
+        animation-duration: 1.2s;
+        animation-iteration-count: infinite;
+    }
+
+    */
+
+    #velero{
+        position: absolute;
+        display: flex;
+        top: 45%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 98;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 5px; /*Espacio entre las 2 velas del velero*/
+        animation-play-state: paused;
+    }
+
+    #velero:hover{
+        animation-play-state: running;
+        animation-name: navegar;
+        animation-duration: 3s;
+    }
+
+    @keyframes navegar {
+        0% {left: 50%;}
+        100% {left: 65%;}
+    }
+
+    #vela-izq{
+        position: relative;
+        width: 0;
+        height: 0;
+        border-left: 100px solid transparent;
+        border-right: 0px solid transparent;
+        border-bottom: 200px solid white;
+        animation: none;
+        z-index: 99;
+        transform: rotate(2deg);
+    }
+
+    #vela-der{
+        position: relative;
+        width: 0;
+        height: 0;
+        border-left: 0px solid transparent;
+        border-right: 80px solid transparent;
+        border-bottom: 150px solid white;
+        z-index: 99;
+        transform: rotate(-1deg);
+    }
+
+    #casco{
+        position: absolute;
+        margin-top: 4%; /*Espacio entre las velas y el casco del velero*/
+        width: 200px;
+        height: 48px;
+        border-bottom-right-radius: 800px;
+        border-top-left-radius: 500px;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(to bottom, #ffb199,#ff0844)
+    }
+
+    /*ANIMACIÓN PALETAS DE AGUA*/
+    @keyframes brindar {
+        0%   {gap: 0%;}
+        50%  {gap: 100%}
+        100% {gap: 0%;}
+    }
+
+    /*ESTILOS PALETAS DE AGUA*/
+    .clink {
+        position: relative;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        gap: 0; /*Espacio inicial entre los helados*/
+        animation-name: brindar;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        z-index: 100;
+    }
+
+    .helado {
+        position: relative;
+        top: 50%; /* Centra verticalmente */
+        transform: translateY(-50%); /* Ajusta el centrado */
+        width: 300px;
+        height: 450px;
+        border-top-left-radius: 80%;
+        border-top-right-radius: 80%;
+    }
+
+    .izquierdo{
+        transform: rotateZ(-45deg);
+        background: rgb(255, 0, 0);
+        mix-blend-mode: multiply;
+    }
+    
+    .derecho{
+        transform: rotateZ(45deg);
+        background: rgb(0, 68, 255);
+        mix-blend-mode: multiply;
+    }
+    .palito{
+        position: relative;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%);
+        background: rgb(153, 87, 0);
+        border-bottom-right-radius: 40px;
+        border-bottom-left-radius: 40px;
+        width: 56px;
+        height: 200px;
+        
+    }
+    
+    /*Estilos del sol y las nubes*/
+    #sol{
+        background-image: radial-gradient(circle, white, yellow, rgba(255, 255, 224, 0.801));
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%);
+        width: 500px;
+        height: 500px;
+        border-radius: 100%;
+        animation: fataMorgana 7s infinite;
+        z-index: 97;
+    }
+
+    @keyframes fataMorgana{
+        0% {
+        opacity: 1;
+        }
+
+        100% {
+        width: 10%;
+        height: 20%;
+        margin-top: -10%;
+        margin-left: 5%;
+        opacity: 0;
+        }
+    }
+    
+
+    </style>
+</head>
+<body>
+    <section id="canvas">
+
+        <div id="cieloDia"></div>
+        <div id="cieloNoche"></div>
+
+        <div class="cuerpo">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div id="velero">
+            <div id="vela-izq"></div>
+            <div id="vela-der"></div>
+            <div id="casco"></div>
+        </div>
+
+        <div class="clink">
+            <div class="helado derecho">
+                <div class="palito">
+                </div>
+            </div>
+
+            <div class="helado izquierdo">
+                <div class="palito">
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div>
+            <div id="sol">
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>
