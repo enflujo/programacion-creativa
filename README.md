@@ -66,3 +66,5 @@ Ir a [Glosario](Glosario.md)
 - ..::Laura Echeverri::..
 - _::..Jesús Paredes..::_
 - ..:: Sara Colmenares Hernández ::..
+- Juliana Chapeton Castro
+
