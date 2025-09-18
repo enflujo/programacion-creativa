@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biblioteca</title>
+
+    <style>
+      :root {
+        --colorFondo: linear-gradient(180deg, rgb(162, 245, 173), rgb(238, 228, 238), rgb(120, 200, 235));
+        --colorMaceta: linear-gradient(180deg, rgb(231, 106, 193), rgb(122, 116, 115));
+      }
+      html {
+        height: 100%;
+        width: 100%;
+      }
+      body {
+        background: var(--colorFondo);
+        font-family: Georgia, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        animation: gradiente 5s ease infinite;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      @keyframes gradiente {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .estante {
+        display: flex;
+        justify-content: space-around;
+        background-color: LavenderBlush;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(10, 24, 1, 0);
+        margin-bottom: 50px;
+        height: auto;
+      }
+      .libro {
+        width: 60px;
+        height: 180px;
+        margin: 0 10px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        writing-mode: vertical-rl;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        color: Linen;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+        position: relative;
+      }
+      .tooltip {
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 110%;
+        transform: translateY(-50%);
+        background: #fffbe0;
+        color: #333;
+        border: 1px solid #aaa;
+        border-radius: 8px;
+        padding: 8px 10px;
+        white-space: nowrap;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        z-index: 10;
+        font-size: 10px;
+        writing-mode: horizontal-tb;
+      }
+      .libro:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      .libro:hover .tooltip {
+        display: block;
+      }
+      .mesa {
+        width: 80%;
+        height: 100px;
+        background-color: rgb(239, 153, 113);
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+        align-items: flex-end;
+        position: relative;
+        margin-top: 40px;
+        animation: crecer 1s ease-out forwards;
+      }
+      .arrumeLibros {
+        position: absolute;
+        bottom: 100px;
+        left: 40%;
+      }
+
+      .libroApilado {
+        position: absolute;
+        width: 120px;
+        height: 20px;
+        border: 2px solid #333;
+        border-radius: 3px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      .libroA1 {
+        background: linear-gradient(90deg, #f39c12, #e67e22);
+        bottom: 0;
+        transform: rotate(-3deg);
+      }
+      .libroA2 {
+        background: linear-gradient(90deg, #3498db, #2980b9);
+        bottom: 25px;
+        transform: rotate(2deg);
+      }
+      .libroA3 {
+        background: linear-gradient(90deg, #2ecc71, #27ae60);
+        bottom: 50px;
+        transform: rotate(-1deg);
+      }
+      .libroApilado:hover {
+        transform: translateY(-8px) rotate(0deg);
+        transition: transform 200ms ease;
+        z-index: 999;
+      }
+      .planta {
+        position: absolute;
+        bottom: 100px;
+        left: 5%;
+        width: 60px;
+        height: 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 2;
+        animation: balanceo 3s ease-in-out infinite;
+      }
+
+      .hoja {
+        position: absolute;
+        width: 30px;
+        height: 50px;
+        background: linear-gradient(120deg, #3fa34d 60%, #7ed957 100%);
+        border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+        opacity: 0.9;
+        animation: giroHoja 1s linear alternate;
+      }
+
+      .hoja1 {
+        left: 0px;
+        top: 10px;
+        transform: rotate(-25deg);
+        z-index: 1;
+      }
+      .hoja2 {
+        left: 15px;
+        top: 0px;
+        transform: rotate(10deg);
+        z-index: 2;
+      }
+      .hoja3 {
+        left: 30px;
+        top: 15px;
+        transform: rotate(30deg);
+        z-index: 1;
+      }
+
+      .maceta {
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+        width: 40px;
+        height: 30px;
+        background: var(--colorMaceta);
+        border-radius: 0 0 20px 20px;
+        border-top: 4px solid #7a7473;
+        z-index: 3;
+      }
+
+      .hoja:hover {
+        transform: rotate(180deg);
+      }
+
+      @keyframes giroHoja {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(180deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes balanceo {
+        0%,
+        100% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(5deg);
+        }
+      }
+
+      @keyframes crecer {
+        from {
+          transform: scale(0.5);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      .lampara {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        bottom: 100px;
+        left: 90%;
+        width: 40px;
+        height: auto;
+        z-index: 2;
+        transform: translateX(-50%);
+        position: absolute;
+        align-items: center;
+        animation: colorLampara 2s linear infinite;
+      }
+
+      .pantalla {
+        width: 60px;
+        height: 50px;
+        background: #ffe066;
+        border-radius: 40px 40px 30px 30px / 60px 60px 30px 30px;
+        border: 7px solid #e0c200;
+        margin-top: -70px;
+        z-index: 2;
+        box-shadow: 0 0 20px 5px #ffe066;
+        animation: colorLampara 2s linear infinite, rotacionLampara 5s linear alternate-reverse, luz 2s linear infinite;
+      }
+      .base {
+        width: 40px;
+        height: 10px;
+        background: #333;
+        border-radius: 50%;
+        margin: 0 auto;
+        position: relative;
+        top: -5px;
+      }
+
+      @keyframes rotacionLampara {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(180deg);
+        }
+      }
+
+      @keyframes colorLampara {
+        0% {
+          background-color: rgb(230, 197, 36);
+        }
+        25% {
+          background-color: orange;
+        }
+        25% {
+          background-color: yellow;
+        }
+        50% {
+          background-color: #ffe066;
+        }
+      }
+      @keyframes luz {
+        0%,
+        100% {
+          box-shadow: 0 0 10px 3px #ffe066;
+        }
+        50% {
+          box-shadow: 0 0 25px 8px #ffd633;
+        }
+      }
+
+      @keyframes cambiarColor1 {
+        from {
+          background-color: MediumTurquoise;
+        }
+        to {
+          background-color: PaleGoldenRod;
+        }
+      }
+      @keyframes cambiarColor2 {
+        from {
+          background-color: #27ae60;
+        }
+        to {
+          background-color: rgb(188, 10, 110);
+        }
+      }
+      @keyframes cambiarColor3 {
+        from {
+          background-color: #73c6b6;
+        }
+        to {
+          background-color: #b7950b;
+        }
+      }
+      @keyframes cambiarColor4 {
+        from {
+          background-color: #00ff33;
+        }
+        to {
+          background-color: #0066cc;
+        }
+      }
+      @keyframes cambiarColor5 {
+        from {
+          background-color: #00cc99;
+        }
+        to {
+          background-color: #6633cc;
+        }
+      }
+      @keyframes cambiarColor6 {
+        from {
+          background-color: #ff3333;
+        }
+        to {
+          background-color: #ffb8b8;
+        }
+      }
+      @keyframes cambiarColor7 {
+        from {
+          background-color: #99ff99;
+        }
+        to {
+          background-color: #99cc33;
+        }
+      }
+      @keyframes cambiarColor8 {
+        from {
+          background-color: #99ccff;
+        }
+        to {
+          background-color: #ffcc99;
+        }
+      }
+      .libro1 {
+        background-color: #c0392b;
+      }
+
+      .libro1:hover {
+        animation: cambiarColor1 2s linear infinite;
+        animation-direction: alternate;
+      }
+      .libro2 {
+        background-color: #27ae60;
+      }
+      .libro2:hover {
+        animation: cambiarColor2 2s linear infinite;
+        animation-direction: alternate;
+      }
+      .libro3 {
+        background-color: #2980b9;
+      }
+
+      .libro3:hover {
+        animation: cambiarColor3 2s linear infinite;
+        animation-direction: alternate;
+
+        animation-iteration-count: 2;
+      }
+      .libro4 {
+        background-color: #8e44ad;
+      }
+      .libro4:hover {
+        animation: cambiarColor4 2s linear infinite;
+        animation-direction: alternate;
+      }
+      .libro5 {
+        background-color: #f39c12;
+      }
+      .libro5:hover {
+        animation: cambiarColor5 2s linear infinite;
+        animation-direction: alternate;
+      }
+      .libro6 {
+        background-color: slateblue;
+      }
+      .libro6:hover {
+        animation: cambiarColor6 2s linear infinite;
+        animation-direction: alternate;
+      }
+      .libro7 {
+        background-color: teal;
+      }
+      .libro7:hover {
+        animation: cambiarColor7 2s linear infinite;
+        animation-direction: alternate;
+      }
+      .libro8 {
+        background-color: crimson;
+      }
+      .libro8:hover {
+        animation: cambiarColor8 2s linear infinite;
+        animation-direction: alternate;
+      }
+      .informacion {
+        display: none;
+        margin-top: 10px;
+        padding: 15px;
+        border: 2px solid #333;
+        border-radius: 8px;
+        background-color: white;
+        max-width: 400px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>📚 Mi Biblioteca 📚</h1>
+
+    <div class="estante">
+      <div class="libro libro1">
+        Cien años de soledad
+        <span class="tooltip">Gabriel García Márquez, 1967</span>
+      </div>
+
+      <div class="libro libro2">
+        La vorágine
+        <span class="tooltip">José Eustasio Rivera, 1924 </span>
+      </div>
+
+      <div class="libro libro3">
+        Barrio bomba
+        <span class="tooltip">John Jairo Junieles, 2023</span>
+      </div>
+
+      <div class="libro libro4">
+        La mujer barbuda
+        <span class="tooltip">Ramón Illán Bacca, 2011</span>
+      </div>
+
+      <div class="libro libro5">
+        Montes de María
+        <span class="tooltip">Daniel Ángel, 2025</span>
+      </div>
+      <div class="libro libro6">
+        Las ilusiones perdidas
+        <span class="tooltip">Honore de Balzac, 1837</span>
+      </div>
+      <div class="libro libro7">
+        El último encuentro
+        <span class="tooltip">Sandor Marai, 1942</span>
+      </div>
+      <div class="libro libro8">
+        Los nombres de Feliza
+        <span class="tooltip">Juan Gabriel Vásquez, 2025</span>
+      </div>
+    </div>
+
+    <div id="cajaInformacion" class="informacion"></div>
+    <div class="mesa">
+      <div class="lampara">
+        <div class="pantalla"></div>
+        <div class="base"></div>
+      </div>
+
+      <div class="planta">
+        <div class="hoja hoja1"></div>
+        <div class="hoja hoja2"></div>
+        <div class="hoja hoja3"></div>
+        <div class="maceta"></div>
+      </div>
+
+      <div class="arrumeLibros">
+        <div class="libroApilado libroA1"></div>
+        <div class="libroApilado libroA2"></div>
+        <div class="libroApilado libroA3"></div>
+      </div>
+    </div>
+  </body>
+</html>
